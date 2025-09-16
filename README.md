@@ -12,7 +12,7 @@ Feedback and new Ideas are also appreciated, I created this project as means to 
 
 To see what has changed over the Versions please see the Patchlogs.md (In English on Top and German at the Bottom)
 
-The game is currently just in English and I plan to make a Language option in the Settings.
+The game is currently just in German, but I plan to make a Language option in the Settings.
 
 For the Time being every Level is available from the Start, but this will also change in the Future, with planned Level skips you'll be able to buy with coins.
 
