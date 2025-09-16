@@ -1,6 +1,10 @@
 # SlimeyJump
 ### Godot 4.5 Game
 
+### IMPORTANT
+>The game currently is still in an unfinished state, if for some reason it crashes I will not take responsibility for any damaged caused by this!
+> The game has only been thouroughly tested on Android 15, so if there are versions specific Bugs you notice, please do not refrain from telling me the version and recreation details, so I can fix it.
+
 #### about
 This game is a Puzzle Platformer for android and Windows devices
 if you notice any problems please don't hesitate to contact me and I will try to answer as soon as possible!
