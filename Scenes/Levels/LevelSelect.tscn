@@ -1,0 +1,301 @@
+[gd_scene load_steps=61 format=3 uid="uid://dpccc05p3u36"]
+
+[ext_resource type="Script" uid="uid://dyei6bufhygrw" path="res://Scripts/scene scripts/level_select.gd" id="1_chbko"]
+[ext_resource type="Texture2D" uid="uid://irmyl2mv6ebv" path="res://Sprites/background/country Platform/Background (by ansimuz).png" id="2_ft65g"]
+[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sign-Board/Sign-board.png" id="3_rcgjn"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="4_utyn2"]
+[ext_resource type="Texture2D" uid="uid://cjepud8ukl8jk" path="res://Sprites/Objects/Level Buttons/normal/B1.png" id="5_0vqv8"]
+[ext_resource type="Texture2D" uid="uid://bqbmmu1sa4s8x" path="res://Sprites/Objects/Level Buttons/normal/B2.png" id="6_2tfka"]
+[ext_resource type="Texture2D" uid="uid://c053b63k7it76" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B1.png" id="6_ksgsr"]
+[ext_resource type="Texture2D" uid="uid://b4k0jhjo0ght0" path="res://Sprites/Objects/Level Buttons/hover/hover-B1.png" id="7_cl4t8"]
+[ext_resource type="Texture2D" uid="uid://ctes4dtwe2wmv" path="res://Sprites/Objects/Level Buttons/normal/B3.png" id="7_f2b6r"]
+[ext_resource type="Texture2D" uid="uid://du3rplgoj7iej" path="res://Sprites/Objects/Level Buttons/normal/B4.png" id="8_jqwfc"]
+[ext_resource type="Texture2D" uid="uid://cydgk6gggnctd" path="res://Sprites/Objects/Level Buttons/normal/B5.png" id="9_gf417"]
+[ext_resource type="Texture2D" uid="uid://c880f71mw8use" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B2.png" id="9_xan3u"]
+[ext_resource type="Texture2D" uid="uid://hvinkpvo8vvq" path="res://Sprites/Objects/Level Buttons/hover/hover-B2.png" id="10_h7w0o"]
+[ext_resource type="Texture2D" uid="uid://xvfugnlewyrk" path="res://Sprites/Objects/Level Buttons/normal/B6.png" id="10_pwj8p"]
+[ext_resource type="Texture2D" uid="uid://cl1y0jcnioeg1" path="res://Sprites/Objects/Level Buttons/normal/B7.png" id="11_m1ndv"]
+[ext_resource type="Texture2D" uid="uid://c6ymiwybs8qdh" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B3.png" id="12_dnsj4"]
+[ext_resource type="Texture2D" uid="uid://du5mm34u6yufw" path="res://Sprites/Objects/Level Buttons/normal/B8.png" id="12_tclm8"]
+[ext_resource type="Texture2D" uid="uid://camiplow4n4gs" path="res://Sprites/Objects/Level Buttons/hover/hover-B3.png" id="13_75ff7"]
+[ext_resource type="Texture2D" uid="uid://cxt1ilj5pan06" path="res://Sprites/Objects/Level Buttons/normal/B9.png" id="13_0344q"]
+[ext_resource type="Texture2D" uid="uid://py5fgpel7dgo" path="res://Sprites/Objects/Level Buttons/normal/B10.png" id="14_tqoy4"]
+[ext_resource type="Texture2D" uid="uid://djegapxh3oiyv" path="res://Sprites/Objects/Level Buttons/normal/B11.png" id="15_anq5c"]
+[ext_resource type="Texture2D" uid="uid://ba1cbhcn5nsrt" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B4.png" id="15_b5mb2"]
+[ext_resource type="Texture2D" uid="uid://b87ye2l4fqpy1" path="res://Sprites/Objects/Level Buttons/normal/B12.png" id="16_cxeeb"]
+[ext_resource type="Texture2D" uid="uid://dtd7m6nsk51jh" path="res://Sprites/Objects/Level Buttons/hover/hover-B4.png" id="16_su3r7"]
+[ext_resource type="Texture2D" uid="uid://bi2ooy2uviws7" path="res://Sprites/Objects/Level Buttons/normal/B13.png" id="17_ebe3b"]
+[ext_resource type="Texture2D" uid="uid://coiyvv4fdjuj2" path="res://Sprites/Objects/Level Buttons/normal/B14.png" id="18_rujd7"]
+[ext_resource type="Texture2D" uid="uid://bqpc3hotwtnss" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B5.png" id="18_sbjrq"]
+[ext_resource type="Texture2D" uid="uid://b2tt22x4iwanq" path="res://Sprites/Objects/Level Buttons/hover/hover-B5.png" id="19_2e4i4"]
+[ext_resource type="Texture2D" uid="uid://beh2os5prtmf6" path="res://Sprites/Objects/Level Buttons/normal/B15.png" id="19_c7wnu"]
+[ext_resource type="Texture2D" uid="uid://dnokiker87bj7" path="res://Sprites/Objects/Level Buttons/normal/B16.png" id="20_fgg57"]
+[ext_resource type="Texture2D" uid="uid://dg1ve40fe6gae" path="res://Sprites/Objects/Level Buttons/normal/B17.png" id="21_4swd3"]
+[ext_resource type="Texture2D" uid="uid://b8tymq04whf3e" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B6.png" id="21_xyd7b"]
+[ext_resource type="Texture2D" uid="uid://cjgw71mqh8a5u" path="res://Sprites/Objects/Level Buttons/normal/B18.png" id="22_l7g7g"]
+[ext_resource type="Texture2D" uid="uid://bkqs3o0lpw4db" path="res://Sprites/Objects/Level Buttons/hover/hover-B6.png" id="22_vr0yq"]
+[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="23_0vqv8"]
+[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sign-Board/Sign-board-hover.png" id="24_2tfka"]
+[ext_resource type="Texture2D" uid="uid://dp7d6okh76d0p" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B7.png" id="24_3e437"]
+[ext_resource type="Texture2D" uid="uid://dmxl6xwe7vfr1" path="res://Sprites/Objects/Level Buttons/hover/hover-B7.png" id="25_pt5wy"]
+[ext_resource type="Texture2D" uid="uid://bt672htcsfkf8" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B8.png" id="27_qpfad"]
+[ext_resource type="Texture2D" uid="uid://cxyfxfjnfe18y" path="res://Sprites/Objects/Level Buttons/hover/hover-B8.png" id="28_op1vg"]
+[ext_resource type="Texture2D" uid="uid://dox6cnu3rls2g" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B9.png" id="30_6pn8t"]
+[ext_resource type="Texture2D" uid="uid://gwkmkkm0elhv" path="res://Sprites/Objects/Level Buttons/hover/hover-B9.png" id="31_70wmg"]
+[ext_resource type="Texture2D" uid="uid://c5ignbwo43h2p" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B10.png" id="33_bitfn"]
+[ext_resource type="Texture2D" uid="uid://bgbug6imj538w" path="res://Sprites/Objects/Level Buttons/hover/hover-B10.png" id="34_2hqyq"]
+[ext_resource type="Texture2D" uid="uid://c2g8i4c67ux28" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B11.png" id="36_r65bj"]
+[ext_resource type="Texture2D" uid="uid://cfxucnxy2bjpp" path="res://Sprites/Objects/Level Buttons/hover/hover-B11.png" id="37_nqcgk"]
+[ext_resource type="Texture2D" uid="uid://bkk86wyhc8eo1" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B12.png" id="39_b14x7"]
+[ext_resource type="Texture2D" uid="uid://dvh6u5ubo5krc" path="res://Sprites/Objects/Level Buttons/hover/hover-B12.png" id="40_xitur"]
+[ext_resource type="Texture2D" uid="uid://dxjmyl4xwjqn6" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B13.png" id="42_08qxg"]
+[ext_resource type="Texture2D" uid="uid://depoisjw4iw81" path="res://Sprites/Objects/Level Buttons/hover/hover-B13.png" id="43_0few6"]
+[ext_resource type="Texture2D" uid="uid://c5sgj052tvpy4" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B14.png" id="45_w8j3s"]
+[ext_resource type="Texture2D" uid="uid://nsaqqhqhv0lk" path="res://Sprites/Objects/Level Buttons/hover/hover-B14.png" id="46_xwtaj"]
+[ext_resource type="Texture2D" uid="uid://das2et03kv03c" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B15.png" id="48_jrd7a"]
+[ext_resource type="Texture2D" uid="uid://b2ojoy8ewq1yf" path="res://Sprites/Objects/Level Buttons/hover/hover-B15.png" id="49_ugfji"]
+[ext_resource type="Texture2D" uid="uid://xlpjyiqxhmhk" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B16.png" id="51_degcx"]
+[ext_resource type="Texture2D" uid="uid://7vdmu6cmvjck" path="res://Sprites/Objects/Level Buttons/hover/hover-B16.png" id="52_lipx3"]
+[ext_resource type="Texture2D" uid="uid://fo2xrqwgr5a1" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B17.png" id="54_eyytp"]
+[ext_resource type="Texture2D" uid="uid://bx1nbiegkox3g" path="res://Sprites/Objects/Level Buttons/hover/hover-B17.png" id="55_1ascs"]
+[ext_resource type="Texture2D" uid="uid://cqutsjrubrhf2" path="res://Sprites/Objects/Level Buttons/pressed/pressed-B18.png" id="57_2helw"]
+[ext_resource type="Texture2D" uid="uid://bjnyk04y7jygn" path="res://Sprites/Objects/Level Buttons/hover/hover-B18.png" id="58_5q7jd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_chbko")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 336)
+scale = Vector2(3, 3)
+texture = ExtResource("2_ft65g")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button <" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 470
+text = "<"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 105
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/VBoxContainer"]
+position = Vector2(296, 70)
+scale = Vector2(7, 7)
+texture = ExtResource("3_rcgjn")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Sprite2D"]
+offset_left = -59.0
+offset_top = -6.71429
+offset_right = 537.0
+offset_bottom = 137.286
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("4_utyn2")
+theme_override_font_sizes/font_size = 70
+text = "Level Select"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(593, 350)
+layout_mode = 2
+columns = 6
+
+[node name="Button1" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("5_0vqv8")
+texture_pressed = ExtResource("6_ksgsr")
+texture_hover = ExtResource("7_cl4t8")
+stretch_mode = 0
+
+[node name="Button2" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("6_2tfka")
+texture_pressed = ExtResource("9_xan3u")
+texture_hover = ExtResource("10_h7w0o")
+stretch_mode = 0
+
+[node name="Button3" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("7_f2b6r")
+texture_pressed = ExtResource("12_dnsj4")
+texture_hover = ExtResource("13_75ff7")
+stretch_mode = 0
+
+[node name="Button4" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("8_jqwfc")
+texture_pressed = ExtResource("15_b5mb2")
+texture_hover = ExtResource("16_su3r7")
+stretch_mode = 0
+
+[node name="Button5" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("9_gf417")
+texture_pressed = ExtResource("18_sbjrq")
+texture_hover = ExtResource("19_2e4i4")
+stretch_mode = 0
+
+[node name="Button6" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("10_pwj8p")
+texture_pressed = ExtResource("21_xyd7b")
+texture_hover = ExtResource("22_vr0yq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button7" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("11_m1ndv")
+texture_pressed = ExtResource("24_3e437")
+texture_hover = ExtResource("25_pt5wy")
+stretch_mode = 0
+
+[node name="Button8" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("12_tclm8")
+texture_pressed = ExtResource("27_qpfad")
+texture_hover = ExtResource("28_op1vg")
+stretch_mode = 0
+
+[node name="Button9" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("13_0344q")
+texture_pressed = ExtResource("30_6pn8t")
+texture_hover = ExtResource("31_70wmg")
+stretch_mode = 0
+
+[node name="Button10" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("14_tqoy4")
+texture_pressed = ExtResource("33_bitfn")
+texture_hover = ExtResource("34_2hqyq")
+stretch_mode = 0
+
+[node name="Button11" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("15_anq5c")
+texture_pressed = ExtResource("36_r65bj")
+texture_hover = ExtResource("37_nqcgk")
+stretch_mode = 0
+
+[node name="Button12" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("16_cxeeb")
+texture_pressed = ExtResource("39_b14x7")
+texture_hover = ExtResource("40_xitur")
+stretch_mode = 0
+
+[node name="Button13" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("17_ebe3b")
+texture_pressed = ExtResource("42_08qxg")
+texture_hover = ExtResource("43_0few6")
+stretch_mode = 0
+
+[node name="Button14" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("18_rujd7")
+texture_pressed = ExtResource("45_w8j3s")
+texture_hover = ExtResource("46_xwtaj")
+stretch_mode = 0
+
+[node name="Button15" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("19_c7wnu")
+texture_pressed = ExtResource("48_jrd7a")
+texture_hover = ExtResource("49_ugfji")
+stretch_mode = 0
+
+[node name="Button16" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("20_fgg57")
+texture_pressed = ExtResource("51_degcx")
+texture_hover = ExtResource("52_lipx3")
+stretch_mode = 0
+
+[node name="Button17" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("21_4swd3")
+texture_pressed = ExtResource("54_eyytp")
+texture_hover = ExtResource("55_1ascs")
+stretch_mode = 0
+
+[node name="Button18" type="TextureButton" parent="HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(95, 115)
+layout_mode = 2
+texture_normal = ExtResource("22_l7g7g")
+texture_pressed = ExtResource("57_2helw")
+texture_hover = ExtResource("58_5q7jd")
+stretch_mode = 0
+
+[node name="Button" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 144)
+layout_mode = 2
+texture_normal = ExtResource("3_rcgjn")
+texture_pressed = ExtResource("23_0vqv8")
+texture_hover = ExtResource("24_2tfka")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Button"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 9.0
+offset_right = 477.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("4_utyn2")
+theme_override_font_sizes/font_size = 120
+text = "go back"
+horizontal_alignment = 1
+
+[node name="Button >" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 470
+text = ">"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button11" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button12" to="." method="_on_button_12_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button13" to="." method="_on_button_13_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button14" to="." method="_on_button_14_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button15" to="." method="_on_button_15_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button16" to="." method="_on_button_16_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

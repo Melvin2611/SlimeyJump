@@ -1,0 +1,274 @@
+[gd_scene load_steps=12 format=3 uid="uid://bwe04db4dy1ku"]
+
+[ext_resource type="Script" uid="uid://dhxm5dxm24r7v" path="res://Scripts/scene scripts/hud.gd" id="1_bjfho"]
+[ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="2_6fbih"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="3_t1xeu"]
+[ext_resource type="Texture2D" uid="uid://cu0ucvua0u0y" path="res://Sprites/Pause-button.png" id="4_2ubmp"]
+[ext_resource type="Texture2D" uid="uid://ril7iyiauw0v" path="res://Sprites/Pause-button-pressed.png" id="5_u1fe8"]
+[ext_resource type="Texture2D" uid="uid://d3b37tkar16w6" path="res://Sprites/Pause-button-hover.png" id="6_2x80y"]
+[ext_resource type="Shader" uid="uid://dm47q4kny0bj7" path="res://Scripts/shader/hud.gdshader" id="7_u1fe8"]
+[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sign-Board/Sign-board.png" id="8_k1jev"]
+[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="9_mbgcg"]
+[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sign-Board/Sign-board-hover.png" id="10_bdieq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2x80y"]
+shader = ExtResource("7_u1fe8")
+shader_parameter/blur_size = 4.0
+shader_parameter/darkness = 0.6
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_bjfho")
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(1086, 26)
+scale = Vector2(3, 3)
+texture = ExtResource("2_6fbih")
+
+[node name="CoinLabel" type="Label" parent="."]
+offset_left = 1110.0
+offset_top = 4.0
+offset_right = 1144.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("3_t1xeu")
+theme_override_font_sizes/font_size = 40
+text = ": 0"
+
+[node name="Pause Button" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("4_2ubmp")
+texture_pressed = ExtResource("5_u1fe8")
+texture_hover = ExtResource("6_2x80y")
+stretch_mode = 0
+
+[node name="PauseMenu" type="Control" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+material = SubResource("ShaderMaterial_2x80y")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1112.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume Button" type="TextureButton" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 309.0
+offset_top = 100.0
+offset_right = 391.0
+offset_bottom = 140.0
+grow_horizontal = 2
+scale = Vector2(6, 3)
+texture_normal = ExtResource("8_k1jev")
+texture_pressed = ExtResource("9_mbgcg")
+texture_hover = ExtResource("10_bdieq")
+stretch_mode = 0
+
+[node name="RESUME" type="Label" parent="PauseMenu/Resume Button"]
+layout_mode = 0
+offset_left = 23.3333
+offset_top = 3.66666
+offset_right = 96.3333
+offset_bottom = 33.6667
+scale = Vector2(0.5, 1)
+theme_override_fonts/font = ExtResource("3_t1xeu")
+theme_override_font_sizes/font_size = 30
+text = "RESUME"
+horizontal_alignment = 1
+
+[node name="Restart Button" type="TextureButton" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 220.0
+offset_right = 411.0
+offset_bottom = 260.0
+scale = Vector2(6, 3)
+texture_normal = ExtResource("8_k1jev")
+texture_pressed = ExtResource("9_mbgcg")
+texture_hover = ExtResource("10_bdieq")
+stretch_mode = 0
+
+[node name="RESTART" type="Label" parent="PauseMenu/Restart Button"]
+layout_mode = 0
+offset_left = 20.5
+offset_top = 4.0
+offset_right = 102.5
+offset_bottom = 34.0
+scale = Vector2(0.5, 1)
+theme_override_fonts/font = ExtResource("3_t1xeu")
+theme_override_font_sizes/font_size = 30
+text = "RESTART"
+horizontal_alignment = 1
+
+[node name="Quit Button" type="TextureButton" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 340.0
+offset_right = 411.0
+offset_bottom = 380.0
+scale = Vector2(6, 3)
+texture_normal = ExtResource("8_k1jev")
+texture_pressed = ExtResource("9_mbgcg")
+texture_hover = ExtResource("10_bdieq")
+stretch_mode = 0
+
+[node name="QUIT" type="Label" parent="PauseMenu/Quit Button"]
+layout_mode = 0
+offset_left = 29.5
+offset_top = 4.0
+offset_right = 77.5
+offset_bottom = 34.0
+scale = Vector2(0.5, 1)
+theme_override_fonts/font = ExtResource("3_t1xeu")
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[node name="Button" type="Button" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 478.0
+offset_right = 538.0
+offset_bottom = 528.0
+scale = Vector2(3, 3)
+theme_override_font_sizes/font_size = 30
+text = "debug
+"
+
+[node name="DebugMenu" type="Control" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="DebugMenu"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.388235, 0.388235, 0.388235, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugMenu"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DebugMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="X" type="Label" parent="DebugMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "X:"
+
+[node name="LineEditX" type="LineEdit" parent="DebugMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Y" type="Label" parent="DebugMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Y:"
+
+[node name="LineEditY" type="LineEdit" parent="DebugMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="tp Button" type="Button" parent="DebugMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "teleport
+"
+
+[node name="add coins" type="Button" parent="DebugMenu/VBoxContainer"]
+layout_mode = 2
+text = "add coin"
+
+[node name="Invincible" type="CheckButton" parent="DebugMenu/VBoxContainer"]
+layout_mode = 2
+text = "invincible / noclip"
+
+[node name="Values" type="CheckButton" parent="DebugMenu/VBoxContainer"]
+layout_mode = 2
+text = "show data"
+
+[node name="CheckButton" type="CheckButton" parent="DebugMenu/VBoxContainer"]
+layout_mode = 2
+text = "infinte jump"
+
+[node name="exit debug" type="Button" parent="DebugMenu/VBoxContainer"]
+layout_mode = 2
+text = "Exit debug"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="DebugMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DebugMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "cord examples:
+Level1:
+start: 0,300
+castle: 5000,300
+end: 8500,300
+Level2:
+start: 0,300
+after gap1: 4100,300
+end: 7800,-400
+Level3:
+start: 0,300
+after door: 3200,300
+end: 8500,300
+Level4:
+start: 0,300
+after gap: 5350,150
+after doors: 7475,300
+end: 9000,-100"
+
+[node name="Label2" type="Label" parent="DebugMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Level 5:
+start: 0,300
+after door: 3300,300
+end: 7600,300
+Level 6:
+start: 0,300
+after door1: 1000,-3500
+end: -1500,-12850
+Level7:
+start: 0,300
+after door: 4200,200
+end: 8250,200
+Level8:
+start: 0,300
+after leap: 2400,300
+end: 5300,300"
+
+[node name="LabelFPS" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 62.0
+offset_right = 41.0
+offset_bottom = 85.0
+
+[connection signal="pressed" from="Pause Button" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Resume Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Restart Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Quit Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="DebugMenu/VBoxContainer/HBoxContainer/tp Button" to="." method="_on_teleport_button_pressed"]
+[connection signal="pressed" from="DebugMenu/VBoxContainer/add coins" to="." method="_on_add_coins_pressed"]
+[connection signal="button_down" from="DebugMenu/VBoxContainer/Invincible" to="." method="_on_invincible_button_down"]
+[connection signal="button_up" from="DebugMenu/VBoxContainer/Invincible" to="." method="_on_invincible_button_up"]
+[connection signal="button_down" from="DebugMenu/VBoxContainer/Values" to="." method="_on_values_button_down"]
+[connection signal="button_up" from="DebugMenu/VBoxContainer/Values" to="." method="_on_values_button_up"]
+[connection signal="button_down" from="DebugMenu/VBoxContainer/CheckButton" to="." method="_on_check_button_button_down"]
+[connection signal="button_up" from="DebugMenu/VBoxContainer/CheckButton" to="." method="_on_check_button_button_up"]
+[connection signal="pressed" from="DebugMenu/VBoxContainer/exit debug" to="." method="_on_exit_debug_pressed"]

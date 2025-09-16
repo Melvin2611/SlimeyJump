@@ -1,0 +1,194 @@
+[gd_scene load_steps=9 format=3 uid="uid://hc37sns74j3c"]
+
+[ext_resource type="Script" uid="uid://b27nscwmna0wu" path="res://Scripts/scene scripts/goback.gd" id="1_7xmno"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="1_i8h6y"]
+[ext_resource type="Texture2D" uid="uid://irmyl2mv6ebv" path="res://Sprites/background/country Platform/Background (by ansimuz).png" id="1_uy3b0"]
+[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sign-Board/Sign-board.png" id="2_640q4"]
+[ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="2_uy3b0"]
+[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="3_5qoai"]
+[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sign-Board/Sign-board-hover.png" id="4_jpdlp"]
+[ext_resource type="Texture2D" uid="uid://exe3rknrrutr" path="res://Sprites/Objects/Sign-Board/Sign-board-small.png" id="8_cmrso"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(536, 339)
+scale = Vector2(3, 3)
+texture = ExtResource("1_uy3b0")
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 84.0
+offset_bottom = 34.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_640q4")
+texture_pressed = ExtResource("3_5qoai")
+texture_hover = ExtResource("4_jpdlp")
+script = ExtResource("1_7xmno")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("2_uy3b0")
+bus = &"SFX"
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 2.0
+offset_right = 66.0
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 12
+text = "go back"
+
+[node name="Special Thanks" type="Sprite2D" parent="."]
+position = Vector2(843, 83)
+scale = Vector2(8, 8)
+texture = ExtResource("8_cmrso")
+
+[node name="Label" type="Label" parent="Special Thanks"]
+offset_left = -16.25
+offset_top = -7.5
+offset_right = 52.75
+offset_bottom = 28.5
+scale = Vector2(0.5, 0.5)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 20
+text = "Special
+Thanks"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Help 1" type="Sprite2D" parent="."]
+position = Vector2(841, 213)
+scale = Vector2(5, 5)
+texture = ExtResource("8_cmrso")
+
+[node name="Label" type="Label" parent="Help 1"]
+offset_left = -14.2
+offset_top = -7.4
+offset_right = 41.8
+offset_bottom = 28.6
+scale = Vector2(0.5, 0.5)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 20
+text = "Florian
+Gieswein"
+horizontal_alignment = 1
+
+[node name="Help 2" type="Sprite2D" parent="."]
+position = Vector2(841, 313)
+scale = Vector2(5, 5)
+texture = ExtResource("8_cmrso")
+
+[node name="Label" type="Label" parent="Help 2"]
+offset_left = -25.0
+offset_top = -7.60001
+offset_right = 76.0
+offset_bottom = 28.4
+scale = Vector2(0.5, 0.5)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 20
+text = "Robin
+Schildgen"
+horizontal_alignment = 1
+
+[node name="Lead Dev" type="Sprite2D" parent="."]
+position = Vector2(422, 103)
+scale = Vector2(10, 10)
+texture = ExtResource("8_cmrso")
+
+[node name="Label" type="Label" parent="Lead Dev"]
+offset_left = -15.3
+offset_top = -4.7
+offset_right = 143.7
+offset_bottom = 49.3
+scale = Vector2(0.2, 0.2)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 30
+text = "Lead Developer:
+Melvin Gieswein"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Assets" type="Sprite2D" parent="."]
+position = Vector2(421, 283)
+scale = Vector2(8, 8)
+texture = ExtResource("8_cmrso")
+
+[node name="Label" type="Label" parent="Assets"]
+offset_left = -17.125
+offset_top = -5.25
+offset_right = 155.875
+offset_bottom = 48.75
+scale = Vector2(0.2, 0.2)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 35
+text = "Assets Used
+made by:"
+horizontal_alignment = 1
+
+[node name="Asset 1" type="Sprite2D" parent="."]
+position = Vector2(418, 402)
+scale = Vector2(4, 4)
+texture = ExtResource("2_640q4")
+
+[node name="Label" type="Label" parent="Asset 1"]
+offset_left = -25.5
+offset_top = -5.75
+offset_right = 147.5
+offset_bottom = 48.25
+scale = Vector2(0.3, 0.3)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 35
+text = "BDragon1727"
+horizontal_alignment = 1
+
+[node name="Asset 2" type="Sprite2D" parent="."]
+position = Vector2(419, 481)
+scale = Vector2(4, 4)
+texture = ExtResource("2_640q4")
+
+[node name="Label" type="Label" parent="Asset 2"]
+offset_left = -25.5
+offset_top = -5.75
+offset_right = 147.5
+offset_bottom = 48.25
+scale = Vector2(0.3, 0.3)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 35
+text = "Ansimuz"
+horizontal_alignment = 1
+
+[node name="Asset 3" type="Sprite2D" parent="."]
+position = Vector2(419, 561)
+scale = Vector2(4, 4)
+texture = ExtResource("2_640q4")
+
+[node name="Label" type="Label" parent="Asset 3"]
+offset_left = -25.5
+offset_top = -5.75
+offset_right = 147.5
+offset_bottom = 48.25
+scale = Vector2(0.3, 0.3)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 35
+text = "Raou"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
