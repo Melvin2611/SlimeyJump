@@ -298,4 +298,6 @@ text = ">"
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button14" to="." method="_on_button_14_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button15" to="." method="_on_button_15_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button16" to="." method="_on_button_16_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button17" to="." method="_on_button_17_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/GridContainer/Button18" to="." method="_on_button_18_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

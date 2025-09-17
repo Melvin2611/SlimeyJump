@@ -3423,7 +3423,7 @@ size = Vector2(32, 8)
 scroll_offset = Vector2(-126, 22)
 repeat_size = Vector2(1792, 1152)
 repeat_times = 4
-limit_begin = Vector2(-100000, -1e+07)
+limit_begin = Vector2(-100000, -10000000)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D4"]
 position = Vector2(1115, 475)
@@ -3827,6 +3827,7 @@ position = Vector2(839, 326)
 script = ExtResource("31_4kjvi")
 trigger_body = NodePath("../SlimePlayer")
 target_body = NodePath("../SlimePlayer2")
+teleport = Vector2(1093, 354)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 scale = Vector2(4, 4)
