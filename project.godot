@@ -10,11 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Slime Game"
+config/name="Slimey Jump"
+config/version="0.4.1"
 run/main_scene="uid://bbu853t6d4tyv"
 config/features=PackedStringArray("4.5", "Mobile")
 boot_splash/bg_color=Color(0.509804, 0.713726, 1, 1)
 boot_splash/image="uid://nffec6kwcc2j"
+config/icon="uid://nffec6kwcc2j"
 
 [autoload]
 

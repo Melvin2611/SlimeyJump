@@ -1,7 +1,7 @@
-[gd_scene load_steps=88 format=4 uid="uid://c4entbqomqs0v"]
+[gd_scene load_steps=89 format=4 uid="uid://c4entbqomqs0v"]
 
 [ext_resource type="Texture2D" uid="uid://bhfvp4ajiuwu4" path="res://Sprites/background/Factory-backdrop.png" id="1_fl24m"]
-[ext_resource type="Script" uid="uid://bpiiqyo2jabga" path="res://Scripts/Objects/W3/Level 15/GoalL15.gd" id="2_11j0w"]
+[ext_resource type="Script" uid="uid://cqhwfau50ku7s" path="res://Scripts/Objects/W3/Level 18/GoalL18.gd" id="2_5e8ov"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="3_lin0y"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="4_5r5an"]
 [ext_resource type="Script" uid="uid://dpvcnafnh5e6f" path="res://Scripts/Objects/W3/Level 18/camera_2dL18.gd" id="5_5r5an"]
@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://b3lt0n6q7eggb" path="res://Sprites/Objects/Cloner/Cloner2.png" id="34_7ekvg"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="35_gadxb"]
 [ext_resource type="AudioStream" uid="uid://dqh50ietcml0c" path="res://Sound/mus/desert-storm-ii-114904.mp3" id="36_06cs3"]
+[ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="37_5e8ov"]
 [ext_resource type="Script" uid="uid://bkwy3a7ag4b24" path="res://Scripts/Objects/onepressbutton.gd" id="37_ms6q3"]
 [ext_resource type="Texture2D" uid="uid://devuuf3eaq7g5" path="res://Sprites/Objects/Button/OnePressbutton/Button2.png" id="38_vavef"]
 [ext_resource type="Texture2D" uid="uid://cvhrw7e3npvs4" path="res://Sprites/Objects/Button/OnePressbutton/Button1.png" id="39_4v6uw"]
@@ -3524,7 +3525,7 @@ texture = ExtResource("1_fl24m")
 [node name="Goal" type="Area2D" parent="."]
 position = Vector2(2922, -969)
 collision_layer = 2
-script = ExtResource("2_11j0w")
+script = ExtResource("2_5e8ov")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(185, 3)
@@ -4331,6 +4332,15 @@ tile_set = SubResource("TileSet_0vsx4")
 position = Vector2(2019, 26)
 scale = Vector2(8, 8)
 texture = ExtResource("19_u7ex4")
+
+[node name="Coin1" parent="." instance=ExtResource("37_5e8ov")]
+position = Vector2(4120.49, -2502.0361)
+
+[node name="Coin2" parent="." instance=ExtResource("37_5e8ov")]
+position = Vector2(-362.41016, -1352.8392)
+
+[node name="Coin3" parent="." instance=ExtResource("37_5e8ov")]
+position = Vector2(3233.6038, -1711.794)
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(-1611, -78)

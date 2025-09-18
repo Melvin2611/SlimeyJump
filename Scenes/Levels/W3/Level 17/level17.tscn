@@ -1,9 +1,10 @@
-[gd_scene load_steps=64 format=4 uid="uid://bgrrhp3p0y4wb"]
+[gd_scene load_steps=65 format=4 uid="uid://bgrrhp3p0y4wb"]
 
 [ext_resource type="Texture2D" uid="uid://bhfvp4ajiuwu4" path="res://Sprites/background/Factory-backdrop.png" id="1_3825l"]
 [ext_resource type="Script" uid="uid://dk4r5sohbddl4" path="res://Scripts/Objects/W3/Level 17/GoalL17.gd" id="2_mneen"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="3_m17da"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="4_vp533"]
+[ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="5_k3rph"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="5_l1ean"]
 [ext_resource type="Script" uid="uid://csn4rhpjkdmr3" path="res://Scripts/Objects/steamvent.gd" id="11_4c564"]
 [ext_resource type="Texture2D" uid="uid://bdkc1vc6lpm2" path="res://Sprites/Objects/Smoke/Smoke1.png" id="12_5kmeg"]
@@ -3451,6 +3452,15 @@ stream = ExtResource("4_vp533")
 volume_db = 10.0
 bus = &"SFX"
 
+[node name="Coin1" parent="." instance=ExtResource("5_k3rph")]
+position = Vector2(-3287, -318)
+
+[node name="Coin2" parent="." instance=ExtResource("5_k3rph")]
+position = Vector2(297.70166, -640.723)
+
+[node name="Coin3" parent="." instance=ExtResource("5_k3rph")]
+position = Vector2(9464, -319)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-9221, 40)
 zoom = Vector2(0.8, 0.8)
@@ -3507,7 +3517,7 @@ tile_map_data = PackedByteArray("AADx//L/AAAMAAEAAADw//L/AAAMAAEAAADv//L/AAAMAAE
 tile_set = SubResource("TileSet_c62wo")
 
 [node name="Button" type="StaticBody2D" parent="." groups=["platforms"]]
-position = Vector2(2155, -523)
+position = Vector2(2183, -442)
 scale = Vector2(4, 4)
 collision_layer = 2
 collision_mask = 3

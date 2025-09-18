@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://hc37sns74j3c"]
+[gd_scene load_steps=10 format=3 uid="uid://hc37sns74j3c"]
 
 [ext_resource type="Script" uid="uid://b27nscwmna0wu" path="res://Scripts/scene scripts/goback.gd" id="1_7xmno"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="1_i8h6y"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="3_5qoai"]
 [ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sign-Board/Sign-board-hover.png" id="4_jpdlp"]
 [ext_resource type="Texture2D" uid="uid://exe3rknrrutr" path="res://Sprites/Objects/Sign-Board/Sign-board-small.png" id="8_cmrso"]
+[ext_resource type="AudioStream" uid="uid://qcpa5hxhebi4" path="res://Sound/mus/8-bit-video-game-background-music-loop-wood-chapter-368532.mp3" id="9_5qoai"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -190,5 +191,10 @@ theme_override_fonts/font = ExtResource("1_i8h6y")
 theme_override_font_sizes/font_size = 35
 text = "Raou"
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_5qoai")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

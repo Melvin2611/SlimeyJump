@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/silent-night-12137.mp3-bfaf8687a62b36429b6f51
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
