@@ -3747,11 +3747,10 @@ autoplay = true
 bus = &"Music"
 parameters/looping = true
 
-[node name="Death Plain" type="Area2D" parent="." node_paths=PackedStringArray("player")]
+[node name="Death Plain" type="Area2D" parent="."]
 position = Vector2(2521, 270)
 collision_layer = 2
 script = ExtResource("37_63ooc")
-player = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
 position = Vector2(-36, 0.375)
