@@ -3942,6 +3942,7 @@ texture = SubResource("GradientTexture2D_jb015")
 texture_scale = 15.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_51klv")
 offset_left = -1953.0
 offset_top = -9600.0
@@ -3971,4 +3972,5 @@ stream = ExtResource("18_gedcq")
 bus = &"SFX"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.25929382, 0.25929368, 0.25929365, 1)
