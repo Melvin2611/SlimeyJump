@@ -1,4 +1,8 @@
-# Patch Notes and Changelogs
+# Patch Notes and Changelogs ENGLISCH
+## v.0.0.1
+> Player has been added
+> Camera has been added
+> a test level has been added
 > Settings Menu has been added
 > Level Select has been added
 > Assets have been added
@@ -98,3 +102,108 @@
 
 #### Menus:
 > New music has been added to all menus, which also helps adjust the music volume on the Settings page
+
+# Patchlogs und Changelogs DEUTSCH
+## v.0.0.1
+> Player wurde hinzugefügt
+> Kamera wurde hinzugefügt
+> test level wurde hinzugefügt
+> Settings Menu wurde hinzugefügt
+> Level Select wurde hinzugefügt
+> Assets wurden hinzugefügt
+
+## v0.0.2
+> Level 2 wurde hinzugefügt
+> Level 1 wurde einfacher gemacht
+> schwebe Platformen wurden hinzugefügt
+> Einige Menus wurden verschönert
+> Player script wurde etwas verändert 
+> Neue Assets wurden hinzugefügt
+
+## v0.0.3
+#### Kamera Änderung:
+> Die Kamera zeigt nun etwas weiter nach unten, wodurch man wenn man auf dem Boden ist mehr ziehen kann, und somit weiter fliegen kann
+
+#### Level 2 wurde geupgraded:
+> Stacheln wurden hinzugefügt
+> Es wurde durch ein bisschen Level Änderungen einfacher gemacht
+
+#### Level 3 wurde hinzugefügt:
+> Der erste Teil des Levels wurde fertig gestellt
+> Crates wurden hinzugefügt
+> Schalter wurden hinzugefügt
+> Türen wurden hinzugefügt
+
+#### Design:
+> Das Main Menu hat neue Assets bekommen
+> Das Credits Menu wurde fertiggestellt bis auf ein Placeholder für zukünftige Credits
+> Das Level Select Menu hat sehr viele neue Assets und Buttons bekommen, wodurch es nun ansehnlicher ist.
+
+## v.0.0.4
+#### Design:
+> Änderung der Main Menu buttons um den Text klarer zu lesen und zusammfügung damit sie aneinander hängen
+> Das Logo wurde geändert
+
+#### Mechanics:
+> Level 3: Wurde Fertig gestellt,
+> Moving Platforms haben ein Rework bekommen
+> ein HUD wurde hinzugefügt
+> Debug Menu hinzugefügt 
+
+## v.0.0.5
+#### Level 4:
+> leap felder wurden hinzugefügt
+> neue sounds wurden hinzugefügt
+> One way Platformen wurden hinzugefügt
+> Shawblades wurden hinzugefügt
+> Level 4 wurde fertig gestellt
+
+#### Level 5:
+> Gravitationsbereiche wurden hinzugefügt
+> Level 5 wurde fertig gestellt
+
+#### Debug:
+> Das Debug Menu hat beispiel koordinaten für alle bisher vorhandenen Level bekommen um das teleportieren zu vereinfachen
+
+## v.0.1.0
+#### Level 6:
+> Level 6 und somit die 1te Welt sind fertig
+> Die Blue Slime Ability wurde hinzugefügt
+
+## v.0.1.1
+#### Levels:
+> Level 7,8&9 sind jetzt fertig und hinzugefügt
+
+## v.0.2.0
+#### Levels:
+> Level 10,11&12 und somit Welt 2 sind jetzt fertig.
+> Die Buttons im Levelselect menü haben auch farbliche Anpassung nach thema der Welt bekommen
+
+#### Ability:
+> Die Red Slime Ability wurde hinzugefügt
+
+## v.0.3.0
+> Welt 3 wurde Fertig gestellt und somit geht es jetzt bis Level 18
+> Neue Abilitys und Assets wurden hinzugefügt
+
+## v.0.4.1-beta
+### Versionskennzeichnung:
+> Die Art wie Versionen gekenzeichnet werden wurde geändert für eine Bessere einstimmung beim Release
+
+#### Level Select:
+> Der Level Select Screen hat neue Buttons für Links und Rechts bekommen und ist nun Scrollable
+> Es wurden alle Buttons für die Level hinzugefügt und gestyled (außer für die Special Welt)
+
+#### Alte Level
+> In Level 17 & 18 fehlten noch Coins, diese wurden in dieser Version hinzugefügt
+> Ein Bug in Level 18 wurde gefixt das zur "level_15_complete" Scene und nicht zur "level_18_complete" Scene gewechselt wurde
+
+#### Level 19:
+> Level 19 und somit das erste Level von Welt 4 wurde hinzugefügt
+> Ein unterwassershader wurde hinzugefügt
+> Neuer Unterwasser Background wurde hinzugefügt
+> Neue Tiles wurden geaddet
+> Unterwasser Mechanic wurde hinzugefügt
+
+#### Menus:
+> Es wurde eine neue Musik zu allen Menus hinzugefügt, was auch bei der Settingspage hilft die Musik lautstärke zu regeln
