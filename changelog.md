@@ -1,4 +1,4 @@
-# Patch Notes and Changelogs ENGLISCH
+# Patch Notes and Changelogs ENGLISH
 ## v.0.0.1
 > Player has been added
 > Camera has been added
