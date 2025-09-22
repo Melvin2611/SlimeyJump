@@ -116,6 +116,31 @@
 > added Darkness mechanic
 > added Water flow mechanic
 
+## v.0.5.1-beta
+#### Levels:
+> Level 24 has been added and completed
+> Level 25 has been added and completed
+> Level 26 has been added and completed
+> Level 27 has been added and completed
+> Level 15 - 24 have gotten upgraded with the signs, for new Lore
+
+#### Mechanics:
+> another New Darkness mechanic has been added
+> buttons for said Darkness mechanic have been added
+> a new skin for the Moving Platforms has been added
+> New Tiles have been added
+
+#### Enemys:
+> The first enemy type has been added for the Theme of W5
+
+#### Controlls:
+> The Controlls have been overhauled so now you can start the movement from anywhere on the screen and don't have to touch the slime first
+> Controller support and Rumble for Controllers has been added, please note that this feature is still very experimental so bugs will occure
+> Controller support as of now only goes over the main slime movement and nothing else so you still have to use your fingers or mouse to play the game!
+
+#### Bug:
+> small bug that will be fixed by v.0.5.2-beta where you fall forever in W5 levels, please just restart in the pause menu if that happens
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -234,3 +259,28 @@
 #### Mechanics:
 > Eine Dunkelheit Mechanic wurde hinzugefügt
 > Eine Wasser strömungs Mechanic wurde hinzugefügt
+
+## v.0.5.1-beta
+#### Levels:
+> Level 24 wurde hinzugefügt und Fertig gestellt
+> Level 25 wurde hinzugefügt und Fertig gestellt
+> Level 26 wurde hinzugefügt und Fertig gestellt
+> Level 27 wurde hinzugefügt und Fertig gestellt
+> Level 15 - 24 wurden mit Schildern ausgestattet und geben nun auch neue Geschichtselemete
+
+#### Mechaniken:
+> noch eine neue Dunkelheits mechanik wurde hinzugefügt
+> Knöpfe für die eben genannte Dunkelheits Mechanik wurden hinzugefügt
+> Bewegende Platformen haben ein neues Aussehen für W5 bekommen
+> Neue Tiles wurden hinzugefügt
+
+#### Gegner:
+> Der erste Gegner Typ wurde für das Thema von Welt 5 hinzugefügt
+
+#### Steuerung:
+> Die Steuerung wurde überarbeitet, wodurch du nun von überall auf dem Bidlschirm ziehen kannst, und nicht jedes mal erst den Slime berühren musst.
+> Controller unterstützung und Rumble für Controller wurde hinzugefügt, bitte beachte aber, das dieses Feature erst sehr Experimental ist und sehr wahrscheinlich Fehler auftreten werden
+> Controller unterstützung ist bisher nur für die Standard Steuerung des Slimes da und hat sonst noch nichts anderes, also kann man keine Menüs oder weiteres damit Steuern.
+
+#### Bug:
+> ein kleiner bug der spätestens in v.0.5.2-beta gefixt wird, wo du nicht stirbst wenn du in W5 unter den Boden fällst, in dem Fall bitte fürs erste einfach Pausieren und das Level Reseten mit dem "RESTART" knopf.
