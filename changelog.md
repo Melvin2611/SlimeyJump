@@ -103,6 +103,20 @@
 #### Menus:
 > New music has been added to all menus, which also helps adjust the music volume on the Settings page
 
+## v.0.4.2-beta
+#### Levels:
+> added and finished Level 20 
+> added and finished Level 21
+> added and finished Level 22
+> added and finished Level 23
+> added Level 24
+> Linked Level 20 - 24
+
+#### Mechanics:
+> added Darkness mechanic
+> added Water flow mechanic
+
+
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
 > Player wurde hinzugefügt
@@ -207,3 +221,16 @@
 
 #### Menus:
 > Es wurde eine neue Musik zu allen Menus hinzugefügt, was auch bei der Settingspage hilft die Musik lautstärke zu regeln
+
+## v.0.4.2-beta
+#### Levels:
+> Level 20 wurde hinzugefügt und Fertig gestellt
+> Level 21 wurde hinzugefügt und Fertig gestellt
+> Level 22 wurde hinzugefügt und Fertig gestellt
+> level 23 wurde hinzugefügt und Fertig gestellt
+> Level 24 wurde hinzugefügt
+> Level 20 - 24 wurden verlinkt
+
+#### Mechanics:
+> Eine Dunkelheit Mechanic wurde hinzugefügt
+> Eine Wasser strömungs Mechanic wurde hinzugefügt
