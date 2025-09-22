@@ -101,23 +101,14 @@ func _on_animation_finished():
 		has_squished = true
 		_animation()
 
-# Input-Check
-func _is_input_on_slime(input_pos: Vector2) -> bool:
-	var collision_shape = find_child("CollisionShape2D") as CollisionShape2D
-	if collision_shape:
-		var local_pos = to_local(input_pos)
-		var shape = collision_shape.shape
-		if shape is CircleShape2D:
-			return local_pos.length() <= shape.radius
-		elif shape is RectangleShape2D:
-			return abs(local_pos.x) <= shape.extents.x and abs(local_pos.y) <= shape.extents.y
-	return false
+# Input-Check (entfernt, da Berührungen von überall akzeptiert werden)
+# func _is_input_on_slime(input_pos: Vector2) -> bool: ... (nicht mehr benötigt)
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed and (is_on_ground or air_fling_count < max_air_flings) and _is_input_on_slime(get_global_mouse_position()):
+		if event.pressed and (is_on_ground or air_fling_count < max_air_flings):
 			is_aiming = true
-			aim_start_pos = global_position
+			aim_start_pos = get_global_mouse_position()  # Setze auf ersten Touch-Punkt
 			aim_current_pos = get_global_mouse_position()
 			linear_velocity = Vector2.ZERO
 			_animation()
@@ -137,9 +128,9 @@ func _input(event):
 		var viewport = get_viewport()
 		var canvas_transform = viewport.get_canvas_transform()
 		var touch_global = canvas_transform.affine_inverse() * event.position
-		if event.pressed and (is_on_ground or air_fling_count < max_air_flings) and _is_input_on_slime(touch_global):
+		if event.pressed and (is_on_ground or air_fling_count < max_air_flings):
 			is_aiming = true
-			aim_start_pos = global_position
+			aim_start_pos = touch_global  # Setze auf ersten Touch-Punkt
 			aim_current_pos = touch_global
 			linear_velocity = Vector2.ZERO
 			_animation()
@@ -162,7 +153,7 @@ func _input(event):
 # Draw Trajectory
 func _draw():
 	if is_aiming:
-		aim_start_pos = global_position
+		# aim_start_pos bleibt der erste Touch-Punkt, nicht mehr auf global_position setzen
 		var drag_vector = aim_current_pos - aim_start_pos
 		if drag_vector.length() > max_drag_distance:
 			drag_vector = drag_vector.normalized() * max_drag_distance
