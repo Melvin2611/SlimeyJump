@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://btu4bbwf158xn"]
+[gd_scene load_steps=66 format=4 uid="uid://btu4bbwf158xn"]
 
 [ext_resource type="Texture2D" uid="uid://bhfvp4ajiuwu4" path="res://Sprites/background/Factory-backdrop.png" id="1_5582g"]
 [ext_resource type="Script" uid="uid://bpiiqyo2jabga" path="res://Scripts/Objects/W3/Level 15/GoalL15.gd" id="2_luy0c"]
@@ -25,7 +25,10 @@
 [ext_resource type="Texture2D" uid="uid://d084rij1ole7e" path="res://Sprites/Objects/Button/Button1.png" id="17_x5ml6"]
 [ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="18_lbs6b"]
 [ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="19_js5ea"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="19_uyoa8"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="20_84b4q"]
 [ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="20_s5tde"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="21_ga01e"]
 [ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Slime/Slime-Fling/Slime-fling2.png" id="21_mb6kb"]
 [ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="22_skj3c"]
 [ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="23_40p12"]
@@ -3748,6 +3751,31 @@ position = Vector2(11, -105)
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_eynp0")
 autoplay = "default"
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(676, 363)
+scale = Vector2(4, 4)
+texture = ExtResource("19_uyoa8")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(599, 269)
+scale = Vector2(4, 4)
+texture = ExtResource("20_84b4q")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -13.75
+offset_right = 277.5
+offset_bottom = 113.25
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_ga01e")
+theme_override_font_sizes/font_size = 23
+text = "Was eine Komische Maschine, aber 
+sieht nicht so aus, alsob wir hier 
+irgendwie anders rauskommen, 
+vielleicht hilft sie uns ja"
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(263, 742)

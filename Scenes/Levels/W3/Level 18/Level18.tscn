@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=4 uid="uid://c4entbqomqs0v"]
+[gd_scene load_steps=92 format=4 uid="uid://c4entbqomqs0v"]
 
 [ext_resource type="Texture2D" uid="uid://bhfvp4ajiuwu4" path="res://Sprites/background/Factory-backdrop.png" id="1_fl24m"]
 [ext_resource type="Script" uid="uid://cqhwfau50ku7s" path="res://Scripts/Objects/W3/Level 18/GoalL18.gd" id="2_5e8ov"]
@@ -38,8 +38,11 @@
 [ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="32_fes4c"]
 [ext_resource type="Script" uid="uid://fmucqsawwyoq" path="res://Scripts/Objects/Cloner.gd" id="32_s1fme"]
 [ext_resource type="AudioStream" uid="uid://lrkbmtyhc0vr" path="res://Sound/sfx/saw-running-82131.mp3" id="32_vxcc3"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="33_0vsx4"]
 [ext_resource type="Texture2D" uid="uid://ck3hud3b5ma7b" path="res://Sprites/Objects/Cloner/Cloner1.png" id="33_30dtg"]
 [ext_resource type="Texture2D" uid="uid://b3lt0n6q7eggb" path="res://Sprites/Objects/Cloner/Cloner2.png" id="34_7ekvg"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="34_lff8f"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="35_da63j"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="35_gadxb"]
 [ext_resource type="AudioStream" uid="uid://dqh50ietcml0c" path="res://Sound/mus/desert-storm-ii-114904.mp3" id="36_06cs3"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="37_5e8ov"]
@@ -4321,6 +4324,30 @@ parameters/looping = true
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="shaw"]
 position = Vector2(-1.15857e-06, 3.91155e-07)
 shape = SubResource("ConvexPolygonShape2D_0vsx4")
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-1376, -69)
+scale = Vector2(4, 4)
+texture = ExtResource("33_0vsx4")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-1453, -163)
+scale = Vector2(4, 4)
+texture = ExtResource("34_lff8f")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -30.0
+offset_top = -14.75
+offset_right = 276.0
+offset_bottom = 112.25
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("35_da63j")
+theme_override_font_sizes/font_size = 27
+text = "Da hinten ist schon Mein
+Schatz...
+Ich mein Unser Schatz!
+Schnell Klon dich wir kriegen ihn!"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(8291, 890)

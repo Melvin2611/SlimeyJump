@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://vvy7tsjoxrm5"]
+[gd_scene load_steps=67 format=4 uid="uid://vvy7tsjoxrm5"]
 
 [ext_resource type="Shader" uid="uid://4pdpoyjiusm" path="res://Scripts/shader/underwater.gdshader" id="1_2xyac"]
 [ext_resource type="Texture2D" uid="uid://d3rqu5lgh41rh" path="res://Sprites/background/underwater/far.png" id="1_uvt4y"]
@@ -35,6 +35,9 @@
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="19_gs43c"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="20_gwpvo"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="21_sabn0"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="22_44m3d"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="23_b1jqb"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="24_r38k8"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="25_gwpvo"]
 [ext_resource type="AudioStream" uid="uid://loqbjeluihr8" path="res://Sound/mus/ambient-pad-background-music-for-space-or-underwater-adventure-3323.mp3" id="26_uvt4y"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="28_jptv1"]
@@ -3892,6 +3895,31 @@ texture = ExtResource("40_44m3d")
 stream = ExtResource("29_lpimv")
 bus = &"SFX"
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-913, -68)
+scale = Vector2(4, 4)
+texture = ExtResource("22_44m3d")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-990, -162)
+scale = Vector2(4, 4)
+texture = ExtResource("23_b1jqb")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -29.25
+offset_top = -13.75
+offset_right = 280.75
+offset_bottom = 113.25
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("24_r38k8")
+theme_override_font_sizes/font_size = 17
+text = "Pahh!
+du hasts gut, im Wasser kannst du ja auch atmen!
+Warte mal atmest du überhaupt?
+Egal! Aber Bitte mach schnell mein Holz 
+wird sonst noch Morsch"
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(8291, 890)
 scale = Vector2(4, 4)
@@ -3935,11 +3963,9 @@ bus = &"SFX"
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_2xyac")
 offset_left = -1953.0
-offset_top = -9600.0
-offset_right = 15699.0
+offset_top = -3913.0
+offset_right = 7315.0
 offset_bottom = 180.0
-
-[node name="HUD" parent="." instance=ExtResource("21_sabn0")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_uvt4y")
@@ -3961,3 +3987,5 @@ shape = SubResource("RectangleShape2D_4iyn6")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Death Plain"]
 stream = ExtResource("29_lpimv")
 bus = &"SFX"
+
+[node name="HUD" parent="." instance=ExtResource("21_sabn0")]

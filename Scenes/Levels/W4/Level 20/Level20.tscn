@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://c0di0rh4unys7"]
+[gd_scene load_steps=48 format=4 uid="uid://c0di0rh4unys7"]
 
 [ext_resource type="Texture2D" uid="uid://d3rqu5lgh41rh" path="res://Sprites/background/underwater/far.png" id="1_1tuno"]
 [ext_resource type="Texture2D" uid="uid://bt5m7atsy8qmx" path="res://Sprites/background/underwater/sand.png" id="2_21e7s"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="7_2jsjl"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="8_m5pcb"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_ki8xl"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="10_taubt"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="11_6p4sk"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="12_wcnex"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="13_7r8l2"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="18_qa0td"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="19_molyc"]
@@ -3688,7 +3691,7 @@ seamless_blend_skirt = 0.65
 shader = ExtResource("34_a8vue")
 shader_parameter/color = Color(0.45452422, 0.45452428, 0.45452422, 1)
 shader_parameter/fast_noise = SubResource("NoiseTexture2D_1w5s0")
-shader_parameter/speed = Vector2(-0.07, 0.03)
+shader_parameter/speed = Vector2(-0.055, 0.03)
 shader_parameter/wave_strength = 2.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpd7b"]
@@ -3793,6 +3796,30 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("9_ki8xl")
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-986, -68)
+scale = Vector2(4, 4)
+texture = ExtResource("10_taubt")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-1063, -162)
+scale = Vector2(4, 4)
+texture = ExtResource("11_6p4sk")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_wcnex")
+theme_override_font_sizes/font_size = 27
+text = "Pass auf bei dieser Strömung
+könntest du in Löcher
+getrieben werden oder eine
+Alge könnte im Gesicht landen!"
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(8291, 890)
 scale = Vector2(4, 4)
@@ -3836,8 +3863,8 @@ bus = &"SFX"
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_rhmri")
 offset_left = -1953.0
-offset_top = -9600.0
-offset_right = 15699.0
+offset_top = -3889.0
+offset_right = 10670.0
 offset_bottom = 180.0
 
 [node name="Strömung" type="Area2D" parent="."]
@@ -3867,11 +3894,11 @@ shape = SubResource("RectangleShape2D_r1086")
 stream = ExtResource("18_qa0td")
 bus = &"SFX"
 
-[node name="HUD" parent="." instance=ExtResource("35_alelv")]
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("36_cq3lv")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"
 parameters/looping = true
+
+[node name="HUD" parent="." instance=ExtResource("35_alelv")]

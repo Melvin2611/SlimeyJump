@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://rj33qedvrfjj"]
+
+[ext_resource type="Script" uid="uid://bo8i43ak1mcfw" path="res://Scripts/Objects/W1/Level 2/moving_platformL2.gd" id="1_4ahfh"]
+[ext_resource type="Texture2D" uid="uid://b8jynw4275537" path="res://Sprites/Objects/Moving Platform-spooky.png" id="2_7mpb0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pq8e"]
+size = Vector2(80, 14)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+script = ExtResource("1_4ahfh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7mpb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5pq8e")

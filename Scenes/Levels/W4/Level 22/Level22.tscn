@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://dhq2wheijta4u"]
+[gd_scene load_steps=65 format=4 uid="uid://dhq2wheijta4u"]
 
 [ext_resource type="Texture2D" uid="uid://d3rqu5lgh41rh" path="res://Sprites/background/underwater/far.png" id="1_jb015"]
 [ext_resource type="Texture2D" uid="uid://bt5m7atsy8qmx" path="res://Sprites/background/underwater/sand.png" id="2_wmuwh"]
@@ -21,8 +21,11 @@
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="18_gedcq"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="19_0vlxy"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="19_2lpxh"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="20_2wise"]
 [ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/factorytileset.png" id="20_1356v"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="21_fumjm"]
 [ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="21_kr1xb"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="22_88qit"]
 [ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="22_a4kqd"]
 [ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="23_ujjlc"]
 [ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="24_kyk4c"]
@@ -4243,6 +4246,31 @@ texture = ExtResource("17_0i3n1")
 stream = ExtResource("18_gedcq")
 bus = &"SFX"
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-1173, -89)
+scale = Vector2(4, 4)
+texture = ExtResource("20_2wise")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-1250, -183)
+scale = Vector2(4, 4)
+texture = ExtResource("21_fumjm")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("22_88qit")
+theme_override_font_sizes/font_size = 27
+text = "Gut das du dieses Gel gefunden
+hast, ich glaube ohne hättest
+du hier absolut nichts sehen
+können!"
+metadata/_edit_use_anchors_ = true
+
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(8230, 871)
 scale = Vector2(4, 4)
@@ -4292,11 +4320,9 @@ texture_scale = 15.0
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_51klv")
 offset_left = -1953.0
-offset_top = -9600.0
-offset_right = 15699.0
+offset_top = -2981.0
+offset_right = 7013.0
 offset_bottom = 180.0
-
-[node name="HUD" parent="." instance=ExtResource("35_42g7u")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("36_b7ljs")
@@ -4320,3 +4346,5 @@ bus = &"SFX"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.25929382, 0.25929368, 0.25929365, 1)
+
+[node name="HUD" parent="." instance=ExtResource("35_42g7u")]

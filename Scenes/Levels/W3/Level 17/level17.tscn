@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://bgrrhp3p0y4wb"]
+[gd_scene load_steps=68 format=4 uid="uid://bgrrhp3p0y4wb"]
 
 [ext_resource type="Texture2D" uid="uid://bhfvp4ajiuwu4" path="res://Sprites/background/Factory-backdrop.png" id="1_3825l"]
 [ext_resource type="Script" uid="uid://dk4r5sohbddl4" path="res://Scripts/Objects/W3/Level 17/GoalL17.gd" id="2_mneen"]
@@ -16,9 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://blu65d47xpld8" path="res://Sprites/Objects/Smoke/Smoke4.png" id="15_0qdd8"]
 [ext_resource type="Texture2D" uid="uid://bnvkpl632nh5t" path="res://Sprites/Objects/Spike.png" id="15_vp533"]
 [ext_resource type="Texture2D" uid="uid://bxcjkmhftwauh" path="res://Sprites/Objects/Smoke/Smoke5.png" id="16_bckwv"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="16_ibdvl"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="16_l1ean"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="17_kucbm"]
 [ext_resource type="Texture2D" uid="uid://devuuf3eaq7g5" path="res://Sprites/Objects/Button/OnePressbutton/Button2.png" id="17_sf71g"]
 [ext_resource type="Texture2D" uid="uid://bbmfywjmt224r" path="res://Sprites/Objects/Smoke/Smoke6.png" id="17_ur3q4"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="18_0qdd8"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="18_iafia"]
 [ext_resource type="Script" uid="uid://bkwy3a7ag4b24" path="res://Scripts/Objects/onepressbutton.gd" id="18_k3rph"]
 [ext_resource type="Texture2D" uid="uid://cvhrw7e3npvs4" path="res://Sprites/Objects/Button/OnePressbutton/Button1.png" id="18_mneen"]
@@ -3509,6 +3512,29 @@ shape = SubResource("RectangleShape2D_4c564")
 
 [node name="Sprite2D" type="Sprite2D" parent="Door"]
 texture = ExtResource("14_k3rph")
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-9540, -409)
+scale = Vector2(4, 4)
+texture = ExtResource("16_ibdvl")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-9617, -503)
+scale = Vector2(4, 4)
+texture = ExtResource("17_kucbm")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -27.25
+offset_top = -13.25
+offset_right = 278.75
+offset_bottom = 113.75
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_0qdd8")
+theme_override_font_sizes/font_size = 27
+text = "Pass ja auf, dass du nicht 
+in irgendwelche Stacheln 
+herein gerätst!"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(263, 742)

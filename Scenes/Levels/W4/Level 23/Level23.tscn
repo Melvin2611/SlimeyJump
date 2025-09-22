@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://br88u16iu1qi7"]
+[gd_scene load_steps=61 format=4 uid="uid://br88u16iu1qi7"]
 
 [ext_resource type="Texture2D" uid="uid://d3rqu5lgh41rh" path="res://Sprites/background/underwater/far.png" id="1_a7s87"]
 [ext_resource type="Texture2D" uid="uid://bt5m7atsy8qmx" path="res://Sprites/background/underwater/sand.png" id="2_nv2o0"]
@@ -19,7 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://bs3igc2piqcfx" path="res://Scenes/Objects/MovingPlatform-sand.tscn" id="18_nv2o0"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="18_ucxdc"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="19_fbe1o"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="19_s7cur"]
 [ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/factorytileset.png" id="20_4s35c"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="20_glhd0"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="21_4ikqw"]
 [ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="21_v1wmq"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="22_ojxlm"]
 [ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="22_va528"]
@@ -3910,6 +3913,31 @@ collision_layer = 2
 speed = 75.0
 move_distance = 300.0
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-1030, -84)
+scale = Vector2(4, 4)
+texture = ExtResource("19_s7cur")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-1107, -178)
+scale = Vector2(4, 4)
+texture = ExtResource("20_glhd0")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_4ikqw")
+theme_override_font_sizes/font_size = 22
+text = "Das wird ja immer dunkler,
+nicht mehr lang und alles ist
+Pech schwarz sicher das wir
+weiter wollen?
+Ich kriege noch eine Thalassophobie"
+
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(8251, 876)
 scale = Vector2(4, 4)
@@ -3958,11 +3986,9 @@ texture_scale = 15.0
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_p4gu5")
 offset_left = -1953.0
-offset_top = -9600.0
-offset_right = 15699.0
+offset_top = -4105.0
+offset_right = 6466.0
 offset_bottom = 180.0
-
-[node name="HUD" parent="." instance=ExtResource("35_se1ni")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("36_bxh7f")
@@ -3987,3 +4013,5 @@ bus = &"SFX"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+
+[node name="HUD" parent="." instance=ExtResource("35_se1ni")]

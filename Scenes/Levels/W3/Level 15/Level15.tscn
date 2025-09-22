@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://dtel553fsldgr"]
+[gd_scene load_steps=66 format=4 uid="uid://dtel553fsldgr"]
 
 [ext_resource type="Script" uid="uid://bpiiqyo2jabga" path="res://Scripts/Objects/W3/Level 15/GoalL15.gd" id="2_88gi2"]
 [ext_resource type="Texture2D" uid="uid://bhfvp4ajiuwu4" path="res://Sprites/background/Factory-backdrop.png" id="4_eypio"]
@@ -31,6 +31,9 @@
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="20_26dds"]
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="20_yhn2w"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="21_1wtnb"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="21_j48s2"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="22_1m66i"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="23_26dds"]
 [ext_resource type="Script" uid="uid://csn4rhpjkdmr3" path="res://Scripts/Objects/steamvent.gd" id="25_ek6bi"]
 [ext_resource type="Texture2D" uid="uid://bdkc1vc6lpm2" path="res://Sprites/Objects/Smoke/Smoke1.png" id="26_hae1r"]
 [ext_resource type="Texture2D" uid="uid://dfisj1olpn6a6" path="res://Sprites/Objects/Smoke/Smoke2.png" id="27_eypio"]
@@ -3415,7 +3418,7 @@ size = Vector2(19.39, 19.16)
 
 [node name="Parallax2D4" type="Parallax2D" parent="."]
 repeat_size = Vector2(1792, 1152)
-limit_begin = Vector2(-100000, -1e+07)
+limit_begin = Vector2(-100000, -10000000)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D4"]
 position = Vector2(704, -68)
@@ -3580,6 +3583,30 @@ position = Vector2(3647.02, -466.91)
 
 [node name="Coin3" parent="." instance=ExtResource("20_26dds")]
 position = Vector2(7747.26, 41.1016)
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(487, 359)
+scale = Vector2(4, 4)
+texture = ExtResource("21_j48s2")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(410, 265)
+scale = Vector2(4, 4)
+texture = ExtResource("22_1m66i")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_26dds")
+theme_override_font_sizes/font_size = 27
+text = "Endlich haben wir eine
+Unterkunft gefunden.
+Aber pass bitte auf das dir
+hier auch nichts einstürtzt!"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(263, 742)
