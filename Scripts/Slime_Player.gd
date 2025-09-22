@@ -12,6 +12,7 @@ var air_fling_count = 0
 var max_air_flings = 1
 var current_platform: Node = null
 var ignore_platform_next_frame = false  # Flag gegen Stuck nach Fling
+var using_controller = false  # Neuer Flag, um zwischen Maus und Controller zu unterscheiden
 
 # Neue exportierte Variable für die Versteck-Mechanik
 @export var hide_on_hit_group: String = "hide_triggers"
@@ -150,6 +151,35 @@ func _input(event):
 		aim_current_pos = drag_global
 		queue_redraw()
 
+func _process(_delta: float):
+	var stick_x = Input.get_joy_axis(0, JOY_AXIS_LEFT_X)
+	var stick_y = Input.get_joy_axis(0, JOY_AXIS_LEFT_Y)
+	var stick_vector = Vector2(stick_x, stick_y)
+	var deadzone = 0.2
+
+	if stick_vector.length() > deadzone and (is_on_ground or air_fling_count < max_air_flings) and not is_aiming:
+		is_aiming = true
+		using_controller = true
+		aim_start_pos = global_position  # Starte vom Zentrum des Slimes
+		linear_velocity = Vector2.ZERO
+		_animation()
+		queue_redraw()
+
+	if is_aiming and using_controller and stick_vector.length() > deadzone:
+		var drag_length = stick_vector.length() * max_drag_distance
+		var direction = stick_vector.normalized()
+		aim_current_pos = aim_start_pos + direction * drag_length  # Ziehen in Richtung des Sticks
+		queue_redraw()
+	elif is_aiming and using_controller and stick_vector.length() <= deadzone:
+		is_aiming = false
+		using_controller = false
+		ignore_platform_next_frame = true
+		_animation()
+		queue_redraw()
+		_apply_impulse()
+		if not is_on_ground:
+			air_fling_count += 1
+
 # Draw Trajectory
 func _draw():
 	if is_aiming:
@@ -184,6 +214,10 @@ func _animation():
 	if is_aiming:
 		if animated_sprite.animation != "charge":
 			animated_sprite.play("charge")
+			if using_controller:
+				Input.start_joy_vibration(0, 0.5, 0.5, 0.5)  # Vibriere Controller (weak/strong magnitude 0.5, Dauer 0.5s)
+			else:
+				Input.vibrate_handheld(500)  # Vibriere Handy (Android/iOS, 500ms)
 	elif is_on_ground:
 		if not has_squished and animated_sprite.animation != "squish":
 			animated_sprite.play("squish")
