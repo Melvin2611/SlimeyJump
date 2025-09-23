@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dtatqmjquf6q0" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_5.png" id="5_a1p5w"]
 [ext_resource type="Script" uid="uid://c5imhhtm52cj6" path="res://Scripts/Objects/W5/Level 27/GoalL27.gd" id="6_dy5s5"]
 [ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="7_dy5s5"]
-[ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="8_16spk"]
+[ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="8_dy5s5"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_771nf"]
 [ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/crate/Crate.png" id="10_g0q3t"]
 [ext_resource type="Script" uid="uid://b28yk7bf85j0w" path="res://Scripts/Objects/W1/Level 3/button.gd" id="11_mkumc"]
@@ -37,11 +37,11 @@
 [ext_resource type="Texture2D" uid="uid://nhbxx3egh1e6" path="res://Sprites/Objects/Ghost/Ghost1.png" id="32_sv7j6"]
 [ext_resource type="Texture2D" uid="uid://c0vcecr4kmusi" path="res://Sprites/Objects/Ghost/Ghost2.png" id="33_bhx2d"]
 [ext_resource type="Texture2D" uid="uid://npeupvvquipo" path="res://Sprites/Objects/Ghost/Ghost3.png" id="34_dy5s5"]
-[ext_resource type="AudioStream" uid="uid://loqbjeluihr8" path="res://Sound/mus/ambient-pad-background-music-for-space-or-underwater-adventure-3323.mp3" id="34_sft4c"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="35_5pfhw"]
 [ext_resource type="Texture2D" uid="uid://26ie5d8ghw55" path="res://Sprites/Objects/Ghost/Ghost4.png" id="35_tawyk"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="36_2fdxq"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="37_wg6vw"]
+[ext_resource type="AudioStream" uid="uid://dwt28tudbsdwj" path="res://Sound/mus/catch-up-270509.mp3" id="39_dy5s5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lc65"]
 size = Vector2(384, 256)
@@ -4877,7 +4877,7 @@ scale = Vector2(8, 8)
 texture = ExtResource("7_dy5s5")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Goal"]
-stream = ExtResource("8_16spk")
+stream = ExtResource("8_dy5s5")
 volume_db = 10.0
 bus = &"SFX"
 
@@ -5164,7 +5164,7 @@ tile_map_data = PackedByteArray("AACC//P/AAAXABUAAACC//L/AAAXABUAAACB//P/AAAXABU
 tile_set = SubResource("TileSet_guwx3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("34_sft4c")
+stream = ExtResource("39_dy5s5")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"

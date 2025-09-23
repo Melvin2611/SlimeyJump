@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://dw4rqxerp4y8m"]
+[gd_scene load_steps=60 format=4 uid="uid://dw4rqxerp4y8m"]
 
 [ext_resource type="Texture2D" uid="uid://6m2abukrmqhu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_1.png" id="1_po552"]
 [ext_resource type="Texture2D" uid="uid://b00hkxgbd6ugu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_2.png" id="2_rjrns"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="7_75wdf"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="8_h5wm5"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_a2kqs"]
-[ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/crate/Crate.png" id="10_1l3hj"]
 [ext_resource type="Script" uid="uid://bkwy3a7ag4b24" path="res://Scripts/Objects/onepressbutton.gd" id="11_po552"]
 [ext_resource type="Texture2D" uid="uid://devuuf3eaq7g5" path="res://Sprites/Objects/Button/OnePressbutton/Button2.png" id="15_n6j70"]
 [ext_resource type="Texture2D" uid="uid://cvhrw7e3npvs4" path="res://Sprites/Objects/Button/OnePressbutton/Button1.png" id="16_tgp1m"]
@@ -35,19 +34,13 @@
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="32_clf5e"]
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="33_hgv8g"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="34_q7evi"]
-[ext_resource type="AudioStream" uid="uid://loqbjeluihr8" path="res://Sound/mus/ambient-pad-background-music-for-space-or-underwater-adventure-3323.mp3" id="35_x0al2"]
+[ext_resource type="AudioStream" uid="uid://dwt28tudbsdwj" path="res://Sound/mus/catch-up-270509.mp3" id="36_hr4r0"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="36_nhi40"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="38_hr4r0"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="39_2u0e7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndmtp"]
 size = Vector2(384, 256)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2y1ia"]
-friction = 0.7
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtysp"]
-size = Vector2(84, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e0siq"]
 size = Vector2(32, 6)
@@ -4842,20 +4835,6 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("9_a2kqs")
 
-[node name="Crate" type="RigidBody2D" parent="." groups=["platforms"]]
-position = Vector2(6078, -2175)
-collision_layer = 2
-collision_mask = 3
-mass = 0.2
-physics_material_override = SubResource("PhysicsMaterial_2y1ia")
-
-[node name="Sprite2D" type="Sprite2D" parent="Crate"]
-scale = Vector2(5, 5)
-texture = ExtResource("10_1l3hj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate"]
-shape = SubResource("RectangleShape2D_rtysp")
-
 [node name="Button" type="StaticBody2D" parent="." groups=["platforms"]]
 position = Vector2(-1693, -1638)
 scale = Vector2(4, 4)
@@ -5045,22 +5024,22 @@ texture = SubResource("GradientTexture2D_8p2ni")
 texture_scale = 20.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("35_x0al2")
+stream = ExtResource("36_hr4r0")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"
 parameters/looping = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.2231029, 0.2231029, 0.22310278, 1)
 
 [node name="HUD" parent="." instance=ExtResource("36_nhi40")]
 
-[node name="Death Plain" type="Area2D" parent="."]
+[node name="Death Plain" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(2990, 301)
 collision_layer = 2
 script = ExtResource("38_hr4r0")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
 position = Vector2(-36, 0.375)

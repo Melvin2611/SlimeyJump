@@ -37,7 +37,7 @@
 [ext_resource type="Script" uid="uid://n2r6gawj4fw3" path="res://Scripts/flying_ghost.gd" id="34_vpclo"]
 [ext_resource type="Texture2D" uid="uid://nhbxx3egh1e6" path="res://Sprites/Objects/Ghost/Ghost1.png" id="35_ustkb"]
 [ext_resource type="Texture2D" uid="uid://c0vcecr4kmusi" path="res://Sprites/Objects/Ghost/Ghost2.png" id="36_t5xld"]
-[ext_resource type="AudioStream" uid="uid://loqbjeluihr8" path="res://Sound/mus/ambient-pad-background-music-for-space-or-underwater-adventure-3323.mp3" id="37_puqls"]
+[ext_resource type="AudioStream" uid="uid://dwt28tudbsdwj" path="res://Sound/mus/catch-up-270509.mp3" id="38_6ljws"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="38_ei6o5"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="40_6ljws"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="41_jeaqy"]
@@ -5115,7 +5115,7 @@ texture = SubResource("GradientTexture2D_ahu0s")
 texture_scale = 5.7
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("37_puqls")
+stream = ExtResource("38_6ljws")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"
@@ -5140,15 +5140,16 @@ color = Color(0, 0, 0, 1)
 
 [node name="HUD" parent="." instance=ExtResource("38_ei6o5")]
 
-[node name="Death Plain" type="Area2D" parent="."]
+[node name="Death Plain" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(3592, 275)
 collision_layer = 2
 script = ExtResource("40_6ljws")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
 position = Vector2(-36, 0.375)
 shape = SubResource("RectangleShape2D_scwld")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Death Plain"]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Death Plain"]
 stream = ExtResource("41_jeaqy")
 bus = &"SFX"

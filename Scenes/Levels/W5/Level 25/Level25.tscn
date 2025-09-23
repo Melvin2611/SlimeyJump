@@ -38,7 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="24_nrm8q"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="25_l4s22"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="26_lqdrv"]
-[ext_resource type="AudioStream" uid="uid://loqbjeluihr8" path="res://Sound/mus/ambient-pad-background-music-for-space-or-underwater-adventure-3323.mp3" id="27_iyr8u"]
+[ext_resource type="AudioStream" uid="uid://dwt28tudbsdwj" path="res://Sound/mus/catch-up-270509.mp3" id="38_sgcb2"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="40_sgcb2"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="41_uc0ge"]
 
@@ -5003,7 +5003,7 @@ texture = SubResource("GradientTexture2D_jjbwx")
 texture_scale = 20.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("27_iyr8u")
+stream = ExtResource("38_sgcb2")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"

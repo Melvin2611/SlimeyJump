@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bih75ysk80nip" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_3.png" id="3_wjuq7"]
 [ext_resource type="Texture2D" uid="uid://d2tm3ud7kdnnm" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_4.png" id="4_grqtn"]
 [ext_resource type="Texture2D" uid="uid://dtatqmjquf6q0" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_5.png" id="5_omo5h"]
-[ext_resource type="Script" uid="uid://b2p6atgxx41wc" path="res://Scripts/Objects/W4/Level 24/GoalL24.gd" id="6_3chi2"]
+[ext_resource type="Script" uid="uid://dwfi8am8ypai2" path="res://Scripts/Objects/W5/Level 26/GoalL26.gd" id="6_ukpq2"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="7_v3om0"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="8_sewcm"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_rjomv"]
@@ -37,11 +37,11 @@
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="31_vbo7j"]
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="32_h2i3o"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="33_tggt8"]
-[ext_resource type="AudioStream" uid="uid://loqbjeluihr8" path="res://Sound/mus/ambient-pad-background-music-for-space-or-underwater-adventure-3323.mp3" id="34_iatcr"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="35_huhap"]
 [ext_resource type="Script" uid="uid://n2r6gawj4fw3" path="res://Scripts/flying_ghost.gd" id="36_grqtn"]
 [ext_resource type="Texture2D" uid="uid://nhbxx3egh1e6" path="res://Sprites/Objects/Ghost/Ghost1.png" id="37_omo5h"]
 [ext_resource type="Texture2D" uid="uid://c0vcecr4kmusi" path="res://Sprites/Objects/Ghost/Ghost2.png" id="38_3chi2"]
+[ext_resource type="AudioStream" uid="uid://dwt28tudbsdwj" path="res://Sound/mus/catch-up-270509.mp3" id="41_ukpq2"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="43_ukpq2"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="44_om1m6"]
 
@@ -4834,10 +4834,11 @@ position = Vector2(0, 30)
 scale = Vector2(4, 4)
 texture = ExtResource("5_omo5h")
 
-[node name="Goal" type="Area2D" parent="."]
+[node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(3496, -2378)
 collision_layer = 2
-script = ExtResource("6_3chi2")
+script = ExtResource("6_ukpq2")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(185, 3)
@@ -5106,7 +5107,7 @@ texture = SubResource("GradientTexture2D_omo5h")
 texture_scale = 5.7
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("34_iatcr")
+stream = ExtResource("41_ukpq2")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"

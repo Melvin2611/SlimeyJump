@@ -32,9 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="33_pit4s"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="34_dff04"]
 [ext_resource type="Script" uid="uid://n2r6gawj4fw3" path="res://Scripts/flying_ghost.gd" id="35_imq12"]
+[ext_resource type="AudioStream" uid="uid://dwt28tudbsdwj" path="res://Sound/mus/catch-up-270509.mp3" id="35_oiign"]
 [ext_resource type="Texture2D" uid="uid://nhbxx3egh1e6" path="res://Sprites/Objects/Ghost/Ghost1.png" id="36_ls7pk"]
 [ext_resource type="Texture2D" uid="uid://c0vcecr4kmusi" path="res://Sprites/Objects/Ghost/Ghost2.png" id="37_5bq2k"]
-[ext_resource type="AudioStream" uid="uid://loqbjeluihr8" path="res://Sound/mus/ambient-pad-background-music-for-space-or-underwater-adventure-3323.mp3" id="38_fi2d2"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="39_sh7qk"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="40_233v1"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="41_etlg0"]
@@ -4965,7 +4965,7 @@ tile_map_data = PackedByteArray("AABi//D/AAAXABUAAABi/+//AAAXABUAAABi/+7/AAAXABU
 tile_set = SubResource("TileSet_f1d20")
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
-position = Vector2(1909, -741)
+position = Vector2(-1634, -559)
 disable_mode = 2
 collision_mask = 2
 continuous_cd = 2
@@ -5059,7 +5059,7 @@ texture = SubResource("GradientTexture2D_nqih2")
 texture_scale = 5.7
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("38_fi2d2")
+stream = ExtResource("35_oiign")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"
@@ -5070,10 +5070,11 @@ color = Color(0.2231029, 0.2231029, 0.22310278, 1)
 
 [node name="HUD" parent="." instance=ExtResource("39_sh7qk")]
 
-[node name="Death Plain" type="Area2D" parent="."]
+[node name="Death Plain" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(3592, 275)
 collision_layer = 2
 script = ExtResource("40_233v1")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
 position = Vector2(-36, 0.375)

@@ -2,6 +2,7 @@ extends Area2D
 
 @export var target_rotation: float = 180.0
 @export var rotation_speed: float = 180.0 # Grad pro Sekunde
+@export var GravityStrength: float = -1
 
 var player: RigidBody2D = null
 var rotating_to_target: bool = false
@@ -46,11 +47,11 @@ func _on_body_entered(body):
 		rotating_to_target = true
 		rotating_to_zero = false
 		# Gravitation invertieren deferred
-		body.call_deferred("set", "gravity_scale", body.gravity_scale * -1)
+		body.call_deferred("set", "gravity_scale", body.gravity_scale * GravityStrength)
 
 func _on_body_exited(body):
 	if body == player:
 		rotating_to_target = false
 		rotating_to_zero = true
 		# Gravitation zurücksetzen deferred
-		body.call_deferred("set", "gravity_scale", body.gravity_scale * -1)
+		body.call_deferred("set", "gravity_scale", body.gravity_scale * GravityStrength)
