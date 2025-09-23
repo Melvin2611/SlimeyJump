@@ -1,11 +1,11 @@
-[gd_scene load_steps=64 format=4 uid="uid://ba0yk37nbucyn"]
+[gd_scene load_steps=67 format=4 uid="uid://ba0yk37nbucyn"]
 
 [ext_resource type="Texture2D" uid="uid://6m2abukrmqhu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_1.png" id="1_nl705"]
 [ext_resource type="Texture2D" uid="uid://b00hkxgbd6ugu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_2.png" id="2_5rwse"]
 [ext_resource type="Texture2D" uid="uid://bih75ysk80nip" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_3.png" id="3_w6uqo"]
 [ext_resource type="Texture2D" uid="uid://d2tm3ud7kdnnm" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_4.png" id="4_6ljws"]
 [ext_resource type="Texture2D" uid="uid://dtatqmjquf6q0" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_5.png" id="5_jeaqy"]
-[ext_resource type="Script" uid="uid://b2p6atgxx41wc" path="res://Scripts/Objects/W4/Level 24/GoalL24.gd" id="6_scwld"]
+[ext_resource type="Script" uid="uid://c5imhhtm52cj6" path="res://Scripts/Objects/W5/Level 27/GoalL27.gd" id="6_6ljws"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="7_s651r"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="8_rlcd0"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_l1tuo"]
@@ -39,6 +39,8 @@
 [ext_resource type="Texture2D" uid="uid://c0vcecr4kmusi" path="res://Sprites/Objects/Ghost/Ghost2.png" id="36_t5xld"]
 [ext_resource type="AudioStream" uid="uid://loqbjeluihr8" path="res://Sound/mus/ambient-pad-background-music-for-space-or-underwater-adventure-3323.mp3" id="37_puqls"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="38_ei6o5"]
+[ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="40_6ljws"]
+[ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="41_jeaqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02ubd"]
 size = Vector2(384, 256)
@@ -4760,6 +4762,9 @@ fill_to = Vector2(0.46153846, 0)
 [sub_resource type="CircleShape2D" id="CircleShape2D_nl705"]
 radius = 95.46964
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scwld"]
+size = Vector2(19832, 133.25)
+
 [node name="Level27" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -4832,7 +4837,7 @@ texture = ExtResource("5_jeaqy")
 [node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(3496, -2378)
 collision_layer = 2
-script = ExtResource("6_scwld")
+script = ExtResource("6_6ljws")
 player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
@@ -4952,7 +4957,7 @@ tile_map_data = PackedByteArray("AABt//P/AAAXABEAAABt//L/AAAXAA8AAABs//P/AAAXABE
 tile_set = SubResource("TileSet_3td8c")
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
-position = Vector2(-1662, -1347)
+position = Vector2(-1601, -149)
 disable_mode = 2
 collision_mask = 2
 continuous_cd = 2
@@ -5134,3 +5139,16 @@ offset_bottom = -1675.0
 color = Color(0, 0, 0, 1)
 
 [node name="HUD" parent="." instance=ExtResource("38_ei6o5")]
+
+[node name="Death Plain" type="Area2D" parent="."]
+position = Vector2(3592, 275)
+collision_layer = 2
+script = ExtResource("40_6ljws")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
+position = Vector2(-36, 0.375)
+shape = SubResource("RectangleShape2D_scwld")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Death Plain"]
+stream = ExtResource("41_jeaqy")
+bus = &"SFX"

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://be6pmyi2njmcm"]
+[gd_scene load_steps=5 format=3 uid="uid://be6pmyi2njmcm"]
 
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="1_e5h82"]
 [ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="2_cg67a"]
+[ext_resource type="Script" uid="uid://b8uk42wvo1txi" path="res://Scripts/Objects/W1/Level 1/label.gd" id="3_cg67a"]
 [ext_resource type="Script" uid="uid://c6fb3hcdcnto4" path="res://Scripts/Objects/W2/Level 10/buttonsL10.gd.gd" id="3_e5h82"]
 
 [node name="Level10Complete" type="Node2D"]
@@ -70,6 +71,7 @@ offset_bottom = 361.0
 theme_override_fonts/font = ExtResource("1_e5h82")
 theme_override_font_sizes/font_size = 60
 text = ": 0"
+script = ExtResource("3_cg67a")
 metadata/_edit_use_anchors_ = true
 
 [node name="Buttons" type="HBoxContainer" parent="."]

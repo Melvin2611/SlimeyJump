@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="1_oamkx"]
 [ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="2_2w6mk"]
-[ext_resource type="Script" uid="uid://b4dh1tvsmey8u" path="res://Scripts/Objects/W1/Level 6/buttonsL6.gd" id="3_2nvus"]
+[ext_resource type="Script" uid="uid://b8uk42wvo1txi" path="res://Scripts/Objects/W1/Level 1/label.gd" id="3_54y40"]
 
 [node name="Level6Complete" type="Node2D"]
 
@@ -86,7 +86,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("3_2nvus")
+script = ExtResource("3_54y40")
 metadata/_edit_use_anchors_ = true
 
 [node name="Back To Title" type="Button" parent="Buttons"]

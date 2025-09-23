@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://bpc7b4fsvnd6g"]
+[gd_scene load_steps=69 format=4 uid="uid://bpc7b4fsvnd6g"]
 
 [ext_resource type="Texture2D" uid="uid://6m2abukrmqhu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_1.png" id="1_m0qrl"]
 [ext_resource type="Texture2D" uid="uid://b00hkxgbd6ugu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_2.png" id="2_g7clo"]
@@ -42,6 +42,8 @@
 [ext_resource type="Script" uid="uid://n2r6gawj4fw3" path="res://Scripts/flying_ghost.gd" id="36_grqtn"]
 [ext_resource type="Texture2D" uid="uid://nhbxx3egh1e6" path="res://Sprites/Objects/Ghost/Ghost1.png" id="37_omo5h"]
 [ext_resource type="Texture2D" uid="uid://c0vcecr4kmusi" path="res://Sprites/Objects/Ghost/Ghost2.png" id="38_3chi2"]
+[ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="43_ukpq2"]
+[ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="44_om1m6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdeb5"]
 size = Vector2(384, 256)
@@ -4760,6 +4762,9 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.46153846, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydc0n"]
+size = Vector2(19832, 133.25)
+
 [node name="Level26" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -5125,3 +5130,16 @@ offset_bottom = -1617.0
 color = Color(0.039215688, 0.039215688, 0.07450981, 1)
 
 [node name="HUD" parent="." instance=ExtResource("35_huhap")]
+
+[node name="Death Plain" type="Area2D" parent="."]
+position = Vector2(3557, 193)
+collision_layer = 2
+script = ExtResource("43_ukpq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
+position = Vector2(-36, 0.375)
+shape = SubResource("RectangleShape2D_ydc0n")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Death Plain"]
+stream = ExtResource("44_om1m6")
+bus = &"SFX"
