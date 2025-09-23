@@ -141,6 +141,23 @@
 #### Bug:
 > small bug that will be fixed by v.0.5.2-beta where you fall forever in W5 levels, please just restart in the pause menu if that happens
 
+## v.0.5.2-beta
+#### Levels:
+> Level 28 has been added and completed
+> Level 29 has been added and completed
+> Level 30 has been added and completed
+
+#### Mechanics:
+> New Mechanic with the Ghost enemys has been added which allows them to push crates
+> New Mechanic with one Big Ghost enemy, that can fly through Walls in the Final Level of World 5 (Level 30)
+
+#### Bugs:
+> Fixed a Bug that from Level 5 and onwards, the Coin count wouldn't work in the complete scene and just show 0
+> Fixed a Bug, that you wouldn't die when falling into Holes in the 5th World.
+
+#### other:
+> small change in the apk export setting, but this won't affect anything major
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -284,3 +301,20 @@
 
 #### Bug:
 > ein kleiner bug der spätestens in v.0.5.2-beta gefixt wird, wo du nicht stirbst wenn du in W5 unter den Boden fällst, in dem Fall bitte fürs erste einfach Pausieren und das Level Reseten mit dem "RESTART" knopf.
+
+## v.0.5.2-beta
+#### Levels:
+> Level 28 wurde hinzugefügt und Fertig gestellt
+> Level 29 wurde hinzugefügt und Fertig gestellt
+> Level 30 wurde hinzugefügt und Fertig gestellt
+
+#### Mechaniken:
+> Eine Neue Mechanik mit den Geister Enemys wurde hinzugefügt, was es ihnen jetzt ermöglich Kisten zu schieben
+> Eine Neue Mechanik mit einem Großen Geist wurde hinzugefügt, wodurch der Geist im Letzten Level von Welt 5 (Level 30) jetzt durch Wände fliegen kann.
+
+#### Bugs:
+> Ein Bug wurde Behoben, der ab Level 5 und weiter in der Level complete Szene nicht die eingesamelten Münzen anzeigt und stattdessen nur 0 anzeigt
+> Ein Bug wurde behoben, der einen nicht getötet und resetet hat sobald man in ein Loch in der 5ten Welt fällt.
+
+#### sonstiges:
+> eine kleine änderung in der .apk export einstellung wurde vorgenommen diese wird aber nichts wirklich beeinflussen
