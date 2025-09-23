@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://clik588ivhsl3"]
+[gd_scene load_steps=5 format=3 uid="uid://dofvwddt60wqk"]
 
-[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="1_grlxe"]
-[ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="2_2m12h"]
-[ext_resource type="Script" uid="uid://b8uk42wvo1txi" path="res://Scripts/Objects/W1/Level 1/label.gd" id="3_2m12h"]
-[ext_resource type="Script" uid="uid://623irn6mw7a2" path="res://Scripts/Objects/W5/Level 28/buttonsL28.gd" id="4_2m12h"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="1_epj1k"]
+[ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="2_bn33q"]
+[ext_resource type="Script" uid="uid://b8uk42wvo1txi" path="res://Scripts/Objects/W1/Level 1/label.gd" id="3_245k1"]
+[ext_resource type="Script" uid="uid://bkubb87ugvupn" path="res://Scripts/Objects/W5/Level 27/buttonsL27.gd" id="4_pakwi"]
 
-[node name="Level28Complete" type="Node2D"]
+[node name="Level29Complete" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 8
@@ -35,7 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.993368, 0.993367, 1.46317e-05, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_grlxe")
+theme_override_fonts/font = ExtResource("1_epj1k")
 theme_override_font_sizes/font_size = 120
 text = "Congratulations"
 metadata/_edit_use_anchors_ = true
@@ -53,25 +53,25 @@ offset_bottom = 278.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_grlxe")
+theme_override_fonts/font = ExtResource("1_epj1k")
 theme_override_font_sizes/font_size = 80
-text = "Level 28 COMPLETE"
+text = "Level 29 COMPLETE"
 metadata/_edit_use_anchors_ = true
 
 [node name="Coin" type="Sprite2D" parent="."]
 position = Vector2(513, 325)
 scale = Vector2(6, 6)
-texture = ExtResource("2_2m12h")
+texture = ExtResource("2_bn33q")
 
 [node name="Coin Label" type="Label" parent="."]
 offset_left = 593.0
 offset_top = 301.0
 offset_right = 643.0
 offset_bottom = 361.0
-theme_override_fonts/font = ExtResource("1_grlxe")
+theme_override_fonts/font = ExtResource("1_epj1k")
 theme_override_font_sizes/font_size = 60
 text = ": 0"
-script = ExtResource("3_2m12h")
+script = ExtResource("3_245k1")
 metadata/_edit_use_anchors_ = true
 
 [node name="Buttons" type="HBoxContainer" parent="."]
@@ -88,19 +88,19 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("4_2m12h")
+script = ExtResource("4_pakwi")
 metadata/_edit_use_anchors_ = true
 
 [node name="Back To Title" type="Button" parent="Buttons"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_grlxe")
+theme_override_fonts/font = ExtResource("1_epj1k")
 theme_override_font_sizes/font_size = 40
 text = "Back to Title"
 
 [node name="NEXT LEVEL" type="Button" parent="Buttons"]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("1_grlxe")
+theme_override_fonts/font = ExtResource("1_epj1k")
 theme_override_font_sizes/font_size = 40
 text = "NEXT LEVEL"
 

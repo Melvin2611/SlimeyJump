@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 100.0  # Geschwindigkeit des Geists (anpassen für "langsam")
 @export var gravity: float = 0.0  # Keine Gravitation, da er fliegt (kann angepasst werden)
 @export var sprite_scale: float = 1.0  # Basis-Skalierung für den Sprite (anpassbar)
+@export var push_strength: float = 100.0  # Stärke, mit der der Geist RigidBody2Ds schiebt
 
 @onready var detection_area: Area2D = $DetectionArea  # Die Area für die Reichweite
 @onready var hit_area: Area2D = $HitArea  # Die Area für den Schaden
@@ -36,6 +37,15 @@ func _physics_process(delta: float) -> void:
 			sprite.scale.x = -sprite_scale  # Negativ (-4.0)
 		
 		move_and_slide()
+		
+		# Überprüfe Kollisionen und schiebe RigidBody2Ds
+		for i in range(get_slide_collision_count()):
+			var collision = get_slide_collision(i)
+			var collider = collision.get_collider()
+			if collider is RigidBody2D and not collider.is_in_group("Player"):
+				# Wende einen Impuls in die Bewegungsrichtung an, um zu schieben
+				var push_direction = velocity.normalized()
+				collider.apply_central_impulse(push_direction * push_strength)
 	else:
 		# Stehen bleiben, wenn kein Spieler in Reichweite
 		velocity = Vector2.ZERO

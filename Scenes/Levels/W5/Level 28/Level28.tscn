@@ -4810,10 +4810,11 @@ position = Vector2(0, 30)
 scale = Vector2(4, 4)
 texture = ExtResource("5_2u0e7")
 
-[node name="Goal" type="Area2D" parent="."]
+[node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(7978, -137)
 collision_layer = 2
 script = ExtResource("6_hr4r0")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(185, 3)
