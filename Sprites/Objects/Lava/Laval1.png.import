@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drvxe8jcduebs"
-path="res://.godot/imported/Cloud2.png-a074a1defa93d4ff4bed8f54442240eb.ctex"
+uid="uid://dh4f4lll8m2br"
+path="res://.godot/imported/Laval1.png-f466a2d9cc702a2c5ae889c9c68a4415.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cloud/Cloud2.png"
-dest_files=["res://.godot/imported/Cloud2.png-a074a1defa93d4ff4bed8f54442240eb.ctex"]
+source_file="res://Sprites/Objects/Lava/Laval1.png"
+dest_files=["res://.godot/imported/Laval1.png-f466a2d9cc702a2c5ae889c9c68a4415.ctex"]
 
 [params]
 

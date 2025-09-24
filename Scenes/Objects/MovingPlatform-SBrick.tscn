@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2nlf8k2y87py"]
+
+[ext_resource type="Script" uid="uid://bo8i43ak1mcfw" path="res://Scripts/Objects/W1/Level 2/moving_platformL2.gd" id="1_8tg13"]
+[ext_resource type="Texture2D" uid="uid://gf0rc578nw2w" path="res://Sprites/Objects/Moving Platform-SBrick.png" id="2_l0qp6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pq8e"]
+size = Vector2(80, 14)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+script = ExtResource("1_8tg13")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_l0qp6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5pq8e")

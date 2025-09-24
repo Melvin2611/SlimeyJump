@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d3cqgi2c30nml" path="res://Scripts/scene scripts/main_menu.gd" id="1_totuj"]
 [ext_resource type="Texture2D" uid="uid://irmyl2mv6ebv" path="res://Sprites/background/country Platform/Background (by ansimuz).png" id="2_0126h"]
-[ext_resource type="Texture2D" uid="uid://08qva5h2rr23" path="res://Sprites/Cloud/Cloud1.png" id="2_udm2q"]
-[ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Cloud/Cloud2.png" id="3_mjet1"]
+[ext_resource type="Texture2D" uid="uid://08qva5h2rr23" path="res://Sprites/Objects/Cloud/Cloud1.png" id="2_udm2q"]
+[ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Objects/Cloud/Cloud2.png" id="3_mjet1"]
 [ext_resource type="Script" uid="uid://si5jvfnxecac" path="res://Scripts/Objects/Clouds/CloudsT.gd" id="4_mjet1"]
 [ext_resource type="Texture2D" uid="uid://c8lveqkxenxjw" path="res://Sprites/background/Title.png" id="5_4lp62"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="6_mjet1"]
@@ -1277,6 +1277,15 @@ position = Vector2(584, 336)
 stream = ExtResource("13_3hb06")
 autoplay = true
 bus = &"Music"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 772.0
+offset_top = 334.0
+offset_right = 836.0
+offset_bottom = 357.0
+theme_override_fonts/font = ExtResource("9_tbdrc")
+text = "v.0.6.2-beta"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
