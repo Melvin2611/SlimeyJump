@@ -158,6 +158,24 @@
 #### other:
 > small change in the apk export setting, but this won't affect anything major
 
+## v.0.6.1-beta
+
+- since v.0.5.2-beta had allot of Bugs it brought with it this is just a small release
+
+#### Levels:
+> Level 31 has been added and completed
+
+#### Mechanics:
+> upwards Wind Mechanic has been added
+> small change to the Gravity invert Mechanic
+
+#### Bugs:
+> fixed a bug where the game would crash on completion of a Level
+> added the references to Goal in a lot of Levels
+> fixed the goal would not trigger bug in some Levels
+> added the player references to the Death Plains (falling into hole). which the lack of meant that you would still not die in v.0.5.2-beta when falling
+> put the Player spawn back to the correct coordinates in some Levels.
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -318,3 +336,21 @@
 
 #### sonstiges:
 > eine kleine änderung in der .apk export einstellung wurde vorgenommen diese wird aber nichts wirklich beeinflussen
+
+## v.0.6.1-beta
+
+- aufgrund der sehr verbuggten Version v.0.5.2-beta diesmal nur wenige addons
+
+#### Level:
+> Level 31 wurde hinzugefügt und Fertig gestellt
+
+#### Mechaniken:
+> nach oben blasender Wind Mechanik
+> kleine änderung in der Gravitations wechsel Mechanik
+
+#### Bugs:
+> Bug behoben wo das Spiel crashen würde beim beenden eines Levels
+> Szenen Referenz zum Goal in vielen Leveln hinzugefügt
+> Spieler Referenz zum in vielen Leveln hinzugefügt
+> Spieler Refernz zu den Death Plains hinzugefügt, wodurch man jetzt wieder Stirbt wenn man unter den Boden fällt
+> Spieler Spawn in einigen Leveln wieder auf die richtigen Koordinaten gesetzt.
