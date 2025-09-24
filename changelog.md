@@ -176,6 +176,21 @@
 > added the player references to the Death Plains (falling into hole). which the lack of meant that you would still not die in v.0.5.2-beta when falling
 > put the Player spawn back to the correct coordinates in some Levels.
 
+## v.0.6.2-beta
+#### Levels:
+> Level 32 added and completed
+> Level 33 added and completed
+> Level 34 added and completed
+
+#### Mechanics:
+> added Lava Wind mechanic
+> added Lava as Death method
+> added crumble blocks as a Mechanic
+
+#### Bugs:
+> platforms group had a typo in the Slimeplayer script
+> Level 31 was added to Level Select Button which hasn't been done in v.0.6.1-beta
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -354,3 +369,18 @@
 > Spieler Referenz zum in vielen Leveln hinzugefügt
 > Spieler Refernz zu den Death Plains hinzugefügt, wodurch man jetzt wieder Stirbt wenn man unter den Boden fällt
 > Spieler Spawn in einigen Leveln wieder auf die richtigen Koordinaten gesetzt.
+
+## v.0.6.2-beta
+#### Levels:
+> Level 32 wurde hinzugefügt und Fertig gestellt
+> Level 33 wurde hinzugefügt und Fertig gestellt
+> Level 34 wurde hinzugefügt und Fertig gestellt
+
+#### Mechaniken:
+> Lava Wind mechanik wurde hinzugefügt
+> Lava an der man Sterben kann wurde hinzugefügt
+> bröckelnde Blöcke wurden als Mechanik hinzugefügt
+
+#### Bugs:
+> Die platforms Gruppe hatte im Spieler skript einen Typo und funktionierte deshlab nicht korrekt
+> Level 31 wurde zum Level Select Menü hinzugefügt, da der Button in v.0.6.1-beta die Referenz noch nicht hatte
