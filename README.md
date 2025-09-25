@@ -15,6 +15,7 @@ This is my first Game and made in Godot 4.4.1 and then updated to Godot 4.5 If y
 - iPixl
 - Raou
 - BDragon1727
+- GarzettDev
 Please check out their pages, as they are great and talented Pixel artists.
 all other sprites are made by myself
 
