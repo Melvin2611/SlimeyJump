@@ -191,6 +191,23 @@
 > platforms group had a typo in the Slimeplayer script
 > Level 31 was added to Level Select Button which hasn't been done in v.0.6.1-beta
 
+## v.0.7.1-beta
+#### Levels:
+> Level 35 added and completed
+> Level 36 added and completed
+> Level 37 added and completed 
+
+#### Mechanics:
+> Balloon Mechanic added
+
+#### Assets:
+> Cloud Tilemap added
+> Cloud Background and Foreground added
+
+#### other:
+> changed Loading Picture to be more high quality
+> added the default Slime Sprite as an .svg to the game files for image testing (only 18kb so don't be scared of big file sizes coming to the game I try to keep the size as low as possible and will probably do an optimization before the release version v.1.0.0)
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -384,3 +401,20 @@
 #### Bugs:
 > Die platforms Gruppe hatte im Spieler skript einen Typo und funktionierte deshlab nicht korrekt
 > Level 31 wurde zum Level Select Menü hinzugefügt, da der Button in v.0.6.1-beta die Referenz noch nicht hatte
+
+## v.0.7.1-beta
+#### Levels:
+> Level 35 wurde hinzugefügt und Fertig gestellt
+> Level 36 wurde hinzugefügt und Fertig gestellt
+> Level 37 wurde hinzugefügt und Fertig gestellt
+
+#### Mechaniken:
+> Ballon Mechanik wurde hinzugefügt
+
+#### Assets:
+> Wolken Tilemap wurde hinzugefügt
+> Wolken Hintergrund und Vordergrund wurden hinzugefügt
+
+#### andere:
+> Das Lade Bild wurde für höhere Qualität ersetzt
+> das default Slime Sprite wurde als eine .svg hinzugefügt um mit dem format ein bisschen zu testen (es ist aber nur 18kb also keine angst das sich die Dateigröße stark verändert, ich versuche die Größe so niedrig wie möglich zu halten, und werde wahrscheinlich noch Optimisationen vor der Veröffentlichungs Version v.1.0.0 vornehmen)
