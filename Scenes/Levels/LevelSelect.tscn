@@ -220,7 +220,6 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(593, 350)
 layout_mode = 2
 columns = 6
@@ -726,4 +725,7 @@ bus = &"Music"
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer2/TextureButton32" to="." method="_on_texture_button_32_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer2/TextureButton33" to="." method="_on_texture_button_33_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer2/TextureButton34" to="." method="_on_texture_button_34_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer2/TextureButton35" to="." method="_on_texture_button_35_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer2/TextureButton36" to="." method="_on_texture_button_36_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton37" to="." method="_on_texture_button_37_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

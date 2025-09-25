@@ -1285,7 +1285,7 @@ offset_top = 334.0
 offset_right = 836.0
 offset_bottom = 357.0
 theme_override_fonts/font = ExtResource("9_tbdrc")
-text = "v.0.6.2-beta"
+text = "v.0.7.1-beta"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]

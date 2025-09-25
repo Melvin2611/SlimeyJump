@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="21_jlle7"]
 [ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Slime/Slime-Fling/Slime-fling2.png" id="22_dmq8n"]
 [ext_resource type="Texture2D" uid="uid://drnvhbk6462mm" path="res://Sprites/Objects/Lava/Laval8.png" id="22_r8uvn"]
-[ext_resource type="Script" uid="uid://b4lae855b2u6n" path="res://Scenes/Levels/W6/air stream to ground.gd" id="23_7wxcb"]
+[ext_resource type="Script" uid="uid://b4lae855b2u6n" path="res://Scripts/Objects/W6/air stream to ground.gd" id="23_7wxcb"]
 [ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="23_facq4"]
 [ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="24_m28tp"]
 [ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Slime/Slime-squish/Slime-squish1.png" id="25_aujve"]
