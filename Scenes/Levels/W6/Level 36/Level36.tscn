@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://4s7qg8idqb1y"]
+[gd_scene load_steps=54 format=4 uid="uid://4s7qg8idqb1y"]
 
 [ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/background/Mountains night/sky.png" id="1_od8jf"]
 [ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/background/Mountains night/far-clouds.png" id="2_x5hd5"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bckhumng1hg0q" path="res://Sprites/background/Mountains night/trees.png" id="6_uu706"]
 [ext_resource type="Texture2D" uid="uid://qh4jy64gmg7w" path="res://Sprites/background/bg-transition.png" id="7_jy07e"]
 [ext_resource type="Script" uid="uid://r1nsytikjixm" path="res://Scripts/Objects/W6/Level 36/GoalL36.gd" id="8_jy07e"]
-[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="8_x5hd5"]
+[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Scenes/Levels/W6/Treasure-chest.png" id="8_x5hd5"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="9_kk3td"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="10_wbpsy"]
 [ext_resource type="Texture2D" uid="uid://dh4f4lll8m2br" path="res://Sprites/Objects/Lava/Laval1.png" id="21_f1spk"]
@@ -32,6 +32,7 @@
 [ext_resource type="Script" uid="uid://bp6g4sf10noh8" path="res://Scripts/Objects/W6/Wind Stream.gd" id="38_0oqgt"]
 [ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="38_g1ha0"]
 [ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="39_iivu3"]
+[ext_resource type="Shader" uid="uid://bc4hlbedhppfq" path="res://Scripts/shader/HeatHaze.gdshader" id="40_fdcg2"]
 [ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Slime/Slime-squish/Slime-squish1.png" id="40_nbrc1"]
 [ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Slime/Slime-squish/Slime-squish2.png" id="41_o0ead"]
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="42_1j3fk"]
@@ -5911,6 +5912,13 @@ size = Vector2(6614, 218)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jy07e"]
 size = Vector2(12775, 9181.5)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sfkru"]
+shader = ExtResource("40_fdcg2")
+shader_parameter/distortion_strength = 0.01
+shader_parameter/speed = 1.0
+shader_parameter/noise_scale = 10.0
+shader_parameter/intensity_falloff = 0.5
+
 [node name="Level36" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
@@ -5995,17 +6003,17 @@ position = Vector2(753, -563)
 scale = Vector2(6, 6)
 texture = ExtResource("6_uu706")
 
-[node name="ColorRect3" type="ColorRect" parent="Background"]
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(6389.4995, -6085)
+scale = Vector2(794.437, 200)
+texture = ExtResource("7_jy07e")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
 offset_left = 8292.0
 offset_top = -5266.0
 offset_right = 11418.0
 offset_bottom = -4454.0
 color = Color(0.5921569, 0.15686275, 0.05490196, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background"]
-position = Vector2(6389.4995, -6085)
-scale = Vector2(794.437, 200)
-texture = ExtResource("7_jy07e")
 
 [node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(6917, -7751)
@@ -6115,3 +6123,10 @@ wind_strength = 600.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(3702.5, -4358.25)
 shape = SubResource("RectangleShape2D_jy07e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_sfkru")
+offset_left = 8221.0
+offset_top = -6447.0
+offset_right = 11464.0
+offset_bottom = -4465.0

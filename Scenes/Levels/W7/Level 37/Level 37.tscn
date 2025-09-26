@@ -1,11 +1,11 @@
-[gd_scene load_steps=45 format=4 uid="uid://xyq0pnpc5cqx"]
+[gd_scene load_steps=47 format=4 uid="uid://xyq0pnpc5cqx"]
 
 [ext_resource type="Texture2D" uid="uid://rod8hagerl6n" path="res://Sprites/background/abovetheclouds/Sky.png" id="1_qm425"]
 [ext_resource type="Texture2D" uid="uid://nypv16d1dmba" path="res://Sprites/background/abovetheclouds/Clouds2.png" id="2_ocp5t"]
 [ext_resource type="Texture2D" uid="uid://bogc5driqhkcv" path="res://Sprites/background/abovetheclouds/Clouds1.png" id="3_f1brk"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="3_ho4ki"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="4_nn68e"]
-[ext_resource type="Texture2D" uid="uid://wdtvvni8jl0s" path="res://foregroundClouds.png" id="4_o4nhf"]
+[ext_resource type="Texture2D" uid="uid://wdtvvni8jl0s" path="res://Sprites/background/abovetheclouds/foregroundClouds.png" id="4_o4nhf"]
 [ext_resource type="Script" uid="uid://csypep5wpeick" path="res://Scripts/Objects/W7/Level 37/GoalL37.gd" id="5_qm425"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="5_wbic0"]
 [ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/factorytileset.png" id="6_3643g"]
@@ -25,13 +25,14 @@
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="18_tfu7p"]
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="19_sb5p1"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="20_rj20k"]
-[ext_resource type="AudioStream" uid="uid://dergy5561dtbd" path="res://Sound/mus/silent-night-12137.mp3" id="21_f1gsj"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="22_gmjhm"]
 [ext_resource type="Script" uid="uid://fg4c76pgy5vq" path="res://Scripts/Objects/W7/balloon.gd" id="23_ho4ki"]
 [ext_resource type="Texture2D" uid="uid://bp227o63qx7ui" path="res://Sprites/Objects/balloon/Balloon.png" id="24_nn68e"]
 [ext_resource type="Script" uid="uid://do8pyygfb2j8j" path="res://Scripts/Objects/W1/Level 3/spikeL3.gd" id="25_3643g"]
 [ext_resource type="Texture2D" uid="uid://bnvkpl632nh5t" path="res://Sprites/Objects/Spike.png" id="26_gn0av"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="27_4kcs3"]
+[ext_resource type="AudioStream" uid="uid://se21tp8x41j5" path="res://Sound/mus/dark-clouds-122774.mp3" id="31_ocp5t"]
+[ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="33_ocp5t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jtmq2"]
 size = Vector2(384, 256)
@@ -6234,6 +6235,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrgyx"]
 size = Vector2(98, 93)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1brk"]
+size = Vector2(19832, 133.25)
+
 [node name="Level37" type="Node2D"]
 
 [node name="background" type="Node2D" parent="."]
@@ -7060,13 +7064,26 @@ stream = ExtResource("20_rj20k")
 bus = &"SFX"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("21_f1gsj")
+stream = ExtResource("31_ocp5t")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"
 parameters/looping = true
 
 [node name="HUD" parent="." instance=ExtResource("22_gmjhm")]
+
+[node name="Death Plain" type="Area2D" parent="."]
+position = Vector2(3737, 169)
+collision_layer = 2
+script = ExtResource("33_ocp5t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
+position = Vector2(-36, 0.375)
+shape = SubResource("RectangleShape2D_f1brk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Death Plain"]
+stream = ExtResource("27_4kcs3")
+bus = &"SFX"
 
 [connection signal="body_entered" from="Balloons/Balloon/Area2D" to="Balloons/Balloon" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Balloons/Balloon/Area2D" to="Balloons/Balloon" method="_on_area_2d_body_exited"]

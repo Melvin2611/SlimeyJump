@@ -220,6 +220,7 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(593, 350)
 layout_mode = 2
 columns = 6
@@ -370,6 +371,7 @@ texture_hover = ExtResource("58_5q7jd")
 stretch_mode = 0
 
 [node name="GridContainer2" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(593, 350)
 layout_mode = 2
 columns = 6
@@ -728,4 +730,9 @@ bus = &"Music"
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer2/TextureButton35" to="." method="_on_texture_button_35_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer2/TextureButton36" to="." method="_on_texture_button_36_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton37" to="." method="_on_texture_button_37_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton38" to="." method="_on_texture_button_38_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton39" to="." method="_on_texture_button_39_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton40" to="." method="_on_texture_button_40_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton41" to="." method="_on_texture_button_41_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton42" to="." method="_on_texture_button_42_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

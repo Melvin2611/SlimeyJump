@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://b7vf7dpft8d6i"]
+[gd_scene load_steps=71 format=4 uid="uid://b7vf7dpft8d6i"]
 
 [ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/background/Mountains night/sky.png" id="1_1ekhr"]
 [ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/background/Mountains night/far-clouds.png" id="2_8wrmn"]
@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://wh8jcw5i81o4" path="res://Sprites/Objects/crumbleblock/Crumble5.png" id="46_t7vaw"]
 [ext_resource type="Texture2D" uid="uid://kbpcvt5cfqu4" path="res://Sprites/Objects/crumbleblock/Crumble6.png" id="47_30287"]
 [ext_resource type="Texture2D" uid="uid://brfq3tf4dq7am" path="res://Sprites/Objects/crumbleblock/Crumble1.png" id="48_s2eh8"]
+[ext_resource type="Shader" uid="uid://bc4hlbedhppfq" path="res://Scripts/shader/HeatHaze.gdshader" id="49_7nda5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d8h6g"]
 size = Vector2(384, 256)
@@ -5831,6 +5832,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g80qi"]
+shader = ExtResource("49_7nda5")
+shader_parameter/distortion_strength = 0.01
+shader_parameter/speed = 1.0
+shader_parameter/noise_scale = 10.0
+shader_parameter/intensity_falloff = 0.5
+
 [node name="Level33" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
@@ -6184,3 +6192,17 @@ sprite_frames = SubResource("SpriteFrames_d1dda")
 animation = &"crumble"
 autoplay = "default"
 frame_progress = 0.23252442
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_g80qi")
+offset_left = 3321.0
+offset_top = -2756.0
+offset_right = 3617.0
+offset_bottom = 4607.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_g80qi")
+offset_left = 4209.0
+offset_top = 4649.0
+offset_right = 6964.0
+offset_bottom = 5429.0

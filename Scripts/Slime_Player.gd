@@ -9,7 +9,7 @@ var aim_current_pos: Vector2
 var is_on_ground = false
 var has_squished = false
 var air_fling_count = 0
-var max_air_flings = 1
+@export var max_air_flings = 1
 var current_platform: Node = null
 var ignore_platform_next_frame = false  # Flag gegen Stuck nach Fling
 var using_controller = false  # Neuer Flag, um zwischen Maus und Controller zu unterscheiden

@@ -216,3 +216,23 @@ func _on_texture_button_36_pressed() -> void:
 
 func _on_texture_button_37_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Levels/W7/Level 37/Level37.tscn")
+
+
+func _on_texture_button_38_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Levels/W7/Level 38/Level38.tscn")
+
+
+func _on_texture_button_39_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Levels/W7/Level 39/Level39.tscn")
+
+
+func _on_texture_button_40_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Levels/W7/Level 40/Level40.tscn")
+
+
+func _on_texture_button_41_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Levels/W7/Level 41/Level41.tscn")
+
+
+func _on_texture_button_42_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Levels/W7/Level 42/Level42.tscn")

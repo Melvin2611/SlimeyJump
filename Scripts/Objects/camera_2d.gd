@@ -1,36 +1,41 @@
 extends Camera2D
 
 @export var follow_speed: float = 5.0
-@export var custom_offset: Vector2 = Vector2.ZERO  
+@export var custom_offset: Vector2 = Vector2.ZERO
+@export var lookahead_time: float = 0.3
+@export var lookahead_smoothing: float = 0.15
 
-var target: Node2D = null
+var target: RigidBody2D
+var current_lookahead: Vector2 = Vector2.ZERO
 
 func _ready():
 	make_current()
-	position_smoothing_enabled = false
+	position_smoothing_enabled = true
+	position_smoothing_speed = follow_speed
 
-func _physics_process(delta):
+func _process(delta):
 	var players = get_tree().get_nodes_in_group("Player")
 	var visible_players: Array = []
 
-	# Nur sichtbare Spieler berücksichtigen
 	for p in players:
-		if p is Node2D and p.is_visible_in_tree():
+		if p is RigidBody2D and p.is_visible_in_tree():
 			visible_players.append(p)
 
 	if visible_players.size() > 0:
-		# Finde den nächstgelegenen sichtbaren Player
 		target = _get_closest_player(visible_players)
 
-		# Folge dem Target
 		if target:
-			var target_position = target.global_position + custom_offset
-			global_position = global_position.lerp(target_position, follow_speed * delta)
-	else:
-		target = null  # Falls keiner sichtbar ist
+			# Nutze jetzt die lineare Velocity statt Positionsdifferenz
+			var desired_lookahead = target.linear_velocity * lookahead_time
+			current_lookahead = current_lookahead.lerp(desired_lookahead, lookahead_smoothing)
 
-func _get_closest_player(players: Array) -> Node2D:
-	var closest: Node2D = players[0]
+			global_position = target.global_position + custom_offset + current_lookahead
+	else:
+		target = null
+		current_lookahead = Vector2.ZERO
+
+func _get_closest_player(players: Array) -> RigidBody2D:
+	var closest: RigidBody2D = players[0]
 	var min_dist: float = global_position.distance_to(players[0].global_position)
 
 	for p in players:

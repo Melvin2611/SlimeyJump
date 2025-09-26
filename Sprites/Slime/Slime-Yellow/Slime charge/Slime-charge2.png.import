@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wdqkpqp2ts18"
-path="res://.godot/imported/Treasure-chest.png-794df99749e5ae96ed32a492b9c838e7.ctex"
+uid="uid://duaosx3oao6wp"
+path="res://.godot/imported/Slime-charge2.png-fa9ee596f650cf0b4d8b58fe3f3c2f0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objects/Treasure-chest.png"
-dest_files=["res://.godot/imported/Treasure-chest.png-794df99749e5ae96ed32a492b9c838e7.ctex"]
+source_file="res://Sprites/Slime/Slime-Yellow/Slime charge/Slime-charge2.png"
+dest_files=["res://.godot/imported/Slime-charge2.png-fa9ee596f650cf0b4d8b58fe3f3c2f0d.ctex"]
 
 [params]
 

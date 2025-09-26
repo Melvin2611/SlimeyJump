@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://btim1pkwea0pw"]
+[gd_scene load_steps=63 format=4 uid="uid://btim1pkwea0pw"]
 
 [ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/background/Mountains night/sky.png" id="1_qchtq"]
 [ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/background/Mountains night/far-clouds.png" id="2_aasoj"]
@@ -42,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="31_y2qfq"]
 [ext_resource type="Script" uid="uid://bp6g4sf10noh8" path="res://Scripts/Objects/W6/Wind Stream.gd" id="32_gaq7b"]
 [ext_resource type="Script" uid="uid://cxl3cqq6f5i7c" path="res://Scripts/Objects/Gravity field.gd" id="33_irx6d"]
+[ext_resource type="Shader" uid="uid://bc4hlbedhppfq" path="res://Scripts/shader/HeatHaze.gdshader" id="43_cc4wm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cpe2"]
 size = Vector2(384, 256)
@@ -5762,6 +5763,13 @@ size = Vector2(33.1, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7kdr"]
 size = Vector2(18.709995, 25.2)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wktlq"]
+shader = ExtResource("43_cc4wm")
+shader_parameter/distortion_strength = 0.01
+shader_parameter/speed = 1.0
+shader_parameter/noise_scale = 10.0
+shader_parameter/intensity_falloff = 0.5
+
 [node name="Level32" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
@@ -6156,7 +6164,7 @@ stream = ExtResource("14_g1cuu")
 bus = &"SFX"
 
 [node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(2617, -221)
+position = Vector2(2611, -221)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("32_gaq7b")
@@ -6255,7 +6263,7 @@ parameters/looping = true
 [node name="HUD" parent="." instance=ExtResource("31_y2qfq")]
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(2617, -221)
+position = Vector2(2574, -188)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("32_gaq7b")
@@ -6282,3 +6290,17 @@ shape = SubResource("RectangleShape2D_2cejw")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Gravity Field"]
 position = Vector2(25.165, -38.41)
 shape = SubResource("RectangleShape2D_s7kdr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_wktlq")
+offset_left = 2175.0
+offset_top = -4470.0
+offset_right = 2471.0
+offset_bottom = -2166.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_wktlq")
+offset_left = 3450.0
+offset_top = -4483.0
+offset_right = 3746.0
+offset_bottom = -2179.0

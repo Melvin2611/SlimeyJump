@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=4 uid="uid://dxxklc5e1ljcn"]
+[gd_scene load_steps=87 format=4 uid="uid://dxxklc5e1ljcn"]
 
 [ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/background/Mountains night/sky.png" id="1_wvfpo"]
 [ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/background/Mountains night/far-clouds.png" id="2_befb0"]
@@ -55,6 +55,7 @@
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="56_nle1p"]
 [ext_resource type="Texture2D" uid="uid://bnvkpl632nh5t" path="res://Sprites/Objects/Spike.png" id="57_kk2kp"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="57_lvyed"]
+[ext_resource type="Shader" uid="uid://bc4hlbedhppfq" path="res://Scripts/shader/HeatHaze.gdshader" id="58_midn8"]
 [ext_resource type="AudioStream" uid="uid://dergy5561dtbd" path="res://Sound/mus/silent-night-12137.mp3" id="58_vxv8y"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="59_2np01"]
 
@@ -5877,6 +5878,13 @@ size = Vector2(23.74997, 127.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkfsb"]
 size = Vector2(41.999878, 672.25)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wvfpo"]
+shader = ExtResource("58_midn8")
+shader_parameter/distortion_strength = 0.01
+shader_parameter/speed = 1.0
+shader_parameter/noise_scale = 10.0
+shader_parameter/intensity_falloff = 0.5
+
 [node name="Level35" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
@@ -6370,3 +6378,10 @@ position = Vector2(7498, 1537)
 
 [node name="Area2D3" parent="." instance=ExtResource("57_lvyed")]
 position = Vector2(3826, -4056)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_wvfpo")
+offset_left = -212.0
+offset_top = -3057.0
+offset_right = 8434.0
+offset_bottom = 3814.0

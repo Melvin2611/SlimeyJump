@@ -1,7 +1,7 @@
 extends StaticBody2D
 
-@export var object1: ColorRect
-@export var object2: ColorRect
+@export var ColorRect1: ColorRect
+@export var ColorRect2: ColorRect
 @export var fade_duration: float = 1.0 # Dauer des Fade-Effekts in Sekunden
 @export var fade_step: float = 0.02 # Schrittweite für Alpha-Reduktion pro Frame
 @onready var animated_sprite = $AnimatedSprite2D
@@ -15,10 +15,10 @@ func _ready():
 func _on_body_entered(_body: RigidBody2D) -> void:
 	animated_sprite.play("down")
 	# Starte den Fade-Effekt für beide Objekte
-	if object1:
-		fade_out(object1)
-	if object2:
-		fade_out(object2)
+	if ColorRect1:
+		fade_out(ColorRect1)
+	if ColorRect2:
+		fade_out(ColorRect2)
 
 func fade_out(rect: ColorRect) -> void:
 	# Reduziere den Alphawert schrittweise

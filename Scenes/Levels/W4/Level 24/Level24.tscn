@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b0a70l3l3h5lw" path="res://Sprites/background/underwater/foreground-2.png" id="4_v2jh8"]
 [ext_resource type="Texture2D" uid="uid://bft8ky0g30kc1" path="res://Sprites/Objects/Big-Void.png" id="5_12h4p"]
 [ext_resource type="Script" uid="uid://b2p6atgxx41wc" path="res://Scripts/Objects/W4/Level 24/GoalL24.gd" id="6_l5r8f"]
-[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="7_l5r8f"]
+[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Scenes/Levels/W6/Treasure-chest.png" id="7_l5r8f"]
 [ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="8_isjxl"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_0gehk"]
 [ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/crate/Crate.png" id="10_vtllt"]
