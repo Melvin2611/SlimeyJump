@@ -10,7 +10,10 @@ If a Crash might happen please Report it to me in any way, and please also give 
 ### About:
 This is my first Game and made in Godot 4.4.1 and then updated to Godot 4.5 If you have Feedback or Ideas for new Levels feel free to contact me and share, if you do enough help you might even get a Special Thanks in the Credits.
 
-#### I'am using some Assets from Itch.io the creators of these Assets are:
+[**Changelog**](changelog.md)
+
+
+**I'am using some Assets from Itch.io the creators of these Assets are:**
 - Ansimuz
 - iPixl
 - Raou
