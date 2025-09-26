@@ -24,7 +24,7 @@ all other sprites are made by myself
 The Code has been writen by myself, but some bug fixing and correcting and optimization has been done with AI. I did although go over the entire code everytime it has been writen by AI and validated it to understand what it has done and how it's doing it, and also to make sure, that nothing breaks when I run the code.
 
 
-##DEUTSCH:
+## DEUTSCH:
 ### Godot 4.5 Puzzle-Plattformer.
 Dies ist ein Puzzle-Plattformer und mein erstes Spiel. Feedback ist sehr willkommen und das Projekt ist Open Source.
 
