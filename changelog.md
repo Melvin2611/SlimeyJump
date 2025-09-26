@@ -208,6 +208,31 @@
 > changed Loading Picture to be more high quality
 > added the default Slime Sprite as an .svg to the game files for image testing (only 18kb so don't be scared of big file sizes coming to the game I try to keep the size as low as possible and will probably do an optimization before the release version v.1.0.0)
 
+## v.0.7.2-beta
+#### Levels:
+> Level 38 has been added and completed
+> Level 39 has been added and completed
+> Level 40 has been added and completed
+> Level 41 has been added and completed
+> Level 42 has been added and completed
+> World 7 is now complete
+> Level 38 - 42 have been linked to the Level Select Menu
+
+#### Mechanics:
+> Air Stream Mechanic has been added
+> Timer Cloud Mechanic has been added
+> Super Slime Ability Mechanic has been added
+
+#### Overhauls:
+> World 6 has gotten a Shader for Heat Haze so that the Lave feels more hot, I'm also planning on adding Lighting to the Lava if I don't forget
+
+#### Reworks:
+> The Camera has gotten a rework, and now follows before instead of after the Player (lookahead) so you can see more clearly what is infront of you
+
+#### others:
+> The Version Label in the Main Menu has been changed to v.0.7.2-beta
+> The Version of the Game (only important under app details) has been changed to 0.7.2.0 (letters aren't accepted & it had to be 4 numbers)
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -403,7 +428,7 @@
 > Level 31 wurde zum Level Select Menü hinzugefügt, da der Button in v.0.6.1-beta die Referenz noch nicht hatte
 
 ## v.0.7.1-beta
-#### Levels:
+#### Level:
 > Level 35 wurde hinzugefügt und Fertig gestellt
 > Level 36 wurde hinzugefügt und Fertig gestellt
 > Level 37 wurde hinzugefügt und Fertig gestellt
@@ -418,3 +443,28 @@
 #### andere:
 > Das Lade Bild wurde für höhere Qualität ersetzt
 > das default Slime Sprite wurde als eine .svg hinzugefügt um mit dem format ein bisschen zu testen (es ist aber nur 18kb also keine angst das sich die Dateigröße stark verändert, ich versuche die Größe so niedrig wie möglich zu halten, und werde wahrscheinlich noch Optimisationen vor der Veröffentlichungs Version v.1.0.0 vornehmen)
+
+## v.0.7.2-beta
+#### Level:
+> Level 38 wurde hinzugefügt und Fertig gestellt
+> Level 39 wurde hinzugefügt und Fertig gestellt
+> Level 40 wurde hinzugefügt und Fertig gestellt
+> Level 41 wurde hinzugefügt und Fertig gestellt
+> Level 42 wurde hinzugefügt und Fertig gestellt
+> Welt 7  wurde Fertig gestellt
+> Level 38 - 42 wurden mit dem Level Select Menü verlinkt
+
+#### Mechaniken:
+> Luft Böhen Mechanik wurde Hinzugefügt
+> Zeit Wolken Mechanik wurde hinzugefügt
+> Super Slime Fähigkeit wurde hinzugefügt
+
+#### Overhauls:
+> Welt 6 hat einen Hitze verzerrungs Shader bekommen, damit die Lava sich heißer anfühlt
+
+#### Reworks:
+> Die Kamera hat ein Rework bekommen, und schaut jetzt vor den Spieler statt hinter den Spieler (lookahead), damit man besser sehen kann was vor einem ist
+
+#### sonstiges:
+> Die versions Kennzeichnung im Main Menü wurde zu v.0.7.2-beta geändert
+> Die Spiel version (Nur bei den app details wichtig) wurde auf 0.7.2.0 geändert (Buchstaben werden nicht akzeptiert & es müssen 4 Nummern sein)
