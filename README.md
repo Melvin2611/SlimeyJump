@@ -36,7 +36,7 @@ Sollte es zu einem Absturz kommen, melden Sie ihn bitte an mich über Die Issues
 ### Über:
 Dies ist mein erstes Spiel, das in Godot 4.4.1 erstellt und dann auf Godot 4.5 aktualisiert wurde. Wenn Sie Feedback oder Ideen für neue Level haben, können Sie mich gerne kontaktieren und teilen. Wenn Sie genug helfen, erhalten Sie möglicherweise sogar einen besonderen Dank in den Credits.
 
-[**Changelog**](changelog.md)
+[**Changelog**](changelog.md#patchlogs-und-changelogs-deutsch)
 
 **Ich verwende einige Assets von Itch.io Die Ersteller dieser Assets sind:**
 - Ansimuz
