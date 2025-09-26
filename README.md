@@ -1,5 +1,5 @@
 # SlimeyJump
-### Godot 4.5 Puzzle Platformer.
+**Godot 4.5 Puzzle Platformer.**
 This is a Puzzle Platformer, and the first game I created. Feedback is very much appreciated, and the Project is also Open-source
 
 ## IMPORTANT:
@@ -25,7 +25,7 @@ The Code has been writen by myself, but some bug fixing and correcting and optim
 
 
 ## DEUTSCH:
-### Godot 4.5 Puzzle-Plattformer.
+**Godot 4.5 Puzzle-Plattformer.**
 Dies ist ein Puzzle-Plattformer und mein erstes Spiel. Feedback ist sehr willkommen und das Projekt ist Open Source.
 
 ## WICHTIG:
