@@ -18,8 +18,11 @@ This is my first Game and made in Godot 4.4.1 and then updated to Godot 4.5 If y
 - Raou
 - BDragon1727
 - GarzettDev
+
 Please check out their pages, as they are great and talented Pixel artists.
 all other sprites are made by myself
+
+**The music and Sound effects in the game are mostly from Pixabay, but one Music Track specifically the W8 / LavaLand Theme is from Wolfgang_ on OpenGameArt.org**
 
 The Code has been writen by myself, but some bug fixing and correcting and optimization has been done with AI. I did although go over the entire code everytime it has been writen by AI and validated it to understand what it has done and how it's doing it, and also to make sure, that nothing breaks when I run the code.
 
@@ -44,7 +47,10 @@ Dies ist mein erstes Spiel, das in Godot 4.4.1 erstellt und dann auf Godot 4.5 a
 - Raou
 - BDragon1727
 - GarzettDev
+  
 Schaut euch bitte auch ihre Seiten an, denn sie sind großartige und talentierte Pixel artists.
 Alle anderen Sprites habe ich selbst erstellt.
+
+**Die Musik und die Sound effekte im Spiel sind größtenteils von Pixabay, aber ein Lied spezifisch das W8 / Lava Land Theme ist von Wolfgang_ auf OpenGameArt.org**
 
 Der Code wurde von mir selbst geschrieben, einige Fehlerbehebungen, Korrekturen und Optimierungen wurden jedoch mithilfe von KI vorgenommen. Ich habe den gesamten Code jedes Mal überprüft, wenn er von KI geschrieben wurde, und ihn validiert, um zu verstehen, was und wie er funktioniert, und um sicherzustellen, dass beim Ausführen des Codes nichts kaputt geht.
