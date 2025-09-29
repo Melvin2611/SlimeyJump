@@ -233,6 +233,26 @@
 > The Version Label in the Main Menu has been changed to v.0.7.2-beta
 > The Version of the Game (only important under app details) has been changed to 0.7.2.0 (letters aren't accepted & it had to be 4 numbers)
 
+## v.0.8.1-beta
+#### Levels:
+> Level 43 has been added and completed
+> Level 43 has been Linked
+
+#### Assets:
+> New Music Track has been added
+> New Tiles have been added
+> New Background and Placeholder Background has been added
+> Credits Page has gotten an update
+> Main Menu Label has been changed to v.0.8.1-beta
+
+#### Mechanics:
+> New Lava to die has been added
+> New Meteor Mechanic has been added
+> Meteor Spawner Mechanic has been added
+
+#### Bugs:
+> Temporary fix for the Button exited bug (see issues)
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -468,3 +488,23 @@
 #### sonstiges:
 > Die versions Kennzeichnung im Main Menü wurde zu v.0.7.2-beta geändert
 > Die Spiel version (Nur bei den app details wichtig) wurde auf 0.7.2.0 geändert (Buchstaben werden nicht akzeptiert & es müssen 4 Nummern sein)
+
+## v.0.8.1-beta
+#### Level:
+> Level 43 wurde hinzugefügt und Fertig gestellt
+> Level 43 wurde verlinkt
+
+#### Assets:
+> Ein Neuer Musik Track wurde hinzugefügt
+> Neue Tiles wurden hinzugefügt
+> Ein neuer Hintergrund wurde hinzugefügt aber auch mit Plazhaltern
+> Die Credits Seite wurde geupdated
+> Das Main Menü hat eine Änderung am Label zu v.0.8.1-beta bekommen
+
+#### Mechaniken:
+> Neue Lava zum Sterben wurde hinzugefügt
+> Neue Meteor Mechanik wurde hinzugefügt
+> Meteor Spawner wurde hinzugefügt
+
+#### Bugs:
+> Temporärer Fix für den Button bug (siehe Issues) wurde hinzugefügt
