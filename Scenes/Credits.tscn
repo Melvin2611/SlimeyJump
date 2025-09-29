@@ -142,8 +142,8 @@ made by:"
 horizontal_alignment = 1
 
 [node name="Asset 1" type="Sprite2D" parent="."]
-position = Vector2(416.5, 388)
-scale = Vector2(2.5, 2.5)
+position = Vector2(415, 383)
+scale = Vector2(2, 2)
 texture = ExtResource("2_640q4")
 
 [node name="Label" type="Label" parent="Asset 1"]
@@ -169,8 +169,8 @@ theme_override_font_sizes/font_size = 25
 text = "(on itch.io)"
 
 [node name="Asset 2" type="Sprite2D" parent="."]
-position = Vector2(419, 438)
-scale = Vector2(2.5, 2.5)
+position = Vector2(415, 423)
+scale = Vector2(2, 2)
 texture = ExtResource("2_640q4")
 
 [node name="Label" type="Label" parent="Asset 2"]
@@ -196,8 +196,8 @@ theme_override_font_sizes/font_size = 25
 text = "(on itch.io"
 
 [node name="Asset 3" type="Sprite2D" parent="."]
-position = Vector2(422.00003, 487.99997)
-scale = Vector2(2.5, 2.5)
+position = Vector2(415, 463)
+scale = Vector2(2, 2)
 texture = ExtResource("2_640q4")
 
 [node name="Label" type="Label" parent="Asset 3"]
@@ -223,11 +223,38 @@ theme_override_font_sizes/font_size = 25
 text = "(on itch.io)"
 
 [node name="Asset 4" type="Sprite2D" parent="."]
-position = Vector2(425, 538.00006)
-scale = Vector2(2.5, 2.5)
+position = Vector2(415, 503)
+scale = Vector2(2, 2)
 texture = ExtResource("2_640q4")
 
-[node name="Label" type="Label" parent="Asset 4"]
+[node name="Label3" type="Label" parent="Asset 4"]
+offset_left = -26.0
+offset_top = -6.5
+offset_right = 147.0
+offset_bottom = 47.5
+scale = Vector2(0.3, 0.3)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 35
+text = "GarzettDev"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Asset 4"]
+offset_left = 0.69999695
+offset_top = 2.8499794
+offset_right = 183.7
+offset_bottom = 28.84998
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 25
+text = "(on itch.io)"
+
+[node name="Asset 5" type="Sprite2D" parent="."]
+position = Vector2(415, 543)
+scale = Vector2(2, 2)
+texture = ExtResource("2_640q4")
+
+[node name="Label" type="Label" parent="Asset 5"]
 offset_left = -25.5
 offset_top = -5.75
 offset_right = 147.5
@@ -236,14 +263,41 @@ scale = Vector2(0.3, 0.3)
 theme_override_constants/line_spacing = -6
 theme_override_fonts/font = ExtResource("1_i8h6y")
 theme_override_font_sizes/font_size = 35
-text = "Wolfgang_"
+text = "iPixl"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Asset 4"]
+[node name="Label2" type="Label" parent="Asset 5"]
 offset_left = 1.2
 offset_top = 3.5999756
 offset_right = 184.2
 offset_bottom = 29.599976
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 25
+text = "(on on itch.io)"
+
+[node name="Asset 6" type="Sprite2D" parent="."]
+position = Vector2(415, 583)
+scale = Vector2(2, 2)
+texture = ExtResource("2_640q4")
+
+[node name="Label" type="Label" parent="Asset 6"]
+offset_left = -27.0
+offset_top = -6.5
+offset_right = 146.0
+offset_bottom = 47.5
+scale = Vector2(0.3, 0.3)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 35
+text = "Wolfgang_"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Asset 6"]
+offset_left = -0.30000293
+offset_top = 2.8499718
+offset_right = 182.7
+offset_bottom = 28.849972
 scale = Vector2(0.2, 0.2)
 theme_override_fonts/font = ExtResource("1_i8h6y")
 theme_override_font_sizes/font_size = 25
