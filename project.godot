@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Slimey Jump"
-config/version="0.7.2"
+config/version="0.8.1"
 run/main_scene="uid://bbu853t6d4tyv"
 config/features=PackedStringArray("4.5", "Mobile")
 boot_splash/bg_color=Color(0.509804, 0.713726, 1, 1)

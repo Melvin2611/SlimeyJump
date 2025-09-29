@@ -142,8 +142,8 @@ made by:"
 horizontal_alignment = 1
 
 [node name="Asset 1" type="Sprite2D" parent="."]
-position = Vector2(418, 402)
-scale = Vector2(4, 4)
+position = Vector2(416.5, 388)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_640q4")
 
 [node name="Label" type="Label" parent="Asset 1"]
@@ -158,9 +158,19 @@ theme_override_font_sizes/font_size = 35
 text = "BDragon1727"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="Asset 1"]
+offset_left = 1.2
+offset_top = 3.5999756
+offset_right = 184.2
+offset_bottom = 29.599976
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 25
+text = "(on itch.io)"
+
 [node name="Asset 2" type="Sprite2D" parent="."]
-position = Vector2(419, 481)
-scale = Vector2(4, 4)
+position = Vector2(419, 438)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_640q4")
 
 [node name="Label" type="Label" parent="Asset 2"]
@@ -175,9 +185,19 @@ theme_override_font_sizes/font_size = 35
 text = "Ansimuz"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="Asset 2"]
+offset_left = 1.2
+offset_top = 3.5999756
+offset_right = 184.2
+offset_bottom = 29.599976
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 25
+text = "(on itch.io"
+
 [node name="Asset 3" type="Sprite2D" parent="."]
-position = Vector2(419, 561)
-scale = Vector2(4, 4)
+position = Vector2(422.00003, 487.99997)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_640q4")
 
 [node name="Label" type="Label" parent="Asset 3"]
@@ -191,6 +211,43 @@ theme_override_fonts/font = ExtResource("1_i8h6y")
 theme_override_font_sizes/font_size = 35
 text = "Raou"
 horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Asset 3"]
+offset_left = 1.2
+offset_top = 3.5999756
+offset_right = 184.2
+offset_bottom = 29.599976
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 25
+text = "(on itch.io)"
+
+[node name="Asset 4" type="Sprite2D" parent="."]
+position = Vector2(425, 538.00006)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_640q4")
+
+[node name="Label" type="Label" parent="Asset 4"]
+offset_left = -25.5
+offset_top = -5.75
+offset_right = 147.5
+offset_bottom = 48.25
+scale = Vector2(0.3, 0.3)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 35
+text = "Wolfgang_"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Asset 4"]
+offset_left = 1.2
+offset_top = 3.5999756
+offset_right = 184.2
+offset_bottom = 29.599976
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("1_i8h6y")
+theme_override_font_sizes/font_size = 25
+text = "(on OpenGameArt.org)"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_5qoai")

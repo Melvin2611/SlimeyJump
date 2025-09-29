@@ -3331,7 +3331,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kmeg"]
-size = Vector2(32, 5.25)
+size = Vector2(26, 7.75)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bckwv"]
 animations = [{
@@ -3562,7 +3562,7 @@ animation = &"up"
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
-position = Vector2(0, 0.625)
+position = Vector2(0, 0.125)
 shape = SubResource("RectangleShape2D_5kmeg")
 
 [node name="ConveyorBelts" type="Node" parent="."]

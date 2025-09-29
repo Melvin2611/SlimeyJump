@@ -70,7 +70,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvbfv"]
-size = Vector2(32, 4.25)
+size = Vector2(26, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0evu0"]
 size = Vector2(14, 47.25)
@@ -2692,7 +2692,7 @@ animation = &"up"
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
-position = Vector2(0, 1.125)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_wvbfv")
 
 [node name="Door" type="Node2D" parent="."]
@@ -2890,7 +2890,7 @@ frame = 3
 frame_progress = 0.739574
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Wind"]
-position = Vector2(2397, -661)
+position = Vector2(2413, -660)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_6tmsj")
 autoplay = "default"

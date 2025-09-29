@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="9_fm1ti"]
 [ext_resource type="Script" uid="uid://d2un1u0ferdk4" path="res://Scripts/Objects/W7/Level 42/GoalL42.gd" id="9_n5khx"]
 [ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/factorytileset.png" id="10_10lgg"]
-[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Scenes/Levels/W6/Treasure-chest.png" id="10_drtby"]
+[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="10_drtby"]
 [ext_resource type="Texture2D" uid="uid://cinh4ggnkku6d" path="res://Sprites/Cloud Tileset (1).png" id="11_emjrg"]
 [ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="12_drtby"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="15_h4mtw"]

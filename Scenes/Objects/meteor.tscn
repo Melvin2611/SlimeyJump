@@ -1,0 +1,78 @@
+[gd_scene load_steps=13 format=3 uid="uid://biu6pv2ckqxms"]
+
+[ext_resource type="Script" uid="uid://51yoxpv37mdc" path="res://Scripts/Objects/W8/meteor.gd" id="1_upxbf"]
+[ext_resource type="Texture2D" uid="uid://d08hf8nfh0mim" path="res://Sprites/Objects/Meteor/Meteoir1.png" id="2_5mr2n"]
+[ext_resource type="Texture2D" uid="uid://dio3rhim4c7f1" path="res://Sprites/Objects/Meteor/Meteoirbreak1.png" id="2_omho7"]
+[ext_resource type="Texture2D" uid="uid://bqyx2ge2yw3sc" path="res://Sprites/Objects/Meteor/Meteoir2.png" id="3_6ljsl"]
+[ext_resource type="Texture2D" uid="uid://c4p8tegwfv6cp" path="res://Sprites/Objects/Meteor/Meteoirbreak2.png" id="3_wb0lp"]
+[ext_resource type="Texture2D" uid="uid://j3u8xre5dtud" path="res://Sprites/Objects/Meteor/Meteoirbreak3.png" id="4_uiwec"]
+[ext_resource type="Texture2D" uid="uid://reiafc6ec8wj" path="res://Sprites/Objects/Meteor/Meteoirbreak4.png" id="5_hxqyt"]
+[ext_resource type="Texture2D" uid="uid://8r5jj2iyv84" path="res://Sprites/Objects/Meteor/Meteoirbreak5.png" id="6_hprbe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1v76l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_omho7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wb0lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uiwec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hxqyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hprbe")
+}],
+"loop": true,
+"name": &"break",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5mr2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6ljsl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_udk4i"]
+radius = 38.013157
+
+[sub_resource type="Gradient" id="Gradient_omho7"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wb0lp"]
+gradient = SubResource("Gradient_omho7")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[node name="Meteor" type="Area2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_upxbf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(20, -19)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_1v76l")
+animation = &"break"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_udk4i")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1.9073486e-06, -3.8146973e-06)
+scale = Vector2(1.796875, 1.71875)
+color = Color(1, 0.3529412, 0, 1)
+texture = SubResource("GradientTexture2D_wb0lp")

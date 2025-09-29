@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://6ap8s0ayytsf" path="res://Sprites/background/Dungeon/BackgroundLayer1-169.png" id="1_3vp8i"]
 [ext_resource type="Texture2D" uid="uid://dugpenbj8qiuv" path="res://Sprites/background/Dungeon/BackgroundLayer2-169.png" id="2_waiwu"]
 [ext_resource type="Script" uid="uid://b1to804jl83m2" path="res://Scripts/Objects/W1/Level 6/GoalL6.gd" id="3_dime8"]
-[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Scenes/Levels/W6/Treasure-chest.png" id="4_dime8"]
+[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="4_dime8"]
 [ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="5_dime8"]
 [ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/crate/Crate.png" id="6_1gxkp"]
 [ext_resource type="Script" uid="uid://b28yk7bf85j0w" path="res://Scripts/Objects/W1/Level 3/button.gd" id="7_12cyq"]

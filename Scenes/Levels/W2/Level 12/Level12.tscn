@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dstk4ykqavkaa" path="res://Sprites/plank-backdrop.png" id="1_7gxwp"]
 [ext_resource type="Script" uid="uid://b0dvkova1i6aq" path="res://Scripts/Objects/W2/Level 11/GoalL11.gd" id="1_87ry0"]
 [ext_resource type="Texture2D" uid="uid://dt4jeqa3aeb1s" path="res://Sprites/Objects/door2.png" id="2_p6j3a"]
-[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Scenes/Levels/W6/Treasure-chest.png" id="4_p6j3a"]
+[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="4_p6j3a"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="4_piki2"]
 [ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="5_p6j3a"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="8_mg0kr"]
@@ -2301,7 +2301,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jj22k"]
-size = Vector2(32, 5.25)
+size = Vector2(26, 5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_odwcq"]
 animations = [{
@@ -2709,7 +2709,7 @@ animation = &"up"
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heavy Button/Area2D"]
-position = Vector2(0, 1.125)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_jj22k")
 
 [node name="Heavy Button2" type="StaticBody2D" parent="." groups=["platforms"]]

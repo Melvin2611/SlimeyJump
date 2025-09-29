@@ -79,7 +79,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wguu"]
-size = Vector2(32, 5.25)
+size = Vector2(26, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13fi0"]
 size = Vector2(128, 382)
@@ -3619,7 +3619,7 @@ animation = &"up"
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
-position = Vector2(0, 0.625)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_0wguu")
 
 [node name="Button2" type="StaticBody2D" parent="." groups=["platforms"]]
