@@ -253,6 +253,20 @@
 #### Bugs:
 > Temporary fix for the Button exited bug (see issues)
 
+## v.0.8.2-beta
+#### Levels:
+> Level 44 has been added and completed
+> Level 45 has been added and completed
+> Level 46 has been added and almost completed
+
+#### Mechanics:
+> New Lava rise mechanic has been added
+
+#### Assets:
+> Background Volcanos have been added and are now replacing the Placeholder
+> The Label in the Main Menu has been changed to v.0.8.2-beta
+> The Version has been changed to 0.8.2.0
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -508,3 +522,17 @@
 
 #### Bugs:
 > Temporärer Fix für den Button bug (siehe Issues) wurde hinzugefügt
+
+## v.0.8.2-beta
+#### Level:
+> Level 44 wurde hinzugefügt und Fertig gestellt
+> Level 45 wurde hinzugefügt und Fertig gestellt
+> Level 46 wurde hinzugefügt und fast Fertig gestellt
+
+#### Mechaniken:
+> Neue Lava steigen Mechanik wurde hinzugefügt
+
+#### Assets:
+> Hintergrund Vulkane wurde hinzugefügt, und ersetzen nun die Platzhalter
+> Das Label im Main Menu wurde zu v.0.8.2-beta geändert
+> Die Game Version  wurde zu 0.8.2.0 geändert
