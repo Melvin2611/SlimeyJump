@@ -53,8 +53,65 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_85buo"]
 size = Vector2(384, 256)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxw1r"]
+resource_name = "Slime"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_fwpcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qbrdv")
+}],
+"loop": true,
+"name": &"charge",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_d1f8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ktkex")
+}],
+"loop": true,
+"name": &"fling",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_wgy66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_xckrx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("20_aa1mh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q1a20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_har3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_gdqpg")
+}],
+"loop": true,
+"name": &"squish",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37q46"]
+size = Vector2(98, 93)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hoos1"]
-size = Vector2(41.999878, 672.25)
+size = Vector2(51.24995, 672.25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xmx67"]
 animations = [{
@@ -7028,63 +7085,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_dxw1r"]
-resource_name = "Slime"
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_fwpcp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_qbrdv")
-}],
-"loop": true,
-"name": &"charge",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("16_d1f8t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_ktkex")
-}],
-"loop": true,
-"name": &"fling",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("18_wgy66")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_xckrx")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 5.0,
-"texture": ExtResource("20_aa1mh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_q1a20")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_har3d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_gdqpg")
-}],
-"loop": true,
-"name": &"squish",
-"speed": 10.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_37q46"]
-size = Vector2(98, 93)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_biajt"]
 size = Vector2(20013, 133.25)
 
@@ -7097,51 +7097,50 @@ shader_parameter/intensity_falloff = 0.5
 
 [node name="Level43" type="Node2D"]
 
-[node name="Node2D2" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="Node2D2"]
+[node name="ColorRect" type="ColorRect" parent="Background"]
 offset_left = -839.0
 offset_top = -5438.0
 offset_right = 10722.0
 offset_bottom = 109.0
 color = Color(0.25882354, 0.1254902, 0.12941177, 1)
 
-[node name="Parallax2D3" type="Parallax2D" parent="Node2D2"]
+[node name="Parallax2D3" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.9, 1)
 repeat_size = Vector2(1920, 0)
 repeat_times = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D2/Parallax2D3"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D3"]
 scale = Vector2(4, 4)
 texture = ExtResource("1_ktkex")
 
-[node name="Parallax2D" type="Parallax2D" parent="Node2D2"]
+[node name="Parallax2D" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.7, 1)
-repeat_size = Vector2(1920, 0)
+repeat_size = Vector2(1920, 820)
 repeat_times = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D2/Parallax2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D"]
 scale = Vector2(4, 4)
 texture = ExtResource("2_wgy66")
 
-[node name="Parallax2D2" type="Parallax2D" parent="Node2D2"]
+[node name="Parallax2D2" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.4, 1)
-repeat_size = Vector2(2000, 0)
+repeat_size = Vector2(1920, 0)
 repeat_times = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D2/Parallax2D2"]
-position = Vector2(-79.99999, -100.99999)
-scale = Vector2(2.5, 2.5)
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D2"]
+position = Vector2(0, -101)
+scale = Vector2(4, 4)
 texture = ExtResource("3_xckrx")
 
-[node name="Parallax2D4" type="Parallax2D" parent="Node2D2"]
+[node name="Parallax2D4" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.3, 1)
-repeat_size = Vector2(2000, 0)
+repeat_size = Vector2(1920, 0)
 repeat_times = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D2/Parallax2D4"]
-position = Vector2(-79, -105.00001)
-scale = Vector2(2.5, 2.5)
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D4"]
+scale = Vector2(4, 4)
 texture = ExtResource("4_aa1mh")
 
 [node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
@@ -7176,6 +7175,30 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("4_fwpcp")
 
+[node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
+position = Vector2(537, 411)
+disable_mode = 2
+collision_mask = 2
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("9_xckrx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayer"]
+position = Vector2(5, -19)
+scale = Vector2(2.9825, 2.96875)
+sprite_frames = SubResource("SpriteFrames_dxw1r")
+animation = &"squish"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlimePlayer"]
+position = Vector2(5, -17.5)
+shape = SubResource("RectangleShape2D_37q46")
+
+[node name="SlimeJump" type="AudioStreamPlayer" parent="SlimePlayer"]
+stream = ExtResource("20_47h5x")
+bus = &"SFX"
+
 [node name="Lava" type="Area2D" parent="."]
 position = Vector2(2265, 559)
 rotation = -1.5707964
@@ -7183,7 +7206,7 @@ scale = Vector2(4, 4)
 script = ExtResource("9_dxw1r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lava"]
-position = Vector2(8.25, 323.375)
+position = Vector2(11.2500305, 323.375)
 shape = SubResource("RectangleShape2D_hoos1")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lava"]
@@ -7236,7 +7259,7 @@ scale = Vector2(4, 4)
 script = ExtResource("9_dxw1r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lava2"]
-position = Vector2(8.25, 323.375)
+position = Vector2(9.875008, 323.375)
 shape = SubResource("RectangleShape2D_hoos1")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lava2"]
@@ -7378,30 +7401,6 @@ sprite_frames = SubResource("SpriteFrames_a26wl")
 animation = &"crumble"
 autoplay = "default"
 
-[node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
-position = Vector2(537, 411)
-disable_mode = 2
-collision_mask = 2
-continuous_cd = 2
-contact_monitor = true
-max_contacts_reported = 4
-script = ExtResource("9_xckrx")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayer"]
-position = Vector2(5, -19)
-scale = Vector2(2.9825, 2.96875)
-sprite_frames = SubResource("SpriteFrames_dxw1r")
-animation = &"squish"
-autoplay = "idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SlimePlayer"]
-position = Vector2(5, -17.5)
-shape = SubResource("RectangleShape2D_37q46")
-
-[node name="SlimeJump" type="AudioStreamPlayer" parent="SlimePlayer"]
-stream = ExtResource("20_47h5x")
-bus = &"SFX"
-
 [node name="Meteor" parent="." instance=ExtResource("26_wcer2")]
 position = Vector2(974, -133)
 
@@ -7435,7 +7434,6 @@ max_x_offset = 1200.0
 max_y_offset = -1300.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_tutos")
 offset_left = -1060.0
 offset_top = -5757.0
