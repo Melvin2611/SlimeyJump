@@ -267,6 +267,21 @@
 > The Label in the Main Menu has been changed to v.0.8.2-beta
 > The Version has been changed to 0.8.2.0
 
+## v.0.8.3-beta
+#### Levels:
+> Level 47 has been added and completed
+> Level 48 has been added and almost completed
+
+#### Mechanics:
+> New Lava geyser Mechanic has been added
+> New moving Platform has been added
+> New Dragon Head Enemy has been added
+
+#### Assets:
+> New Sprites have been added for Dragon and Fire and Lava
+> New Sfx for Dragon Breath has been added
+> New Music for Lava castle escape has been added
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -536,3 +551,18 @@
 > Hintergrund Vulkane wurde hinzugefügt, und ersetzen nun die Platzhalter
 > Das Label im Main Menu wurde zu v.0.8.2-beta geändert
 > Die Game Version  wurde zu 0.8.2.0 geändert
+
+## v.0.8.3-beta
+#### Level:
+> Level 47 wurde hinzugefügt und fertig gestellt
+> Level 48 wurde hinzugefügt und fertig gestellt
+
+#### Mechaniken:
+> Neue Lava geyser Mechanik wurde hinzugefügt
+> Neuer Moving Platform Typ wurde hinzugefügt
+> Neuer Drachen Kopf Gegner wurde hinzugefügt
+
+#### Assets:
+> Neue Sprites für den Drachen Kopf, Lava und Feuer wurden hinzugefügt
+> Neuer Sound effekt für den Drachen atem wurde hinzugefügt
+> Neue Musik für die Lava Festung entkommen Sequenz wurde hinzugefügt
