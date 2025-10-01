@@ -737,4 +737,5 @@ bus = &"Music"
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton44" to="." method="_on_texture_button_44_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton45" to="." method="_on_texture_button_45_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton46" to="." method="_on_texture_button_46_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GridContainer3/TextureButton47" to="." method="_on_texture_button_47_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

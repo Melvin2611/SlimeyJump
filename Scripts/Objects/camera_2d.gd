@@ -13,7 +13,7 @@ func _ready():
 	position_smoothing_enabled = true
 	position_smoothing_speed = follow_speed
 
-func _process(delta):
+func _process(_delta):
 	var players = get_tree().get_nodes_in_group("Player")
 	var visible_players: Array = []
 

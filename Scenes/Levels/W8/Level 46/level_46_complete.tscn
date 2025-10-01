@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="1_7qut1"]
 [ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="2_w41ty"]
 [ext_resource type="Script" uid="uid://b8uk42wvo1txi" path="res://Scripts/Objects/W1/Level 1/label.gd" id="3_v5joi"]
-[ext_resource type="Script" uid="uid://boqia2bhkihcu" path="res://buttonsL46.gd" id="4_7qut1"]
+[ext_resource type="Script" uid="uid://boqia2bhkihcu" path="res://Scripts/Objects/W8/Level 46/buttonsL46.gd" id="4_7qut1"]
 
 [node name="Level46Complete" type="Node2D"]
 

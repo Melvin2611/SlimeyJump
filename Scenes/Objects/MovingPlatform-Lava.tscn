@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://coxjvorfw6qav"]
+
+[ext_resource type="Script" uid="uid://bo8i43ak1mcfw" path="res://Scripts/Objects/W1/Level 2/moving_platformL2.gd" id="1_jf5aw"]
+[ext_resource type="Texture2D" uid="uid://bnnc17xt6okga" path="res://Sprites/Objects/Moving Platform-lava.png" id="2_66tom"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pq8e"]
+size = Vector2(80, 14)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+script = ExtResource("1_jf5aw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_66tom")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5pq8e")
