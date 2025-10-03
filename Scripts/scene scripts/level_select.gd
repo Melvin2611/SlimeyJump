@@ -79,10 +79,10 @@ func _set_button_locked_state(button: BaseButton, locked: bool, level_index: int
 
 func _show_purchase_popup(level_index: int):
 	if ProgressManager.global_coin_count < 24:
-		popup_label.text = "Nicht genug Münzen! (24 benötigt)"
+		popup_label.text = Localization.get_text("PopUpT1")
 		buy_button.disabled = true
 	else:
-		popup_label.text = "Level " + str(level_index + 1) + " freischalten für 24 Münzen?"
+		popup_label.text = Localization.get_text("PopUpT21") + str(level_index + 1) + Localization.get_text("PopUpT22")
 		buy_button.disabled = false
 	selected_bonus_level = level_index
 	popup_purchase.visible = true
@@ -101,7 +101,7 @@ func _on_buy_bonus_level():
 		popup_purchase.visible = false
 		Background.hide()
 	else:
-		popup_label.text = "Kauf fehlgeschlagen! Nicht genug Münzen oder Level bereits freigeschaltet."
+		popup_label.text = Localization.get_text("PopUpT3")
 		buy_button.disabled = true
 
 func _on_cancel_purchase():

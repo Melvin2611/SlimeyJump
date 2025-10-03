@@ -155,7 +155,11 @@
 	"W7L40S1": "Ohhh…\n \nC-ces nuages sont si cool…\nIls apparaissent et disparaissent\nen rythme.",
 	"W7L41S1": "...",
 	"W7L42S1": "Zut !!!\nOn est déjà presque dans l'espace !",
-	"W7L42S2": "Merveilleux !!!\nOn est déjà presque dans l'espace !"
+	"W7L42S2": "Merveilleux !!!\nOn est déjà presque dans l'espace !",
+	"PopUpT1": "Pas assez de pièces ! (24 nécessaires)",
+	"PopUpT21": "Débloquer le niveau",
+	"PopUpT22": " pour 24 pièces ?",
+	"PopUpT3": "Achat échoué !"
   },
   "it": {
 	"W1L1S1": "Tira una linea lontano dallo Slime,\nquando rilasci lo Slime\nsi lancia nella direzione opposta",
@@ -205,7 +209,11 @@
 	"W7L40S1": "Ohhh…\n \nQ-queste nuvole sono così cool…\nAppaiono e scompaiono\na ritmo.",
 	"W7L41S1": "...",
 	"W7L42S1": "Maledizione!!!\nSiamo già quasi nello spazio!",
-	"W7L42S2": "Meraviglioso!!!\nSiamo già quasi nello spazio!"
+	"W7L42S2": "Meraviglioso!!!\nSiamo già quasi nello spazio!",
+	"PopUpT1": "Non abbastanza monete! (24 necessarie)",
+	"PopUpT21": "Sblocca livello",
+	"PopUpT22": " per 24 monete?",
+	"PopUpT3": "Acquisto fallito!"
   },
   "es": {
 	"W1L1S1": "Tira una línea lejos del Slime,\ncuando sueltas el Slime\nse lanza en la dirección opuesta",
@@ -255,7 +263,11 @@
 	"W7L40S1": "Ohhh…\n \nE-estas nubes son tan geniales…\nAparecen y desaparecen\nen ritmo.",
 	"W7L41S1": "...",
 	"W7L42S1": "¡Maldición!!!\n¡Ya estamos casi en el espacio!",
-	"W7L42S2": "¡Maravilloso!!!\n¡Ya estamos casi en el espacio!"
+	"W7L42S2": "¡Maravilloso!!!\n¡Ya estamos casi en el espacio!",
+	"PopUpT1": "¡No hay suficientes monedas! (24 necesarias)",
+	"PopUpT21": "Desbloquear nivel",
+	"PopUpT22": " por 24 monedas?",
+	"PopUpT3": "¡Compra fallida!"
   },
   "zh": {
 	"W1L1S1": "从Slime拉出一条线，\n当你放手时Slime\n会向相反方向发射",
@@ -305,7 +317,11 @@
 	"W7L40S1": "哦哦…\n \n这些云太酷了…\n它们出现和消失\n有节奏。",
 	"W7L41S1": "...",
 	"W7L42S1": "该死！！！\n我们已经几乎在太空了！",
-	"W7L42S2": "美妙！！！\n我们已经几乎在太空了！"
+	"W7L42S2": "美妙！！！\n我们已经几乎在太空了！",
+	"PopUpT1": "硬币不足！（需要24个）",
+	"PopUpT21": "解锁关卡",
+	"PopUpT22": " 需要24个硬币？",
+	"PopUpT3": "购买失败！"
   },
   "ja": {
 	"W1L1S1": "スライムから線を引いて離すと、\n離したときスライムは\n反対方向に飛ぶ",
@@ -355,7 +371,11 @@
 	"W7L40S1": "おお…\n \nこれらの雲はクール…\nリズムで現れ消える。",
 	"W7L41S1": "...",
 	"W7L42S1": "くそ！！！\nもうほとんど宇宙だ！",
-	"W7L42S2": "素晴らしい！！！\nもうほとんど宇宙だ！"
+	"W7L42S2": "素晴らしい！！！\nもうほとんど宇宙だ！",
+	"PopUpT1": "コインが足りません！（24個必要）",
+	"PopUpT21": "レベルをアンロック",
+	"PopUpT22": " 24コインで？",
+	"PopUpT3": "購入失敗！"
   },
   "ru": {
 	"W1L1S1": "Тяните линию от Слима,\nкогда отпускаете, Слим\nлетит в противоположном направлении",
@@ -405,6 +425,10 @@
 	"W7L40S1": "Ооо…\n \nЭ-эти облака такие крутые…\nОни появляются и исчезают\nв ритме.",
 	"W7L41S1": "...",
 	"W7L42S1": "Чёрт!!!\nМы уже почти в космосе!",
-	"W7L42S2": "Замечательно!!!\nМы уже почти в космосе!"
+	"W7L42S2": "Замечательно!!!\nМы уже почти в космосе!",
+	"PopUpT1": "Недостаточно монет! (нужно 24)",
+	"PopUpT21": "Открыть уровень",
+	"PopUpT22": " за 24 монеты?",
+	"PopUpT3": "Покупка не удалась!"
   }
 }
