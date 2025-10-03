@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://btim1pkwea0pw"]
+[gd_scene load_steps=66 format=4 uid="uid://btim1pkwea0pw"]
 
 [ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/background/Mountains night/sky.png" id="1_qchtq"]
 [ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/background/Mountains night/far-clouds.png" id="2_aasoj"]
@@ -31,8 +31,11 @@
 [ext_resource type="Texture2D" uid="uid://drnvhbk6462mm" path="res://Sprites/Objects/Lava/Laval8.png" id="22_r8uvn"]
 [ext_resource type="Script" uid="uid://b4lae855b2u6n" path="res://Scripts/Objects/W6/air stream to ground.gd" id="23_7wxcb"]
 [ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="23_facq4"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="24_g1cuu"]
 [ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="24_m28tp"]
 [ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Slime/Slime-squish/Slime-squish1.png" id="25_aujve"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="25_r8uvn"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="26_chkv3"]
 [ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Slime/Slime-squish/Slime-squish2.png" id="26_e11b7"]
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="27_3r6ku"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="27_s7kdr"]
@@ -6214,6 +6217,30 @@ script = ExtResource("23_7wxcb")
 position = Vector2(121, 0)
 shape = SubResource("RectangleShape2D_7wxcb")
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(2073, -2423)
+scale = Vector2(4, 4)
+texture = ExtResource("24_g1cuu")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(1996, -2517)
+scale = Vector2(4, 4)
+texture = ExtResource("25_r8uvn")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("26_chkv3")
+theme_override_font_sizes/font_size = 22
+text = "WOOOW....
+Pass auf!
+Diese Hitze macht einen 
+ziemlichen Aufwind!"
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(8265, 903)
 scale = Vector2(4, 4)
@@ -6222,12 +6249,15 @@ tile_set = SubResource("TileSet_hdxtn")
 
 [node name="Coin1" parent="." instance=ExtResource("27_s7kdr")]
 position = Vector2(98, -5333)
+coin_id = "C321"
 
 [node name="Coin2" parent="." instance=ExtResource("27_s7kdr")]
 position = Vector2(5011.4873, -3621.2292)
+coin_id = "C322"
 
 [node name="Coin3" parent="." instance=ExtResource("27_s7kdr")]
 position = Vector2(3139.982, -3183.146)
+coin_id = "C323"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(95, -39)

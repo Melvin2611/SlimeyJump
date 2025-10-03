@@ -177,12 +177,15 @@ script = ExtResource("9_khxqr")
 
 [node name="Coin1" parent="." instance=ExtResource("10_yxff7")]
 position = Vector2(2261.53, -470.978)
+coin_id = "C101"
 
 [node name="Coin2" parent="." instance=ExtResource("10_yxff7")]
 position = Vector2(7097.76, 161.687)
+coin_id = "C102"
 
 [node name="Coin3" parent="." instance=ExtResource("10_yxff7")]
 position = Vector2(4502.69, -600.372)
+coin_id = "C103"
 
 [node name="Sign" type="Sprite2D" parent="."]
 position = Vector2(374, 230)
@@ -208,6 +211,29 @@ kommt mir dieser Ort hier
 sehr bekannt vor, dabei sind wir
 die ganze Zeit in eine Richtung
 gelaufen"
+
+[node name="Sign2" type="Sprite2D" parent="."]
+position = Vector2(5543, 230)
+scale = Vector2(4, 4)
+texture = ExtResource("11_tqiq0")
+
+[node name="Speech-bubble2" type="Sprite2D" parent="."]
+position = Vector2(5466, 136)
+scale = Vector2(4, 4)
+texture = ExtResource("12_xic6b")
+
+[node name="Label" type="Label" parent="Speech-bubble2"]
+offset_left = -25.75
+offset_top = -12.25
+offset_right = 280.25
+offset_bottom = 114.75
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_0ecwo")
+theme_override_font_sizes/font_size = 30
+text = "Test
+Tester
+am Testigsten"
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(326, 613)

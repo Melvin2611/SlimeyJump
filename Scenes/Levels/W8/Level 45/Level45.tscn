@@ -7229,14 +7229,17 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("8_o2ca2")
 
-[node name="Area2D" parent="." instance=ExtResource("58_5nofl")]
+[node name="Coin1" parent="." instance=ExtResource("58_5nofl")]
 position = Vector2(825.77673, -1552.9126)
+coin_id = "C451"
 
-[node name="Area2D2" parent="." instance=ExtResource("58_5nofl")]
+[node name="Coin2" parent="." instance=ExtResource("58_5nofl")]
 position = Vector2(2855, 13)
+coin_id = "C452"
 
-[node name="Area2D5" parent="." instance=ExtResource("58_5nofl")]
+[node name="Coin3" parent="." instance=ExtResource("58_5nofl")]
 position = Vector2(6176.8306, -1288.8508)
+coin_id = "C453"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(-27, 277)

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://btraog0pniu4l" path="res://Sprites/background/dessert/sky.png" id="1_yywxh"]
 [ext_resource type="Texture2D" uid="uid://c1sicm1q344i8" path="res://Sprites/background/dessert/dunes1.png" id="2_msm3q"]
 [ext_resource type="Texture2D" uid="uid://bvjw1fb4k1qqy" path="res://Sprites/background/dessert/dunes2.png" id="3_35gic"]
-[ext_resource type="Script" uid="uid://chxnolysflvyq" path="res://Scripts/Objects/W3/Level14/goalL14.gd" id="4_35gic"]
+[ext_resource type="Script" uid="uid://chxnolysflvyq" path="res://Scripts/Objects/W3/Level 14/goalL14.gd" id="4_35gic"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="5_3ywgt"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="6_jk1dd"]
 [ext_resource type="Texture2D" uid="uid://bft8ky0g30kc1" path="res://Sprites/Objects/Big-Void.png" id="7_c2shx"]
@@ -2653,13 +2653,16 @@ Sand zu graben?!"
 
 [node name="Coin1" parent="." instance=ExtResource("12_35gic")]
 position = Vector2(164.677, -1000.71)
+coin_id = "C141"
 
 [node name="Coin2" parent="." instance=ExtResource("12_35gic")]
 position = Vector2(4481.2, 111.624)
+coin_id = "C142"
 
 [node name="Coin3" parent="." instance=ExtResource("12_35gic")]
 position = Vector2(8862.48, -676.595)
 rotation = -3.14159
+coin_id = "C143"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(263, 742)

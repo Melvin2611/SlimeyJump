@@ -1595,12 +1595,15 @@ texture = ExtResource("15_agf52")
 
 [node name="Coin1" parent="." instance=ExtResource("15_1qr8o")]
 position = Vector2(2759, -605)
+coin_id = "C31"
 
 [node name="Coin2" parent="." instance=ExtResource("15_1qr8o")]
 position = Vector2(4070, -72)
+coin_id = "C32"
 
 [node name="Coin3" parent="." instance=ExtResource("15_1qr8o")]
 position = Vector2(8037, -240)
+coin_id = "C33"
 
 [node name="Moving Platform 1" parent="." instance=ExtResource("15_flgu7")]
 position = Vector2(6300, -44)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://c7e2vv8e5mx0h"]
+[gd_scene load_steps=65 format=4 uid="uid://c7e2vv8e5mx0h"]
 
 [ext_resource type="Texture2D" uid="uid://6m2abukrmqhu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_1.png" id="1_q4hwa"]
 [ext_resource type="Texture2D" uid="uid://b00hkxgbd6ugu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_2.png" id="2_6w1ou"]
@@ -15,7 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://d084rij1ole7e" path="res://Sprites/Objects/Button/Button1.png" id="13_of7j3"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="16_oiign"]
 [ext_resource type="Script" uid="uid://cs4bwivxtx3pb" path="res://Scripts/Objects/W1/Level 3/door.gd" id="17_lrrrr"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="17_q4hwa"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="18_6w1ou"]
 [ext_resource type="Texture2D" uid="uid://cs1mfpjvebrhy" path="res://Sprites/Objects/Door.png" id="18_yx65p"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="19_fv3ie"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="20_tjri6"]
 [ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/factorytileset.png" id="21_8d3fs"]
 [ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="22_5tqwg"]
@@ -4951,12 +4954,39 @@ texture = ExtResource("18_yx65p")
 
 [node name="Coin1" parent="." instance=ExtResource("16_oiign")]
 position = Vector2(4547.965, -575.1886)
+coin_id = "C291"
 
 [node name="Coin2" parent="." instance=ExtResource("16_oiign")]
 position = Vector2(280.27344, -1405.3425)
+coin_id = "C292"
 
 [node name="Coin3" parent="." instance=ExtResource("16_oiign")]
 position = Vector2(-984.2355, -1384.2854)
+coin_id = "C293"
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-1215, -515)
+scale = Vector2(4, 4)
+texture = ExtResource("17_q4hwa")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-1292, -609)
+scale = Vector2(4, 4)
+texture = ExtResource("18_6w1ou")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_fv3ie")
+theme_override_font_sizes/font_size = 22
+text = "Das war ein F-FEHLER!!!
+Das hier ist ein G-G-Geister Haus,
+und jetzt ist sogar noch der Eingang
+verschwunden."
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(8291, 890)

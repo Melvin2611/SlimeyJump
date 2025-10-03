@@ -3577,12 +3577,15 @@ shape = SubResource("ConvexPolygonShape2D_6l3g8")
 
 [node name="Coin1" parent="." instance=ExtResource("20_26dds")]
 position = Vector2(2049.51, 304.223)
+coin_id = "C151"
 
 [node name="Coin2" parent="." instance=ExtResource("20_26dds")]
 position = Vector2(3647.02, -466.91)
+coin_id = "C152"
 
 [node name="Coin3" parent="." instance=ExtResource("20_26dds")]
 position = Vector2(7747.26, 41.1016)
+coin_id = "C153"
 
 [node name="Sign" type="Sprite2D" parent="."]
 position = Vector2(487, 359)

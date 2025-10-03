@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://dq5rgqqs4wt3m"]
+[gd_scene load_steps=76 format=4 uid="uid://dq5rgqqs4wt3m"]
 
 [ext_resource type="Texture2D" uid="uid://6m2abukrmqhu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_1.png" id="1_v8s4i"]
 [ext_resource type="Texture2D" uid="uid://b00hkxgbd6ugu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_2.png" id="2_vrvbd"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/factorytileset.png" id="17_iqlx1"]
 [ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="18_ifw7h"]
 [ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="19_q7mvj"]
+[ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="19_tawyk"]
 [ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="20_004k7"]
 [ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="21_733xt"]
 [ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="22_6osa1"]
@@ -40,7 +41,10 @@
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="35_5pfhw"]
 [ext_resource type="Texture2D" uid="uid://26ie5d8ghw55" path="res://Sprites/Objects/Ghost/Ghost4.png" id="35_tawyk"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="36_2fdxq"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="37_g0q3t"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="37_wg6vw"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="38_mkumc"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="39_5e31r"]
 [ext_resource type="AudioStream" uid="uid://dwt28tudbsdwj" path="res://Sound/mus/catch-up-270509.mp3" id="39_dy5s5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lc65"]
@@ -4973,14 +4977,12 @@ collision_mask = 3
 position = Vector2(0, 1.125)
 shape = SubResource("RectangleShape2D_xfneb")
 
-[node name="Button3" type="StaticBody2D" parent="." node_paths=PackedStringArray("object1", "object2") groups=["platforms"]]
+[node name="Button3" type="StaticBody2D" parent="." groups=["platforms"]]
 position = Vector2(2275, -1323)
 scale = Vector2(4, 4)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("14_etdrb")
-object1 = NodePath("../ColorRect3")
-object2 = NodePath("../ColorRect4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button3"]
 position = Vector2(0, 5)
@@ -5030,6 +5032,18 @@ shape = SubResource("RectangleShape2D_5r7qs")
 
 [node name="Sprite2D" type="Sprite2D" parent="Door2"]
 texture = ExtResource("15_0gx6f")
+
+[node name="Coin1" parent="." instance=ExtResource("19_tawyk")]
+position = Vector2(-1706.5618, -1536.967)
+coin_id = "C301"
+
+[node name="Coin2" parent="." instance=ExtResource("19_tawyk")]
+position = Vector2(5500, -807)
+coin_id = "C302"
+
+[node name="Coin3" parent="." instance=ExtResource("19_tawyk")]
+position = Vector2(7212, -78)
+coin_id = "C303"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(-1632, -843)
@@ -5127,35 +5141,82 @@ energy = 0.6
 texture = SubResource("GradientTexture2D_nkmhw")
 texture_scale = 5.7
 
-[node name="FlyingGhost3" type="CharacterBody2D" parent="."]
+[node name="Larry" type="CharacterBody2D" parent="."]
 position = Vector2(5512, -782.00006)
 scale = Vector2(12, 12)
 collision_layer = 2
 script = ExtResource("31_hsq76")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FlyingGhost3"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Larry"]
 sprite_frames = SubResource("SpriteFrames_16spk")
 autoplay = "default"
 frame_progress = 0.78407216
 
-[node name="HitArea" type="Area2D" parent="FlyingGhost3"]
+[node name="HitArea" type="Area2D" parent="Larry"]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FlyingGhost3/HitArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Larry/HitArea"]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_c6dta")
 
-[node name="DetectionArea" type="Area2D" parent="FlyingGhost3"]
+[node name="DetectionArea" type="Area2D" parent="Larry"]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FlyingGhost3/DetectionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Larry/DetectionArea"]
 shape = SubResource("CircleShape2D_copmt")
 
-[node name="PointLight2D" type="PointLight2D" parent="FlyingGhost3"]
+[node name="PointLight2D" type="PointLight2D" parent="Larry"]
 color = Color(0.6518714, 0.9999997, 0.892865, 1)
 energy = 0.6
 texture = SubResource("GradientTexture2D_nkmhw")
 texture_scale = 5.7
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-1318, -836)
+scale = Vector2(4, 4)
+texture = ExtResource("37_g0q3t")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-1395, -930)
+scale = Vector2(4, 4)
+texture = ExtResource("38_mkumc")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("39_5e31r")
+theme_override_font_sizes/font_size = 22
+text = "H-HILFE!!!
+Hier ist es jetzt schon wieder
+so M-Mega Dunkel!!!"
+
+[node name="Sign2" type="Sprite2D" parent="."]
+position = Vector2(3202, -69)
+scale = Vector2(4, 4)
+texture = ExtResource("37_g0q3t")
+
+[node name="Speech-bubble2" type="Sprite2D" parent="."]
+position = Vector2(3125, -163)
+scale = Vector2(4, 4)
+texture = ExtResource("38_mkumc")
+
+[node name="Label" type="Label" parent="Speech-bubble2"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("39_5e31r")
+theme_override_font_sizes/font_size = 22
+text = "Da ist ja noch so ein Riesiger Geist...
+Aber da oben ist auch ein Schatz...
+
+Schnapp dir den Schatz und dann Renn!"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(8291, 890)

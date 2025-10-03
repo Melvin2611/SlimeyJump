@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://b6gifrtjnp6jc"]
+[gd_scene load_steps=54 format=4 uid="uid://b6gifrtjnp6jc"]
 
 [ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/background/Mountains night/sky.png" id="1_obkk1"]
 [ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/background/Mountains night/far-clouds.png" id="2_nwisq"]
@@ -15,9 +15,12 @@
 [ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="12_b8upn"]
 [ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="13_gmcnq"]
 [ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="14_kxfyt"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="15_8kd6s"]
 [ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Slime/Slime-Fling/Slime-fling2.png" id="15_hkbas"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="16_b8upn"]
 [ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="16_w4itw"]
 [ext_resource type="Script" uid="uid://do8pyygfb2j8j" path="res://Scripts/Objects/W1/Level 3/spikeL3.gd" id="17_gmcnq"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="17_kxfyt"]
 [ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="17_tog8p"]
 [ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Slime/Slime-squish/Slime-squish1.png" id="18_gnnv8"]
 [ext_resource type="Texture2D" uid="uid://bnvkpl632nh5t" path="res://Sprites/Objects/Spike.png" id="18_kxfyt"]
@@ -5908,6 +5911,53 @@ texture = ExtResource("18_kxfyt")
 stream = ExtResource("19_hkbas")
 bus = &"SFX"
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(539, -55)
+scale = Vector2(4, 4)
+texture = ExtResource("15_8kd6s")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(462, -149)
+scale = Vector2(4, 4)
+texture = ExtResource("16_b8upn")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_kxfyt")
+theme_override_font_sizes/font_size = 22
+text = "Endlich raus aus diesem Haus!
+
+Dann mal weiter... 
+Es gibt bestimmt noch weiter Schätze!"
+
+[node name="Sign2" type="Sprite2D" parent="."]
+position = Vector2(3631, -1910)
+scale = Vector2(4, 4)
+texture = ExtResource("15_8kd6s")
+
+[node name="Speech-bubble2" type="Sprite2D" parent="."]
+position = Vector2(3554, -2004)
+scale = Vector2(4, 4)
+texture = ExtResource("16_b8upn")
+
+[node name="Label" type="Label" parent="Speech-bubble2"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_kxfyt")
+theme_override_font_sizes/font_size = 22
+text = "Hier sind ja wieder diese Steine!
+Vielleicht gibt es irgendwas oben
+auf dem Berg!"
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(8265, 903)
 scale = Vector2(4, 4)
@@ -5916,12 +5966,15 @@ tile_set = SubResource("TileSet_vkq4c")
 
 [node name="Coin1" parent="." instance=ExtResource("39_w4itw")]
 position = Vector2(1352, -1311)
+coin_id = "C311"
 
 [node name="Coin2" parent="." instance=ExtResource("39_w4itw")]
 position = Vector2(5599.915, -1723.1904)
+coin_id = "C312"
 
 [node name="Coin3" parent="." instance=ExtResource("39_w4itw")]
 position = Vector2(5206.49, -3692.4146)
+coin_id = "C313"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(95, -39)

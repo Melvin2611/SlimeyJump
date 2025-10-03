@@ -7,7 +7,7 @@ func _ready():
 
 func _on_body_entered(body: Node):
 	if body == player:
-		Global.coin_count = 0
+		Global.reset_level_coins()
 		$AudioStreamPlayer.play()
 		await get_tree().create_timer(0.2).timeout
 		get_tree().reload_current_scene()

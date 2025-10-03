@@ -4999,12 +4999,15 @@ tile_set = SubResource("TileSet_aejvh")
 
 [node name="Coin1" parent="." instance=ExtResource("22_omo5h")]
 position = Vector2(-1553, -2031)
+coin_id = "C261"
 
 [node name="Coin2" parent="." instance=ExtResource("22_omo5h")]
 position = Vector2(595, -1863)
+coin_id = "C262"
 
 [node name="Coin3" parent="." instance=ExtResource("22_omo5h")]
 position = Vector2(2095, -2418)
+coin_id = "C263"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(-1611, -78)

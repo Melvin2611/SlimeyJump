@@ -1201,15 +1201,34 @@ texture_hover = ExtResource("10_3hb06")
 
 [node name="Label" type="Label" parent="VBoxContainer/Play"]
 layout_mode = 0
-offset_left = 28.6667
-offset_top = 0.666667
-offset_right = 68.6667
-offset_bottom = 30.6667
-scale = Vector2(0.6, 0.6)
+offset_left = 33.66671
+offset_top = 3.0000005
+offset_right = 73.66671
+offset_bottom = 33.000034
+scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_tbdrc")
 theme_override_font_sizes/font_size = 30
 text = "Play"
+horizontal_alignment = 1
+
+[node name="Level Select" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_wib81")
+texture_pressed = ExtResource("9_vuees")
+texture_hover = ExtResource("10_3hb06")
+
+[node name="Label" type="Label" parent="VBoxContainer/Level Select"]
+layout_mode = 0
+offset_left = 10.666671
+offset_top = 3.666667
+offset_right = 134.66667
+offset_bottom = 33.666702
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_tbdrc")
+theme_override_font_sizes/font_size = 30
+text = "Level Select"
 horizontal_alignment = 1
 
 [node name="Settings" type="TextureButton" parent="VBoxContainer"]
@@ -1220,11 +1239,11 @@ texture_hover = ExtResource("10_3hb06")
 
 [node name="Label" type="Label" parent="VBoxContainer/Settings"]
 layout_mode = 0
-offset_left = 16.6667
-offset_top = 0.33333
-offset_right = 103.667
-offset_bottom = 30.3333
-scale = Vector2(0.6, 0.6)
+offset_left = 21.66671
+offset_top = 2.6666634
+offset_right = 108.66701
+offset_bottom = 32.666664
+scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("9_tbdrc")
 theme_override_font_sizes/font_size = 30
 text = "Settings"
@@ -1238,11 +1257,11 @@ texture_hover = ExtResource("10_3hb06")
 
 [node name="Label" type="Label" parent="VBoxContainer/Credits"]
 layout_mode = 0
-offset_left = 20.6667
-offset_top = 2.33333
-offset_right = 95.6667
-offset_bottom = 32.3333
-scale = Vector2(0.6, 0.6)
+offset_left = 25.66671
+offset_top = 4.666663
+offset_right = 100.66671
+offset_bottom = 34.666664
+scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("9_tbdrc")
 theme_override_font_sizes/font_size = 30
 text = "Credits"
@@ -1256,11 +1275,11 @@ texture_hover = ExtResource("10_3hb06")
 
 [node name="Label" type="Label" parent="VBoxContainer/Quit"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 2.0
-offset_right = 72.0
-offset_bottom = 32.0
-scale = Vector2(0.6, 0.6)
+offset_left = 35.00001
+offset_top = 4.3333335
+offset_right = 77.000015
+offset_bottom = 34.333332
+scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("9_tbdrc")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
@@ -1285,9 +1304,10 @@ offset_top = 334.0
 offset_right = 836.0
 offset_bottom = 357.0
 theme_override_fonts/font = ExtResource("9_tbdrc")
-text = "v.0.8.3-beta"
+text = "v.0.9.1-beta"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level Select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

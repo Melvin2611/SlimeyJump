@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=4 uid="uid://be83gjqe8gx5i"]
+[gd_scene load_steps=104 format=4 uid="uid://be83gjqe8gx5i"]
 
 [ext_resource type="Texture2D" uid="uid://c45e705p43tbx" path="res://Sprites/background/Volcano/BG.png" id="1_wwxy4"]
 [ext_resource type="Texture2D" uid="uid://iqjaoprlai57" path="res://Sprites/background/Volcano/Clouds.png" id="2_1ppyr"]
@@ -36,6 +36,7 @@
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="40_806vc"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="41_acfh4"]
 [ext_resource type="Shader" uid="uid://bc4hlbedhppfq" path="res://Scripts/shader/HeatHaze.gdshader" id="42_256uo"]
+[ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="46_eewhs"]
 [ext_resource type="Script" uid="uid://v63ippe5gkr" path="res://Scripts/Objects/W8/Level 48/Dragon.gd" id="48_7xxga"]
 [ext_resource type="Texture2D" uid="uid://d2586buvv5aj8" path="res://Sprites/Objects/DragonHead.png" id="49_0go4v"]
 [ext_resource type="Texture2D" uid="uid://dqtjm6lx6qti0" path="res://Sprites/Objects/Fire-Lava-Breath.png" id="50_gfenu"]
@@ -7652,6 +7653,18 @@ position = Vector2(0.41070986, -10.008929)
 scale = Vector2(1.4481026, 0.64313626)
 color = Color(1, 0.4, 0, 1)
 texture = SubResource("GradientTexture2D_yf38f")
+
+[node name="Coin1" parent="." instance=ExtResource("46_eewhs")]
+position = Vector2(1539.157, -181.78012)
+coin_id = "C481"
+
+[node name="Coin2" parent="." instance=ExtResource("46_eewhs")]
+position = Vector2(5515.8687, -148.81323)
+coin_id = "C482"
+
+[node name="Coin3" parent="." instance=ExtResource("46_eewhs")]
+position = Vector2(12083.514, -2814.8137)
+coin_id = "C483"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(5371, -1268)

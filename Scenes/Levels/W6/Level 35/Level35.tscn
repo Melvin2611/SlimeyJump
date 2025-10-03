@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=4 uid="uid://dxxklc5e1ljcn"]
+[gd_scene load_steps=90 format=4 uid="uid://dxxklc5e1ljcn"]
 
 [ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/background/Mountains night/sky.png" id="1_wvfpo"]
 [ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/background/Mountains night/far-clouds.png" id="2_befb0"]
@@ -33,8 +33,11 @@
 [ext_resource type="Texture2D" uid="uid://bcaa1ic20167y" path="res://Sprites/Objects/Lava/Laval6.png" id="35_learj"]
 [ext_resource type="Texture2D" uid="uid://csi3tk0n0effu" path="res://Sprites/Objects/Lava/Laval7.png" id="36_b45xh"]
 [ext_resource type="Texture2D" uid="uid://drnvhbk6462mm" path="res://Sprites/Objects/Lava/Laval8.png" id="37_v4wec"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="37_whgub"]
 [ext_resource type="Script" uid="uid://bjwrdicjqc6k2" path="res://Scripts/Objects/W6/Level 35/elevator_platform.gd" id="38_k0i7n"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="38_q32ni"]
 [ext_resource type="Texture2D" uid="uid://cqisp2axfv3an" path="res://Sprites/Objects/Lava/Lavator.png" id="39_fern3"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="39_ru3rq"]
 [ext_resource type="Texture2D" uid="uid://dicycm30jpj6t" path="res://Sprites/Objects/OneWayPlatform.png" id="40_befb0"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="40_jtwlh"]
 [ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/factorytileset.png" id="41_j2hyr"]
@@ -5888,12 +5891,13 @@ shader_parameter/intensity_falloff = 0.5
 [node name="Level35" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
+position = Vector2(380, -3674)
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
-offset_left = -41.0
+offset_left = -1153.0
 offset_top = 22.0
-offset_right = 13096.0
-offset_bottom = 5818.0
+offset_right = 12843.0
+offset_bottom = 7560.0
 color = Color(0.17254902, 0.14509805, 0.27450982, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Background"]
@@ -6242,6 +6246,30 @@ position = Vector2(30, 13)
 scale = Vector2(4, 4)
 texture = ExtResource("40_befb0")
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(7728, -3714)
+scale = Vector2(4, 4)
+texture = ExtResource("37_whgub")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(7651, -3808)
+scale = Vector2(4, 4)
+texture = ExtResource("38_q32ni")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("39_ru3rq")
+theme_override_font_sizes/font_size = 22
+text = "Wow...
+Was ein Fahrstuhl...
+Na wenigstens sind wir jetzt raus
+aus diesem Bunker."
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(5310, -1284)
 scale = Vector2(4, 4)
@@ -6370,14 +6398,17 @@ parameters/looping = true
 
 [node name="HUD" parent="." instance=ExtResource("59_2np01")]
 
-[node name="Area2D" parent="." instance=ExtResource("57_lvyed")]
+[node name="Coin1" parent="." instance=ExtResource("57_lvyed")]
 position = Vector2(515.0806, 1632.9331)
+coin_id = "C351"
 
-[node name="Area2D2" parent="." instance=ExtResource("57_lvyed")]
+[node name="Coin2" parent="." instance=ExtResource("57_lvyed")]
 position = Vector2(7498, 1537)
+coin_id = "C352"
 
-[node name="Area2D3" parent="." instance=ExtResource("57_lvyed")]
+[node name="Coin3" parent="." instance=ExtResource("57_lvyed")]
 position = Vector2(3826, -4056)
+coin_id = "C353"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_wvfpo")

@@ -3965,12 +3965,15 @@ occluder = SubResource("OccluderPolygon2D_hpuft")
 
 [node name="Coin1" parent="." instance=ExtResource("23_08hkj")]
 position = Vector2(-1636, -1675)
+coin_id = "C211"
 
 [node name="Coin2" parent="." instance=ExtResource("23_08hkj")]
 position = Vector2(5091.8027, -3299.0264)
+coin_id = "C212"
 
 [node name="Coin3" parent="." instance=ExtResource("23_08hkj")]
 position = Vector2(6386, -2204)
+coin_id = "C213"
 
 [node name="SlimePlayerglow" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 visible = false

@@ -2444,12 +2444,15 @@ tile_set = SubResource("TileSet_f3slg")
 
 [node name="Coin1" parent="." instance=ExtResource("17_prvax")]
 position = Vector2(-924, 107)
+coin_id = "C111"
 
 [node name="Coin2" parent="." instance=ExtResource("17_prvax")]
 position = Vector2(1046.07, -351.147)
+coin_id = "C112"
 
 [node name="Coin3" parent="." instance=ExtResource("17_prvax")]
 position = Vector2(2437, -1262)
+coin_id = "C113"
 
 [node name="ConveyorBelt" type="Area2D" parent="."]
 position = Vector2(391, 454)

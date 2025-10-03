@@ -21,6 +21,7 @@ config/icon="uid://nffec6kwcc2j"
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+ProgressManager="*res://Scripts/ProgressManager.gd"
 
 [display]
 

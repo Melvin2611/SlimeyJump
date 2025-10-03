@@ -2518,12 +2518,15 @@ bus = &"SFX"
 
 [node name="Coin1" parent="." instance=ExtResource("30_tx58p")]
 position = Vector2(1973.99, -148.024)
+coin_id = "C91"
 
 [node name="Coin2" parent="." instance=ExtResource("30_tx58p")]
 position = Vector2(7487.6, -621.964)
+coin_id = "C92"
 
 [node name="Coin3" parent="." instance=ExtResource("30_tx58p")]
 position = Vector2(10259, -980)
+coin_id = "C93"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player"]]
 position = Vector2(-1, 357)

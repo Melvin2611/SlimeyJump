@@ -7331,12 +7331,15 @@ tile_set = SubResource("TileSet_ni2ww")
 
 [node name="Coin1" parent="." instance=ExtResource("25_hoos1")]
 position = Vector2(-655.23816, -2304.2593)
+coin_id = "C431"
 
 [node name="Coin2" parent="." instance=ExtResource("25_hoos1")]
 position = Vector2(4580.309, 63.691223)
+coin_id = "C432"
 
 [node name="Coin3" parent="." instance=ExtResource("25_hoos1")]
 position = Vector2(6897.452, -110.43872)
+coin_id = "C433"
 
 [node name="crumbleblock" type="Area2D" parent="."]
 position = Vector2(6250, 289)

@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="4_yhfkj"]
 [ext_resource type="Texture2D" uid="uid://bft8ky0g30kc1" path="res://Sprites/Objects/Big-Void.png" id="5_euw7n"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="5_n4i2p"]
-[ext_resource type="Texture2D" uid="uid://08qva5h2rr23" path="res://Sprites/Cloud/Cloud1.png" id="6_euw7n"]
-[ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Cloud/Cloud2.png" id="7_x88su"]
+[ext_resource type="Texture2D" uid="uid://08qva5h2rr23" path="res://Sprites/Objects/Cloud/Cloud1.png" id="6_euw7n"]
+[ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Objects/Cloud/Cloud2.png" id="7_x88su"]
 [ext_resource type="Script" uid="uid://gvn42edt13q3" path="res://Scripts/Objects/W1/Level 2/CloudsL2.gd" id="8_x88su"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_a0mkr"]
 [ext_resource type="PackedScene" uid="uid://b2f8x4t5o7pun" path="res://Scenes/Objects/MovingPlatform.tscn" id="10_j0wjt"]
@@ -1324,12 +1324,15 @@ script = ExtResource("9_a0mkr")
 
 [node name="Coin1" parent="." instance=ExtResource("10_x47mk")]
 position = Vector2(2726, 153)
+coin_id = "C21"
 
 [node name="Coin2" parent="." instance=ExtResource("10_x47mk")]
 position = Vector2(6470, 163)
+coin_id = "C22"
 
 [node name="Coin3" parent="." instance=ExtResource("10_x47mk")]
 position = Vector2(5000, -261)
+coin_id = "C23"
 
 [node name="Moving Platform" parent="." instance=ExtResource("10_j0wjt")]
 position = Vector2(2726, 341)

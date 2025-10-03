@@ -7814,12 +7814,15 @@ texture = ExtResource("48_yskxj")
 
 [node name="Coin1" parent="." instance=ExtResource("62_048sy")]
 position = Vector2(504.9737, -610.64734)
+coin_id = "C471"
 
 [node name="Coin2" parent="." instance=ExtResource("62_048sy")]
 position = Vector2(6719.5044, -937.6393)
+coin_id = "C472"
 
 [node name="Coin3" parent="." instance=ExtResource("62_048sy")]
 position = Vector2(-332.18182, -505.5454)
+coin_id = "C473"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(5371, -1268)

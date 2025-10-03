@@ -1,6 +1,9 @@
 extends CanvasLayer
 
 @onready var pause_menu = $PauseMenu  # Pfad zu deinem Pause-Menü-Node
+@onready var level_coin_label = $LevelCoinLabel  # Label für Level-Münzen
+@onready var global_coin_label = $GlobalCoinLabel  # Label für globale Münzen
+
 func _on_pause_button_pressed():
 	get_tree().paused = true
 	pause_menu.visible = true  # Zeige Menü
@@ -19,24 +22,20 @@ func _on_quit_button_pressed():
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scenes/Main Menu.tscn")  # Zurück zum Hauptmenü
 	
-@onready var coin_label: Label = $CoinLabel  # Referenz zum Label
 
 func _ready() -> void:
-	Global.coin_collected.connect(_on_coin_collected)  # Signal vom Global-Skript verbinden
+	Global.coin_collected.connect(_on_coin_collected)
 	pause_menu.visible = false
 	$DebugMenu.visible = false
-	update_hud()  # Initial anzeigen
+	update_hud(Global.level_coin_count, Global.global_coin_count)  # Initial anzeigen
 
-func _on_coin_collected(_new_count: int) -> void:
-	update_hud()
+func _on_coin_collected(level_count: int, global_count: int):
+	update_hud(level_count, global_count)
 
-func update_hud() -> void:
-	coin_label.text = ": %d" % [Global.coin_count]
-	if Global.coin_count == Global.MAX_COINS:
-		coin_label.add_theme_color_override("font_color", Color(1, 1, 0.3))  # Rot färben
-	else:
-		coin_label.add_theme_color_override("font_color", Color(1, 1, 1))  # Weiß (Standard)
-
+func update_hud(level_count: int, global_count: int):
+	level_coin_label.text = ": %d/%d" % [level_count, Global.MAX_COINS_PER_LEVEL]
+	global_coin_label.text = ": %d" % global_count
+	
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Ab hier begintt das Debug Menu:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +70,7 @@ func _on_invincible_button_down() -> void:
 
 func _on_add_coins_pressed() -> void:
 	Global.coin_count += 1
-	update_hud()
+	update_hud(Global.level_coin_count, Global.global_coin_count)
 
 func _on_values_button_up() -> void:
 	var fps = Engine.get_frames_per_second()
@@ -90,3 +89,23 @@ func _on_check_button_button_up() -> void:
 func _on_check_button_button_down() -> void:
 	var player = get_tree().get_first_node_in_group("Player")
 	player.max_air_flings = 1
+
+
+func _on_reset_button_pressed() -> void:
+	ProgressManager.reset_progress()
+	print("Fortschritt wurde zurückgesetzt!")
+
+
+func _on_Coin_reset_button_pressed() -> void:
+	Global.level_coin_count = 0
+	Global.global_coin_count = 0
+	Global.collected_coins = {}  # Löscht alle gesammelten Münz-IDs für alle Levels
+	Global.coin_collected.emit(0, 0)  # Aktualisiert das HUD
+	Global.save_progress()  # Speichert die Änderungen in user://progress.save
+	print("Coins zurückgesetzt!")  # Optional: Debug-Ausgabe
+
+
+func _on_level_unlock_button_pressed() -> void:
+	ProgressManager.highest_completed_level = 48  # Setze auf die Anzahl der Levels, um alle freizuschalten
+	ProgressManager.save_progress()
+	print("Alle Levels freigeschaltet!")

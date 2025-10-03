@@ -4,7 +4,7 @@ extends Area2D
 
 func _ready():
 	body_entered.connect(_on_body_entered)
-
+	Global.set_current_level("Level 41")
 func _on_body_entered(body: Node):
 	if body == player:
 		$AudioStreamPlayer2D.play()

@@ -17,7 +17,7 @@ func _process(delta):
 
 func _on_body_entered(body: RigidBody2D):
 	if body.is_in_group("Player"):
-		Global.coin_count = 0
+		Global.reset_level_coins()
 		$AudioStreamPlayer.play()
 		if is_inside_tree():
 			await get_tree().create_timer(0.2).timeout

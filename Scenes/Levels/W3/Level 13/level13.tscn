@@ -2760,12 +2760,15 @@ move_distance = 500.0
 
 [node name="Coin1" parent="." instance=ExtResource("15_wvbfv")]
 position = Vector2(1893, 177)
+coin_id = "C131"
 
 [node name="Coin2" parent="." instance=ExtResource("15_wvbfv")]
 position = Vector2(4978.74, -175.242)
+coin_id = "C132"
 
 [node name="Coin3" parent="." instance=ExtResource("15_wvbfv")]
 position = Vector2(6488.11, -710.263)
+coin_id = "C133"
 
 [node name="Sign" type="Sprite2D" parent="."]
 position = Vector2(1028, 359)

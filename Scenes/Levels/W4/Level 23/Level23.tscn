@@ -3946,12 +3946,15 @@ tile_set = SubResource("TileSet_s7cur")
 
 [node name="Coin1" parent="." instance=ExtResource("22_ojxlm")]
 position = Vector2(-24.264282, -821.59534)
+coin_id = "C231"
 
 [node name="Coin2" parent="." instance=ExtResource("22_ojxlm")]
 position = Vector2(3831, -1674)
+coin_id = "C232"
 
 [node name="Coin3" parent="." instance=ExtResource("22_ojxlm")]
 position = Vector2(4024.4636, -2289.7642)
+coin_id = "C233"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(-1634, -67)

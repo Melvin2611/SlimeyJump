@@ -4279,12 +4279,15 @@ tile_set = SubResource("TileSet_i0glc")
 
 [node name="Coin1" parent="." instance=ExtResource("19_2lpxh")]
 position = Vector2(-928.0829, -2536.5723)
+coin_id = "C221"
 
 [node name="Coin2" parent="." instance=ExtResource("19_2lpxh")]
 position = Vector2(3922.958, -1810.5774)
+coin_id = "C222"
 
 [node name="Coin3" parent="." instance=ExtResource("19_2lpxh")]
 position = Vector2(5566.115, -2177.0532)
+coin_id = "C223"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(-1611, -78)

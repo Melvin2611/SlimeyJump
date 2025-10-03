@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="5_adran"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="6_adran"]
 [ext_resource type="Texture2D" uid="uid://d2vpomp8d1wrm" path="res://Sprites/Objects/Void.png" id="6_owyi3"]
-[ext_resource type="Texture2D" uid="uid://08qva5h2rr23" path="res://Sprites/Cloud/Cloud1.png" id="7_0e5wr"]
-[ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Cloud/Cloud2.png" id="8_0gcxw"]
+[ext_resource type="Texture2D" uid="uid://08qva5h2rr23" path="res://Sprites/Objects/Cloud/Cloud1.png" id="7_0e5wr"]
+[ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Objects/Cloud/Cloud2.png" id="8_0gcxw"]
 [ext_resource type="Script" uid="uid://buxwhwrh13i3j" path="res://Scripts/Objects/Clouds/CloudsL1.gd" id="9_01nlf"]
 [ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="10_ejmvd"]
 [ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="11_yi13b"]
@@ -1482,12 +1482,15 @@ texture = ExtResource("11_yi13b")
 
 [node name="Coin3" parent="." instance=ExtResource("12_2xkkf")]
 position = Vector2(7029, 269)
+coin_id = "C13"
 
 [node name="Coin2" parent="." instance=ExtResource("12_2xkkf")]
 position = Vector2(4458, -369)
+coin_id = "C12"
 
 [node name="Coin1" parent="." instance=ExtResource("12_2xkkf")]
 position = Vector2(2201, -178)
+coin_id = "C11"
 
 [node name="Cloud8" type="AnimatedSprite2D" parent="."]
 position = Vector2(7216, -583)

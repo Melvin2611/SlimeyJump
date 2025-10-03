@@ -1458,12 +1458,15 @@ move_distance = 750.0
 
 [node name="Coin1" parent="." instance=ExtResource("32_u6n70")]
 position = Vector2(5488.64, -812.727)
+coin_id = "C41"
 
 [node name="Coin2" parent="." instance=ExtResource("32_u6n70")]
 position = Vector2(7863, -310)
+coin_id = "C42"
 
 [node name="Coin3" parent="." instance=ExtResource("32_u6n70")]
 position = Vector2(4291, 177)
+coin_id = "C43"
 
 [node name="shaw" type="Area2D" parent="."]
 position = Vector2(7751, 422)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://b1rvcaqee3kia"]
+[gd_scene load_steps=54 format=4 uid="uid://b1rvcaqee3kia"]
 
 [ext_resource type="Texture2D" uid="uid://6ap8s0ayytsf" path="res://Sprites/background/Dungeon/BackgroundLayer1-169.png" id="1_xxxov"]
 [ext_resource type="Texture2D" uid="uid://dugpenbj8qiuv" path="res://Sprites/background/Dungeon/BackgroundLayer2-169.png" id="2_lwxr0"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="19_n0ace"]
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="20_6uf2f"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="21_c0e8j"]
+[ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="21_tigut"]
 [ext_resource type="Texture2D" uid="uid://flqjmb4dcls7" path="res://Sprites/background/Dungeon/ForegroundLayer1-169.png" id="22_o8i22"]
 [ext_resource type="AudioStream" uid="uid://3rp5o4jnlwwj" path="res://Sound/mus/the-castle-267961.mp3" id="23_yuftl"]
 [ext_resource type="Script" uid="uid://cxl3cqq6f5i7c" path="res://Scripts/Objects/Gravity field.gd" id="24_6sgk0"]
@@ -1526,6 +1527,18 @@ position_smoothing_speed = 7.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("9_ogesi")
+
+[node name="Coin1" parent="." instance=ExtResource("21_tigut")]
+position = Vector2(1287.9564, -636.1215)
+coin_id = "C51"
+
+[node name="Coin2" parent="." instance=ExtResource("21_tigut")]
+position = Vector2(2779.5942, -1008.12994)
+coin_id = "C52"
+
+[node name="Coin3" parent="." instance=ExtResource("21_tigut")]
+position = Vector2(7533, -211)
+coin_id = "C53"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player"]]
 position = Vector2(0, 408)

@@ -3457,12 +3457,15 @@ bus = &"SFX"
 
 [node name="Coin1" parent="." instance=ExtResource("5_k3rph")]
 position = Vector2(-3287, -318)
+coin_id = "C171"
 
 [node name="Coin2" parent="." instance=ExtResource("5_k3rph")]
 position = Vector2(297.70166, -640.723)
+coin_id = "C172"
 
 [node name="Coin3" parent="." instance=ExtResource("5_k3rph")]
 position = Vector2(9464, -319)
+coin_id = "C173"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-9221, 40)

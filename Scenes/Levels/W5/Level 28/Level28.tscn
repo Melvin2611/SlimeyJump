@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=4 uid="uid://dw4rqxerp4y8m"]
+[gd_scene load_steps=63 format=4 uid="uid://dw4rqxerp4y8m"]
 
 [ext_resource type="Texture2D" uid="uid://6m2abukrmqhu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_1.png" id="1_po552"]
 [ext_resource type="Texture2D" uid="uid://b00hkxgbd6ugu" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_2.png" id="2_rjrns"]
@@ -38,6 +38,9 @@
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="36_nhi40"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="38_hr4r0"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="39_2u0e7"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="39_bm0r2"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="40_75wdf"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="41_h5wm5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndmtp"]
 size = Vector2(384, 256)
@@ -4884,12 +4887,15 @@ move_distance = 1000.0
 
 [node name="Coin1" parent="." instance=ExtResource("17_rjrns")]
 position = Vector2(8341.819, -806.50635)
+coin_id = "C281"
 
 [node name="Coin2" parent="." instance=ExtResource("17_rjrns")]
 position = Vector2(7404.5522, -2474.0088)
+coin_id = "C282"
 
 [node name="Coin3" parent="." instance=ExtResource("17_rjrns")]
 position = Vector2(3240.0122, -1922.8118)
+coin_id = "C283"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(8291, 890)
@@ -5048,3 +5054,26 @@ shape = SubResource("RectangleShape2D_bm0r2")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Death Plain"]
 stream = ExtResource("39_2u0e7")
 bus = &"SFX"
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-1129, -66)
+scale = Vector2(4, 4)
+texture = ExtResource("39_bm0r2")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-1206, -160)
+scale = Vector2(4, 4)
+texture = ExtResource("40_75wdf")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -13.0
+offset_right = 277.5
+offset_bottom = 114.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("41_h5wm5")
+theme_override_font_sizes/font_size = 22
+text = "D-D-Da hinten  ist ein H-Haus,
+vielleicht k-können wir uns
+d-da verstecken."

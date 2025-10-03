@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=4 uid="uid://c8i7hvqa6pe71"]
+[gd_scene load_steps=93 format=4 uid="uid://c8i7hvqa6pe71"]
 
 [ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/background/Mountains night/sky.png" id="1_ywxwx"]
 [ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/background/Mountains night/far-clouds.png" id="2_1ojbf"]
@@ -47,9 +47,13 @@
 [ext_resource type="Texture2D" uid="uid://csi3tk0n0effu" path="res://Sprites/Objects/Lava/Laval7.png" id="35_sm84t"]
 [ext_resource type="Texture2D" uid="uid://drnvhbk6462mm" path="res://Sprites/Objects/Lava/Laval8.png" id="36_kjw4f"]
 [ext_resource type="AudioStream" uid="uid://dergy5561dtbd" path="res://Sound/mus/silent-night-12137.mp3" id="37_a483r"]
+[ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="38_crptd"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="38_qg0bh"]
 [ext_resource type="Script" uid="uid://cxl3cqq6f5i7c" path="res://Scripts/Objects/Gravity field.gd" id="39_32gmd"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="39_rpd3g"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="40_e7hvq"]
 [ext_resource type="Script" uid="uid://b7f6tn4amvwpg" path="res://Scripts/Objects/crumbleblock.gd" id="40_kf0gh"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="41_7tivi"]
 [ext_resource type="Texture2D" uid="uid://ci2iaivavy8oo" path="res://Sprites/Objects/crumbleblock/Crumble2.png" id="41_sbrr3"]
 [ext_resource type="Texture2D" uid="uid://cnv3yb5ddbof8" path="res://Sprites/Objects/crumbleblock/Crumble3.png" id="42_3pkdh"]
 [ext_resource type="Texture2D" uid="uid://dchtml0ngidom" path="res://Sprites/Objects/crumbleblock/Crumble4.png" id="43_xx4ip"]
@@ -125,7 +129,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5kww"]
-size = Vector2(16.849998, 56.21)
+size = Vector2(15.609997, 56.93)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7hvq"]
+size = Vector2(1.5300007, 7.8599987)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ui46k"]
 size = Vector2(112, 16)
@@ -6127,8 +6134,12 @@ collision_layer = 2
 script = ExtResource("39_32gmd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gravity Field"]
-position = Vector2(24.455, -23.555)
+position = Vector2(25.074999, -23.195)
 shape = SubResource("RectangleShape2D_h5kww")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gravity Field"]
+position = Vector2(16.515001, -6.2299995)
+shape = SubResource("RectangleShape2D_e7hvq")
 
 [node name="crumbleblock" type="Area2D" parent="."]
 position = Vector2(1600.9998, 2826)
@@ -6226,6 +6237,41 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
 position = Vector2(-62, -2516.75)
 shape = SubResource("RectangleShape2D_4hftu")
+
+[node name="Coin1" parent="." instance=ExtResource("38_crptd")]
+position = Vector2(2549.3035, 2390.0708)
+coin_id = "C341"
+
+[node name="Coin2" parent="." instance=ExtResource("38_crptd")]
+position = Vector2(4117.616, 2665.956)
+coin_id = "C342"
+
+[node name="Coin3" parent="." instance=ExtResource("38_crptd")]
+position = Vector2(6142.425, 2981.976)
+coin_id = "C343"
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(940, 2879)
+scale = Vector2(4, 4)
+texture = ExtResource("39_rpd3g")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(863, 2785)
+scale = Vector2(4, 4)
+texture = ExtResource("40_e7hvq")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("41_7tivi")
+theme_override_font_sizes/font_size = 22
+text = "Booooaaaaaahhhhhhhhh...
+
+Hier ist es ja Mega Heiß unten"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(5310, -1284)

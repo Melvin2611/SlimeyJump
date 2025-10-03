@@ -7398,12 +7398,15 @@ shape = SubResource("RectangleShape2D_aifiy")
 
 [node name="Coin1" parent="." instance=ExtResource("41_efg3q")]
 position = Vector2(2711, -308)
+coin_id = "C441"
 
 [node name="Coin2" parent="." instance=ExtResource("41_efg3q")]
 position = Vector2(4952.316, -137.90979)
+coin_id = "C442"
 
 [node name="Coin3" parent="." instance=ExtResource("41_efg3q")]
 position = Vector2(7878.619, 287.6457)
+coin_id = "C443"
 
 [node name="Lava2" type="Area2D" parent="."]
 position = Vector2(1673.0001, 526)

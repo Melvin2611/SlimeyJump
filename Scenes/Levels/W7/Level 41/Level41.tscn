@@ -6929,12 +6929,15 @@ tile_set = SubResource("TileSet_rmemh")
 
 [node name="Coin1" parent="." instance=ExtResource("16_w1qbu")]
 position = Vector2(2852.8237, -2757.832)
+coin_id = "C411"
 
 [node name="Coin2" parent="." instance=ExtResource("16_w1qbu")]
 position = Vector2(6136.983, -4520.0884)
+coin_id = "C412"
 
 [node name="Coin3" parent="." instance=ExtResource("16_w1qbu")]
 position = Vector2(1331, -3483)
+coin_id = "C413"
 
 [node name="Balloons" type="Node2D" parent="."]
 

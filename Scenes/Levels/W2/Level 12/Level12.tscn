@@ -2625,12 +2625,15 @@ texture = ExtResource("10_kluhm")
 
 [node name="Coin1" parent="." instance=ExtResource("8_mg0kr")]
 position = Vector2(-129.636, -1499.64)
+coin_id = "C121"
 
 [node name="Coin2" parent="." instance=ExtResource("8_mg0kr")]
 position = Vector2(124.909, -1506)
+coin_id = "C122"
 
 [node name="Coin3" parent="." instance=ExtResource("8_mg0kr")]
 position = Vector2(0, -601)
+coin_id = "C123"
 
 [node name="Sign" type="Sprite2D" parent="."]
 position = Vector2(-1430, 360)

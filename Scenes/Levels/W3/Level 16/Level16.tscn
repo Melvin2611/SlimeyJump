@@ -3795,12 +3795,15 @@ texture = ExtResource("16_ga01e")
 
 [node name="Coin1" parent="." instance=ExtResource("40_uf4j6")]
 position = Vector2(2108.24, -511.751)
+coin_id = "C161"
 
 [node name="Coin2" parent="." instance=ExtResource("40_uf4j6")]
 position = Vector2(-35.2024, -1140.31)
+coin_id = "C162"
 
 [node name="Coin3" parent="." instance=ExtResource("40_uf4j6")]
 position = Vector2(1484.01, -3000.37)
+coin_id = "C163"
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(437, 350)

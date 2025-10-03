@@ -6425,12 +6425,15 @@ tile_set = SubResource("TileSet_yajhg")
 
 [node name="Coin1" parent="." instance=ExtResource("13_0c3cw")]
 position = Vector2(4506, -675)
+coin_id = "C401"
 
 [node name="Coin2" parent="." instance=ExtResource("13_0c3cw")]
 position = Vector2(3229, -3204)
+coin_id = "C402"
 
 [node name="Coin3" parent="." instance=ExtResource("13_0c3cw")]
 position = Vector2(6120.67, -5792.5376)
+coin_id = "C403"
 
 [node name="Balloons" type="Node2D" parent="."]
 position = Vector2(4907, 143)
