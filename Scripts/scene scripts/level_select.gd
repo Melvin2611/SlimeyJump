@@ -2,9 +2,9 @@ extends Control
 
 @export var Background: ColorRect
 
-@onready var grid_page1: GridContainer = $VBoxContainer/HBoxContainer/GridContainer
-@onready var grid_page2: GridContainer = $VBoxContainer/HBoxContainer/GridContainer2
-@onready var grid_page3: GridContainer = $VBoxContainer/HBoxContainer/GridContainer3
+@onready var grid_page1: GridContainer = $GridContainer
+@onready var grid_page2: GridContainer = $GridContainer2
+@onready var grid_page3: GridContainer = $GridContainer3
 @onready var left_button: TextureButton = $"Button <"
 @onready var right_button: TextureButton = $"Button >"
 @onready var popup_purchase: PanelContainer = $PopupPurchase
@@ -12,16 +12,23 @@ extends Control
 @onready var buy_button: TextureButton = $PopupPurchase/VBoxContainer/BuyButton
 @onready var cancel_button: TextureButton = $PopupPurchase/VBoxContainer/CancelButton
 
-
 var grids: Array[GridContainer]
 var current_page: int = 0
 var total_pages: int = 3
 var slide_distance: float = 1152.0
 var selected_bonus_level: int = -1
+var is_animating: bool = false
 
 func _ready():
 	# Fülle Grids
 	grids = [grid_page1, grid_page2, grid_page3]
+
+	# Setze initiale Positionen für Zentrierung und verstecke nicht aktive Grids
+	for i in range(grids.size()):
+		center_grid(grids[i])
+		if i != current_page:
+			grids[i].visible = false
+			grids[i].position.x = -slide_distance if i < current_page else slide_distance
 
 	# Buttons verbinden
 	left_button.pressed.connect(_on_left_pressed)
@@ -44,6 +51,11 @@ func _ready():
 		var level_index: int = i
 		var locked := not ProgressManager.is_level_unlocked(level_index)
 		_set_button_locked_state(buttons[i], locked, level_index)
+
+func center_grid(grid: GridContainer) -> void:
+	var viewport_width = get_viewport_rect().size.x
+	var grid_width = grid.size.x
+	grid.position.x = (viewport_width - grid_width) / 2
 
 func _set_button_locked_state(button: BaseButton, locked: bool, level_index: int) -> void:
 	# Button deaktivieren
@@ -94,7 +106,7 @@ func _on_buy_bonus_level():
 
 func _on_cancel_purchase():
 	popup_purchase.visible = false
-	Background.show()
+	Background.hide()
 	selected_bonus_level = -1
 
 func _on_left_pressed():
@@ -107,23 +119,44 @@ func _on_right_pressed():
 	animate_slide(current_page, next_page, -slide_distance, slide_distance)
 	current_page = next_page
 
-func animate_slide(current_idx: int, next_idx: int, current_direction: float, next_start: float):
-	grids[next_idx].visible = true
-	grids[next_idx].position.x = next_start
+func animate_slide(current_idx: int, next_idx: int, current_target_x: float, next_start_x: float):
+	if is_animating:
+		return
+	is_animating = true
+	# Deaktiviere Buttons während der Animation
+	left_button.disabled = true
+	right_button.disabled = true
 
+	# Stelle sicher, dass die nächste Seite sichtbar ist und am Start steht
+	grids[next_idx].visible = true
+	grids[next_idx].position.x = next_start_x + (get_viewport_rect().size.x - grids[next_idx].size.x) / 2
+
+	# Tween für aktuelle Seite (raus)
 	var tween_current = create_tween()
-	tween_current.tween_property(grids[current_idx], "position:x", current_direction, 0.5)
+	tween_current.tween_property(
+		grids[current_idx], "position:x", current_target_x + (get_viewport_rect().size.x - grids[current_idx].size.x) / 2, 0.45
+	).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+
+	# Nach Ende: unsichtbar und korrekt außerhalb parken
 	tween_current.tween_callback(func():
 		grids[current_idx].visible = false
-		grids[current_idx].position.x = 0
+		grids[current_idx].position.x = current_target_x
 	)
-	tween_current.set_ease(Tween.EASE_IN_OUT)
-	tween_current.set_trans(Tween.TRANS_CUBIC)
 
+	# Tween für neue Seite (rein)
 	var tween_next = create_tween()
-	tween_next.tween_property(grids[next_idx], "position:x", 0, 0.5)
-	tween_next.set_ease(Tween.EASE_IN_OUT)
-	tween_next.set_trans(Tween.TRANS_CUBIC)
+	tween_next.tween_property(
+		grids[next_idx], "position:x", (get_viewport_rect().size.x - grids[next_idx].size.x) / 2, 0.45
+	).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+
+	# Nach Ende: safety reset und Buttons wieder aktivieren
+	tween_next.tween_callback(func():
+		grids[next_idx].position.x = (get_viewport_rect().size.x - grids[next_idx].size.x) / 2
+		grids[next_idx].visible = true
+		is_animating = false
+		left_button.disabled = false
+		right_button.disabled = false
+	)
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Main Menu.tscn")
