@@ -282,6 +282,34 @@
 > New Sfx for Dragon Breath has been added
 > New Music for Lava castle escape has been added
 
+## v.0.9.1-beta
+#### Levels:
+> Every Level has gotten a Sign
+
+#### Language:
+> German Language has been added fully
+> English Language has been added fully
+> French Language has been added fully
+> Italian language has been added fully
+> Spanish language has been added fully
+> Chinese language has been added fully
+> Japanese language has been added fully
+> Russian language has been added fully
+
+#### Main Menus:
+> Main Menu has gotten a new Play Button 
+> Old Play Button is now Level Select Button
+> Levels now have to be unlocked
+> W9 Levels can now be bought with coins (they don't exist at this moment so buying them is still pointless)
+> Settings menu got the buggy FPS option removed (default FPS is now 60)
+> Level Select Menu Scrolling has been fixed
+
+#### others
+> Coins have gotten a Rework, now you have the Global Coins
+> main Menu Label has been changed
+> Game Version has been changed
+> Save File added for Level Progress and Coins
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
