@@ -22,6 +22,7 @@ config/icon="uid://nffec6kwcc2j"
 
 Global="*res://Scripts/Global.gd"
 ProgressManager="*res://Scripts/ProgressManager.gd"
+Localization="*res://Scripts/localization.gd"
 
 [display]
 

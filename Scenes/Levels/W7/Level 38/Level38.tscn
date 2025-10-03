@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://ss7rtrdtoaq1"]
+[gd_scene load_steps=69 format=4 uid="uid://ss7rtrdtoaq1"]
 
 [ext_resource type="Texture2D" uid="uid://rod8hagerl6n" path="res://Sprites/Objects/Sprites/background/abovetheclouds/Sky.png" id="1_mu1lc"]
 [ext_resource type="Texture2D" uid="uid://nypv16d1dmba" path="res://Sprites/Objects/Sprites/background/abovetheclouds/Clouds2.png" id="2_17irh"]
@@ -27,6 +27,7 @@
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="21_1372d"]
 [ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling1.png" id="21_oefs7"]
 [ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling2.png" id="22_fnrox"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="22_w6dh0"]
 [ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle2.png" id="23_1gfkc"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="23_onkae"]
 [ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle1.png" id="24_g0kjo"]
@@ -7191,6 +7192,8 @@ text = "Oh Man...
 Die Windströme sind hier ja wirklich
 ziemlich stark vielleicht können sie
 uns ja sogar tragen"
+script = ExtResource("22_w6dh0")
+text_key = "W7L38S1"
 metadata/_edit_use_anchors_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

@@ -1,32 +1,33 @@
-[gd_scene load_steps=35 format=4 uid="uid://b3n78jkljjo7d"]
+[gd_scene load_steps=36 format=4 uid="uid://b3n78jkljjo7d"]
 
-[ext_resource type="Texture2D" uid="uid://bbogwkn7bb75v" path="res://Sprites/background/forest tile background/nightsky.png" id="1_df0rm"]
-[ext_resource type="Texture2D" uid="uid://bifyivlvljp7u" path="res://Sprites/background/forest tile background/mountainnight2.png" id="2_df0rm"]
-[ext_resource type="Texture2D" uid="uid://djmptp85vmb5x" path="res://Sprites/background/forest tile background/pine2.png" id="4_aairg"]
-[ext_resource type="Texture2D" uid="uid://b8gq4b0yvms8g" path="res://Sprites/background/forest tile background/pine1.png" id="5_pbt4e"]
-[ext_resource type="Texture2D" uid="uid://xkf1fuurfim2" path="res://Sprites/background/dark backdrop.png" id="5_suxjo"]
+[ext_resource type="Texture2D" uid="uid://bbogwkn7bb75v" path="res://Sprites/Objects/Sprites/background/forest tile background/nightsky.png" id="1_df0rm"]
+[ext_resource type="Texture2D" uid="uid://bifyivlvljp7u" path="res://Sprites/Objects/Sprites/background/forest tile background/mountainnight2.png" id="2_df0rm"]
+[ext_resource type="Texture2D" uid="uid://djmptp85vmb5x" path="res://Sprites/Objects/Sprites/background/forest tile background/pine2.png" id="4_aairg"]
+[ext_resource type="Texture2D" uid="uid://b8gq4b0yvms8g" path="res://Sprites/Objects/Sprites/background/forest tile background/pine1.png" id="5_pbt4e"]
+[ext_resource type="Texture2D" uid="uid://xkf1fuurfim2" path="res://Sprites/Objects/Sprites/background/dark backdrop.png" id="5_suxjo"]
 [ext_resource type="Script" uid="uid://xu6a8uhsdwdd" path="res://Scripts/Objects/W2/Level 10/GoalL10.gd" id="6_suxjo"]
-[ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="7_srqna"]
+[ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Sprites/Objects/Goal.png" id="7_srqna"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="8_dogb3"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_khxqr"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="10_yxff7"]
 [ext_resource type="TileSet" uid="uid://bp6l3qpa0j5kn" path="res://Tileset1.tres" id="11_kbmbo"]
-[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="11_tqiq0"]
-[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="12_xic6b"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sprites/Objects/Sign.png" id="11_tqiq0"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Sprites/Objects/Speech-Bubble.png" id="12_xic6b"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="13_0ecwo"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="14_xic6b"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="19_qhpse"]
 [ext_resource type="AudioStream" uid="uid://dergy5561dtbd" path="res://Sound/mus/silent-night-12137.mp3" id="27_suxjo"]
 [ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="32_r755r"]
-[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="33_fg4nr"]
-[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="34_kypxr"]
-[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="35_43vwm"]
-[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Slime/Slime-Fling/Slime-fling2.png" id="36_r83ld"]
-[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="37_02ytj"]
-[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="38_xbw5y"]
-[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Slime/Slime-squish/Slime-squish1.png" id="39_6tqok"]
-[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Slime/Slime-squish/Slime-squish2.png" id="40_fujm3"]
-[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="41_lhgaf"]
-[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="42_jeag0"]
+[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge1.png" id="33_fg4nr"]
+[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge2.png" id="34_kypxr"]
+[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling1.png" id="35_43vwm"]
+[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling2.png" id="36_r83ld"]
+[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle2.png" id="37_02ytj"]
+[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle1.png" id="38_xbw5y"]
+[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish1.png" id="39_6tqok"]
+[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish2.png" id="40_fujm3"]
+[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish3.png" id="41_lhgaf"]
+[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish4.png" id="42_jeag0"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="43_ebkcc"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="44_d66w2"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="45_ecy7k"]
@@ -211,6 +212,8 @@ kommt mir dieser Ort hier
 sehr bekannt vor, dabei sind wir
 die ganze Zeit in eine Richtung
 gelaufen"
+script = ExtResource("14_xic6b")
+text_key = "W2L10S1"
 
 [node name="Sign2" type="Sprite2D" parent="."]
 position = Vector2(5543, 230)
@@ -234,6 +237,8 @@ theme_override_font_sizes/font_size = 30
 text = "Test
 Tester
 am Testigsten"
+script = ExtResource("14_xic6b")
+text_key = "W2L10S2"
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(326, 613)

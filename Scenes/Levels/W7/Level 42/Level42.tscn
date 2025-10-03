@@ -1,64 +1,82 @@
-[gd_scene load_steps=78 format=4 uid="uid://76p5vk254q6n"]
+[gd_scene load_steps=89 format=4 uid="uid://76p5vk254q6n"]
 
-[ext_resource type="Texture2D" uid="uid://rod8hagerl6n" path="res://Sprites/background/abovetheclouds/Sky.png" id="1_p6vp6"]
-[ext_resource type="Texture2D" uid="uid://bogc5driqhkcv" path="res://Sprites/background/abovetheclouds/Clouds1.png" id="3_jvxi3"]
-[ext_resource type="Texture2D" uid="uid://ciobvsw4nckok" path="res://Sprites/background/weltraum/Sky-Transition.png" id="4_4w7hh"]
-[ext_resource type="Texture2D" uid="uid://wdtvvni8jl0s" path="res://Sprites/background/abovetheclouds/foregroundClouds.png" id="4_hobh2"]
-[ext_resource type="Texture2D" uid="uid://da7dwk1bcw3my" path="res://Sprites/background/weltraum/background_1.png" id="5_h4mtw"]
-[ext_resource type="Texture2D" uid="uid://opmex364onhs" path="res://Sprites/background/weltraum/background_2.png" id="6_ns2jl"]
-[ext_resource type="Texture2D" uid="uid://c6mkkf4ko88tb" path="res://Sprites/background/weltraum/background_3.png" id="7_duab2"]
+[ext_resource type="Texture2D" uid="uid://rod8hagerl6n" path="res://Sprites/Objects/Sprites/background/abovetheclouds/Sky.png" id="1_p6vp6"]
+[ext_resource type="Texture2D" uid="uid://bogc5driqhkcv" path="res://Sprites/Objects/Sprites/background/abovetheclouds/Clouds1.png" id="3_jvxi3"]
+[ext_resource type="Texture2D" uid="uid://ciobvsw4nckok" path="res://Sprites/Objects/Sprites/background/weltraum/Sky-Transition.png" id="4_4w7hh"]
+[ext_resource type="Texture2D" uid="uid://wdtvvni8jl0s" path="res://Sprites/Objects/Sprites/background/abovetheclouds/foregroundClouds.png" id="4_hobh2"]
+[ext_resource type="Texture2D" uid="uid://da7dwk1bcw3my" path="res://Sprites/Objects/Sprites/background/weltraum/background_1.png" id="5_h4mtw"]
+[ext_resource type="Texture2D" uid="uid://opmex364onhs" path="res://Sprites/Objects/Sprites/background/weltraum/background_2.png" id="6_ns2jl"]
+[ext_resource type="Texture2D" uid="uid://c6mkkf4ko88tb" path="res://Sprites/Objects/Sprites/background/weltraum/background_3.png" id="7_duab2"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="7_xdisa"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="8_ha50w"]
-[ext_resource type="Texture2D" uid="uid://bpi4wedpqtoby" path="res://Sprites/background/weltraum/background_4.png" id="8_hput7"]
-[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="9_fm1ti"]
+[ext_resource type="Texture2D" uid="uid://bpi4wedpqtoby" path="res://Sprites/Objects/Sprites/background/weltraum/background_4.png" id="8_hput7"]
+[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/Objects/Sprites/15 Blob TileMap 16x16.png" id="9_fm1ti"]
 [ext_resource type="Script" uid="uid://d2un1u0ferdk4" path="res://Scripts/Objects/W7/Level 42/GoalL42.gd" id="9_n5khx"]
-[ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/factorytileset.png" id="10_10lgg"]
-[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="10_drtby"]
-[ext_resource type="Texture2D" uid="uid://cinh4ggnkku6d" path="res://Sprites/Cloud Tileset (1).png" id="11_emjrg"]
-[ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="12_drtby"]
+[ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/Objects/Sprites/factorytileset.png" id="10_10lgg"]
+[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Sprites/Objects/Treasure-chest.png" id="10_drtby"]
+[ext_resource type="Texture2D" uid="uid://cinh4ggnkku6d" path="res://Sprites/Objects/Sprites/Cloud Tileset (1).png" id="11_emjrg"]
+[ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/Objects/Sprites/factorytileset-pers.png" id="12_drtby"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sprites/Objects/Sign.png" id="13_cfntx"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Sprites/Objects/Speech-Bubble.png" id="14_bes31"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="15_h4mtw"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="15_wbc4p"]
+[ext_resource type="Script" uid="uid://bjmk35i7ei1vq" path="res://Scripts/Objects/W7/Level 42/speech_bubble.gd" id="16_bes31"]
 [ext_resource type="Script" uid="uid://fg4c76pgy5vq" path="res://Scripts/Objects/W7/balloon.gd" id="16_ns2jl"]
-[ext_resource type="Texture2D" uid="uid://bp227o63qx7ui" path="res://Sprites/Objects/balloon/Balloon.png" id="17_duab2"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="16_xybao"]
+[ext_resource type="Texture2D" uid="uid://bp227o63qx7ui" path="res://Sprites/Objects/Sprites/Objects/balloon/Balloon.png" id="17_duab2"]
 [ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="18_hput7"]
-[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="19_ngayn"]
-[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="20_p21jw"]
-[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="21_j8esv"]
-[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Slime/Slime-Fling/Slime-fling2.png" id="22_m380q"]
-[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="23_mbkpy"]
-[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="24_r8cax"]
-[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Slime/Slime-squish/Slime-squish1.png" id="25_8oup0"]
-[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Slime/Slime-squish/Slime-squish2.png" id="26_n5khx"]
-[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="27_7s85c"]
-[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="28_psmhr"]
+[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge1.png" id="19_ngayn"]
+[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge2.png" id="20_p21jw"]
+[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling1.png" id="21_j8esv"]
+[ext_resource type="Texture2D" uid="uid://08qva5h2rr23" path="res://Sprites/Objects/Sprites/Objects/Cloud/Cloud1.png" id="21_spehw"]
+[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling2.png" id="22_m380q"]
+[ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Objects/Sprites/Objects/Cloud/Cloud2.png" id="22_xybao"]
+[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle2.png" id="23_mbkpy"]
+[ext_resource type="Script" uid="uid://f5fccq5utl00" path="res://Scripts/Objects/W7/Level 42/CloudL42.gd" id="23_spehw"]
+[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle1.png" id="24_r8cax"]
+[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish1.png" id="25_8oup0"]
+[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish2.png" id="26_n5khx"]
+[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish3.png" id="27_7s85c"]
+[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish4.png" id="28_psmhr"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="29_cfntx"]
-[ext_resource type="Texture2D" uid="uid://blu5xy37f4aej" path="res://Sprites/Slime/Slime-Yellow/Slime charge/Slime-charge1.png" id="31_n5khx"]
+[ext_resource type="Texture2D" uid="uid://blu5xy37f4aej" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime charge/Slime-charge1.png" id="31_n5khx"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="31_wbc4p"]
-[ext_resource type="Texture2D" uid="uid://duaosx3oao6wp" path="res://Sprites/Slime/Slime-Yellow/Slime charge/Slime-charge2.png" id="32_7s85c"]
+[ext_resource type="Texture2D" uid="uid://duaosx3oao6wp" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime charge/Slime-charge2.png" id="32_7s85c"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="32_fea4f"]
-[ext_resource type="Texture2D" uid="uid://bfm6px7sanmn" path="res://Sprites/Slime/Slime-Yellow/Slime fling/Slime-fling1.png" id="33_psmhr"]
-[ext_resource type="Texture2D" uid="uid://b0wfrkuo1d0p7" path="res://Sprites/Slime/Slime-Yellow/Slime fling/Slime-fling2.png" id="34_cfntx"]
-[ext_resource type="Texture2D" uid="uid://dnxo7ivsm6u28" path="res://Sprites/Slime/Slime-Yellow/Slime idle/Slime-idle1.png" id="35_bes31"]
-[ext_resource type="Texture2D" uid="uid://bemsga11snu0w" path="res://Sprites/Slime/Slime-Yellow/Slime idle/Slime-idle2.png" id="36_wbc4p"]
+[ext_resource type="Texture2D" uid="uid://bfm6px7sanmn" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime fling/Slime-fling1.png" id="33_psmhr"]
+[ext_resource type="Texture2D" uid="uid://b0wfrkuo1d0p7" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime fling/Slime-fling2.png" id="34_cfntx"]
+[ext_resource type="Texture2D" uid="uid://dnxo7ivsm6u28" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime idle/Slime-idle1.png" id="35_bes31"]
+[ext_resource type="Texture2D" uid="uid://bemsga11snu0w" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime idle/Slime-idle2.png" id="36_wbc4p"]
 [ext_resource type="Script" uid="uid://chv6l06ieg52v" path="res://Scripts/Objects/W7/Air-stream-wind.gd" id="37_ngayn"]
-[ext_resource type="Texture2D" uid="uid://csmhyei6au7yh" path="res://Sprites/Slime/Slime-Yellow/Slime squish/Slime-squish1.png" id="37_vbt0t"]
-[ext_resource type="Texture2D" uid="uid://cqni3d2lhrgor" path="res://Sprites/Objects/Wind/Wind1.png" id="38_p21jw"]
-[ext_resource type="Texture2D" uid="uid://c2htfvl65c40p" path="res://Sprites/Slime/Slime-Yellow/Slime squish/Slime-squish2.png" id="38_spehw"]
-[ext_resource type="Texture2D" uid="uid://iag880olb1rp" path="res://Sprites/Objects/Wind/Wind2.png" id="39_j8esv"]
-[ext_resource type="Texture2D" uid="uid://x2msww08yovi" path="res://Sprites/Slime/Slime-Yellow/Slime squish/Slime-squish3.png" id="39_xybao"]
-[ext_resource type="Texture2D" uid="uid://baxtjj0itf40h" path="res://Sprites/Slime/Slime-Yellow/Slime squish/Slime-squish4.png" id="40_7b0ng"]
-[ext_resource type="Texture2D" uid="uid://cnxdj30hq3t4q" path="res://Sprites/Objects/Wind/Wind3.png" id="40_m380q"]
-[ext_resource type="Texture2D" uid="uid://bg51tyls0s3jp" path="res://Sprites/Objects/Wind/Wind4.png" id="41_mbkpy"]
+[ext_resource type="Texture2D" uid="uid://csmhyei6au7yh" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime squish/Slime-squish1.png" id="37_vbt0t"]
+[ext_resource type="Texture2D" uid="uid://cqni3d2lhrgor" path="res://Sprites/Objects/Sprites/Objects/Wind/Wind1.png" id="38_p21jw"]
+[ext_resource type="Texture2D" uid="uid://c2htfvl65c40p" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime squish/Slime-squish2.png" id="38_spehw"]
+[ext_resource type="Texture2D" uid="uid://iag880olb1rp" path="res://Sprites/Objects/Sprites/Objects/Wind/Wind2.png" id="39_j8esv"]
+[ext_resource type="Texture2D" uid="uid://x2msww08yovi" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime squish/Slime-squish3.png" id="39_xybao"]
+[ext_resource type="Texture2D" uid="uid://baxtjj0itf40h" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Slime squish/Slime-squish4.png" id="40_7b0ng"]
+[ext_resource type="Texture2D" uid="uid://cnxdj30hq3t4q" path="res://Sprites/Objects/Sprites/Objects/Wind/Wind3.png" id="40_m380q"]
+[ext_resource type="Texture2D" uid="uid://bg51tyls0s3jp" path="res://Sprites/Objects/Sprites/Objects/Wind/Wind4.png" id="41_mbkpy"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="42_8fs83"]
 [ext_resource type="Script" uid="uid://0js74kie7rdh" path="res://Scripts/Objects/W7/TimerCloud.gd" id="42_r8cax"]
-[ext_resource type="Texture2D" uid="uid://dp40s1u70b7th" path="res://Sprites/Objects/Cloud/TimeCloud1.png" id="43_8oup0"]
+[ext_resource type="Texture2D" uid="uid://dp40s1u70b7th" path="res://Sprites/Objects/Sprites/Objects/Cloud/TimeCloud1.png" id="43_8oup0"]
 [ext_resource type="AudioStream" uid="uid://se21tp8x41j5" path="res://Sound/mus/dark-clouds-122774.mp3" id="44_7s85c"]
-[ext_resource type="Texture2D" uid="uid://vmlto6bvljul" path="res://Sprites/Objects/Cloud/TimeCloud2.png" id="44_n5khx"]
+[ext_resource type="Texture2D" uid="uid://vmlto6bvljul" path="res://Sprites/Objects/Sprites/Objects/Cloud/TimeCloud2.png" id="44_n5khx"]
 [ext_resource type="Script" uid="uid://bp6g4sf10noh8" path="res://Scripts/Objects/W6/Wind Stream.gd" id="45_h4mtw"]
 [ext_resource type="Script" uid="uid://du1hc4tbk6yki" path="res://Scripts/Objects/blue_drop.gd" id="45_ns2jl"]
-[ext_resource type="Texture2D" uid="uid://bokwpdwg36ph8" path="res://Sprites/Slime/Slime-Yellow/Super-drop.png" id="46_duab2"]
+[ext_resource type="Texture2D" uid="uid://bokwpdwg36ph8" path="res://Sprites/Objects/Sprites/Slime/Slime-Yellow/Super-drop.png" id="46_duab2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vbt0t"]
 size = Vector2(276, 176)
+
+[sub_resource type="Gradient" id="Gradient_vbt0t"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_spehw"]
+gradient = SubResource("Gradient_vbt0t")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.4, 0.8)
+metadata/_snap_enabled = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_spehw"]
 texture = ExtResource("9_fm1ti")
@@ -6192,6 +6210,20 @@ sources/9 = SubResource("TileSetAtlasSource_dr2sk")
 sources/1 = SubResource("TileSetAtlasSource_xybao")
 sources/3 = SubResource("TileSetAtlasSource_yqija")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr2sk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_spehw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xybao")
+}],
+"loop": true,
+"name": &"Cloud",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hput7"]
 size = Vector2(12, 15.75)
 
@@ -6724,11 +6756,70 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("8_ha50w")
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(814, -194)
+scale = Vector2(4, 4)
+texture = ExtResource("13_cfntx")
+
+[node name="PointLight2D" type="PointLight2D" parent="Sign"]
+position = Vector2(0, 7)
+color = Color(0, 0.92941177, 0.8, 1)
+texture = SubResource("GradientTexture2D_spehw")
+
+[node name="Speech-bubble2" type="Sprite2D" parent="."]
+position = Vector2(737, -288)
+scale = Vector2(4, 4)
+texture = ExtResource("14_bes31")
+
+[node name="Label" type="Label" parent="Speech-bubble2"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_wbc4p")
+theme_override_font_sizes/font_size = 22
+text = "Wundervoll!!!
+Wir sind ja schon fast im Weltraum!"
+script = ExtResource("16_xybao")
+text_key = "W7L42S2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(737, -288)
+scale = Vector2(4, 4)
+texture = ExtResource("14_bes31")
+script = ExtResource("16_bes31")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -15.0
+offset_right = 277.5
+offset_bottom = 112.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_wbc4p")
+theme_override_font_sizes/font_size = 22
+text = "Mist!!!
+Wir sind ja schon fast im Weltraum!"
+script = ExtResource("16_xybao")
+text_key = "W7L42S1"
+metadata/_edit_use_anchors_ = true
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(5310, -1284)
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AACx/xUAAwABAAcAAACx/xQAAwABAAQAAACw/xUAAwACAAcAAACw/xQAAwACAAQAAACv/xUAAwACAAcAAACv/xQAAwABAAQAAACu/xUAAwABAAcAAACu/xQAAwACAAQAAACt/xUAAwABAAcAAACt/xQAAwABAAQAAACs/xUAAwABAAcAAACs/xQAAwACAAQAAACr/xUAAwACAAcAAACr/xQAAwACAAQAAACq/xUAAwAAAAcAAACq/xQAAwAAAAQAAAAeAMn/AAAMAAUAAAAeAMj/AwACAAMAAAAdAMn/AAAMAAUAAAAdAMj/AwABAAMAAAAcAMn/AAAMAAUAAAAcAMj/AwACAAMAAAAbAMn/AAAMAAUAAAAbAMj/AwABAAMAAAAaAMn/AAAMAAUAAAAaAMj/AwACAAMAAAAZAMn/AAAMAAUAAAAZAMj/AwABAAMAAAAYAMn/AAALAAUAAAAYAMj/AwABAAMAAAAXAMn/AwADAAYAAAAXAMj/AwACAAQAAAAWAMn/AwACAAYAAAAWAMj/AwACAAQAAAAVAMn/AwABAAUAAAAVAMj/AwABAAQAAAAUAMn/AwACAAUAAAAUAMj/AwACAAQAAAATAMn/AwAGAAYAAAATAMj/AwACAAQAAAASAMn/AwACAAcAAAASAMj/AwACAAQAAAARAMn/AwAAAAcAAAARAMj/AwAAAAQAAAAfAMn/AAAMAAUAAAAfAMj/AwACAAMAAAC2/xUAAAALAAYAAAC2/xQAAAALAAYAAAC1/xUAAwADAAcAAAC1/xQAAwADAAQAAAC0/xUAAwACAAcAAAC0/xQAAwABAAQAAACz/xUAAwABAAcAAACz/xQAAwABAAQAAACy/xUAAwACAAcAAACy/xQAAwABAAQAAADC/xUAAAANAAYAAADC/xQAAAANAAYAAADC/xMAAAANAAYAAADC/xIAAAANAAYAAADB/xUAAAAMAAYAAADB/xQAAAAMAAYAAADB/xMAAAAMAAYAAADB/xIAAAAMAAYAAADA/xUAAAAMAAYAAADA/xQAAAAMAAYAAADA/xMAAAAMAAYAAADA/xIAAAAMAAYAAAC//xUAAAAMAAYAAAC//xQAAAAMAAYAAAC//xMAAAAMAAYAAAC//xIAAAARAAcAAAC+/xUAAAAMAAYAAAC+/xQAAAAMAAYAAAC+/xMAAAAMAAYAAAC+/xIAAAAMAAUAAAC9/xUAAAAMAAYAAAC9/xQAAAAMAAYAAAC9/xMAAAAMAAYAAAC9/xIAAAAMAAUAAAC8/xUAAAAMAAYAAAC8/xQAAAAMAAYAAAC8/xMAAAAMAAYAAAC8/xIAAAAMAAUAAAC7/xUAAAAMAAYAAAC7/xQAAAAMAAYAAAC7/xMAAAAMAAYAAAC7/xIAAAAMAAUAAAC6/xUAAAAMAAYAAAC6/xQAAAAMAAYAAAC6/xMAAAAMAAYAAAC6/xIAAAAMAAUAAAC5/xUAAAAMAAYAAAC5/xQAAAAMAAYAAAC5/xMAAAAMAAYAAAC5/xIAAAAMAAUAAAC4/xUAAAAMAAYAAAC4/xQAAAAMAAYAAAC4/xMAAAARAAcAAAC4/xIAAAALAAUAAADB/xEAAAAMAAYAAADB/xAAAAAMAAYAAADB/w8AAAAMAAYAAADB/w4AAAAMAAYAAADB/w0AAAAMAAUAAADA/xEAAAAMAAYAAADA/xAAAAAMAAYAAADA/w8AAAAMAAYAAADA/w4AAAAMAAYAAADA/w0AAAAMAAUAAAC//xEAAAALAAYAAAC//xAAAAALAAYAAAC//w8AAAALAAYAAAC//w4AAAALAAYAAAC//w0AAAALAAUAAADC/xEAAAANAAYAAADC/xAAAAANAAYAAADC/w8AAAANAAYAAADC/w4AAAANAAYAAADC/w0AAAANAAUAAAC3/xUAAAAMAAYAAAC3/xQAAAAMAAYAAAC3/xMAAAAMAAUAAAC2/xMAAAALAAUAAADN/wwAAAANAAYAAADN/wsAAAANAAYAAADN/woAAAANAAYAAADN/wkAAAANAAYAAADN/wgAAAANAAUAAADM/wwAAAAMAAYAAADM/wsAAAAMAAYAAADM/woAAAAMAAYAAADM/wkAAAAMAAYAAADM/wgAAAAMAAUAAADL/wwAAAAMAAYAAADL/wsAAAAMAAYAAADL/woAAAAMAAYAAADL/wkAAAAMAAYAAADL/wgAAAAMAAUAAADK/wwAAAAMAAYAAADK/wsAAAAMAAYAAADK/woAAAAMAAYAAADK/wkAAAAMAAYAAADK/wgAAAAMAAUAAADJ/wwAAAAMAAYAAADJ/wsAAAAMAAYAAADJ/woAAAAMAAYAAADJ/wkAAAAMAAYAAADJ/wgAAAAMAAUAAADI/wwAAAAMAAYAAADI/wsAAAAMAAYAAADI/woAAAAMAAYAAADI/wkAAAAMAAYAAADI/wgAAAAMAAUAAADH/wwAAAAMAAYAAADH/wsAAAAMAAYAAADH/woAAAAMAAYAAADH/wkAAAAMAAYAAADH/wgAAAAMAAUAAADG/wwAAAAMAAYAAADG/wsAAAAMAAYAAADG/woAAAAMAAYAAADG/wkAAAAMAAYAAADG/wgAAAAMAAUAAADF/wwAAAALAAYAAADF/wsAAAALAAYAAADF/woAAAALAAYAAADF/wkAAAALAAYAAADF/wgAAAALAAUAAADZ/wUAAAANAAYAAADZ/wQAAAANAAYAAADZ/wMAAAANAAYAAADZ/wIAAAANAAYAAADZ/wEAAAANAAYAAADZ/wAAAAANAAYAAADZ////AAANAAYAAADZ//7/AAANAAYAAADZ//3/AAANAAYAAADZ//z/AAANAAUAAADY/wUAAAAMAAYAAADY/wQAAAAMAAYAAADY/wMAAAAMAAYAAADY/wIAAAAMAAYAAADY/wEAAAAMAAYAAADY/wAAAAAMAAYAAADY////AAAMAAYAAADY//7/AAAMAAYAAADY//3/AAAMAAYAAADY//z/AAAMAAUAAADX/wUAAAAMAAYAAADX/wQAAAAMAAYAAADX/wMAAAAMAAYAAADX/wIAAAAMAAYAAADX/wEAAAAMAAYAAADX/wAAAAAMAAYAAADX////AAAMAAYAAADX//7/AAAMAAYAAADX//3/AAAMAAYAAADX//z/AAAMAAUAAADW/wUAAAAMAAYAAADW/wQAAAAMAAYAAADW/wMAAAAMAAYAAADW/wIAAAAMAAYAAADW/wEAAAAMAAYAAADW/wAAAAAMAAYAAADW////AAAMAAYAAADW//7/AAAMAAYAAADW//3/AAAMAAYAAADW//z/AAAMAAUAAADV/wUAAAAMAAYAAADV/wQAAAAMAAYAAADV/wMAAAAMAAYAAADV/wIAAAAMAAYAAADV/wEAAAAMAAYAAADV/wAAAAAMAAYAAADV////AAAMAAYAAADV//7/AAAMAAYAAADV//3/AAAMAAYAAADV//z/AAAMAAUAAADU/wUAAAAMAAYAAADU/wQAAAAMAAYAAADU/wMAAAAMAAYAAADU/wIAAAAMAAYAAADU/wEAAAAMAAYAAADU/wAAAAAMAAYAAADU////AAAMAAYAAADU//7/AAAMAAYAAADU//3/AAAMAAYAAADU//z/AAAMAAUAAADT/wUAAAAMAAYAAADT/wQAAAAMAAYAAADT/wMAAAAMAAYAAADT/wIAAAAMAAYAAADT/wEAAAAMAAYAAADT/wAAAAAMAAYAAADT////AAAMAAYAAADT//7/AAAMAAYAAADT//3/AAAMAAYAAADT//z/AAAMAAUAAADS/wUAAAAMAAYAAADS/wQAAAAMAAYAAADS/wMAAAAMAAYAAADS/wIAAAAMAAYAAADS/wEAAAAMAAYAAADS/wAAAAAMAAYAAADS////AAAMAAYAAADS//7/AAAMAAYAAADS//3/AAAMAAYAAADS//z/AAAMAAUAAADR/wUAAAALAAYAAADR/wQAAAALAAYAAADR/wMAAAALAAYAAADR/wIAAAALAAYAAADR/wEAAAALAAYAAADR/wAAAAALAAYAAADR////AAALAAYAAADR//7/AAALAAYAAADR//3/AAALAAYAAADR//z/AAALAAUAAAAgAMr/AAAMAAcAAAAfAMr/AAAMAAcAAAAeAMr/AAAMAAcAAAAdAMr/AAAMAAcAAAAcAMr/AAAMAAcAAAAbAMr/AAAMAAcAAAAaAMr/AAAMAAcAAAAZAMr/AAAMAAcAAAAYAMr/AAALAAcAAAAXAMr/AwADAAYAAAAWAMr/AwACAAYAAAAVAMr/AwAGAAYAAAAUAMr/AwACAAcAAAATAMr/AwAAAAcAAAAmAMr/AwABAAYAAAAmAMn/AwAFAAcAAAAmAMj/AwADAAQAAAAlAMr/AwAAAAUAAAAlAMn/AwAAAAYAAAAlAMj/AwAFAAcAAAAkAMr/AAANAAcAAAAkAMn/AAANAAUAAAAkAMj/AwABAAcAAAAjAMr/AAAMAAcAAAAjAMn/AAAMAAUAAAAjAMj/AwABAAcAAAAiAMr/AAAMAAcAAAAiAMn/AAAMAAUAAAAiAMj/AwACAAcAAAAhAMr/AAAMAAcAAAAhAMn/AAAMAAUAAAAhAMj/AwABAAcAAAAgAMn/AAAMAAUAAAAgAMj/AwACAAcAAAAlAMf/AwADAAQAAAAkAMf/AwACAAQAAAAjAMf/AwACAAQAAAAiAMf/AwACAAQAAAAnAMv/AwADAAcAAAAnAMr/AwADAAUAAAAnAMn/AwADAAQAAAAlAMz/AwADAAcAAAAlAMv/AwAFAAYAAAAkAMz/AwACAAcAAAAkAMv/AwABAAQAAAAjAMz/AwABAAcAAAAjAMv/AwACAAQAAAAiAMz/AwABAAcAAAAiAMv/AwABAAQAAAAhAMz/AwABAAcAAAAhAMv/AwABAAQAAAAgAMz/AwACAAcAAAAgAMv/AwABAAQAAAAfAMz/AwACAAcAAAAfAMv/AwACAAQAAAAeAMz/AwACAAcAAAAeAMv/AwACAAQAAAAdAMz/AwACAAcAAAAdAMv/AwABAAQAAAAcAMz/AwACAAcAAAAcAMv/AwACAAQAAAAbAMz/AwACAAcAAAAbAMv/AwABAAQAAAAaAMz/AwACAAcAAAAaAMv/AwABAAQAAAAmAMv/AwACAAcAAAAZAMv/AwACAAQAAAAYAMv/AwABAAQAAAAXAMv/AwAFAAcAAAAZAMz/AwABAAcAAAAYAMz/AwABAAcAAAAXAMz/AwABAAcAAAAWAMz/AwABAAcAAAAWAMv/AwABAAYAAAAVAMz/AwAAAAcAAAAVAMv/AwAAAAYAAAAhAMf/AwABAAQAAAAgAMf/AwAAAAQAAADp//z/AAANAAYAAADp//v/AAANAAYAAADp//r/AAANAAYAAADp//n/AAANAAYAAADp//j/AAANAAYAAADp//f/AAANAAYAAADp//b/AAANAAYAAADp//X/AAANAAYAAADp//T/AAANAAUAAADo//z/AAAMAAYAAADo//v/AAAMAAYAAADo//r/AAAMAAYAAADo//n/AAAMAAYAAADo//j/AAAMAAYAAADo//f/AAAMAAYAAADo//b/AAAMAAYAAADo//X/AAAMAAYAAADo//T/AAAMAAUAAADn//z/AAAMAAYAAADn//v/AAAMAAYAAADn//r/AAAMAAYAAADn//n/AAAMAAYAAADn//j/AAAMAAYAAADn//f/AAAMAAYAAADn//b/AAAMAAYAAADn//X/AAAMAAYAAADn//T/AAAMAAUAAADm//z/AAAMAAYAAADm//v/AAAMAAYAAADm//r/AAAMAAYAAADm//n/AAAMAAYAAADm//j/AAAMAAYAAADm//f/AAAMAAYAAADm//b/AAAMAAYAAADm//X/AAAMAAYAAADm//T/AAAMAAUAAADl//z/AAAMAAYAAADl//v/AAAMAAYAAADl//r/AAAMAAYAAADl//n/AAAMAAYAAADl//j/AAAMAAYAAADl//f/AAAMAAYAAADl//b/AAAMAAYAAADl//X/AAAMAAYAAADl//T/AAAMAAUAAADk//z/AAAMAAYAAADk//v/AAAMAAYAAADk//r/AAAMAAYAAADk//n/AAAMAAYAAADk//j/AAAMAAYAAADk//f/AAAMAAYAAADk//b/AAAMAAYAAADk//X/AAAMAAYAAADk//T/AAAMAAUAAADj//z/AAAMAAYAAADj//v/AAAMAAYAAADj//r/AAAMAAYAAADj//n/AAAMAAYAAADj//j/AAAMAAYAAADj//f/AAAMAAYAAADj//b/AAAMAAYAAADj//X/AAAMAAYAAADj//T/AAAMAAUAAADi//z/AAAMAAYAAADi//v/AAAMAAYAAADi//r/AAAMAAYAAADi//n/AAAMAAYAAADi//j/AAAMAAYAAADi//f/AAAMAAYAAADi//b/AAAMAAYAAADi//X/AAAMAAYAAADi//T/AAAMAAUAAADh//z/AAAMAAYAAADh//v/AAAMAAYAAADh//r/AAAMAAYAAADh//n/AAAMAAYAAADh//j/AAAMAAYAAADh//f/AAAMAAYAAADh//b/AAAMAAYAAADh//X/AAAMAAYAAADh//T/AAAMAAUAAADg//z/AAALAAYAAADg//v/AAALAAYAAADg//r/AAALAAYAAADg//n/AAALAAYAAADg//j/AAALAAYAAADg//f/AAALAAYAAADg//b/AAALAAYAAADg//X/AAALAAYAAADg//T/AAALAAUAAADN/xQAAAANAAYAAADN/xMAAAANAAYAAADN/xIAAAANAAYAAADN/xEAAAANAAYAAADN/xAAAAANAAYAAADN/w8AAAANAAYAAADN/w4AAAANAAYAAADN/w0AAAANAAYAAADM/xQAAAAMAAYAAADM/xMAAAAMAAYAAADM/xIAAAAMAAYAAADM/xEAAAAMAAYAAADM/xAAAAAMAAYAAADM/w8AAAAMAAYAAADM/w4AAAAMAAYAAADM/w0AAAAMAAYAAADL/xQAAAAMAAYAAADL/xMAAAAMAAYAAADL/xIAAAAMAAYAAADL/xEAAAAMAAYAAADL/xAAAAAMAAYAAADL/w8AAAAMAAYAAADL/w4AAAAMAAYAAADL/w0AAAAMAAYAAADK/xQAAAAMAAYAAADK/xMAAAAMAAYAAADK/xIAAAAMAAYAAADK/xEAAAAMAAYAAADK/xAAAAAMAAYAAADK/w8AAAAMAAYAAADK/w4AAAAMAAYAAADK/w0AAAAMAAYAAADJ/xQAAAAMAAYAAADJ/xMAAAAMAAYAAADJ/xIAAAAMAAYAAADJ/xEAAAAMAAYAAADJ/xAAAAAMAAYAAADJ/w8AAAAMAAYAAADJ/w4AAAAMAAYAAADJ/w0AAAAMAAYAAADI/xQAAAAMAAYAAADI/xMAAAAMAAYAAADI/xIAAAAMAAYAAADI/xEAAAAMAAYAAADI/xAAAAAMAAYAAADI/w8AAAAMAAYAAADI/w4AAAAMAAYAAADI/w0AAAAMAAYAAADH/xQAAAAMAAYAAADH/xMAAAAMAAYAAADH/xIAAAAMAAYAAADH/xEAAAAMAAYAAADH/xAAAAAMAAYAAADH/w8AAAAMAAYAAADH/w4AAAAMAAYAAADH/w0AAAAMAAYAAADG/xQAAAAMAAYAAADG/xMAAAAMAAYAAADG/xIAAAAMAAYAAADG/xEAAAAMAAYAAADG/xAAAAAMAAYAAADG/w8AAAAMAAYAAADG/w4AAAAMAAYAAADG/w0AAAAMAAYAAADF/xQAAAALAAYAAADF/xMAAAALAAYAAADF/xIAAAALAAYAAADF/xEAAAALAAYAAADF/xAAAAALAAYAAADF/w8AAAALAAYAAADF/w4AAAALAAYAAADF/w0AAAALAAYAAADZ/xUAAAANAAYAAADZ/xQAAAANAAYAAADZ/xMAAAANAAYAAADZ/xIAAAANAAYAAADZ/xEAAAANAAYAAADZ/xAAAAANAAYAAADZ/w8AAAANAAYAAADZ/w4AAAANAAYAAADZ/w0AAAANAAYAAADZ/wwAAAANAAYAAADZ/wsAAAANAAYAAADZ/woAAAANAAYAAADZ/wkAAAANAAYAAADZ/wgAAAANAAYAAADZ/wcAAAANAAYAAADZ/wYAAAANAAYAAADY/xUAAAAMAAYAAADY/xQAAAAMAAYAAADY/xMAAAAMAAYAAADY/xIAAAAMAAYAAADY/xEAAAAMAAYAAADY/xAAAAAMAAYAAADY/w8AAAAMAAYAAADY/w4AAAAMAAYAAADY/w0AAAAMAAYAAADY/wwAAAAMAAYAAADY/wsAAAAMAAYAAADY/woAAAAMAAYAAADY/wkAAAAMAAYAAADY/wgAAAAMAAYAAADY/wcAAAAMAAYAAADY/wYAAAAMAAYAAADX/xUAAAAMAAYAAADX/xQAAAAMAAYAAADX/xMAAAAMAAYAAADX/xIAAAAMAAYAAADX/xEAAAAMAAYAAADX/xAAAAAMAAYAAADX/w8AAAAMAAYAAADX/w4AAAAMAAYAAADX/w0AAAAMAAYAAADX/wwAAAAMAAYAAADX/wsAAAAMAAYAAADX/woAAAAMAAYAAADX/wkAAAAMAAYAAADX/wgAAAAMAAYAAADX/wcAAAAMAAYAAADX/wYAAAAMAAYAAADW/xUAAAAMAAYAAADW/xQAAAAMAAYAAADW/xMAAAAMAAYAAADW/xIAAAAMAAYAAADW/xEAAAAMAAYAAADW/xAAAAAMAAYAAADW/w8AAAAMAAYAAADW/w4AAAAMAAYAAADW/w0AAAAMAAYAAADW/wwAAAAMAAYAAADW/wsAAAAMAAYAAADW/woAAAAMAAYAAADW/wkAAAAMAAYAAADW/wgAAAAMAAYAAADW/wcAAAAMAAYAAADW/wYAAAAMAAYAAADV/xUAAAAMAAYAAADV/xQAAAAMAAYAAADV/xMAAAAMAAYAAADV/xIAAAAMAAYAAADV/xEAAAAMAAYAAADV/xAAAAAMAAYAAADV/w8AAAAMAAYAAADV/w4AAAAMAAYAAADV/w0AAAAMAAYAAADV/wwAAAAMAAYAAADV/wsAAAAMAAYAAADV/woAAAAMAAYAAADV/wkAAAAMAAYAAADV/wgAAAAMAAYAAADV/wcAAAAMAAYAAADV/wYAAAAMAAYAAADU/xUAAAAMAAYAAADU/xQAAAAMAAYAAADU/xMAAAAMAAYAAADU/xIAAAAMAAYAAADU/xEAAAAMAAYAAADU/xAAAAAMAAYAAADU/w8AAAAMAAYAAADU/w4AAAAMAAYAAADU/w0AAAAMAAYAAADU/wwAAAAMAAYAAADU/wsAAAAMAAYAAADU/woAAAAMAAYAAADU/wkAAAAMAAYAAADU/wgAAAAMAAYAAADU/wcAAAAMAAYAAADU/wYAAAAMAAYAAADT/xUAAAAMAAYAAADT/xQAAAAMAAYAAADT/xMAAAAMAAYAAADT/xIAAAAMAAYAAADT/xEAAAAMAAYAAADT/xAAAAAMAAYAAADT/w8AAAAMAAYAAADT/w4AAAAMAAYAAADT/w0AAAAMAAYAAADT/wwAAAAMAAYAAADT/wsAAAAMAAYAAADT/woAAAAMAAYAAADT/wkAAAAMAAYAAADT/wgAAAAMAAYAAADT/wcAAAAMAAYAAADT/wYAAAAMAAYAAADS/xUAAAAMAAYAAADS/xQAAAAMAAYAAADS/xMAAAAMAAYAAADS/xIAAAAMAAYAAADS/xEAAAAMAAYAAADS/xAAAAAMAAYAAADS/w8AAAAMAAYAAADS/w4AAAAMAAYAAADS/w0AAAAMAAYAAADS/wwAAAAMAAYAAADS/wsAAAAMAAYAAADS/woAAAAMAAYAAADS/wkAAAAMAAYAAADS/wgAAAAMAAYAAADS/wcAAAAMAAYAAADS/wYAAAAMAAYAAADR/xUAAAALAAYAAADR/xQAAAALAAYAAADR/xMAAAALAAYAAADR/xIAAAALAAYAAADR/xEAAAALAAYAAADR/xAAAAALAAYAAADR/w8AAAALAAYAAADR/w4AAAALAAYAAADR/w0AAAALAAYAAADR/wwAAAALAAYAAADR/wsAAAALAAYAAADR/woAAAALAAYAAADR/wkAAAALAAYAAADR/wgAAAALAAYAAADR/wcAAAALAAYAAADR/wYAAAALAAYAAADp/xYAAAANAAcAAADp/xUAAAANAAYAAADp/xQAAAANAAYAAADp/xMAAAANAAYAAADp/xIAAAANAAYAAADp/xEAAAANAAYAAADp/xAAAAANAAYAAADp/w8AAAANAAYAAADp/w4AAAANAAYAAADp/w0AAAANAAYAAADp/wwAAAANAAYAAADp/wsAAAANAAYAAADp/woAAAANAAYAAADp/wkAAAANAAYAAADp/wgAAAANAAYAAADp/wcAAAANAAYAAADp/wYAAAANAAYAAADp/wUAAAANAAYAAADp/wQAAAANAAYAAADp/wMAAAANAAYAAADp/wIAAAANAAYAAADp/wEAAAANAAYAAADp/wAAAAANAAYAAADp////AAANAAYAAADp//7/AAANAAYAAADp//3/AAANAAYAAADo/xYAAAAMAAcAAADo/xUAAAAMAAYAAADo/xQAAAAMAAYAAADo/xMAAAAMAAYAAADo/xIAAAAMAAYAAADo/xEAAAAMAAYAAADo/xAAAAAMAAYAAADo/w8AAAAMAAYAAADo/w4AAAAMAAYAAADo/w0AAAAMAAYAAADo/wwAAAAMAAYAAADo/wsAAAAMAAYAAADo/woAAAAMAAYAAADo/wkAAAAMAAYAAADo/wgAAAAMAAYAAADo/wcAAAAMAAYAAADo/wYAAAAMAAYAAADo/wUAAAAMAAYAAADo/wQAAAAMAAYAAADo/wMAAAAMAAYAAADo/wIAAAAMAAYAAADo/wEAAAAMAAYAAADo/wAAAAAMAAYAAADo////AAAMAAYAAADo//7/AAAMAAYAAADo//3/AAAMAAYAAADn/xYAAAAMAAcAAADn/xUAAAAMAAYAAADn/xQAAAAMAAYAAADn/xMAAAAMAAYAAADn/xIAAAAMAAYAAADn/xEAAAAMAAYAAADn/xAAAAAMAAYAAADn/w8AAAAMAAYAAADn/w4AAAAMAAYAAADn/w0AAAAMAAYAAADn/wwAAAAMAAYAAADn/wsAAAAMAAYAAADn/woAAAAMAAYAAADn/wkAAAAMAAYAAADn/wgAAAAMAAYAAADn/wcAAAAMAAYAAADn/wYAAAAMAAYAAADn/wUAAAAMAAYAAADn/wQAAAAMAAYAAADn/wMAAAAMAAYAAADn/wIAAAAMAAYAAADn/wEAAAAMAAYAAADn/wAAAAAMAAYAAADn////AAAMAAYAAADn//7/AAAMAAYAAADn//3/AAAMAAYAAADm/xYAAAAMAAcAAADm/xUAAAAMAAYAAADm/xQAAAAMAAYAAADm/xMAAAAMAAYAAADm/xIAAAAMAAYAAADm/xEAAAAMAAYAAADm/xAAAAAMAAYAAADm/w8AAAAMAAYAAADm/w4AAAAMAAYAAADm/w0AAAAMAAYAAADm/wwAAAAMAAYAAADm/wsAAAAMAAYAAADm/woAAAAMAAYAAADm/wkAAAAMAAYAAADm/wgAAAAMAAYAAADm/wcAAAAMAAYAAADm/wYAAAAMAAYAAADm/wUAAAAMAAYAAADm/wQAAAAMAAYAAADm/wMAAAAMAAYAAADm/wIAAAAMAAYAAADm/wEAAAAMAAYAAADm/wAAAAAMAAYAAADm////AAAMAAYAAADm//7/AAAMAAYAAADm//3/AAAMAAYAAADl/xYAAAAMAAcAAADl/xUAAAAMAAYAAADl/xQAAAAMAAYAAADl/xMAAAAMAAYAAADl/xIAAAAMAAYAAADl/xEAAAAMAAYAAADl/xAAAAAMAAYAAADl/w8AAAAMAAYAAADl/w4AAAAMAAYAAADl/w0AAAAMAAYAAADl/wwAAAAMAAYAAADl/wsAAAAMAAYAAADl/woAAAAMAAYAAADl/wkAAAAMAAYAAADl/wgAAAAMAAYAAADl/wcAAAAMAAYAAADl/wYAAAAMAAYAAADl/wUAAAAMAAYAAADl/wQAAAAMAAYAAADl/wMAAAAMAAYAAADl/wIAAAAMAAYAAADl/wEAAAAMAAYAAADl/wAAAAAMAAYAAADl////AAAMAAYAAADl//7/AAAMAAYAAADl//3/AAAMAAYAAADk/xYAAAAMAAcAAADk/xUAAAAMAAYAAADk/xQAAAAMAAYAAADk/xMAAAAMAAYAAADk/xIAAAAMAAYAAADk/xEAAAAMAAYAAADk/xAAAAAMAAYAAADk/w8AAAAMAAYAAADk/w4AAAAMAAYAAADk/w0AAAAMAAYAAADk/wwAAAAMAAYAAADk/wsAAAAMAAYAAADk/woAAAAMAAYAAADk/wkAAAAMAAYAAADk/wgAAAAMAAYAAADk/wcAAAAMAAYAAADk/wYAAAAMAAYAAADk/wUAAAAMAAYAAADk/wQAAAAMAAYAAADk/wMAAAAMAAYAAADk/wIAAAAMAAYAAADk/wEAAAAMAAYAAADk/wAAAAAMAAYAAADk////AAAMAAYAAADk//7/AAAMAAYAAADk//3/AAAMAAYAAADj/xYAAAAMAAcAAADj/xUAAAAMAAYAAADj/xQAAAAMAAYAAADj/xMAAAAMAAYAAADj/xIAAAAMAAYAAADj/xEAAAAMAAYAAADj/xAAAAAMAAYAAADj/w8AAAAMAAYAAADj/w4AAAAMAAYAAADj/w0AAAAMAAYAAADj/wwAAAAMAAYAAADj/wsAAAAMAAYAAADj/woAAAAMAAYAAADj/wkAAAAMAAYAAADj/wgAAAAMAAYAAADj/wcAAAAMAAYAAADj/wYAAAAMAAYAAADj/wUAAAAMAAYAAADj/wQAAAAMAAYAAADj/wMAAAAMAAYAAADj/wIAAAAMAAYAAADj/wEAAAAMAAYAAADj/wAAAAAMAAYAAADj////AAAMAAYAAADj//7/AAAMAAYAAADj//3/AAAMAAYAAADi/xYAAAAMAAcAAADi/xUAAAAMAAYAAADi/xQAAAAMAAYAAADi/xMAAAAMAAYAAADi/xIAAAAMAAYAAADi/xEAAAAMAAYAAADi/xAAAAAMAAYAAADi/w8AAAAMAAYAAADi/w4AAAAMAAYAAADi/w0AAAAMAAYAAADi/wwAAAAMAAYAAADi/wsAAAAMAAYAAADi/woAAAAMAAYAAADi/wkAAAAMAAYAAADi/wgAAAAMAAYAAADi/wcAAAAMAAYAAADi/wYAAAAMAAYAAADi/wUAAAAMAAYAAADi/wQAAAAMAAYAAADi/wMAAAAMAAYAAADi/wIAAAAMAAYAAADi/wEAAAAMAAYAAADi/wAAAAAMAAYAAADi////AAAMAAYAAADi//7/AAAMAAYAAADi//3/AAAMAAYAAADh/xYAAAAMAAcAAADh/xUAAAAMAAYAAADh/xQAAAAMAAYAAADh/xMAAAAMAAYAAADh/xIAAAAMAAYAAADh/xEAAAAMAAYAAADh/xAAAAAMAAYAAADh/w8AAAAMAAYAAADh/w4AAAAMAAYAAADh/w0AAAAMAAYAAADh/wwAAAAMAAYAAADh/wsAAAAMAAYAAADh/woAAAAMAAYAAADh/wkAAAAMAAYAAADh/wgAAAAMAAYAAADh/wcAAAAMAAYAAADh/wYAAAAMAAYAAADh/wUAAAAMAAYAAADh/wQAAAAMAAYAAADh/wMAAAAMAAYAAADh/wIAAAAMAAYAAADh/wEAAAAMAAYAAADh/wAAAAAMAAYAAADh////AAAMAAYAAADh//7/AAAMAAYAAADh//3/AAAMAAYAAADg/xYAAAALAAcAAADg/xUAAAALAAYAAADg/xQAAAALAAYAAADg/xMAAAALAAYAAADg/xIAAAALAAYAAADg/xEAAAALAAYAAADg/xAAAAALAAYAAADg/w8AAAALAAYAAADg/w4AAAALAAYAAADg/w0AAAALAAYAAADg/wwAAAALAAYAAADg/wsAAAALAAYAAADg/woAAAALAAYAAADg/wkAAAALAAYAAADg/wgAAAALAAYAAADg/wcAAAALAAYAAADg/wYAAAALAAYAAADg/wUAAAALAAYAAADg/wQAAAALAAYAAADg/wMAAAALAAYAAADg/wIAAAALAAYAAADg/wEAAAALAAYAAADg/wAAAAALAAYAAADg////AAALAAYAAADg//7/AAALAAYAAADg//3/AAALAAYAAADZ/xYAAAANAAcAAADY/xYAAAAMAAcAAADX/xYAAAAMAAcAAADW/xYAAAAMAAcAAADV/xYAAAAMAAcAAADU/xYAAAAMAAcAAADT/xYAAAAMAAcAAADS/xYAAAAMAAcAAADR/xYAAAALAAcAAADN/xYAAAANAAcAAADN/xUAAAANAAYAAADM/xYAAAAMAAcAAADM/xUAAAAMAAYAAADL/xYAAAAMAAcAAADL/xUAAAAMAAYAAADK/xYAAAAMAAcAAADK/xUAAAAMAAYAAADJ/xYAAAAMAAcAAADJ/xUAAAAMAAYAAADI/xYAAAAMAAcAAADI/xUAAAAMAAYAAADH/xYAAAAMAAcAAADH/xUAAAAMAAYAAADG/xYAAAAMAAcAAADG/xUAAAAMAAYAAADF/xYAAAALAAcAAADF/xUAAAALAAYAAADC/xYAAAANAAcAAADB/xYAAAAMAAcAAADA/xYAAAAMAAcAAAC//xYAAAAMAAcAAAC+/xYAAAAMAAcAAAC9/xYAAAAMAAcAAAC8/xYAAAAMAAcAAAC7/xYAAAAMAAcAAAC6/xYAAAAMAAcAAAC5/xYAAAAMAAcAAAC4/xYAAAAMAAcAAAC3/xYAAAAMAAcAAAC2/xYAAAALAAcAAABQAMv/AAABAAIAAABRAMv/AAABAAIAAABSAMv/AAABAAIAAABTAMv/AAABAAIAAABUAMv/AAABAAIAAABVAMv/AAABAAIAAABWAMr/AAACAAEAAABWAMn/AAACAAEAAABWAMj/AAACAAEAAABWAMf/AAACAAEAAABWAMb/AAACAAEAAABWAMX/AAACAAEAAABSAMP/AAABAAAAAABRAMP/AAABAAAAAABQAMP/AAABAAAAAABPAMP/AAABAAAAAABOAMP/AAABAAAAAABNAMP/AAABAAAAAABMAMP/AAABAAAAAABLAMP/AAABAAAAAABKAMT/AAAFAAEAAABJAMT/AAAAAAEAAABJAMX/AAAAAAEAAABJAMb/AAAAAAEAAABJAMf/AAAAAAEAAABJAMj/AAAAAAEAAABJAMn/AAAAAAEAAABKAMn/AAACAAEAAABKAMr/AAAFAAIAAABKAMX/AAACAAEAAABKAMb/AAACAAEAAABKAMf/AAACAAEAAABKAMj/AAACAAEAAABKAMP/AAABAAAAAABWAMv/AAACAAIAAABWAMT/AAACAAEAAABWAMP/AAACAAAAAABVAMP/AAABAAAAAABUAMP/AAABAAAAAABTAMP/AAABAAAAAABPAMv/AAABAAIAAABOAMv/AAABAAIAAABNAMv/AAABAAIAAABMAMv/AAABAAIAAABLAMv/AAABAAIAAABKAMv/AAABAAIAAABJAMv/AAAAAAIAAABJAMr/AAAAAAEAAABJAMP/AAAAAAAAAABVAMr/AAAGAAIAAABUAMr/AAABAAAAAABTAMr/AAABAAAAAABSAMr/AAABAAAAAABRAMr/AAABAAAAAABQAMr/AAABAAAAAABPAMr/AAABAAAAAABOAMr/AAABAAAAAABNAMr/AAABAAAAAABMAMr/AAABAAAAAABLAMr/AAABAAAAAABVAMn/AAAAAAEAAABVAMj/AAAAAAEAAABVAMf/AAAAAAEAAABVAMb/AAAAAAEAAABVAMX/AAAAAAEAAABVAMT/AAAGAAEAAABUAMT/AAABAAIAAABTAMT/AAABAAIAAABSAMT/AAABAAIAAABRAMT/AAABAAIAAABQAMT/AAABAAIAAABPAMT/AAABAAIAAABOAMT/AAABAAIAAABNAMT/AAABAAIAAABMAMT/AAABAAIAAABLAMT/AAABAAIAAAA=")
 tile_set = SubResource("TileSet_xhakj")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="."]
+position = Vector2(1268, -346)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_dr2sk")
+animation = &"Cloud"
+autoplay = "Cloud"
+script = ExtResource("23_spehw")
 
 [node name="Blue Drop" type="Area2D" parent="." node_paths=PackedStringArray("slime_player_blue")]
 position = Vector2(3593, -2201)
@@ -6781,13 +6872,12 @@ autoplay = "idle"
 position = Vector2(5, -17.5)
 shape = SubResource("RectangleShape2D_ymlcf")
 
-[node name="SlimeJump" type="AudioStreamPlayer" parent="SlimePlayer"]
+[node name="SlimeJump" type="AudioStreamPlayer2D" parent="SlimePlayer"]
 stream = ExtResource("29_cfntx")
 bus = &"SFX"
 
 [node name="Super SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
-visible = false
-position = Vector2(3774, -2094)
+position = Vector2(10253, -4811)
 disable_mode = 2
 collision_mask = 2
 continuous_cd = 2
@@ -6807,7 +6897,7 @@ autoplay = "idle"
 position = Vector2(5, -17.5)
 shape = SubResource("RectangleShape2D_ymlcf")
 
-[node name="SlimeJump" type="AudioStreamPlayer" parent="Super SlimePlayer"]
+[node name="SlimeJump" type="AudioStreamPlayer2D" parent="Super SlimePlayer"]
 stream = ExtResource("29_cfntx")
 bus = &"SFX"
 

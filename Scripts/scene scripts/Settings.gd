@@ -14,9 +14,9 @@ var mute_enabled: bool = false
 # UI-Referenzen
 @onready var music_slider: HSlider = $VBoxContainer/Sprite2D2/MusicSlider
 @onready var sfx_slider: HSlider = $VBoxContainer/Sprite2D3/SfxSlider
-@onready var fps_option: OptionButton = $VBoxContainer/FpsOption
 @onready var mute_checkbox: CheckBox = $VBoxContainer/Sprite2D/MuteCheckBox
 @onready var reset_button: TextureButton = $VBoxContainer/ResetButton
+@onready var language_option: OptionButton = $VBoxContainer/LanguageOption
 
 # Bus-Indizes
 var music_bus_idx: int = -1
@@ -27,12 +27,17 @@ func _ready() -> void:
 	music_bus_idx = AudioServer.get_bus_index(music_bus_name)
 	sfx_bus_idx = AudioServer.get_bus_index(sfx_bus_name)
 
-	# FPS-Optionen füllen
-	fps_option.clear()
-	fps_option.add_item("30 FPS", 30)
-	fps_option.add_item("60 FPS", 60)
-	fps_option.add_item("Unbegrenzt", 0)
-
+	# Sprache-Optionen füllen
+	language_option.clear()
+	language_option.add_item("English", 0)
+	language_option.add_item("Deutsch", 1)
+	language_option.add_item("Français", 2)
+	language_option.add_item("Italiano", 3)
+	language_option.add_item("Español", 4)
+	language_option.add_item("简体中文", 5)
+	language_option.add_item("日本語", 6)
+	language_option.add_item("Русский", 7)
+	
 	# Einstellungen laden & anwenden
 	load_settings()
 	update_ui()
@@ -52,6 +57,7 @@ func load_settings() -> void:
 		sfx_volume = float(cfg.get_value("audio", "sfx", sfx_volume))
 		fps_limit = int(cfg.get_value("gameplay", "fps", fps_limit))
 		mute_enabled = bool(cfg.get_value("audio", "mute", mute_enabled))
+		Localization.set_language(cfg.get_value("gameplay", "language", "en"))
 
 func save_settings() -> void:
 	var cfg := ConfigFile.new()
@@ -59,6 +65,7 @@ func save_settings() -> void:
 	cfg.set_value("audio", "sfx", sfx_volume)
 	cfg.set_value("audio", "mute", mute_enabled)
 	cfg.set_value("gameplay", "fps", fps_limit)
+	cfg.set_value("gameplay", "language", Localization.current_language)
 	cfg.save("user://settings.cfg")
 
 # -------------------------
@@ -69,10 +76,25 @@ func update_ui() -> void:
 	sfx_slider.value = round(sfx_volume * 100)
 	mute_checkbox.button_pressed = mute_enabled
 
-	for i in range(fps_option.get_item_count()):
-		if fps_option.get_item_id(i) == fps_limit:
-			fps_option.select(i)
-			break
+	match Localization.current_language:
+		"en":
+			language_option.select(0)
+		"de":
+			language_option.select(1)
+		"fr":
+			language_option.select(2)
+		"it":
+			language_option.select(3)
+		"es":
+			language_option.select(4)
+		"zh":
+			language_option.select(5)
+		"ja":
+			language_option.select(6)
+		"ru":
+			language_option.select(7)
+		_:
+			language_option.select(0) # Fallback auf Englisch
 
 # -------------------------
 # Hilfsfunktionen
@@ -103,9 +125,27 @@ func _on_sfx_slider_value_changed(value: float) -> void:
 	_apply_sfx_volume()
 	save_settings()
 
-func _on_fps_option_item_selected(id: int) -> void:
-	fps_limit = id
-	Engine.max_fps = fps_limit if fps_limit > 0 else 0
+func _on_language_option_item_selected(index: int) -> void:
+	match index:
+		0:
+			Localization.set_language("en")
+		1:
+			Localization.set_language("de")
+		2:
+			Localization.set_language("fr")
+		3:
+			Localization.set_language("it")
+		4:
+			Localization.set_language("es")
+		5:
+			Localization.set_language("zh")
+		6:
+			Localization.set_language("ja")
+		7:
+			Localization.set_language("ru")
+
+	# Alle Labels im Spiel neu laden
+	get_tree().call_group("translatable_labels", "update_text")
 	save_settings()
 
 func _on_mute_check_box_toggled(button_pressed: bool) -> void:

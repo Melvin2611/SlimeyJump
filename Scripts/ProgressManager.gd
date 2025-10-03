@@ -1,9 +1,15 @@
 extends Node
 
+# Signal, das ausgesendet wird, wenn sich global_coin_count ändert
+signal coin_count_updated(new_count: int)
+
 # Speichert das höchste freigeschaltete Level (0 = Level 1 freigeschaltet)
 var highest_completed_level: int = 0
 
-# Coin-Daten (geteilt mit Coin-Skript)
+# Liste der freigeschalteten Bonuslevel
+var unlocked_bonus_levels: Array[int] = []
+
+# Coin-Daten (geteilt mit Global-Skript)
 var global_coin_count: int = 0
 var collected_coins: Dictionary = {}  # Speichert eingesammelte Münzen pro Level
 
@@ -56,33 +62,67 @@ var levels: Array[String] = [
 	"res://Scenes/Levels/W8/Level 45/Level45.tscn",
 	"res://Scenes/Levels/W8/Level 46/Level46.tscn",
 	"res://Scenes/Levels/W8/Level 47/Level47.tscn",
-	"res://Scenes/Levels/W8/Level 48/Level48.tscn"
+	"res://Scenes/Levels/W8/Level 48/Level48.tscn",
+	"res://Scenes/Levels/Bonus/Level 49/Level49.tscn",
+	"res://Scenes/Levels/Bonus/Level 50/Level50.tscn",
+	"res://Scenes/Levels/Bonus/Level 51/Level51.tscn",
+	"res://Scenes/Levels/Bonus/Level 52/Level52.tscn",
+	"res://Scenes/Levels/Bonus/Level 53/Level53.tscn",
+	"res://Scenes/Levels/Bonus/Level 54/Level54.tscn"
 ]
 
 func _ready():
 	load_progress()
-	print("Spielstart: highest_completed_level = ", highest_completed_level, ", global_coin_count = ", global_coin_count)
+	emit_signal("coin_count_updated", global_coin_count)  # Initiale Anzeige im HUD
+	print("Spielstart: highest_completed_level = ", highest_completed_level, ", global_coin_count = ", global_coin_count, ", unlocked_bonus_levels = ", unlocked_bonus_levels)
 
 # Funktion zum Aktualisieren des Fortschritts
 func complete_level(level_index: int):
-	if level_index >= highest_completed_level:
+	if level_index >= highest_completed_level and level_index < 48: # Bonuslevel beeinflussen nicht highest_completed_level
 		highest_completed_level = level_index + 1 # Erhöhe auf das nächste Level
 		save_progress()
 		print("Level abgeschlossen: ", level_index, ", highest_completed_level = ", highest_completed_level)
 
+# Funktion zum Freischalten eines Bonuslevels
+func unlock_bonus_level(level_index: int) -> bool:
+	if level_index >= 48 and level_index < levels.size() and global_coin_count >= 24 and level_index not in unlocked_bonus_levels:
+		global_coin_count -= 24
+		emit_signal("coin_count_updated", global_coin_count)  # Signal für HUD vor dem Speichern
+		unlocked_bonus_levels.append(level_index)
+		save_progress()
+		print("Bonuslevel ", level_index + 1, " freigeschaltet. Verbleibende Münzen: ", global_coin_count)
+		return true
+	return false
+
+# Funktion zum Prüfen, ob ein Level freigeschaltet ist
+func is_level_unlocked(level_index: int) -> bool:
+	if level_index < 48: # Normale Level
+		return level_index <= highest_completed_level
+	else: # Bonuslevel
+		return level_index in unlocked_bonus_levels
+
 # Funktion zum Abrufen des nächsten Levels
 func get_next_level() -> String:
 	var next_level_index = highest_completed_level
-	if next_level_index < levels.size():
+	if next_level_index < 48: # Nur normale Level
 		return levels[next_level_index]
 	else:
-		return levels[0] # Fallback: Zurück zum ersten Level, wenn alle abgeschlossen
+		return levels[0] # Fallback: Zurück zum ersten Level
 
 # Speichere Fortschritt in einer Datei (JSON für alle Daten)
 func save_progress():
+	# sichere Kopie mit ints, damit die gespeicherten Werte integer-ähnlich sind
+	var bonus_levels_for_save: Array = []
+	for b in unlocked_bonus_levels:
+		bonus_levels_for_save.append(int(b))
+
 	var save_data = {
-		"highest_completed_level": highest_completed_level
+		"highest_completed_level": int(highest_completed_level),
+		"unlocked_bonus_levels": bonus_levels_for_save,
+		"global_coin_count": int(global_coin_count),
+		"collected_coins": collected_coins
 	}
+
 	var file = FileAccess.open("user://progress.save", FileAccess.WRITE)
 	if file:
 		file.store_string(JSON.stringify(save_data))
@@ -91,6 +131,7 @@ func save_progress():
 	else:
 		print("Fehler: Konnte progress.save nicht speichern!")
 
+
 func load_progress():
 	if FileAccess.file_exists("user://progress.save"):
 		var file = FileAccess.open("user://progress.save", FileAccess.READ)
@@ -98,20 +139,43 @@ func load_progress():
 			var save_data = JSON.parse_string(file.get_as_text())
 			file.close()
 			if save_data is Dictionary:
-				highest_completed_level = save_data.get("highest_completed_level", 0)
+				# highest / coins als ints lesen (falls JSON number als float kommt)
+				highest_completed_level = int(save_data.get("highest_completed_level", 0))
+
+				# Bonuslevel-Liste sauber rekonstruieren (akzeptiere float und int)
+				unlocked_bonus_levels = []
+				var loaded_bonus_levels = save_data.get("unlocked_bonus_levels", [])
+				for item in loaded_bonus_levels:
+					# JSON liefert häufig floats; akzeptiere beides und cast zu int
+					if item is int or item is float:
+						unlocked_bonus_levels.append(int(item))
+					else:
+						print("Warnung: Ungültiges Element in unlocked_bonus_levels: ", item)
+
+				global_coin_count = int(save_data.get("global_coin_count", 0))
+				if global_coin_count < 0:
+					print("Warnung: global_coin_count ist negativ (", global_coin_count, "), setze auf 0")
+					global_coin_count = 0
+
+				collected_coins = save_data.get("collected_coins", {})
+				emit_signal("coin_count_updated", global_coin_count)
 				print("Level-Fortschritt geladen: ", save_data)
+				print(" -> konvertierte unlocked_bonus_levels: ", unlocked_bonus_levels)
 			else:
 				print("Fehler: Ungültiges Dateiformat in progress.save")
-		else:
-			print("Fehler beim Öffnen der progress.save zum Laden")
 	else:
 		highest_completed_level = 0
+		unlocked_bonus_levels = []
+		global_coin_count = 0
+		collected_coins = {}
+		emit_signal("coin_count_updated", global_coin_count)
 		print("Keine progress.save gefunden, starte bei Default-Werten")
 
 
 # Funktion zum Zurücksetzen des Fortschritts
 func reset_progress():
 	highest_completed_level = 0
+	unlocked_bonus_levels = []
 	global_coin_count = 0
 	collected_coins = {}
 	if FileAccess.file_exists("user://progress.save"):
@@ -122,4 +186,5 @@ func reset_progress():
 		else:
 			print("Fehler: Konnte Fortschrittsdatei nicht löschen!")
 	save_progress()
-	print("Fortschritt zurückgesetzt: highest_completed_level = ", highest_completed_level, ", global_coin_count = ", global_coin_count)
+	emit_signal("coin_count_updated", global_coin_count)  # Signal für HUD
+	print("Fortschritt zurückgesetzt: highest_completed_level = ", highest_completed_level, ", global_coin_count = ", global_coin_count, ", unlocked_bonus_levels = ", unlocked_bonus_levels)

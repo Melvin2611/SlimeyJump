@@ -1,37 +1,38 @@
-[gd_scene load_steps=54 format=4 uid="uid://b6gifrtjnp6jc"]
+[gd_scene load_steps=55 format=4 uid="uid://b6gifrtjnp6jc"]
 
-[ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/background/Mountains night/sky.png" id="1_obkk1"]
-[ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/background/Mountains night/far-clouds.png" id="2_nwisq"]
+[ext_resource type="Texture2D" uid="uid://b6m7q400wd7x4" path="res://Sprites/Objects/Sprites/background/Mountains night/sky.png" id="1_obkk1"]
+[ext_resource type="Texture2D" uid="uid://fuped50605tt" path="res://Sprites/Objects/Sprites/background/Mountains night/far-clouds.png" id="2_nwisq"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="3_1gj2r"]
-[ext_resource type="Texture2D" uid="uid://boh2k3185eu0j" path="res://Sprites/background/Mountains night/near-clouds.png" id="3_bspq2"]
+[ext_resource type="Texture2D" uid="uid://boh2k3185eu0j" path="res://Sprites/Objects/Sprites/background/Mountains night/near-clouds.png" id="3_bspq2"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="4_4h0up"]
-[ext_resource type="Texture2D" uid="uid://brr2x5pj6pjbl" path="res://Sprites/background/Mountains night/far-mountains.png" id="4_40tqx"]
-[ext_resource type="Texture2D" uid="uid://bsca1fshaidrg" path="res://Sprites/background/Mountains night/mountains.png" id="5_8kd6s"]
-[ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/crate/Crate.png" id="5_w4jrw"]
-[ext_resource type="Texture2D" uid="uid://bckhumng1hg0q" path="res://Sprites/background/Mountains night/trees.png" id="6_b8upn"]
+[ext_resource type="Texture2D" uid="uid://brr2x5pj6pjbl" path="res://Sprites/Objects/Sprites/background/Mountains night/far-mountains.png" id="4_40tqx"]
+[ext_resource type="Texture2D" uid="uid://bsca1fshaidrg" path="res://Sprites/Objects/Sprites/background/Mountains night/mountains.png" id="5_8kd6s"]
+[ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/Sprites/Objects/crate/Crate.png" id="5_w4jrw"]
+[ext_resource type="Texture2D" uid="uid://bckhumng1hg0q" path="res://Sprites/Objects/Sprites/background/Mountains night/trees.png" id="6_b8upn"]
 [ext_resource type="Script" uid="uid://dhadcw7vo1mic" path="res://Scripts/Objects/W6/Level 31/GoalL31.gd" id="7_nwisq"]
-[ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="8_bspq2"]
+[ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Sprites/Objects/Goal.png" id="8_bspq2"]
 [ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="11_8kd6s"]
-[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="12_b8upn"]
-[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="13_gmcnq"]
-[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="14_kxfyt"]
-[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="15_8kd6s"]
-[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Slime/Slime-Fling/Slime-fling2.png" id="15_hkbas"]
-[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="16_b8upn"]
-[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="16_w4itw"]
+[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge1.png" id="12_b8upn"]
+[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge2.png" id="13_gmcnq"]
+[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling1.png" id="14_kxfyt"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sprites/Objects/Sign.png" id="15_8kd6s"]
+[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling2.png" id="15_hkbas"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Sprites/Objects/Speech-Bubble.png" id="16_b8upn"]
+[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle2.png" id="16_w4itw"]
 [ext_resource type="Script" uid="uid://do8pyygfb2j8j" path="res://Scripts/Objects/W1/Level 3/spikeL3.gd" id="17_gmcnq"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="17_kxfyt"]
-[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="17_tog8p"]
-[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Slime/Slime-squish/Slime-squish1.png" id="18_gnnv8"]
-[ext_resource type="Texture2D" uid="uid://bnvkpl632nh5t" path="res://Sprites/Objects/Spike.png" id="18_kxfyt"]
-[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Slime/Slime-squish/Slime-squish2.png" id="19_0c8qr"]
+[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle1.png" id="17_tog8p"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="18_b8upn"]
+[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish1.png" id="18_gnnv8"]
+[ext_resource type="Texture2D" uid="uid://bnvkpl632nh5t" path="res://Sprites/Objects/Sprites/Objects/Spike.png" id="18_kxfyt"]
+[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish2.png" id="19_0c8qr"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="19_hkbas"]
-[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="20_hdy4g"]
-[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="21_7lkor"]
+[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish3.png" id="20_hdy4g"]
+[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish4.png" id="21_7lkor"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="22_ld1bf"]
-[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="23_082tg"]
-[ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/factorytileset.png" id="24_04h7c"]
-[ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="25_kcsvv"]
+[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/Objects/Sprites/15 Blob TileMap 16x16.png" id="23_082tg"]
+[ext_resource type="Texture2D" uid="uid://doppmso61ac1v" path="res://Sprites/Objects/Sprites/factorytileset.png" id="24_04h7c"]
+[ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/Objects/Sprites/factorytileset-pers.png" id="25_kcsvv"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="27_eofhy"]
 [ext_resource type="AudioStream" uid="uid://dergy5561dtbd" path="res://Sound/mus/silent-night-12137.mp3" id="30_nwisq"]
 [ext_resource type="Script" uid="uid://bp6g4sf10noh8" path="res://Scripts/Objects/W6/Wind Stream.gd" id="34_nwisq"]
@@ -5934,6 +5935,8 @@ text = "Endlich raus aus diesem Haus!
 
 Dann mal weiter... 
 Es gibt bestimmt noch weiter Schätze!"
+script = ExtResource("18_b8upn")
+text_key = "W6L31S1"
 
 [node name="Sign2" type="Sprite2D" parent="."]
 position = Vector2(3631, -1910)
@@ -5957,6 +5960,8 @@ theme_override_font_sizes/font_size = 22
 text = "Hier sind ja wieder diese Steine!
 Vielleicht gibt es irgendwas oben
 auf dem Berg!"
+script = ExtResource("18_b8upn")
+text_key = "W6L31S2"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(8265, 903)
