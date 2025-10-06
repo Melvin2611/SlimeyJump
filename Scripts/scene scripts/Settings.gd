@@ -17,6 +17,7 @@ var mute_enabled: bool = false
 @onready var mute_checkbox: CheckBox = $VBoxContainer/Sprite2D/MuteCheckBox
 @onready var reset_button: TextureButton = $VBoxContainer/ResetButton
 @onready var language_option: OptionButton = $VBoxContainer/LanguageOption
+@onready var confirmation_popup = $ConfirmationPopup
 
 # Bus-Indizes
 var music_bus_idx: int = -1
@@ -46,6 +47,10 @@ func _ready() -> void:
 	AudioServer.set_bus_mute(music_bus_idx, mute_enabled)
 	AudioServer.set_bus_mute(sfx_bus_idx, mute_enabled)
 	Engine.max_fps = fps_limit if fps_limit > 0 else 0
+	
+	# reset button popup Signale
+	confirmation_popup.confirmed.connect(_on_popup_confirmed)
+	confirmation_popup.cancelled.connect(_on_popup_cancelled)
 
 # -------------------------
 # Laden / Speichern
@@ -169,3 +174,27 @@ func _on_reset_button_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Main Menu.tscn")
+
+
+func _on_reset_button_2_pressed() -> void:
+	_on_reset_button_pressed()
+	confirmation_popup.show()
+
+func _on_popup_confirmed():
+	# Logik zum Löschen des Fortschritts
+	print("Level-Fortschritt wird gelöscht...")
+	ProgressManager.reset_progress()
+	print("Level-Fortschritt wurde gelöscht!")
+	print("Coin-Fortschritt wird gelöscht...")
+	Global.level_coin_count = 0
+	ProgressManager.global_coin_count = 0  # Direkt ProgressManager zurücksetzen
+	Global.global_coin_count = 0  # Synchronisiere Global
+	Global.collected_coins = {}  # Löscht alle gesammelten Münz-IDs für alle Levels
+	ProgressManager.collected_coins = {}  # Synchronisiere ProgressManager
+	ProgressManager.save_progress()  # Speichert die Änderungen in user://progress.save
+	ProgressManager.emit_signal("coin_count_updated", 0)  # Signal für HUD
+	print("Coin-Fortschritt wurde gelöscht!")
+	print("Save Reset abgeschlossen")
+
+func _on_popup_cancelled():
+	print("Abgebrochen")

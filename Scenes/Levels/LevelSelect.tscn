@@ -1063,4 +1063,5 @@ grow_vertical = 2
 [connection signal="pressed" from="GridContainer3/TextureButton46" to="." method="_on_texture_button_46_pressed"]
 [connection signal="pressed" from="GridContainer3/TextureButton47" to="." method="_on_texture_button_47_pressed"]
 [connection signal="pressed" from="GridContainer3/TextureButton48" to="." method="_on_texture_button_48_pressed"]
+[connection signal="pressed" from="GridContainer3/TextureButton49" to="." method="_on_texture_button_49_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

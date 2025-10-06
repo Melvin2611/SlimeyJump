@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://bdyk1uo42soui"]
+
+[ext_resource type="Script" uid="uid://2hc76fqxd5fi" path="res://Scripts/scene scripts/Confirm_Popup.gd" id="1_mj22b"]
+[ext_resource type="Texture2D" uid="uid://exe3rknrrutr" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-small.png" id="2_71q38"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="3_3h8gr"]
+[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board.png" id="4_jklgc"]
+[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="5_wj17b"]
+[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-hover.png" id="6_3e4d7"]
+
+[node name="PanelContainer" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mj22b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.5211406, 0.5211406, 0.5211405, 1)
+position = Vector2(262, 71)
+scale = Vector2(16, 16)
+texture = ExtResource("2_71q38")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3h8gr")
+theme_override_font_sizes/font_size = 32
+text = "Do you really want to reset all Level Progress?"
+horizontal_alignment = 1
+
+[node name="ConfirmButton" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 67)
+layout_mode = 2
+texture_normal = ExtResource("4_jklgc")
+texture_pressed = ExtResource("5_wj17b")
+texture_hover = ExtResource("6_3e4d7")
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="VBoxContainer/ConfirmButton"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 17.0
+offset_right = 401.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("3_3h8gr")
+theme_override_font_sizes/font_size = 26
+text = "Confirm"
+horizontal_alignment = 1
+
+[node name="CancelButton" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 67)
+layout_mode = 2
+texture_normal = ExtResource("4_jklgc")
+texture_pressed = ExtResource("5_wj17b")
+texture_hover = ExtResource("6_3e4d7")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/CancelButton"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 18.0
+offset_right = 401.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("3_3h8gr")
+theme_override_font_sizes/font_size = 26
+text = "Cancel"
+horizontal_alignment = 1

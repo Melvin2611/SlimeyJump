@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bbu853t6d4tyv"]
+[gd_scene load_steps=24 format=4 uid="uid://bbu853t6d4tyv"]
 
 [ext_resource type="Script" uid="uid://d3cqgi2c30nml" path="res://Scripts/scene scripts/main_menu.gd" id="1_totuj"]
 [ext_resource type="Texture2D" uid="uid://irmyl2mv6ebv" path="res://Sprites/Objects/Sprites/background/country Platform/Background (by ansimuz).png" id="2_0126h"]
@@ -6,16 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Objects/Sprites/Objects/Cloud/Cloud2.png" id="3_mjet1"]
 [ext_resource type="Script" uid="uid://si5jvfnxecac" path="res://Scripts/Objects/Clouds/CloudsT.gd" id="4_mjet1"]
 [ext_resource type="Texture2D" uid="uid://c8lveqkxenxjw" path="res://Sprites/Objects/Sprites/background/Title.png" id="5_4lp62"]
-[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/Objects/Sprites/15 Blob TileMap 16x16.png" id="6_mjet1"]
+[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="6_mjet1"]
 [ext_resource type="Texture2D" uid="uid://j5fcmts8n05s" path="res://Sprites/Objects/Sign-Board/Chain.png" id="6_nl2gc"]
 [ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="8_4lp62"]
-[ext_resource type="Texture2D" uid="uid://7mnoohorfu3m" path="res://Sprites/Objects/Sprites/wood_tileset-pers.png" id="8_ef6yq"]
+[ext_resource type="Texture2D" uid="uid://7mnoohorfu3m" path="res://Sprites/wood_tileset-pers.png" id="8_ef6yq"]
 [ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board.png" id="8_wib81"]
-[ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/Objects/Sprites/factorytileset-pers.png" id="9_nl2gc"]
+[ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="9_nl2gc"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="9_tbdrc"]
 [ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="9_vuees"]
 [ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-hover.png" id="10_3hb06"]
 [ext_resource type="AudioStream" uid="uid://qcpa5hxhebi4" path="res://Sound/mus/8-bit-video-game-background-music-loop-wood-chapter-368532.mp3" id="13_3hb06"]
+[ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="17_w2mqo"]
+[ext_resource type="Script" uid="uid://bxp68adapuj5r" path="res://Scripts/Objects/W8/Level 48/final-label.gd" id="18_s8c0c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0vewo"]
 animations = [{
@@ -1325,7 +1327,29 @@ offset_top = 334.0
 offset_right = 836.0
 offset_bottom = 357.0
 theme_override_fonts/font = ExtResource("9_tbdrc")
-text = "v.0.9.1-beta"
+text = "v.0.9.2-beta"
+
+[node name="Coin2" type="Sprite2D" parent="."]
+position = Vector2(873, 593)
+scale = Vector2(6, 6)
+texture = ExtResource("17_w2mqo")
+
+[node name="Coin Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17881945
+anchor_top = 0.20061728
+anchor_right = 0.3298611
+anchor_bottom = 0.20061728
+offset_left = 713.0
+offset_top = 436.0
+offset_right = 763.0
+offset_bottom = 496.0
+theme_override_fonts/font = ExtResource("9_tbdrc")
+theme_override_font_sizes/font_size = 60
+text = ": 144 / 144"
+script = ExtResource("18_s8c0c")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level Select" to="." method="_on_level_select_pressed"]

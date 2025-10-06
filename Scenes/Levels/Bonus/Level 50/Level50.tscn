@@ -1,0 +1,1654 @@
+[gd_scene load_steps=103 format=4 uid="uid://mxo6dd7ylnbr"]
+
+[ext_resource type="Texture2D" uid="uid://da7dwk1bcw3my" path="res://Sprites/Objects/Sprites/background/weltraum/background_1.png" id="1_xefw2"]
+[ext_resource type="Texture2D" uid="uid://opmex364onhs" path="res://Sprites/Objects/Sprites/background/weltraum/background_2.png" id="2_a5w2h"]
+[ext_resource type="Texture2D" uid="uid://c6mkkf4ko88tb" path="res://Sprites/Objects/Sprites/background/weltraum/background_3.png" id="3_fj7i0"]
+[ext_resource type="Texture2D" uid="uid://bpi4wedpqtoby" path="res://Sprites/Objects/Sprites/background/weltraum/background_4.png" id="4_76do5"]
+[ext_resource type="Texture2D" uid="uid://bft8ky0g30kc1" path="res://Sprites/Objects/Big-Void.png" id="7_up8j4"]
+[ext_resource type="Script" uid="uid://dv0bnb7ogsxg5" path="res://GoalL49.gd" id="8_t1i4i"]
+[ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="9_toiv4"]
+[ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="10_xbsc7"]
+[ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="11_qqeby"]
+[ext_resource type="Script" uid="uid://b7f6tn4amvwpg" path="res://Scripts/Objects/crumbleblock.gd" id="12_r1cjg"]
+[ext_resource type="Texture2D" uid="uid://ci2iaivavy8oo" path="res://Sprites/Objects/Sprites/Objects/crumbleblock/Crumble2.png" id="13_ux3t6"]
+[ext_resource type="Texture2D" uid="uid://cnv3yb5ddbof8" path="res://Sprites/Objects/Sprites/Objects/crumbleblock/Crumble3.png" id="14_rghnx"]
+[ext_resource type="Texture2D" uid="uid://dchtml0ngidom" path="res://Sprites/Objects/Sprites/Objects/crumbleblock/Crumble4.png" id="15_fygjo"]
+[ext_resource type="Texture2D" uid="uid://wh8jcw5i81o4" path="res://Sprites/Objects/Sprites/Objects/crumbleblock/Crumble5.png" id="16_l7xqv"]
+[ext_resource type="Texture2D" uid="uid://kbpcvt5cfqu4" path="res://Sprites/Objects/Sprites/Objects/crumbleblock/Crumble6.png" id="17_x8aj3"]
+[ext_resource type="Texture2D" uid="uid://brfq3tf4dq7am" path="res://Sprites/Objects/Sprites/Objects/crumbleblock/Crumble1.png" id="18_34ajy"]
+[ext_resource type="Script" uid="uid://0js74kie7rdh" path="res://Scripts/Objects/W7/TimerCloud.gd" id="19_3v3fn"]
+[ext_resource type="Texture2D" uid="uid://dp40s1u70b7th" path="res://Sprites/Objects/Sprites/Objects/Cloud/TimeCloud1.png" id="20_fujq0"]
+[ext_resource type="Texture2D" uid="uid://vmlto6bvljul" path="res://Sprites/Objects/Sprites/Objects/Cloud/TimeCloud2.png" id="21_wcka7"]
+[ext_resource type="Script" uid="uid://yvllfwn1cdix" path="res://Scripts/Objects/Conveyorbelt.gd" id="22_2xw6n"]
+[ext_resource type="Texture2D" uid="uid://c2knc1mbwofp1" path="res://Sprites/Objects/Sprites/Objects/conveyor/Conveyor1.png" id="23_ycllr"]
+[ext_resource type="Texture2D" uid="uid://0cds7ilgpubl" path="res://Sprites/Objects/Sprites/Objects/conveyor/Conveyor2.png" id="24_s5uxt"]
+[ext_resource type="Texture2D" uid="uid://b0hndsiwsakno" path="res://Sprites/Objects/Sprites/Objects/conveyor/Conveyor3.png" id="25_k7r02"]
+[ext_resource type="Texture2D" uid="uid://b3w232g0e002q" path="res://Sprites/Objects/Sprites/Objects/conveyor/Conveyor4.png" id="26_xakog"]
+[ext_resource type="Script" uid="uid://fsqlbp2xeo0k" path="res://Scripts/Objects/leap.gd" id="27_ngy31"]
+[ext_resource type="Texture2D" uid="uid://dpu2apdisajsx" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform1.png" id="28_korec"]
+[ext_resource type="Texture2D" uid="uid://bcx5vhuvamc8e" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform2.png" id="29_fualh"]
+[ext_resource type="Texture2D" uid="uid://dlqn4fhsvpg10" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform3.png" id="30_wgy7j"]
+[ext_resource type="Texture2D" uid="uid://cooq000h0kuyn" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform4.png" id="31_ot2cm"]
+[ext_resource type="Texture2D" uid="uid://cqpsluoeqys70" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform5.png" id="32_4sn5m"]
+[ext_resource type="Texture2D" uid="uid://bfd1jdx3sq1w5" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform6.png" id="33_c2j16"]
+[ext_resource type="AudioStream" uid="uid://bxbi040lktj06" path="res://Sound/sfx/cartoon-jump-6462.mp3" id="34_gv8xv"]
+[ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/Sprites/Objects/crate/Crate.png" id="35_76cxu"]
+[ext_resource type="Script" uid="uid://b28yk7bf85j0w" path="res://Scripts/Objects/W1/Level 3/button.gd" id="36_rixif"]
+[ext_resource type="Texture2D" uid="uid://b1kf44lic3mle" path="res://Sprites/Objects/Sprites/Objects/Button/Button2.png" id="37_4ssye"]
+[ext_resource type="Texture2D" uid="uid://d084rij1ole7e" path="res://Sprites/Objects/Sprites/Objects/Button/Button1.png" id="38_im5nm"]
+[ext_resource type="Script" uid="uid://cs4bwivxtx3pb" path="res://Scripts/Objects/W1/Level 3/door.gd" id="39_k1bp0"]
+[ext_resource type="Texture2D" uid="uid://cs1mfpjvebrhy" path="res://Sprites/Objects/Door.png" id="40_8m6ec"]
+[ext_resource type="Script" uid="uid://do8pyygfb2j8j" path="res://Scripts/Objects/W1/Level 3/spikeL3.gd" id="41_4kakm"]
+[ext_resource type="Texture2D" uid="uid://rkgcxbrpb4g7" path="res://Sprites/Objects/Spikes.png" id="42_xjgic"]
+[ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="43_gf3at"]
+[ext_resource type="Texture2D" uid="uid://bnvkpl632nh5t" path="res://Sprites/Objects/Spike.png" id="44_nvg6b"]
+[ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="45_g1jdm"]
+[ext_resource type="Script" uid="uid://dwow07q6dv5xm" path="res://Scripts/Objects/W9/shaww_bladee.gd" id="46_c0d2c"]
+[ext_resource type="Texture2D" uid="uid://b15y84vexf21b" path="res://Sprites/Objects/shawblades/Shawblade-full1.png" id="47_264w8"]
+[ext_resource type="Texture2D" uid="uid://dcwrihwj38sjp" path="res://Sprites/Objects/shawblades/Shawblade-full2.png" id="48_cyeut"]
+[ext_resource type="PackedScene" uid="uid://bs3igc2piqcfx" path="res://Scenes/Objects/MovingPlatform-sand.tscn" id="48_n3kqr"]
+[ext_resource type="AudioStream" uid="uid://lrkbmtyhc0vr" path="res://Sound/sfx/saw-running-82131.mp3" id="49_3lndb"]
+[ext_resource type="TileSet" uid="uid://bp6l3qpa0j5kn" path="res://Tileset1.tres" id="50_q855t"]
+[ext_resource type="Texture2D" uid="uid://btui5ywlg6bgi" path="res://Sprites/Objects/Sprites/Objects/shawblades/Shawblade1.png" id="51_5ml41"]
+[ext_resource type="Texture2D" uid="uid://dlcsw3g63csrm" path="res://Sprites/Objects/Sprites/Objects/shawblades/Shawblade2.png" id="52_m6xed"]
+[ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="53_1ao4d"]
+[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="54_qw7t0"]
+[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="55_8bjq6"]
+[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="56_bmos3"]
+[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Slime/Slime-Fling/Slime-fling2.png" id="57_3ncbi"]
+[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="58_73grq"]
+[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="59_nbe5i"]
+[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Slime/Slime-squish/Slime-squish1.png" id="60_thuqh"]
+[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Slime/Slime-squish/Slime-squish2.png" id="61_b7pul"]
+[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="62_gdyxu"]
+[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="63_dxufx"]
+[ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="64_q1u8p"]
+[ext_resource type="AudioStream" uid="uid://b0klxdv65xagh" path="res://Sound/mus/cottagecore-re.mp3" id="65_emxqo"]
+[ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="66_y8lxs"]
+[ext_resource type="Script" uid="uid://5g2vt3lsrmco" path="res://Scripts/Objects/wind.gd" id="67_up8j4"]
+[ext_resource type="AudioStream" uid="uid://dq8mydokpmrbr" path="res://Sound/sfx/wind.mp3" id="68_t1i4i"]
+[ext_resource type="Texture2D" uid="uid://7b2mrnygod5v" path="res://Sprites/Objects/Sprites/background/dessert/flyingsan/flying-sand1.png" id="69_toiv4"]
+[ext_resource type="Texture2D" uid="uid://bvqwf2dnhgspc" path="res://Sprites/Objects/Sprites/background/dessert/flyingsan/flying-sand2.png" id="70_xbsc7"]
+[ext_resource type="Texture2D" uid="uid://d2geqgbuhdmnv" path="res://Sprites/Objects/Sprites/background/dessert/flyingsan/flying-sand3.png" id="71_qqeby"]
+[ext_resource type="Texture2D" uid="uid://csyiqjbcn6j64" path="res://Sprites/Objects/Sprites/background/dessert/flyingsan/flying-sand4.png" id="72_r1cjg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyot2"]
+size = Vector2(384, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qut0c"]
+size = Vector2(112, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qd3cr"]
+size = Vector2(128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dv1e2"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("13_ux3t6")
+}, {
+"duration": 2.0,
+"texture": ExtResource("14_rghnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fygjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_l7xqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_x8aj3")
+}],
+"loop": true,
+"name": &"crumble",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_34ajy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b55td"]
+size = Vector2(188, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5bo5"]
+size = Vector2(188, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_na8so"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_ycllr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_s5uxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_k7r02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xakog")
+}],
+"loop": true,
+"name": &"default",
+"speed": 32.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk76b"]
+size = Vector2(128, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5f75"]
+size = Vector2(128, 10.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4w6d"]
+size = Vector2(47.75, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mgynl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_korec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_fualh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_wgy7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ot2cm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_4sn5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_c2j16")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y10yt"]
+friction = 0.7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2mgn"]
+size = Vector2(84, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hs8c7"]
+size = Vector2(32, 6)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_atvj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_4ssye")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_im5nm")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rur7t"]
+size = Vector2(32, 4.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxfk8"]
+size = Vector2(14, 47.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6fmh"]
+size = Vector2(240, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rug3q"]
+size = Vector2(11, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_airwd"]
+size = Vector2(9.75, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gm8tq"]
+size = Vector2(28203, 191)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ykh5"]
+radius = 57.00877
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_po52c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_264w8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_cyeut")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_apgvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_5ml41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_m6xed")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_vy1we"]
+points = PackedVector2Array(-15, 7, -12, 0, -6, -6, 0, -7, 6, -6, 12, 0, 15, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0w1fe"]
+resource_name = "Slime"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_qw7t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_8bjq6")
+}],
+"loop": true,
+"name": &"charge",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_bmos3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_3ncbi")
+}],
+"loop": true,
+"name": &"fling",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("58_73grq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_nbe5i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("60_thuqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_b7pul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_gdyxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_dxufx")
+}],
+"loop": true,
+"name": &"squish",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_beuhl"]
+size = Vector2(98, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ux3t6"]
+size = Vector2(3072.5, 1909.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rghnx"]
+size = Vector2(1062, 1973)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fygjo"]
+size = Vector2(2824, 2159)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7xqv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("69_toiv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_xbsc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_qqeby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_r1cjg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Level50" type="Node2D"]
+
+[node name="Backgrounds" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Backgrounds"]
+offset_left = -588.0
+offset_top = -4329.0
+offset_right = 24577.0
+offset_bottom = 857.0
+color = Color(0, 0, 0.1764706, 1)
+
+[node name="Parallax2D5" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.05, 1)
+scroll_offset = Vector2(-337, 463)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_begin = Vector2(-10000000, 100000000)
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D5"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_xefw2")
+
+[node name="Parallax2D6" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-337, 463)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D6"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_a5w2h")
+
+[node name="Parallax2D7" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.13, 1)
+scroll_offset = Vector2(-337, 463)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D7"]
+scale = Vector2(4, 4)
+texture = ExtResource("3_fj7i0")
+
+[node name="Parallax2D8" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.17, 1)
+scroll_offset = Vector2(-337, 463)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D8"]
+scale = Vector2(4, 4)
+texture = ExtResource("4_76do5")
+
+[node name="Parallax2D10" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.05, 1)
+scroll_offset = Vector2(-359, -393)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_begin = Vector2(-10000000, 100000000)
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D10"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_xefw2")
+
+[node name="Parallax2D11" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-359, -393)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D11"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_a5w2h")
+
+[node name="Parallax2D12" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.3, 1)
+scroll_offset = Vector2(-359, -393)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D12"]
+scale = Vector2(4, 4)
+texture = ExtResource("3_fj7i0")
+
+[node name="Parallax2D13" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.17, 1)
+scroll_offset = Vector2(-359, -393)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D13"]
+scale = Vector2(4, 4)
+texture = ExtResource("4_76do5")
+
+[node name="Parallax2D14" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.05, 1)
+scroll_offset = Vector2(-326, -1292)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_begin = Vector2(-10000000, 100000000)
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D14"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_xefw2")
+
+[node name="Parallax2D15" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-326, -1292)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D15"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_a5w2h")
+
+[node name="Parallax2D16" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.13, 1)
+scroll_offset = Vector2(-326, -1292)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D16"]
+scale = Vector2(4, 4)
+texture = ExtResource("3_fj7i0")
+
+[node name="Parallax2D17" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.17, 1)
+scroll_offset = Vector2(-326, -1292)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D17"]
+scale = Vector2(4, 4)
+texture = ExtResource("4_76do5")
+
+[node name="Parallax2D18" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.05, 1)
+scroll_offset = Vector2(-283, -2116)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_begin = Vector2(-10000000, 100000000)
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D18"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_xefw2")
+
+[node name="Parallax2D19" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-283, -2116)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D19"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_a5w2h")
+
+[node name="Parallax2D20" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.13, 1)
+scroll_offset = Vector2(-283, -2116)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D20"]
+scale = Vector2(4, 4)
+texture = ExtResource("3_fj7i0")
+
+[node name="Parallax2D21" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.17, 1)
+scroll_offset = Vector2(-283, -2116)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D21"]
+scale = Vector2(4, 4)
+texture = ExtResource("4_76do5")
+
+[node name="Parallax2D22" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.05, 1)
+scroll_offset = Vector2(-348, -3015)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_begin = Vector2(-10000000, 100000000)
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D22"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_xefw2")
+
+[node name="Parallax2D23" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-348, -3015)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D23"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_a5w2h")
+
+[node name="Parallax2D24" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.13, 1)
+scroll_offset = Vector2(-348, -3015)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D24"]
+scale = Vector2(4, 4)
+texture = ExtResource("3_fj7i0")
+
+[node name="Parallax2D25" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.17, 1)
+scroll_offset = Vector2(-348, -3015)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D25"]
+scale = Vector2(4, 4)
+texture = ExtResource("4_76do5")
+
+[node name="Parallax2D26" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.05, 1)
+scroll_offset = Vector2(-348, -3882)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_begin = Vector2(-10000000, 100000000)
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D26"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_xefw2")
+
+[node name="Parallax2D28" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-348, -3882)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D28"]
+scale = Vector2(4, 4)
+texture = ExtResource("3_fj7i0")
+
+[node name="Parallax2D27" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.13, 1)
+scroll_offset = Vector2(-348, -3882)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D27"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_a5w2h")
+
+[node name="Parallax2D29" type="Parallax2D" parent="Backgrounds"]
+scroll_scale = Vector2(0.17, 1)
+scroll_offset = Vector2(-348, -3882)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Parallax2D29"]
+scale = Vector2(4, 4)
+texture = ExtResource("4_76do5")
+
+[node name="Big-void" type="Sprite2D" parent="."]
+position = Vector2(1915, 649)
+scale = Vector2(12, 12)
+texture = ExtResource("7_up8j4")
+
+[node name="Big-void2" type="Sprite2D" parent="."]
+position = Vector2(6843.0005, 700)
+scale = Vector2(6, 6)
+texture = ExtResource("7_up8j4")
+
+[node name="Big-void3" type="Sprite2D" parent="."]
+position = Vector2(9979, 684)
+scale = Vector2(12, 12)
+texture = ExtResource("7_up8j4")
+
+[node name="Big-void4" type="Sprite2D" parent="."]
+position = Vector2(13759.001, 684)
+scale = Vector2(12, 12)
+texture = ExtResource("7_up8j4")
+
+[node name="Goal" type="Area2D" parent="."]
+position = Vector2(17946, 2216)
+collision_layer = 2
+script = ExtResource("8_t1i4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+position = Vector2(-2207, -4064)
+shape = SubResource("RectangleShape2D_dyot2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="Goal"]
+stream = ExtResource("9_toiv4")
+volume_db = 10.0
+bus = &"SFX"
+
+[node name="Sprite2D" type="Sprite2D" parent="Goal"]
+position = Vector2(-2207, -4064)
+scale = Vector2(64, 64)
+texture = ExtResource("10_xbsc7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(330, 4)
+zoom = Vector2(0.82, 0.82)
+limit_left = -448
+limit_top = -2006
+limit_right = 15976
+limit_bottom = 739
+position_smoothing_speed = 7.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+script = ExtResource("11_qqeby")
+
+[node name="crumbleblock" type="Area2D" parent="."]
+position = Vector2(5878, 350)
+collision_layer = 2
+script = ExtResource("12_r1cjg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crumbleblock"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_qut0c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="crumbleblock" groups=["platforms"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crumbleblock/StaticBody2D"]
+shape = SubResource("RectangleShape2D_qd3cr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="crumbleblock"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_dv1e2")
+animation = &"crumble"
+autoplay = "default"
+
+[node name="TimerBlocks" type="Node2D" parent="." node_paths=PackedStringArray("block1", "block2")]
+position = Vector2(4955, -2052)
+script = ExtResource("19_3v3fn")
+block1 = NodePath("block1")
+block2 = NodePath("block2")
+
+[node name="block1" type="StaticBody2D" parent="TimerBlocks" groups=["platforms"]]
+position = Vector2(-514.99994, 709)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="TimerBlocks/block1"]
+scale = Vector2(4, 4)
+texture = ExtResource("20_fujq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TimerBlocks/block1"]
+position = Vector2(-2, 6)
+shape = SubResource("RectangleShape2D_b55td")
+
+[node name="block2" type="StaticBody2D" parent="TimerBlocks" groups=["platforms"]]
+position = Vector2(246, 569)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="TimerBlocks/block2"]
+scale = Vector2(4, 4)
+texture = ExtResource("21_wcka7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TimerBlocks/block2"]
+position = Vector2(-2, 6)
+shape = SubResource("RectangleShape2D_t5bo5")
+
+[node name="TimerBlocks2" type="Node2D" parent="." node_paths=PackedStringArray("block1", "block2")]
+position = Vector2(3981, -2141)
+script = ExtResource("19_3v3fn")
+block1 = NodePath("block1")
+block2 = NodePath("block2")
+
+[node name="block1" type="StaticBody2D" parent="TimerBlocks2" groups=["platforms"]]
+position = Vector2(-514.99994, 709)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="TimerBlocks2/block1"]
+scale = Vector2(4, 4)
+texture = ExtResource("20_fujq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TimerBlocks2/block1"]
+position = Vector2(-2, 6)
+shape = SubResource("RectangleShape2D_b55td")
+
+[node name="block2" type="StaticBody2D" parent="TimerBlocks2" groups=["platforms"]]
+position = Vector2(88, 569)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="TimerBlocks2/block2"]
+scale = Vector2(4, 4)
+texture = ExtResource("21_wcka7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TimerBlocks2/block2"]
+position = Vector2(-2, 6)
+shape = SubResource("RectangleShape2D_t5bo5")
+
+[node name="ConveyorBelt" type="Area2D" parent="."]
+position = Vector2(7803, -468)
+scale = Vector2(4, 4)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("22_2xw6n")
+speed = 200.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ConveyorBelt"]
+sprite_frames = SubResource("SpriteFrames_na8so")
+autoplay = "default"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ConveyorBelt" groups=["platforms"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConveyorBelt/StaticBody2D"]
+shape = SubResource("RectangleShape2D_hk76b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConveyorBelt"]
+position = Vector2(0, -7.625)
+shape = SubResource("RectangleShape2D_s5f75")
+
+[node name="leap1" type="Area2D" parent="."]
+position = Vector2(2491, -542)
+scale = Vector2(5.35, 5.35)
+collision_layer = 2
+script = ExtResource("27_ngy31")
+catapult_force = -2500.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leap1"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_t4w6d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="leap1"]
+sprite_frames = SubResource("SpriteFrames_mgynl")
+autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="leap1"]
+stream = ExtResource("34_gv8xv")
+volume_db = 15.0
+max_distance = 1000.0
+bus = &"SFX"
+
+[node name="crumbleblock2" type="Area2D" parent="."]
+position = Vector2(6351, 352)
+collision_layer = 2
+script = ExtResource("12_r1cjg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crumbleblock2"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_qut0c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="crumbleblock2" groups=["platforms"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crumbleblock2/StaticBody2D"]
+shape = SubResource("RectangleShape2D_qd3cr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="crumbleblock2"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_dv1e2")
+animation = &"crumble"
+autoplay = "default"
+
+[node name="Crate" type="RigidBody2D" parent="." groups=["platforms"]]
+position = Vector2(7750, -1616)
+collision_layer = 2
+collision_mask = 3
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_y10yt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Crate"]
+scale = Vector2(5, 5)
+texture = ExtResource("35_76cxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate"]
+shape = SubResource("RectangleShape2D_y2mgn")
+
+[node name="Button" type="StaticBody2D" parent="." groups=["platforms"]]
+position = Vector2(8185, -1396)
+scale = Vector2(4, 4)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("36_rixif")
+door_path = NodePath("../Door")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_hs8c7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
+sprite_frames = SubResource("SpriteFrames_atvj8")
+animation = &"up"
+
+[node name="Area2D" type="Area2D" parent="Button"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
+position = Vector2(0, 1.125)
+shape = SubResource("RectangleShape2D_rur7t")
+
+[node name="Door" type="Node2D" parent="."]
+position = Vector2(8347, -692)
+scale = Vector2(4, 4)
+script = ExtResource("39_k1bp0")
+CLOSED_Y = 556.0
+OPEN_Y = 356.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Door"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/StaticBody2D"]
+position = Vector2(0, -0.125)
+shape = SubResource("RectangleShape2D_uxfk8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Door"]
+texture = ExtResource("40_8m6ec")
+
+[node name="Spikes" type="Node2D" parent="."]
+position = Vector2(3002, 48)
+
+[node name="Spikes3" type="Area2D" parent="Spikes"]
+position = Vector2(-255, -1796)
+rotation = 3.1415927
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes3"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes3"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes3"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes4" type="Area2D" parent="Spikes"]
+position = Vector2(-511, -1860)
+rotation = 3.1415927
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes4"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes4"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes4"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes8" type="Area2D" parent="Spikes"]
+position = Vector2(321, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes8"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes8"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes8"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes9" type="Area2D" parent="Spikes"]
+position = Vector2(385, -1188)
+scale = Vector2(4, 4)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes9"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes9"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes9"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes10" type="Area2D" parent="Spikes"]
+position = Vector2(2113, -1188)
+scale = Vector2(4, 4)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes10"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes10"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes10"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spike3" type="Area2D" parent="Spikes"]
+position = Vector2(-1695, 124)
+scale = Vector2(4, 4)
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spike3"]
+rotation = -1.5708
+texture = ExtResource("44_nvg6b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spike3"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike3"]
+position = Vector2(4.5, 2.5)
+shape = SubResource("RectangleShape2D_rug3q")
+
+[node name="Spike4" type="Area2D" parent="Spikes"]
+position = Vector2(-1311, 252)
+scale = Vector2(4, 4)
+script = ExtResource("41_4kakm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike4"]
+position = Vector2(2.875, 0)
+shape = SubResource("RectangleShape2D_airwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spike4"]
+rotation = -1.5708
+texture = ExtResource("44_nvg6b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spike4"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spike5" type="Area2D" parent="Spikes"]
+position = Vector2(-1503, 188)
+scale = Vector2(4, 4)
+script = ExtResource("41_4kakm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike5"]
+position = Vector2(2.875, 0)
+shape = SubResource("RectangleShape2D_airwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spike5"]
+rotation = -1.5708
+texture = ExtResource("44_nvg6b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spike5"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spike11" type="Area2D" parent="Spikes"]
+position = Vector2(1025, -1188)
+rotation = 1.5707964
+scale = Vector2(16, 16)
+script = ExtResource("41_4kakm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike11"]
+position = Vector2(2.875, 0)
+shape = SubResource("RectangleShape2D_airwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spike11"]
+rotation = -1.5708
+texture = ExtResource("44_nvg6b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spike11"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes11" type="Area2D" parent="Spikes"]
+position = Vector2(577, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes11"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes11"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes11"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes12" type="Area2D" parent="Spikes"]
+position = Vector2(833, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes12"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes12"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes12"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes13" type="Area2D" parent="Spikes"]
+position = Vector2(1089, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes13"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes13"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes13"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes14" type="Area2D" parent="Spikes"]
+position = Vector2(1345, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes14"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes14"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes14"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes15" type="Area2D" parent="Spikes"]
+position = Vector2(1601, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes15"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes15"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes15"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes16" type="Area2D" parent="Spikes"]
+position = Vector2(1857, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes16"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes16"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes16"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes17" type="Area2D" parent="Spikes"]
+position = Vector2(2113, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes17"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes17"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes17"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes18" type="Area2D" parent="Spikes"]
+position = Vector2(2369, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes18"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes18"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes18"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes19" type="Area2D" parent="Spikes"]
+position = Vector2(2625, -132)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes19"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes19"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes19"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spikes20" type="Area2D" parent="Spikes"]
+position = Vector2(-255, -516)
+collision_layer = 2
+script = ExtResource("41_4kakm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes20"]
+scale = Vector2(4, 4)
+texture = ExtResource("42_xjgic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikes20"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_r6fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spikes20"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spike6" type="Area2D" parent="Spikes"]
+position = Vector2(-95, -452)
+rotation = 1.5707964
+scale = Vector2(4, 4)
+script = ExtResource("41_4kakm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike6"]
+position = Vector2(2.875, 0)
+shape = SubResource("RectangleShape2D_airwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spike6"]
+rotation = -1.5708
+texture = ExtResource("44_nvg6b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spike6"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spike7" type="Area2D" parent="Spikes"]
+position = Vector2(-31, -388)
+rotation = 1.5707964
+scale = Vector2(4, 4)
+script = ExtResource("41_4kakm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike7"]
+position = Vector2(2.875, 0)
+shape = SubResource("RectangleShape2D_airwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spike7"]
+rotation = -1.5708
+texture = ExtResource("44_nvg6b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spike7"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spike8" type="Area2D" parent="Spikes"]
+position = Vector2(33, -324)
+rotation = 1.5707964
+scale = Vector2(4, 4)
+script = ExtResource("41_4kakm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike8"]
+position = Vector2(2.875, 0)
+shape = SubResource("RectangleShape2D_airwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spike8"]
+rotation = -1.5708
+texture = ExtResource("44_nvg6b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spike8"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spike9" type="Area2D" parent="Spikes"]
+position = Vector2(97, -260)
+rotation = 1.5707964
+scale = Vector2(4, 4)
+script = ExtResource("41_4kakm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike9"]
+position = Vector2(2.875, 0)
+shape = SubResource("RectangleShape2D_airwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spike9"]
+rotation = -1.5708
+texture = ExtResource("44_nvg6b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spike9"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Spike10" type="Area2D" parent="Spikes"]
+position = Vector2(161, -196)
+rotation = 1.5707964
+scale = Vector2(4, 4)
+script = ExtResource("41_4kakm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike10"]
+position = Vector2(2.875, 0)
+shape = SubResource("RectangleShape2D_airwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spike10"]
+rotation = -1.5708
+texture = ExtResource("44_nvg6b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spikes/Spike10"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="Death Plain" type="Area2D" parent="."]
+position = Vector2(5337, 584)
+collision_layer = 2
+script = ExtResource("45_g1jdm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
+position = Vector2(2253.5, 220.5)
+shape = SubResource("RectangleShape2D_gm8tq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Death Plain"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="ShawwBladee" type="Area2D" parent="."]
+position = Vector2(3129, 2)
+collision_layer = 2
+script = ExtResource("46_c0d2c")
+point_a = Vector2(2644, -329)
+point_b = Vector2(3129, -2)
+speed = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShawwBladee"]
+shape = SubResource("CircleShape2D_1ykh5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ShawwBladee"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_po52c")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ShawwBladee"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ShawwBladee"]
+stream = ExtResource("49_3lndb")
+volume_db = 1.0
+autoplay = true
+max_distance = 700.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="ShawwBladee2" type="Area2D" parent="."]
+position = Vector2(4233, 13)
+collision_layer = 2
+script = ExtResource("46_c0d2c")
+point_a = Vector2(4230, 13)
+point_b = Vector2(3339, 13)
+speed = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShawwBladee2"]
+shape = SubResource("CircleShape2D_1ykh5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ShawwBladee2"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_po52c")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ShawwBladee2"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ShawwBladee2"]
+stream = ExtResource("49_3lndb")
+volume_db = 1.0
+autoplay = true
+max_distance = 700.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="ShawwBladee3" type="Area2D" parent="."]
+position = Vector2(4366, -1)
+collision_layer = 2
+script = ExtResource("46_c0d2c")
+point_a = Vector2(4366, 13)
+point_b = Vector2(3475, 13)
+speed = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShawwBladee3"]
+shape = SubResource("CircleShape2D_1ykh5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ShawwBladee3"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_po52c")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ShawwBladee3"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ShawwBladee3"]
+stream = ExtResource("49_3lndb")
+volume_db = 1.0
+autoplay = true
+max_distance = 700.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="ShawwBladee4" type="Area2D" parent="."]
+position = Vector2(4504, 0)
+collision_layer = 2
+script = ExtResource("46_c0d2c")
+point_a = Vector2(4504, 13)
+point_b = Vector2(5908, 13)
+speed = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShawwBladee4"]
+shape = SubResource("CircleShape2D_1ykh5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ShawwBladee4"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_po52c")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ShawwBladee4"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ShawwBladee4"]
+stream = ExtResource("49_3lndb")
+volume_db = 1.0
+autoplay = true
+max_distance = 700.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="ShawwBladee5" type="Area2D" parent="."]
+position = Vector2(4641, 3)
+collision_layer = 2
+script = ExtResource("46_c0d2c")
+point_a = Vector2(4641, 13)
+point_b = Vector2(5634, 13)
+speed = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShawwBladee5"]
+shape = SubResource("CircleShape2D_1ykh5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ShawwBladee5"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_po52c")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ShawwBladee5"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ShawwBladee5"]
+stream = ExtResource("49_3lndb")
+volume_db = 1.0
+autoplay = true
+max_distance = 700.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="ShawwBladee6" type="Area2D" parent="."]
+position = Vector2(3693, -205)
+collision_layer = 2
+script = ExtResource("46_c0d2c")
+point_a = Vector2(3674, -794)
+point_b = Vector2(3674, -208)
+speed = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShawwBladee6"]
+shape = SubResource("CircleShape2D_1ykh5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ShawwBladee6"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_po52c")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ShawwBladee6"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ShawwBladee6"]
+stream = ExtResource("49_3lndb")
+volume_db = 1.0
+autoplay = true
+max_distance = 700.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="ShawwBladee7" type="Area2D" parent="."]
+position = Vector2(4198, -208)
+collision_layer = 2
+script = ExtResource("46_c0d2c")
+point_a = Vector2(4219, -780)
+point_b = Vector2(4219, -208)
+speed = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShawwBladee7"]
+shape = SubResource("CircleShape2D_1ykh5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ShawwBladee7"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_po52c")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ShawwBladee7"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ShawwBladee7"]
+stream = ExtResource("49_3lndb")
+volume_db = 1.0
+autoplay = true
+max_distance = 700.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="ShawwBladee8" type="Area2D" parent="."]
+position = Vector2(5015, -227)
+collision_layer = 2
+script = ExtResource("46_c0d2c")
+point_a = Vector2(5028, -807)
+point_b = Vector2(5028, -208)
+speed = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShawwBladee8"]
+shape = SubResource("CircleShape2D_1ykh5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ShawwBladee8"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_po52c")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ShawwBladee8"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ShawwBladee8"]
+stream = ExtResource("49_3lndb")
+volume_db = 1.0
+autoplay = true
+max_distance = 700.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="AnimatableBody2D" parent="." instance=ExtResource("48_n3kqr")]
+position = Vector2(4436, 249)
+scale = Vector2(4, 4)
+collision_layer = 2
+speed = 200.0
+move_distance = 1700.0
+
+[node name="AnimatableBody2D2" parent="." instance=ExtResource("48_n3kqr")]
+position = Vector2(4226, -329)
+scale = Vector2(4, 4)
+collision_layer = 2
+speed = 200.0
+move_distance = 1500.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(5371, -1268)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AACy/x8AAAAYAAEAAACy/x4AAAAYAAEAAACy/x0AAAAYAAEAAACy/xwAAAAYAAEAAACy/xsAAAAYAAEAAACy/xoAAAAYAAAAAACx/x8AAAAXAAEAAACx/x4AAAAXAAEAAACx/x0AAAAXAAEAAACx/xwAAAAXAAEAAACx/xsAAAAXAAEAAACx/xoAAAAXAAAAAACw/x8AAAAXAAEAAACw/x4AAAAXAAEAAACw/x0AAAAXAAEAAACw/xwAAAAXAAEAAACw/xsAAAAXAAEAAACw/xoAAAAXAAAAAACv/x8AAAAXAAEAAACv/x4AAAAXAAEAAACv/x0AAAAXAAEAAACv/xwAAAAXAAEAAACv/xsAAAAXAAEAAACv/xoAAAAXAAAAAACu/x8AAAAXAAEAAACu/x4AAAAXAAEAAACu/x0AAAAXAAEAAACu/xwAAAAXAAEAAACu/xsAAAAXAAEAAACu/xoAAAAXAAAAAACt/x8AAAAXAAEAAACt/x4AAAAXAAEAAACt/x0AAAAXAAEAAACt/xwAAAAXAAEAAACt/xsAAAAXAAEAAACt/xoAAAAXAAAAAACs/x8AAAAXAAEAAACs/x4AAAAXAAEAAACs/x0AAAAXAAEAAACs/xwAAAAXAAEAAACs/xsAAAAXAAEAAACs/xoAAAAXAAAAAACr/x8AAAAXAAEAAACr/x4AAAAXAAEAAACr/x0AAAAXAAEAAACr/xwAAAAXAAEAAACr/xsAAAAXAAEAAACr/xoAAAAXAAAAAACq/x8AAAAXAAEAAACq/x4AAAAXAAEAAACq/x0AAAAXAAEAAACq/xwAAAAXAAEAAACq/xsAAAAXAAEAAACq/xoAAAAXAAAAAACp/x8AAAAXAAEAAACp/x4AAAAXAAEAAACp/x0AAAAXAAEAAACp/xwAAAAXAAEAAACp/xsAAAAXAAEAAACp/xoAAAAXAAAAAACo/x8AAAAXAAEAAACo/x4AAAAXAAEAAACo/x0AAAAXAAEAAACo/xwAAAAXAAEAAACo/xsAAAAXAAEAAACo/xoAAAAXAAAAAACn/x8AAAAXAAEAAACn/x4AAAAXAAEAAACn/x0AAAAXAAEAAACn/xwAAAAXAAEAAACn/xsAAAAXAAEAAACn/xoAAAAXAAAAAACm/x8AAAAXAAEAAACm/x4AAAAXAAEAAACm/x0AAAAXAAEAAACm/xwAAAAXAAEAAACm/xsAAAAXAAEAAACm/xoAAAAbAAIAAACy/yAAAAAYAAIAAACx/yAAAAAXAAIAAACw/yAAAAAXAAIAAACv/yAAAAAXAAIAAACu/yAAAAAXAAIAAACt/yAAAAAXAAIAAACs/yAAAAAXAAIAAACr/yAAAAAXAAIAAACq/yAAAAAXAAIAAACp/yAAAAAXAAIAAACo/yAAAAAXAAIAAACn/yAAAAAXAAIAAACm/yAAAAAXAAIAAACm/xkAAAAYAAEAAACm/xgAAAAYAAEAAACm/xcAAAAYAAEAAACm/xYAAAAYAAEAAACm/xUAAAAYAAEAAACm/xQAAAAYAAEAAACm/xMAAAAYAAEAAACl/x8AAAAXAAEAAACl/x4AAAAXAAEAAACl/x0AAAAXAAEAAACl/xwAAAAXAAEAAACl/xsAAAAXAAEAAACl/xoAAAAXAAEAAACl/xkAAAAXAAEAAACl/xgAAAAXAAEAAACl/xcAAAAXAAEAAACl/xYAAAAXAAEAAACl/xUAAAAXAAEAAACl/xQAAAAXAAEAAACl/xMAAAAXAAEAAACk/x8AAAAWAAEAAACk/x4AAAAWAAEAAACk/x0AAAAWAAEAAACk/xwAAAAWAAEAAACk/xsAAAAWAAEAAACk/xoAAAAWAAEAAACk/xkAAAAWAAEAAACk/xgAAAAWAAEAAACk/xcAAAAWAAEAAACk/xYAAAAWAAEAAACk/xUAAAAWAAEAAACk/xQAAAAWAAEAAACk/xMAAAAWAAEAAACl/yAAAAAXAAIAAACk/yAAAAAWAAIAAACm/xIAAAAYAAEAAACm/xEAAAAYAAEAAACm/xAAAAAYAAEAAACm/w8AAAAYAAEAAACm/w4AAAAYAAEAAACm/w0AAAAYAAEAAACm/wwAAAAYAAEAAACl/xIAAAAXAAEAAACl/xEAAAAXAAEAAACl/xAAAAAXAAEAAACl/w8AAAAXAAEAAACl/w4AAAAXAAEAAACl/w0AAAAXAAEAAACl/wwAAAAXAAEAAACk/xIAAAAWAAEAAACk/xEAAAAWAAEAAACk/xAAAAAWAAEAAACk/w8AAAAWAAEAAACk/w4AAAAWAAEAAACk/w0AAAAWAAEAAACk/wwAAAAWAAEAAACm/wsAAAAYAAEAAACm/woAAAAYAAEAAACm/wkAAAAYAAEAAACm/wgAAAAYAAEAAACm/wcAAAAYAAEAAACm/wYAAAAYAAEAAACm/wUAAAAYAAEAAACm/wQAAAAYAAEAAACm/wMAAAAYAAEAAACl/wsAAAAXAAEAAACl/woAAAAXAAEAAACl/wkAAAAXAAEAAACl/wgAAAAXAAEAAACl/wcAAAAXAAEAAACl/wYAAAAXAAEAAACl/wUAAAAXAAEAAACl/wQAAAAXAAEAAACl/wMAAAAXAAEAAACk/wsAAAAWAAEAAACk/woAAAAWAAEAAACk/wkAAAAWAAEAAACk/wgAAAAWAAEAAACk/wcAAAAWAAEAAACk/wYAAAAWAAEAAACk/wUAAAAWAAEAAACk/wQAAAAWAAEAAACk/wMAAAAWAAEAAACm/wIAAAAYAAEAAACm/wEAAAAYAAEAAACm/wAAAAAYAAEAAACm////AAAYAAEAAACm//7/AAAYAAEAAACm//3/AAAYAAEAAACm//z/AAAYAAEAAACm//v/AAAYAAEAAACm//r/AAAYAAEAAACm//n/AAAYAAEAAACm//j/AAAYAAEAAACm//f/AAAYAAEAAACm//b/AAAYAAEAAACm//X/AAAYAAEAAACl/wIAAAAXAAEAAACl/wEAAAAXAAEAAACl/wAAAAAXAAEAAACl////AAAXAAEAAACl//7/AAAXAAEAAACl//3/AAAXAAEAAACl//z/AAAXAAEAAACl//v/AAAXAAEAAACl//r/AAAXAAEAAACl//n/AAAXAAEAAACl//j/AAAXAAEAAACl//f/AAAXAAEAAACl//b/AAAXAAEAAACl//X/AAAXAAEAAACk/wIAAAAWAAEAAACk/wEAAAAWAAEAAACk/wAAAAAWAAEAAACk////AAAWAAEAAACk//7/AAAWAAEAAACk//3/AAAWAAEAAACk//z/AAAWAAEAAACk//v/AAAWAAEAAACk//r/AAAWAAEAAACk//n/AAAWAAEAAACk//j/AAAWAAEAAACk//f/AAAWAAEAAACk//b/AAAWAAEAAACk//X/AAAWAAEAAACm//T/AAAYAAAAAACl//T/AAAXAAAAAACk//T/AAAWAAAAAADR/xcAAAAbAAEAAADR/xYAAAAXAAAAAADQ/xcAAAAXAAEAAADQ/xYAAAAXAAAAAADP/xcAAAAXAAEAAADP/xYAAAAXAAAAAADO/xcAAAAXAAEAAADO/xYAAAAXAAAAAADN/xcAAAAXAAEAAADN/xYAAAAXAAAAAADM/xcAAAAXAAEAAADM/xYAAAAXAAAAAADL/xcAAAAXAAEAAADL/xYAAAAXAAAAAADK/xcAAAAXAAEAAADK/xYAAAAXAAAAAADJ/xcAAAAXAAEAAADJ/xYAAAAXAAAAAADO/xgAAAAXAAIAAADN/xgAAAAXAAIAAADM/xgAAAAXAAIAAADV/xYAAAAYAAMAAADU/xYAAAAXAAMAAADT/xYAAAAbAAAAAADS/xYAAAAXAAAAAADI/xYAAAAXAAAAAADH/xYAAAAXAAAAAADG/xYAAAAXAAAAAADF/xYAAAAXAAAAAADI/xcAAAAXAAEAAADS/xcAAAAXAAIAAADQ/xgAAAAXAAIAAADP/xgAAAAXAAIAAADL/xgAAAAXAAIAAADK/xgAAAAXAAIAAADH/xcAAAAcAAEAAADJ/xgAAAAXAAIAAADR/xgAAAAYAAIAAADT/xcAAAAYAAIAAADE/xYAAAAcAAAAAADD/xYAAAAXAAMAAADC/xYAAAAXAAMAAADG/xcAAAAXAAIAAADF/xcAAAAXAAIAAADE/xcAAAAXAAIAAADI/xgAAAAXAAIAAADH/xgAAAAXAAIAAAAqAA0ACQAGAAQAAAAqAAwACQAGAAQAAAAqAAsACQAGAAMAAAApAA0ACQAFAAQAAAApAAwACQAFAAQAAAApAAsACQAFAAMAAAAoAA0ACQAFAAQAAAAoAAwACQAFAAQAAAAoAAsACQAFAAMAAAAnAA0ACQAFAAQAAAAnAAwACQAFAAQAAAAnAAsACQAFAAMAAAAmAA0ACQAFAAQAAAAmAAwACQAFAAQAAAAmAAsACQAFAAMAAAAlAA0ACQAFAAQAAAAlAAwACQAFAAQAAAAlAAsACQAFAAMAAAAkAA0ACQAFAAQAAAAkAAwACQAFAAQAAAAkAAsACQAFAAMAAAAjAA0ACQAFAAQAAAAjAAwACQAFAAQAAAAjAAsACQAFAAMAAAAiAA0ACQAFAAQAAAAiAAwACQAFAAQAAAAiAAsACQAFAAMAAAAhAA0ACQAFAAQAAAAhAAwACQAFAAQAAAAhAAsACQAFAAMAAAAgAA0ACQAFAAQAAAAgAAwACQAFAAQAAAAgAAsACQAFAAMAAAAfAA0ACQAFAAQAAAAfAAwACQAFAAQAAAAfAAsACQAFAAMAAAAeAA0ACQAFAAQAAAAeAAwACQAFAAQAAAAeAAsACQAFAAMAAAAdAA0ACQAFAAQAAAAdAAwACQAFAAQAAAAdAAsACQAFAAMAAAAcAA0ACQAFAAQAAAAcAAwACQAFAAQAAAAcAAsACQAFAAMAAAAbAA0ACQAFAAQAAAAbAAwACQAFAAQAAAAbAAsACQAFAAMAAAAaAA0ACQAFAAQAAAAaAAwACQAFAAQAAAAaAAsACQAFAAMAAAAZAA0ACQAFAAQAAAAZAAwACQAFAAQAAAAZAAsACQAFAAMAAAAYAA0ACQAFAAQAAAAYAAwACQAFAAQAAAAYAAsACQAFAAMAAAAXAA0ACQAFAAQAAAAXAAwACQAFAAQAAAAXAAsACQAFAAMAAAAWAA0ACQAFAAQAAAAWAAwACQAFAAQAAAAWAAsACQAFAAMAAAAVAA0ACQADAAMAAAAVAAwACQAFAAQAAAAVAAsACQAFAAMAAAAUAA0ACQAFAAUAAAAUAAwACQAFAAQAAAAUAAsACQAFAAMAAAATAA0ACQAEAAUAAAATAAwACQAEAAQAAAATAAsACQAEAAMAAAAvABEACQAFAAUAAAAvABAACQAFAAQAAAAvAA8ACQAFAAQAAAAvAA4ACQAFAAMAAAAuABEACQAFAAUAAAAuABAACQAFAAQAAAAuAA8ACQAFAAQAAAAuAA4ACQAFAAMAAAAtABEACQAFAAUAAAAtABAACQAFAAQAAAAtAA8ACQAFAAQAAAAtAA4ACQAFAAMAAAAsABEACQAFAAUAAAAsABAACQAFAAQAAAAsAA8ACQAFAAQAAAAsAA4ACQAFAAMAAAArABEACQAFAAUAAAArABAACQAFAAQAAAArAA8ACQAFAAQAAAArAA4ACQAFAAMAAAAqABEACQAFAAUAAAAqABAACQAFAAQAAAAqAA8ACQAFAAQAAAAqAA4ACQACAAQAAAApABEACQAFAAUAAAApABAACQAFAAQAAAApAA8ACQAFAAQAAAApAA4ACQAFAAQAAAAoABEACQAFAAUAAAAoABAACQAFAAQAAAAoAA8ACQAFAAQAAAAoAA4ACQAFAAQAAAAnABEACQAFAAUAAAAnABAACQAFAAQAAAAnAA8ACQAFAAQAAAAnAA4ACQAFAAQAAAAmABEACQAFAAUAAAAmABAACQAFAAQAAAAmAA8ACQAFAAQAAAAmAA4ACQAFAAQAAAAlABEACQAFAAUAAAAlABAACQAFAAQAAAAlAA8ACQAFAAQAAAAlAA4ACQAFAAQAAAAkABEACQAFAAUAAAAkABAACQAFAAQAAAAkAA8ACQAFAAQAAAAkAA4ACQAFAAQAAAAjABEACQAFAAUAAAAjABAACQAFAAQAAAAjAA8ACQAFAAQAAAAjAA4ACQAFAAQAAAAiABEACQAFAAUAAAAiABAACQAFAAQAAAAiAA8ACQAFAAQAAAAiAA4ACQAFAAQAAAAhABEACQAFAAUAAAAhABAACQAFAAQAAAAhAA8ACQAFAAQAAAAhAA4ACQAFAAQAAAAgABEACQAEAAUAAAAgABAACQADAAMAAAAgAA8ACQAFAAQAAAAgAA4ACQAFAAQAAAA3ABEACQAFAAUAAAA3ABAACQAFAAQAAAA3AA8ACQAFAAQAAAA3AA4ACQAFAAMAAAA2ABEACQAFAAUAAAA2ABAACQAFAAQAAAA2AA8ACQAFAAQAAAA2AA4ACQAFAAMAAAA1ABEACQAFAAUAAAA1ABAACQAFAAQAAAA1AA8ACQAFAAQAAAA1AA4ACQAFAAMAAAA0ABEACQAFAAUAAAA0ABAACQAFAAQAAAA0AA8ACQAFAAQAAAA0AA4ACQAFAAMAAAAzABEACQAFAAUAAAAzABAACQAFAAQAAAAzAA8ACQAFAAQAAAAzAA4ACQAFAAMAAAAyABEACQAFAAUAAAAyABAACQAFAAQAAAAyAA8ACQAFAAQAAAAyAA4ACQAFAAMAAAAxABEACQAFAAUAAAAxABAACQAFAAQAAAAxAA8ACQAFAAQAAAAxAA4ACQAFAAMAAAAwABEACQAFAAUAAAAwABAACQAFAAQAAAAwAA8ACQAFAAQAAAAwAA4ACQAFAAMAAAAfABAACQAFAAUAAAAfAA8ACQAFAAQAAAAfAA4ACQAFAAQAAAAeABAACQAFAAUAAAAeAA8ACQAFAAQAAAAeAA4ACQAFAAQAAAAdABAACQAFAAUAAAAdAA8ACQAFAAQAAAAdAA4ACQAFAAQAAAAcABAACQAFAAUAAAAcAA8ACQAFAAQAAAAcAA4ACQAFAAQAAAAbABAACQAEAAUAAAAbAA8ACQADAAMAAAAbAA4ACQAFAAQAAAAaAA8ACQAFAAUAAAAaAA4ACQAFAAQAAAAZAA8ACQAFAAUAAAAZAA4ACQAFAAQAAAAYAA8ACQAEAAUAAAAYAA4ACQADAAMAAAAXAA4ACQAFAAUAAAAWAA4ACQAFAAUAAAAVAA4ACQAEAAUAAADB/xYAAAAXAAMAAAAKABUAAAAZAAIAAAAKABQAAAAaAAEAAAAKABMAAAAaAAIAAAAKABIAAAAZAAEAAAAKABEAAAAZAAEAAAAKABAAAAAZAAAAAAAMABMAAAAXAAMAAAALABMAAAAbAAAAAAALABQAAAAYAAIAAAANABMAAAAYAAMAAADY/w0AAAAYAAAAAADX/w0AAAAXAAAAAADW/w0AAAAcAAAAAADV/w0AAAAXAAMAAADU/w0AAAAbAAMAAADU/wwAAAAYAAAAAADT/w0AAAAXAAIAAADT/wwAAAAXAAAAAADS/w0AAAAXAAIAAADS/wwAAAAXAAAAAADR/w0AAAAXAAIAAADR/wwAAAAXAAAAAADQ/w0AAAAXAAIAAADQ/wwAAAAbAAIAAADQ/wsAAAAYAAEAAADQ/woAAAAYAAEAAADQ/wkAAAAYAAEAAADQ/wgAAAAYAAEAAADP/w0AAAAXAAIAAADP/wwAAAAXAAEAAADP/wsAAAAXAAEAAADP/woAAAAXAAEAAADP/wkAAAAXAAEAAADP/wgAAAAXAAEAAADO/w0AAAAWAAIAAADO/wwAAAAWAAEAAADO/wsAAAAWAAEAAADO/woAAAAWAAEAAADO/wkAAAAWAAEAAADO/wgAAAAWAAEAAADQ/wcAAAAYAAEAAADQ/wYAAAAYAAEAAADQ/wUAAAAYAAEAAADQ/wQAAAAYAAEAAADP/wcAAAAXAAEAAADP/wYAAAAXAAEAAADP/wUAAAAXAAEAAADP/wQAAAAXAAEAAADO/wcAAAAWAAEAAADO/wYAAAAWAAEAAADO/wUAAAAWAAEAAADO/wQAAAAWAAEAAADQ/wMAAAAYAAEAAADQ/wIAAAAYAAEAAADQ/wEAAAAYAAEAAADQ/wAAAAAYAAEAAADQ////AAAYAAEAAADQ//7/AAAYAAEAAADQ//3/AAAYAAEAAADQ//z/AAAYAAEAAADQ//v/AAAYAAEAAADQ//r/AAAYAAEAAADQ//n/AAAYAAEAAADQ//j/AAAYAAEAAADQ//f/AAAYAAEAAADP/wMAAAAXAAEAAADP/wIAAAAXAAEAAADP/wEAAAAXAAEAAADP/wAAAAAXAAEAAADP////AAAXAAEAAADP//7/AAAXAAEAAADP//3/AAAXAAEAAADP//z/AAAXAAEAAADP//v/AAAXAAEAAADP//r/AAAXAAEAAADP//n/AAAXAAEAAADP//j/AAAXAAEAAADP//f/AAAXAAEAAADO/wMAAAAWAAEAAADO/wIAAAAWAAEAAADO/wEAAAAWAAEAAADO/wAAAAAWAAEAAADO////AAAWAAEAAADO//7/AAAWAAEAAADO//3/AAAWAAEAAADO//z/AAAWAAEAAADO//v/AAAWAAEAAADO//r/AAAWAAEAAADO//n/AAAWAAEAAADO//j/AAAWAAEAAADO//f/AAAWAAEAAADQ//b/AAAbAAEAAADQ//X/AAAXAAEAAADQ//T/AAAXAAAAAADP//b/AAAXAAEAAADP//X/AAAXAAEAAADP//T/AAAXAAAAAADO//b/AAAWAAEAAADO//X/AAAWAAEAAADO//T/AAAWAAAAAADV//b/AAAcAAEAAADV//X/AAAXAAEAAADV//T/AAAXAAAAAADU//b/AAAXAAIAAADU//X/AAAXAAEAAADU//T/AAAXAAAAAADT//b/AAAXAAIAAADT//X/AAAXAAEAAADT//T/AAAXAAAAAADS//b/AAAXAAIAAADS//X/AAAXAAEAAADS//T/AAAXAAAAAADR//b/AAAXAAIAAADR//X/AAAXAAEAAADR//T/AAAXAAAAAADY//f/AAAYAAIAAADY//b/AAAYAAEAAADY//X/AAAbAAEAAADY//T/AAAXAAAAAADX//f/AAAXAAIAAADX//b/AAAXAAEAAADX//X/AAAXAAEAAADX//T/AAAXAAAAAADW//f/AAAXAAIAAADW//b/AAAXAAEAAADW//X/AAAXAAEAAADW//T/AAAXAAAAAADV//f/AAAWAAIAAADY/wMAAAAYAAEAAADY/wIAAAAYAAEAAADY/wEAAAAYAAEAAADY/wAAAAAYAAEAAADY////AAAYAAEAAADY//7/AAAYAAEAAADY//3/AAAYAAEAAADY//z/AAAYAAAAAADX/wMAAAAXAAEAAADX/wIAAAAXAAEAAADX/wEAAAAXAAEAAADX/wAAAAAXAAEAAADX////AAAXAAEAAADX//7/AAAXAAEAAADX//3/AAAXAAEAAADX//z/AAAXAAAAAADW/wMAAAAXAAEAAADW/wIAAAAXAAEAAADW/wEAAAAXAAEAAADW/wAAAAAXAAEAAADW////AAAXAAEAAADW//7/AAAXAAEAAADW//3/AAAXAAEAAADW//z/AAAXAAAAAADV/wMAAAAWAAEAAADV/wIAAAAWAAEAAADV/wEAAAAWAAEAAADV/wAAAAAWAAEAAADV////AAAWAAEAAADV//7/AAAWAAEAAADV//3/AAAWAAEAAADV//z/AAAWAAAAAADY/wQAAAAbAAMAAADX/wQAAAAXAAIAAADW/wQAAAAXAAIAAADV/wQAAAAWAAIAAADs/wQAAAAYAAMAAADr/wQAAAAXAAMAAADq/wQAAAAXAAMAAADp/wQAAAAXAAMAAADo/wQAAAAXAAMAAADn/wQAAAAXAAMAAADm/wQAAAAXAAMAAADl/wQAAAAXAAMAAADk/wQAAAAXAAMAAADj/wQAAAAXAAMAAADi/wQAAAAXAAMAAADh/wQAAAAXAAMAAADg/wQAAAAXAAMAAADf/wQAAAAXAAMAAADe/wQAAAAXAAMAAADd/wQAAAAXAAMAAADc/wQAAAAXAAMAAADb/wQAAAAXAAMAAADa/wQAAAAXAAMAAADZ/wQAAAAXAAMAAAADAAQAAAAXAAMAAAACAAQAAAAXAAMAAAABAAQAAAAXAAMAAAAAAAQAAAAXAAMAAAD//wQAAAAXAAMAAAD+/wQAAAAXAAMAAAD9/wQAAAAXAAMAAAD8/wQAAAAXAAMAAAD7/wQAAAAXAAMAAAD6/wQAAAAXAAMAAAD5/wQAAAAXAAMAAAD4/wQAAAAXAAMAAAD3/wQAAAAXAAMAAAD2/wQAAAAXAAMAAAD1/wQAAAAXAAMAAAD0/wQAAAAWAAMAAAAGAAQAAAAbAAIAAAAGAAMAAAAYAAEAAAAGAAIAAAAYAAEAAAAGAAEAAAAYAAEAAAAGAAAAAAAYAAAAAAAFAAQAAAAcAAEAAAAFAAMAAAAXAAEAAAAFAAIAAAAXAAEAAAAFAAEAAAAXAAEAAAAFAAAAAAAXAAAAAAAEAAQAAAAcAAMAAAAEAAMAAAAWAAEAAAAEAAIAAAAWAAEAAAAEAAEAAAAWAAEAAAAEAAAAAAAWAAAAAAD7//X/AAAXAAIAAAD7//T/AAAXAAAAAAD6//X/AAAXAAIAAAD6//T/AAAXAAAAAAD5//X/AAAXAAIAAAD5//T/AAAXAAAAAAD4//X/AAAXAAIAAAD4//T/AAAXAAAAAAD3//X/AAAXAAIAAAD3//T/AAAXAAAAAAD2//X/AAAXAAIAAAD2//T/AAAXAAAAAAD1//X/AAAXAAIAAAD1//T/AAAXAAAAAAD0//X/AAAXAAIAAAD0//T/AAAXAAAAAADz//X/AAAXAAIAAADz//T/AAAXAAAAAADy//X/AAAXAAIAAADy//T/AAAXAAAAAADx//X/AAAXAAIAAADx//T/AAAXAAAAAADw//X/AAAXAAIAAADw//T/AAAXAAAAAADv//X/AAAXAAIAAADv//T/AAAXAAAAAADu//X/AAAXAAIAAADu//T/AAAXAAAAAADt//X/AAAXAAIAAADt//T/AAAXAAAAAADs//X/AAAXAAIAAADs//T/AAAXAAAAAADr//X/AAAXAAIAAADr//T/AAAXAAAAAADq//X/AAAXAAIAAADq//T/AAAXAAAAAADp//X/AAAXAAIAAADp//T/AAAXAAAAAADo//X/AAAXAAIAAADo//T/AAAXAAAAAADn//X/AAAXAAIAAADn//T/AAAXAAAAAADm//X/AAAXAAIAAADm//T/AAAXAAAAAADl//X/AAAXAAIAAADl//T/AAAXAAAAAADk//X/AAAXAAIAAADk//T/AAAXAAAAAADj//X/AAAXAAIAAADj//T/AAAXAAAAAADi//X/AAAXAAIAAADi//T/AAAXAAAAAADh//X/AAAXAAIAAADh//T/AAAXAAAAAADg//X/AAAXAAIAAADg//T/AAAXAAAAAADf//X/AAAXAAIAAADf//T/AAAXAAAAAADe//X/AAAXAAIAAADe//T/AAAXAAAAAADd//X/AAAXAAIAAADd//T/AAAXAAAAAADc//X/AAAXAAIAAADc//T/AAAXAAAAAADb//X/AAAXAAIAAADb//T/AAAXAAAAAADa//X/AAAXAAIAAADa//T/AAAXAAAAAADZ//X/AAAXAAIAAADZ//T/AAAXAAAAAAAGAPX/AAAYAAEAAAAGAPT/AAAYAAAAAAAFAPX/AAAXAAEAAAAFAPT/AAAXAAAAAAAEAPX/AAAcAAEAAAAEAPT/AAAXAAAAAAADAPX/AAAXAAIAAAADAPT/AAAXAAAAAAACAPX/AAAXAAIAAAACAPT/AAAXAAAAAAABAPX/AAAXAAIAAAABAPT/AAAXAAAAAAAAAPX/AAAXAAIAAAAAAPT/AAAXAAAAAAD///X/AAAXAAIAAAD///T/AAAXAAAAAAD+//X/AAAXAAIAAAD+//T/AAAXAAAAAAD9//X/AAAXAAIAAAD9//T/AAAXAAAAAAD8//X/AAAXAAIAAAD8//T/AAAXAAAAAAAGAPb/AAAYAAEAAAAFAPb/AAAXAAEAAAAEAPb/AAAWAAEAAAAGAPj/AAAYAAIAAAAGAPf/AAAYAAEAAAAFAPj/AAAXAAIAAAAFAPf/AAAXAAEAAAAEAPj/AAAWAAIAAAAEAPf/AAAWAAEAAADZ/w4AAAAYAAAAAADY/w4AAAAbAAIAAADa/w8AAAAYAAAAAADZ/w8AAAAbAAIAAADb/xAAAAAYAAAAAADa/xAAAAAfAAAAAADc/xEAAAAYAAAAAADb/xEAAAAfAAAAAADd/xIAAAAdAAAAAADc/xIAAAAbAAMAAADe/xMAAAAXAAMAAADd/xMAAAAaAAMAAAD5/xMAAAAXAAMAAAD4/xMAAAAXAAMAAAD3/xMAAAAXAAMAAAD2/xMAAAAXAAMAAAD1/xMAAAAXAAMAAAD0/xMAAAAXAAMAAADz/xMAAAAXAAMAAADy/xMAAAAXAAMAAADx/xMAAAAXAAMAAADw/xMAAAAXAAMAAADv/xMAAAAXAAMAAADu/xMAAAAXAAMAAADt/xMAAAAXAAMAAADs/xMAAAAXAAMAAADr/xMAAAAXAAMAAADq/xMAAAAXAAMAAADp/xMAAAAXAAMAAADo/xMAAAAXAAMAAADn/xMAAAAXAAMAAADm/xMAAAAXAAMAAADl/xMAAAAXAAMAAADk/xMAAAAXAAMAAADj/xMAAAAXAAMAAADi/xMAAAAXAAMAAADh/xMAAAAXAAMAAADg/xMAAAAXAAMAAADf/xMAAAAXAAMAAAAFABMAAAAYAAMAAAAEABMAAAAXAAMAAAADABMAAAAXAAMAAAACABMAAAAXAAMAAAABABMAAAAXAAMAAAAAABMAAAAXAAMAAAD//xMAAAAXAAMAAAD+/xMAAAAXAAMAAAD9/xMAAAAXAAMAAAD8/xMAAAAXAAMAAAD7/xMAAAAXAAMAAAD6/xMAAAAXAAMAAAAIAAUAAAAYAAAAAAAHAAUAAAAbAAIAAAAJAAYAAAAYAAAAAAAIAAYAAAAbAAIAAAAKAAcAAAAYAAAAAAAJAAcAAAAbAAIAAAALAAgAAAAYAAAAAAAKAAgAAAAbAAIAAAAHAAQAAAAYAAAAAAAMAAkAAAAYAAAAAAALAAkAAAAbAAIAAAANAAoAAAAYAAAAAAAMAAoAAAAbAAIAAAAOAAsAAAAXAAAAAAANAAsAAAAbAAIAAAASAAsAAAAYAAAAAAARAAsAAAAXAAAAAAAQAAsAAAAXAAAAAAAPAAsAAAAXAAAAAAASAAwAAAAYAAIAAAARAAwAAAAXAAIAAAAQAAwAAAAXAAIAAAAPAAwAAAAXAAIAAAAOAAwAAAAXAAIAAAANAAwAAAAXAAIAAAAMAAsAAAAcAAEAAAALAAoAAAAcAAEAAAAKAAkAAAAcAAEAAAAJAAgAAAAcAAEAAAAIAAcAAAAcAAEAAAAHAAYAAAAcAAEAAAAGAAUAAAAcAAEAAAAFAAUAAAAWAAIAAAAGAAYAAAAWAAIAAAAHAAcAAAAWAAIAAAAIAAgAAAAWAAIAAAAJAAkAAAAWAAIAAAAKAAoAAAAWAAIAAAALAAsAAAAWAAIAAAAMAAwAAAAWAAIAAADX/w4AAAAcAAEAAADW/w4AAAAWAAIAAADY/w8AAAAcAAEAAADX/w8AAAAWAAIAAADZ/xAAAAAXAAIAAADY/xAAAAAWAAIAAADa/xEAAAAWAAIAAADb/xIAAAAWAAIAAAAWAAYACQAGAAUAAAAWAAUACQAGAAQAAAAWAAQACQAGAAQAAAAWAAMACQAGAAQAAAAWAAIACQAGAAQAAAAWAAEACQAGAAQAAAAWAAAACQAGAAQAAAAWAP//CQAGAAQAAAAWAP7/CQAGAAQAAAAWAP3/CQAGAAQAAAAWAPz/CQAGAAQAAAAWAPv/CQAGAAQAAAAWAPr/CQAGAAQAAAAWAPn/CQAGAAQAAAAWAPj/CQACAAMAAAAVAAYACQAFAAUAAAAVAAUACQAFAAQAAAAVAAQACQAFAAQAAAAVAAMACQAFAAQAAAAVAAIACQAFAAQAAAAVAAEACQAFAAQAAAAVAAAACQAFAAQAAAAVAP//CQAFAAQAAAAVAP7/CQAFAAQAAAAVAP3/CQAFAAQAAAAVAPz/CQAFAAQAAAAVAPv/CQAFAAQAAAAVAPr/CQAFAAQAAAAVAPn/CQAFAAQAAAAVAPj/CQAFAAQAAAAUAAYACQAFAAUAAAAUAAUACQAFAAQAAAAUAAQACQAFAAQAAAAUAAMACQAFAAQAAAAUAAIACQAFAAQAAAAUAAEACQAFAAQAAAAUAAAACQAFAAQAAAAUAP//CQAFAAQAAAAUAP7/CQAFAAQAAAAUAP3/CQAFAAQAAAAUAPz/CQAFAAQAAAAUAPv/CQAFAAQAAAAUAPr/CQAFAAQAAAAUAPn/CQAFAAQAAAAUAPj/CQAFAAQAAAATAAYACQAEAAUAAAATAAUACQAEAAQAAAATAAQACQAEAAQAAAATAAMACQAEAAQAAAATAAIACQAEAAQAAAATAAEACQAEAAQAAAATAAAACQAEAAQAAAATAP//CQAEAAQAAAATAP7/CQAEAAQAAAATAP3/CQAEAAQAAAATAPz/CQAEAAQAAAATAPv/CQAEAAQAAAATAPr/CQAEAAQAAAATAPn/CQAEAAQAAAATAPj/CQAEAAQAAAAYAPj/CQAGAAUAAAAYAPf/CQAGAAQAAAAYAPb/CQACAAMAAAAYAPX/CQAFAAQAAAAYAPT/CQAFAAMAAAAXAPj/CQAFAAUAAAAXAPf/CQAFAAQAAAAXAPb/CQAFAAQAAAAXAPX/CQAFAAQAAAAXAPT/CQAFAAMAAAAWAPf/CQAFAAQAAAAWAPb/CQAFAAQAAAAWAPX/CQAFAAQAAAAWAPT/CQAFAAMAAAAVAPf/CQAFAAQAAAAVAPb/CQAFAAQAAAAVAPX/CQAFAAQAAAAVAPT/CQAFAAMAAAAUAPf/CQAFAAQAAAAUAPb/CQAFAAQAAAAUAPX/CQAFAAQAAAAUAPT/CQAFAAMAAAATAPf/CQAEAAQAAAATAPb/CQAEAAQAAAATAPX/CQAEAAQAAAATAPT/CQAEAAMAAAA1APb/CQAFAAUAAAA1APX/CQAFAAQAAAA1APT/CQAFAAMAAAA0APb/CQAFAAUAAAA0APX/CQAFAAQAAAA0APT/CQAFAAMAAAAzAPb/CQAFAAUAAAAzAPX/CQAFAAQAAAAzAPT/CQAFAAMAAAAyAPb/CQAFAAUAAAAyAPX/CQAFAAQAAAAyAPT/CQAFAAMAAAAxAPb/CQAFAAUAAAAxAPX/CQAFAAQAAAAxAPT/CQAFAAMAAAAwAPb/CQAFAAUAAAAwAPX/CQAFAAQAAAAwAPT/CQAFAAMAAAAvAPb/CQAFAAUAAAAvAPX/CQAFAAQAAAAvAPT/CQAFAAMAAAAuAPb/CQAFAAUAAAAuAPX/CQAFAAQAAAAuAPT/CQAFAAMAAAAtAPb/CQAFAAUAAAAtAPX/CQAFAAQAAAAtAPT/CQAFAAMAAAAsAPb/CQAFAAUAAAAsAPX/CQAFAAQAAAAsAPT/CQAFAAMAAAArAPb/CQAFAAUAAAArAPX/CQAFAAQAAAArAPT/CQAFAAMAAAAqAPb/CQAFAAUAAAAqAPX/CQAFAAQAAAAqAPT/CQAFAAMAAAApAPb/CQAFAAUAAAApAPX/CQAFAAQAAAApAPT/CQAFAAMAAAAoAPb/CQAFAAUAAAAoAPX/CQAFAAQAAAAoAPT/CQAFAAMAAAAnAPb/CQAFAAUAAAAnAPX/CQAFAAQAAAAnAPT/CQAFAAMAAAAmAPb/CQAFAAUAAAAmAPX/CQAFAAQAAAAmAPT/CQAFAAMAAAAlAPb/CQAFAAUAAAAlAPX/CQAFAAQAAAAlAPT/CQAFAAMAAAAkAPb/CQAFAAUAAAAkAPX/CQAFAAQAAAAkAPT/CQAFAAMAAAAjAPb/CQAFAAUAAAAjAPX/CQAFAAQAAAAjAPT/CQAFAAMAAAAiAPb/CQAFAAUAAAAiAPX/CQAFAAQAAAAiAPT/CQAFAAMAAAAhAPb/CQAFAAUAAAAhAPX/CQAFAAQAAAAhAPT/CQAFAAMAAAAgAPb/CQAFAAUAAAAgAPX/CQAFAAQAAAAgAPT/CQAFAAMAAAAfAPb/CQAFAAUAAAAfAPX/CQAFAAQAAAAfAPT/CQAFAAMAAAAeAPb/CQAFAAUAAAAeAPX/CQAFAAQAAAAeAPT/CQAFAAMAAAAdAPb/CQAFAAUAAAAdAPX/CQAFAAQAAAAdAPT/CQAFAAMAAAAcAPb/CQAFAAUAAAAcAPX/CQAFAAQAAAAcAPT/CQAFAAMAAAAbAPb/CQAFAAUAAAAbAPX/CQAFAAQAAAAbAPT/CQAFAAMAAAAaAPb/CQAFAAUAAAAaAPX/CQAFAAQAAAAaAPT/CQAFAAMAAAAZAPb/CQAFAAUAAAAZAPX/CQAFAAQAAAAZAPT/CQAFAAMAAABGAPb/CQAGAAUAAABGAPX/CQAGAAQAAABGAPT/CQAGAAMAAABFAPb/CQAFAAUAAABFAPX/CQAFAAQAAABFAPT/CQAFAAMAAABEAPb/CQAFAAUAAABEAPX/CQAFAAQAAABEAPT/CQAFAAMAAABDAPb/CQAFAAUAAABDAPX/CQAFAAQAAABDAPT/CQAFAAMAAABCAPb/CQAFAAUAAABCAPX/CQAFAAQAAABCAPT/CQAFAAMAAABBAPb/CQAFAAUAAABBAPX/CQAFAAQAAABBAPT/CQAFAAMAAABAAPb/CQAFAAUAAABAAPX/CQAFAAQAAABAAPT/CQAFAAMAAAA/APb/CQAFAAUAAAA/APX/CQAFAAQAAAA/APT/CQAFAAMAAAA+APb/CQAFAAUAAAA+APX/CQAFAAQAAAA+APT/CQAFAAMAAAA9APb/CQAFAAUAAAA9APX/CQAFAAQAAAA9APT/CQAFAAMAAAA8APb/CQAFAAUAAAA8APX/CQAFAAQAAAA8APT/CQAFAAMAAAA7APb/CQAFAAUAAAA7APX/CQAFAAQAAAA7APT/CQAFAAMAAAA6APb/CQAFAAUAAAA6APX/CQAFAAQAAAA6APT/CQAFAAMAAAA5APb/CQAFAAUAAAA5APX/CQAFAAQAAAA5APT/CQAFAAMAAAA4APb/CQAFAAUAAAA4APX/CQAFAAQAAAA4APT/CQAFAAMAAAA3APb/CQAFAAUAAAA3APX/CQAFAAQAAAA3APT/CQAFAAMAAAA2APb/CQAFAAUAAAA2APX/CQAFAAQAAAA2APT/CQAFAAMAAAA9ABEACQAFAAUAAAA9ABAACQAFAAQAAAA9AA8ACQAFAAQAAAA9AA4ACQAFAAMAAAA8ABEACQAFAAUAAAA8ABAACQAFAAQAAAA8AA8ACQAFAAQAAAA8AA4ACQAFAAMAAAA7ABEACQAFAAUAAAA7ABAACQAFAAQAAAA7AA8ACQAFAAQAAAA7AA4ACQAFAAMAAAA6ABEACQAFAAUAAAA6ABAACQAFAAQAAAA6AA8ACQAFAAQAAAA6AA4ACQAFAAMAAAA5ABEACQAFAAUAAAA5ABAACQAFAAQAAAA5AA8ACQAFAAQAAAA5AA4ACQAFAAMAAAA4ABEACQAFAAUAAAA4ABAACQAFAAQAAAA4AA8ACQAFAAQAAAA4AA4ACQAFAAMAAABGABEACQAGAAUAAABGABAACQAGAAQAAABGAA8ACQAGAAQAAABGAA4ACQAGAAMAAABFABEACQAFAAUAAABFABAACQAFAAQAAABFAA8ACQAFAAQAAABFAA4ACQAFAAMAAABEABEACQAFAAUAAABEABAACQAFAAQAAABEAA8ACQAFAAQAAABEAA4ACQAFAAMAAABDABEACQAFAAUAAABDABAACQAFAAQAAABDAA8ACQAFAAQAAABDAA4ACQAFAAMAAABCABEACQAFAAUAAABCABAACQAFAAQAAABCAA8ACQAFAAQAAABCAA4ACQAFAAMAAABBABEACQAFAAUAAABBABAACQAFAAQAAABBAA8ACQAFAAQAAABBAA4ACQAFAAMAAABAABEACQAFAAUAAABAABAACQAFAAQAAABAAA8ACQAFAAQAAABAAA4ACQAFAAMAAAA/ABEACQAFAAUAAAA/ABAACQAFAAQAAAA/AA8ACQAFAAQAAAA/AA4ACQAFAAMAAAA+ABEACQAFAAUAAAA+ABAACQAFAAQAAAA+AA8ACQAFAAQAAAA+AA4ACQAFAAMAAAA=")
+tile_set = ExtResource("50_q855t")
+
+[node name="shaw" type="Area2D" parent="."]
+position = Vector2(5915, -52.000004)
+rotation = -1.5707964
+scale = Vector2(12, 12)
+script = ExtResource("41_4kakm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="shaw"]
+stream = ExtResource("43_gf3at")
+bus = &"SFX"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="shaw"]
+sprite_frames = SubResource("SpriteFrames_apgvv")
+autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="shaw"]
+stream = ExtResource("49_3lndb")
+volume_db = 1.0
+autoplay = true
+max_distance = 700.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="shaw"]
+position = Vector2(-1.15857e-06, 3.91155e-07)
+shape = SubResource("ConvexPolygonShape2D_vy1we")
+
+[node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player"]]
+position = Vector2(6143, -148)
+disable_mode = 2
+collision_mask = 2
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("53_1ao4d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayer"]
+position = Vector2(5, -19)
+scale = Vector2(2.9825, 2.96875)
+sprite_frames = SubResource("SpriteFrames_0w1fe")
+animation = &"charge"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlimePlayer"]
+visible = false
+position = Vector2(5, -18)
+shape = SubResource("RectangleShape2D_beuhl")
+
+[node name="SlimeJump" type="AudioStreamPlayer" parent="SlimePlayer"]
+stream = ExtResource("64_q1u8p")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("65_emxqo")
+volume_db = -6.492
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="HUD" parent="." instance=ExtResource("66_y8lxs")]
+
+[node name="Wind" type="Area2D" parent="."]
+position = Vector2(1065, 211)
+script = ExtResource("67_up8j4")
+push_force = 1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wind"]
+position = Vector2(124.5, -652.5)
+shape = SubResource("RectangleShape2D_ux3t6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wind"]
+position = Vector2(2180, -683.5)
+shape = SubResource("RectangleShape2D_rghnx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Wind"]
+position = Vector2(4119, -771.5)
+shape = SubResource("RectangleShape2D_fygjo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Wind"]
+stream = ExtResource("68_t1i4i")
+bus = &"SFX"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wind"]
+position = Vector2(-153, -685)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_l7xqv")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Wind"]
+position = Vector2(2397, -661)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_l7xqv")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Wind"]
+position = Vector2(4605.5, -649)
+scale = Vector2(2.9015625, 4)
+sprite_frames = SubResource("SpriteFrames_l7xqv")
+autoplay = "default"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Wind"]
+position = Vector2(4605.5, -649)
+scale = Vector2(2.9015625, 4)
+sprite_frames = SubResource("SpriteFrames_l7xqv")
+autoplay = "default"

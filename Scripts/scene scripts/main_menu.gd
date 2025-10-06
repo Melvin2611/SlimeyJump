@@ -1,5 +1,10 @@
 extends Control
 
+@export var coin_count: Node2D
+
+func _ready():
+	ProgressManager.show_something.connect(_on_show_something)
+
 func _on_play_pressed():
 	$ButtonSound.play()
 	await get_tree().create_timer(0.2).timeout
@@ -28,3 +33,6 @@ func _on_level_select_pressed() -> void:
 	$ButtonSound.play()
 	await get_tree().create_timer(0.2).timeout
 	get_tree().change_scene_to_file("res://Scenes/Levels/LevelSelect.tscn")  # Wechselt zur Level-Select-Szene
+	
+func _on_show_something():
+	coin_count.show() # Zeigt den Node an

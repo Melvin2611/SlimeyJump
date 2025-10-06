@@ -2,6 +2,7 @@ extends Node
 
 # Signal, das ausgesendet wird, wenn sich global_coin_count ändert
 signal coin_count_updated(new_count: int)
+signal show_something
 
 # Speichert das höchste freigeschaltete Level (0 = Level 1 freigeschaltet)
 var highest_completed_level: int = 0
