@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddqkoysyx3dn5"]
+
+[ext_resource type="Texture2D" uid="uid://bwkxd0gyk8wvr" path="res://Sprites/Comics/Comic3.jpg" id="1_4odqx"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="2_13w5f"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="3_v053b"]
+[ext_resource type="Script" uid="uid://owbntuoykmme" path="res://Scripts/scene scripts/comics/nextbuttonCG.gd" id="4_4odqx"]
+[ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="5_0c7ui"]
+
+[node name="Comic3G" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_4odqx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 747.99994
+offset_top = 2.0000288
+offset_right = 926.99994
+offset_bottom = 215.00003
+rotation = 0.31475168
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_13w5f")
+theme_override_font_sizes/font_size = 24
+text = "So...
+jetzt sollten
+wir besser die
+Wüste um-...
+WARTE!!
+STOP!!
+Spring
+nicht..."
+script = ExtResource("3_v053b")
+text_key = "ComicL3"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1128.0
+offset_top = 592.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("2_13w5f")
+theme_override_font_sizes/font_size = 48
+text = ">"
+script = ExtResource("4_4odqx")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("5_0c7ui")
+bus = &"SFX"

@@ -9,4 +9,4 @@ func _on_back_to_title_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Main Menu.tscn")
 
 func _on_next_level_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Levels/W6/Level 31/Level31.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Comics/Comic6.tscn")

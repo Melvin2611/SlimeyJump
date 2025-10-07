@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk231l5yxow62"]
+
+[ext_resource type="Texture2D" uid="uid://bmmcq4l6fshd8" path="res://Sprites/Comics/Comic9.jpg" id="1_64ajb"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="2_mvw3c"]
+[ext_resource type="Script" uid="uid://diw20u52h8ayv" path="res://Scripts/scene scripts/comics/nextbuttonC9.gd" id="3_64ajb"]
+[ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="5_6r5y8"]
+
+[node name="Comic9" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_64ajb")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1128.0
+offset_top = 592.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("2_mvw3c")
+theme_override_font_sizes/font_size = 48
+text = ">"
+script = ExtResource("3_64ajb")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("5_6r5y8")
+bus = &"SFX"

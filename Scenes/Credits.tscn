@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://hc37sns74j3c"]
+[gd_scene load_steps=12 format=4 uid="uid://hc37sns74j3c"]
 
 [ext_resource type="Script" uid="uid://b27nscwmna0wu" path="res://Scripts/scene scripts/goback.gd" id="1_7xmno"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="1_i8h6y"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-hover.png" id="4_jpdlp"]
 [ext_resource type="Texture2D" uid="uid://exe3rknrrutr" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-small.png" id="8_cmrso"]
 [ext_resource type="AudioStream" uid="uid://qcpa5hxhebi4" path="res://Sound/mus/8-bit-video-game-background-music-loop-wood-chapter-368532.mp3" id="9_5qoai"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="9_cmrso"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -51,6 +52,8 @@ offset_bottom = 25.0
 theme_override_fonts/font = ExtResource("1_i8h6y")
 theme_override_font_sizes/font_size = 12
 text = "go back"
+script = ExtResource("9_cmrso")
+text_key = "backB"
 
 [node name="Special Thanks" type="Sprite2D" parent="."]
 position = Vector2(841, 80)

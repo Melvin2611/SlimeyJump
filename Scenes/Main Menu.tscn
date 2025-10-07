@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bbu853t6d4tyv"]
+[gd_scene load_steps=25 format=4 uid="uid://bbu853t6d4tyv"]
 
 [ext_resource type="Script" uid="uid://d3cqgi2c30nml" path="res://Scripts/scene scripts/main_menu.gd" id="1_totuj"]
 [ext_resource type="Texture2D" uid="uid://irmyl2mv6ebv" path="res://Sprites/Objects/Sprites/background/country Platform/Background (by ansimuz).png" id="2_0126h"]
@@ -10,14 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://j5fcmts8n05s" path="res://Sprites/Objects/Sign-Board/Chain.png" id="6_nl2gc"]
 [ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="8_4lp62"]
 [ext_resource type="Texture2D" uid="uid://7mnoohorfu3m" path="res://Sprites/wood_tileset-pers.png" id="8_ef6yq"]
-[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board.png" id="8_wib81"]
 [ext_resource type="Texture2D" uid="uid://desarahw41nps" path="res://Sprites/factorytileset-pers.png" id="9_nl2gc"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="9_tbdrc"]
-[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="9_vuees"]
-[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-hover.png" id="10_3hb06"]
 [ext_resource type="AudioStream" uid="uid://qcpa5hxhebi4" path="res://Sound/mus/8-bit-video-game-background-music-loop-wood-chapter-368532.mp3" id="13_3hb06"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="15_s8c0c"]
 [ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="17_w2mqo"]
 [ext_resource type="Script" uid="uid://bxp68adapuj5r" path="res://Scripts/Objects/W8/Level 48/final-label.gd" id="18_s8c0c"]
+[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board.png" id="19_p2sjk"]
+[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="20_apm58"]
+[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-hover.png" id="21_c131k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0vewo"]
 animations = [{
@@ -1218,15 +1219,15 @@ theme_override_constants/separation = -1
 
 [node name="Play" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("8_wib81")
-texture_pressed = ExtResource("9_vuees")
-texture_hover = ExtResource("10_3hb06")
+texture_normal = ExtResource("19_p2sjk")
+texture_pressed = ExtResource("20_apm58")
+texture_hover = ExtResource("21_c131k")
 
 [node name="Label" type="Label" parent="VBoxContainer/Play"]
 layout_mode = 0
-offset_left = 33.66671
+offset_left = 5.9999924
 offset_top = 3.0000005
-offset_right = 73.66671
+offset_right = 150.0
 offset_bottom = 33.000034
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -1234,18 +1235,20 @@ theme_override_fonts/font = ExtResource("9_tbdrc")
 theme_override_font_sizes/font_size = 30
 text = "Play"
 horizontal_alignment = 1
+script = ExtResource("15_s8c0c")
+text_key = "Play"
 
 [node name="Level Select" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("8_wib81")
-texture_pressed = ExtResource("9_vuees")
-texture_hover = ExtResource("10_3hb06")
+texture_normal = ExtResource("19_p2sjk")
+texture_pressed = ExtResource("20_apm58")
+texture_hover = ExtResource("21_c131k")
 
 [node name="Label" type="Label" parent="VBoxContainer/Level Select"]
 layout_mode = 0
-offset_left = 10.666671
+offset_left = 1.999999
 offset_top = 3.666667
-offset_right = 134.66667
+offset_right = 162.0
 offset_bottom = 33.666702
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -1253,60 +1256,68 @@ theme_override_fonts/font = ExtResource("9_tbdrc")
 theme_override_font_sizes/font_size = 30
 text = "Level Select"
 horizontal_alignment = 1
+script = ExtResource("15_s8c0c")
+text_key = "LSelect"
 
 [node name="Settings" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("8_wib81")
-texture_pressed = ExtResource("9_vuees")
-texture_hover = ExtResource("10_3hb06")
+texture_normal = ExtResource("19_p2sjk")
+texture_pressed = ExtResource("20_apm58")
+texture_hover = ExtResource("21_c131k")
 
 [node name="Label" type="Label" parent="VBoxContainer/Settings"]
 layout_mode = 0
-offset_left = 21.66671
+offset_left = 1.9999924
 offset_top = 2.6666634
-offset_right = 108.66701
+offset_right = 162.0
 offset_bottom = 32.666664
 scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("9_tbdrc")
 theme_override_font_sizes/font_size = 30
 text = "Settings"
 horizontal_alignment = 1
+script = ExtResource("15_s8c0c")
+text_key = "Settings"
 
 [node name="Credits" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("8_wib81")
-texture_pressed = ExtResource("9_vuees")
-texture_hover = ExtResource("10_3hb06")
+texture_normal = ExtResource("19_p2sjk")
+texture_pressed = ExtResource("20_apm58")
+texture_hover = ExtResource("21_c131k")
 
 [node name="Label" type="Label" parent="VBoxContainer/Credits"]
 layout_mode = 0
-offset_left = 25.66671
+offset_left = 1.9999924
 offset_top = 4.666663
-offset_right = 100.66671
+offset_right = 162.0
 offset_bottom = 34.666664
 scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("9_tbdrc")
 theme_override_font_sizes/font_size = 30
 text = "Credits"
 horizontal_alignment = 1
+script = ExtResource("15_s8c0c")
+text_key = "Credits"
 
 [node name="Quit" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("8_wib81")
-texture_pressed = ExtResource("9_vuees")
-texture_hover = ExtResource("10_3hb06")
+texture_normal = ExtResource("19_p2sjk")
+texture_pressed = ExtResource("20_apm58")
+texture_hover = ExtResource("21_c131k")
 
 [node name="Label" type="Label" parent="VBoxContainer/Quit"]
 layout_mode = 0
-offset_left = 35.00001
+offset_left = 2.0000114
 offset_top = 4.3333335
-offset_right = 77.000015
+offset_right = 161.99998
 offset_bottom = 34.333332
 scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("9_tbdrc")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 horizontal_alignment = 1
+script = ExtResource("15_s8c0c")
+text_key = "Quit"
 
 [node name="ButtonSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_4lp62")
@@ -1351,8 +1362,73 @@ text = ": 144 / 144"
 script = ExtResource("18_s8c0c")
 metadata/_edit_use_anchors_ = true
 
+[node name="Chain" type="Sprite2D" parent="."]
+position = Vector2(969.72003, 420.05)
+scale = Vector2(2.46, 2.46)
+texture = ExtResource("6_nl2gc")
+
+[node name="Chain2" type="Sprite2D" parent="."]
+position = Vector2(1109.7, 422)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("6_nl2gc")
+
+[node name="Chain3" type="Sprite2D" parent="."]
+position = Vector2(969.69, 260.95)
+scale = Vector2(2.46, 2.46)
+texture = ExtResource("6_nl2gc")
+
+[node name="Chain4" type="Sprite2D" parent="."]
+position = Vector2(1109.6699, 262.90002)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("6_nl2gc")
+
+[node name="Chain5" type="Sprite2D" parent="."]
+position = Vector2(969.69, 101.950005)
+scale = Vector2(2.46, 2.46)
+texture = ExtResource("6_nl2gc")
+
+[node name="Chain6" type="Sprite2D" parent="."]
+position = Vector2(1109.6699, 103.90003)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("6_nl2gc")
+
+[node name="Chain7" type="Sprite2D" parent="."]
+position = Vector2(969.69, -57.049988)
+scale = Vector2(2.46, 2.46)
+texture = ExtResource("6_nl2gc")
+
+[node name="Chain8" type="Sprite2D" parent="."]
+position = Vector2(1109.6699, -55.099945)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("6_nl2gc")
+
+[node name="GalleryButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 500.0
+offset_right = 1018.0
+offset_bottom = 521.2
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("19_p2sjk")
+texture_pressed = ExtResource("20_apm58")
+texture_hover = ExtResource("21_c131k")
+
+[node name="Label" type="Label" parent="GalleryButton"]
+layout_mode = 0
+offset_left = 23.199999
+offset_top = 1.1999878
+offset_right = 96.2
+offset_bottom = 34.19999
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("9_tbdrc")
+theme_override_font_sizes/font_size = 32
+text = "Gallery"
+script = ExtResource("15_s8c0c")
+text_key = "Gallery"
+
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level Select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="GalleryButton" to="." method="_on_gallery_button_pressed"]

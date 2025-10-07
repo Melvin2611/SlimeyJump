@@ -9,4 +9,4 @@ func _on_body_entered(body: Node):
 	if body == player:
 		$AudioStreamPlayer2D.play()
 		await get_tree().create_timer(3.6).timeout
-		get_tree().change_scene_to_file("res://Scenes/Levels/W8/Level 48/level_48_complete.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Comics/Comic9.tscn")

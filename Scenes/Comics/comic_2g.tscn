@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://csd25ygguxix7"]
+
+[ext_resource type="Texture2D" uid="uid://dqdqhgfertclg" path="res://Sprites/Comics/Comic2.jpg" id="1_7gjsr"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="2_t20e4"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="3_w38ax"]
+[ext_resource type="Script" uid="uid://owbntuoykmme" path="res://Scripts/scene scripts/comics/nextbuttonCG.gd" id="4_7gjsr"]
+[ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="5_j8q7e"]
+
+[node name="Comic2G" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_7gjsr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 745.00006
+offset_top = -0.99998474
+offset_right = 924.00006
+offset_bottom = 212.00002
+rotation = 0.30464226
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_t20e4")
+theme_override_font_sizes/font_size = 24
+text = "WOW...
+Diese Festung
+haben wir jetzt
+hinter uns
+als nächstes
+gehts in
+den
+Wald"
+script = ExtResource("3_w38ax")
+text_key = "ComicL2"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1128.0
+offset_top = 592.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("2_t20e4")
+theme_override_font_sizes/font_size = 48
+text = ">"
+script = ExtResource("4_7gjsr")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("5_j8q7e")
+bus = &"SFX"

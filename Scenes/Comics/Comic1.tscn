@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwyuw4i4kh7vy"]
+
+[ext_resource type="Texture2D" uid="uid://diwpgmdqvbmr0" path="res://Sprites/Comics/Comic1.jpg" id="1_36d32"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="2_7ua8h"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="3_vnk5t"]
+[ext_resource type="Script" uid="uid://b1rumfkpomwv3" path="res://Scripts/scene scripts/comics/nextbuttonC1.gd" id="4_rm3fu"]
+[ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="5_7ua8h"]
+
+[node name="Comic1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_36d32")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 402.0
+offset_top = 233.0
+offset_right = 581.0
+offset_bottom = 392.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7ua8h")
+theme_override_font_sizes/font_size = 24
+text = "Pheww...
+Das war eine Schwere
+Landung...
+Hey du... willst du
+vielleicht einen 
+Schatz?"
+script = ExtResource("3_vnk5t")
+text_key = "ComicL1"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1128.0
+offset_top = 592.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("2_7ua8h")
+theme_override_font_sizes/font_size = 48
+text = ">"
+script = ExtResource("4_rm3fu")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("5_7ua8h")
+bus = &"SFX"

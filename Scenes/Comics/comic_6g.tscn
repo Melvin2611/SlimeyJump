@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://xyexft8x7kck"]
+
+[ext_resource type="Texture2D" uid="uid://csrjqslv4mg54" path="res://Sprites/Comics/Comic6.jpg" id="1_fmt3j"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="2_k1t7n"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="3_nxsyt"]
+[ext_resource type="Script" uid="uid://owbntuoykmme" path="res://Scripts/scene scripts/comics/nextbuttonCG.gd" id="4_fmt3j"]
+[ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="5_j4qj0"]
+
+[node name="Comic6G" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_fmt3j")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 762.0
+offset_top = -1.0
+offset_right = 941.0
+offset_bottom = 185.0
+rotation = 0.3998234
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_k1t7n")
+theme_override_font_sizes/font_size = 24
+text = "Endlich...
+Wir sind wieder
+da wo wir hin
+wollten...
+
+Geh und
+Kletter!"
+script = ExtResource("3_nxsyt")
+text_key = "ComicL6"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1128.0
+offset_top = 592.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("2_k1t7n")
+theme_override_font_sizes/font_size = 48
+text = ">"
+script = ExtResource("4_fmt3j")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("5_j4qj0")
+bus = &"SFX"

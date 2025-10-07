@@ -1,0 +1,160 @@
+[gd_scene load_steps=18 format=3 uid="uid://cgp4ek503y58k"]
+
+[ext_resource type="Script" uid="uid://3fws18lfduxv" path="res://Scripts/gallery.gd" id="1_tstqc"]
+[ext_resource type="Texture2D" uid="uid://dstk4ykqavkaa" path="res://Sprites/plank-backdrop.png" id="2_k8t8m"]
+[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board.png" id="3_fwapm"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="4_4o7ca"]
+[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="5_3dxyr"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="5_k8t8m"]
+[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-hover.png" id="6_2sofi"]
+[ext_resource type="Texture2D" uid="uid://diwpgmdqvbmr0" path="res://Sprites/Comics/Comic1.jpg" id="7_borpo"]
+[ext_resource type="Texture2D" uid="uid://cuehn7whvdg7x" path="res://Sprites/Objects/Level Buttons/Lock.png" id="8_dh3n7"]
+[ext_resource type="Texture2D" uid="uid://dqdqhgfertclg" path="res://Sprites/Comics/Comic2.jpg" id="9_8t3eb"]
+[ext_resource type="Texture2D" uid="uid://bwkxd0gyk8wvr" path="res://Sprites/Comics/Comic3.jpg" id="10_oxwf7"]
+[ext_resource type="Texture2D" uid="uid://b0qooguplwpxs" path="res://Sprites/Comics/Comic4.jpg" id="11_qfwk0"]
+[ext_resource type="Texture2D" uid="uid://dv3ew2x62h08j" path="res://Sprites/Comics/Comic5.jpg" id="12_3m3g6"]
+[ext_resource type="Texture2D" uid="uid://csrjqslv4mg54" path="res://Sprites/Comics/Comic6.jpg" id="13_bn47r"]
+[ext_resource type="Texture2D" uid="uid://b1r6rdcwfn41o" path="res://Sprites/Comics/Comic7.jpg" id="14_8ddnh"]
+[ext_resource type="Texture2D" uid="uid://bdjqbyk7no3rb" path="res://Sprites/Comics/Comic8.jpg" id="15_vma76"]
+[ext_resource type="Texture2D" uid="uid://bmmcq4l6fshd8" path="res://Sprites/Comics/Comic9.jpg" id="16_2n30w"]
+
+[node name="Gallery" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tstqc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(589, 168)
+scale = Vector2(4, 4)
+texture = ExtResource("2_k8t8m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(598, 40)
+scale = Vector2(4, 4)
+texture = ExtResource("3_fwapm")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -22.5
+offset_top = -9.75
+offset_right = 50.5
+offset_bottom = 23.25
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("4_4o7ca")
+theme_override_font_sizes/font_size = 32
+text = "Gallery"
+script = ExtResource("5_k8t8m")
+text_key = "Gallery"
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("3_fwapm")
+texture_pressed = ExtResource("5_3dxyr")
+texture_hover = ExtResource("6_2sofi")
+
+[node name="Label" type="Label" parent="BackButton"]
+layout_mode = 0
+offset_left = 19.666666
+offset_top = -0.33333334
+offset_right = 60.666664
+offset_bottom = 22.666666
+theme_override_fonts/font = ExtResource("4_4o7ca")
+text = "go back"
+script = ExtResource("5_k8t8m")
+text_key = "backB"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+offset_left = 247.99998
+offset_top = 128.00002
+offset_right = 3712.0
+offset_bottom = 2080.0
+scale = Vector2(0.2, 0.2)
+columns = 3
+
+[node name="ComicButton1" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_borpo")
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/ComicButton1"]
+position = Vector2(550, 314.9999)
+scale = Vector2(32, 32)
+texture = ExtResource("8_dh3n7")
+
+[node name="ComicButton2" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("9_8t3eb")
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/ComicButton2"]
+position = Vector2(550, 314.9999)
+scale = Vector2(32, 32)
+texture = ExtResource("8_dh3n7")
+
+[node name="ComicButton3" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("10_oxwf7")
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/ComicButton3"]
+position = Vector2(550, 314.9999)
+scale = Vector2(32, 32)
+texture = ExtResource("8_dh3n7")
+
+[node name="ComicButton4" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("11_qfwk0")
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/ComicButton4"]
+position = Vector2(550, 314.9999)
+scale = Vector2(32, 32)
+texture = ExtResource("8_dh3n7")
+
+[node name="ComicButton5" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_3m3g6")
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/ComicButton5"]
+position = Vector2(550, 314.9999)
+scale = Vector2(32, 32)
+texture = ExtResource("8_dh3n7")
+
+[node name="ComicButton6" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("13_bn47r")
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/ComicButton6"]
+position = Vector2(550, 314.9999)
+scale = Vector2(32, 32)
+texture = ExtResource("8_dh3n7")
+
+[node name="ComicButton7" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("14_8ddnh")
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/ComicButton7"]
+position = Vector2(550, 314.9999)
+scale = Vector2(32, 32)
+texture = ExtResource("8_dh3n7")
+
+[node name="ComicButton8" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("15_vma76")
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/ComicButton8"]
+position = Vector2(550, 314.9999)
+scale = Vector2(32, 32)
+texture = ExtResource("8_dh3n7")
+
+[node name="ComicButton9" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("16_2n30w")
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/ComicButton9"]
+position = Vector2(550, 314.9999)
+scale = Vector2(32, 32)
+texture = ExtResource("8_dh3n7")

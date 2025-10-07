@@ -36,3 +36,9 @@ func _on_level_select_pressed() -> void:
 	
 func _on_show_something():
 	coin_count.show() # Zeigt den Node an
+
+
+func _on_gallery_button_pressed() -> void:
+	$ButtonSound.play()
+	await get_tree().create_timer(0.2).timeout
+	get_tree().change_scene_to_file("res://Scenes/gallery.tscn")

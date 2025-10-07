@@ -1,4 +1,4 @@
-[gd_scene load_steps=180 format=4 uid="uid://dpccc05p3u36"]
+[gd_scene load_steps=181 format=4 uid="uid://dpccc05p3u36"]
 
 [ext_resource type="Script" uid="uid://dyei6bufhygrw" path="res://Scripts/scene scripts/level_select.gd" id="1_chbko"]
 [ext_resource type="Texture2D" uid="uid://irmyl2mv6ebv" path="res://Sprites/Objects/Sprites/background/country Platform/Background (by ansimuz).png" id="2_ft65g"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c053b63k7it76" path="res://Sprites/Objects/Sprites/Objects/Level Buttons/pressed/pressed-B1.png" id="6_ksgsr"]
 [ext_resource type="Texture2D" uid="uid://b4k0jhjo0ght0" path="res://Sprites/Objects/Sprites/Objects/Level Buttons/hover/hover-B1.png" id="7_cl4t8"]
 [ext_resource type="Texture2D" uid="uid://ctes4dtwe2wmv" path="res://Sprites/Objects/Sprites/Objects/Level Buttons/normal/B3.png" id="7_f2b6r"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="7_lwflp"]
 [ext_resource type="Texture2D" uid="uid://du3rplgoj7iej" path="res://Sprites/Objects/Sprites/Objects/Level Buttons/normal/B4.png" id="8_jqwfc"]
 [ext_resource type="Texture2D" uid="uid://cydgk6gggnctd" path="res://Sprites/Objects/Sprites/Objects/Level Buttons/normal/B5.png" id="9_gf417"]
 [ext_resource type="Texture2D" uid="uid://c880f71mw8use" path="res://Sprites/Objects/Sprites/Objects/Level Buttons/pressed/pressed-B2.png" id="9_xan3u"]
@@ -209,13 +210,6 @@ position = Vector2(780.4, 271)
 scale = Vector2(7.2, 7.2)
 texture = ExtResource("3_7dsyo")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 280.0
-offset_right = 873.0
-offset_bottom = 144.0
-theme_override_font_sizes/font_size = 105
-
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 position = Vector2(575, 70)
 scale = Vector2(7, 7)
@@ -231,6 +225,8 @@ theme_override_fonts/font = ExtResource("4_utyn2")
 theme_override_font_sizes/font_size = 70
 text = "Level Select"
 horizontal_alignment = 1
+script = ExtResource("7_lwflp")
+text_key = "LSelect"
 
 [node name="GridContainer" type="GridContainer" parent="."]
 custom_minimum_size = Vector2(593, 350)
@@ -964,6 +960,8 @@ theme_override_fonts/font = ExtResource("4_utyn2")
 theme_override_font_sizes/font_size = 120
 text = "go back"
 horizontal_alignment = 1
+script = ExtResource("7_lwflp")
+text_key = "backB"
 
 [node name="Button <" type="TextureButton" parent="."]
 layout_mode = 0

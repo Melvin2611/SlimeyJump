@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bj74jjf4hpj8y"]
+
+[ext_resource type="Texture2D" uid="uid://dv3ew2x62h08j" path="res://Sprites/Comics/Comic5.jpg" id="1_i5v58"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="2_i6gs1"]
+[ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="3_iffav"]
+[ext_resource type="Script" uid="uid://c52d0deeiyt3r" path="res://Scripts/scene scripts/comics/nextbuttonC5.gd" id="4_i5v58"]
+[ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="5_api2e"]
+
+[node name="Comic5" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_i5v58")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 743.0
+offset_top = -1.0
+offset_right = 922.0
+offset_bottom = 185.0
+rotation = 0.27536407
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_i6gs1")
+theme_override_font_sizes/font_size = 24
+text = "Pheww...
+Endlich raus aus
+dem Wasser...
+Hey Stop!
+Du willst
+d-doch
+nicht?!..."
+script = ExtResource("3_iffav")
+text_key = "ComicL5"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1128.0
+offset_top = 592.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("2_i6gs1")
+theme_override_font_sizes/font_size = 48
+text = ">"
+script = ExtResource("4_i5v58")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("5_api2e")
+bus = &"SFX"
