@@ -310,6 +310,27 @@
 > Game Version has been changed
 > Save File added for Level Progress and Coins
 
+## v.0.9.2-beta
+#### Levels:
+> Level 49 has been added and completed
+> level 50 has been added and completed
+> A Hollow Knight Easter Egg has been added
+
+#### Story:
+> Comics have been added so now the Story is complete
+> a Gallery has been added to view the Comics
+> Comics are now accesible by Playing the Game normaly
+> Comics won't show up when playing through Level Select (this is not a bug)
+
+#### Language:
+> Now the entire Game is Translated in every Language (please Note that most of the Translation is done by AI)
+> German Language isn't AI translated
+> English Language is mostly not AI translated
+
+#### Fix:
+> button Fix in Level 6
+> Green Jelly Fix in Level 6
+
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -594,3 +615,53 @@
 > Neue Sprites für den Drachen Kopf, Lava und Feuer wurden hinzugefügt
 > Neuer Sound effekt für den Drachen atem wurde hinzugefügt
 > Neue Musik für die Lava Festung entkommen Sequenz wurde hinzugefügt
+
+## v.0.9.1-beta
+#### Level:
+> Jedes Level hat ein Schild bekommen
+
+#### Sprachen:
+> Deutsche Sprache wurde vollständig hinzugefügt
+> Englishe Sprache wurde vollständig hinzugefügt
+> Französische Sprache wurde vollständig hinzugefügt
+> Italienische Sprache wurde vollständig hinzugefügt
+> Spanische Sprache wurde vollständig hinzugefügt
+> Chinesische Sprache wurde vollständig hinzugefügt
+> Japanische Sprache wurde vollständig hinzugefügt
+> Russische Sprache wurde vollständig hinzugefügt
+
+#### Main Menüs:
+> Main Menü hat einen neuen Play Knopf bekommen 
+> Der alte Play Button ist jetzt der Level Select Button
+> Level müssen jetzt freigeschaltet werden
+> W9 Level können jetzt mit Münzen gekauft werden (aktuell gibt es aber noch keine W9 Level also bringt es nichts)
+> vom Einstellungs menü wurde die buggy FPS Option entfernt
+> Level Select Menü Scrollen wurde jetzt gefixt, und die Animation spielt richtig
+
+#### sonstiges:
+> Münzen haben ein Rework bekommen
+> main Menü Label wurde auf 0.9.1-beta geändert
+> Game Version wurde geändert auf 0.9.1.0
+> Eine Save File wurde hinzugefügt und somit wird der Fortschritt nun Automatisch gespeichert
+
+
+## v.0.9.2-beta
+#### Level:
+> Level 49 wurde hinzugefügt und fertig gestellt
+> level 50 wurde hinzugefügt und fertig gestellt
+> Ein Hollow Knight Easter Egg wurde hinzugefügt
+
+#### Geschichte:
+> Comics wurden hinzugefügt und somit ist jetzt auch die Story vollständig
+> Eine Gallerie zum anschauen der Comics wurde hinzugefügt
+> Comics sind nun erhältlich indem man durch die Story spielt
+> Comics werden nicht angezeigt wenn man durchs Level Select Menü die Level auswählt (Das ist kein Bug)
+
+#### Sprache:
+> Das Ganze Spiel ist nun übersetzt, (Bitte beachte das die Übersetzung über KI lief und somit Fehler enthalten kann)
+> Deutsche Sprache wurde nicht KI übersetzt
+> Englische Sprache ist größtenteils nicht KI übersetzt
+
+#### Fix:
+> Knopf Fehler behebung in Level 6
+> Grünes Gelee Fehler behebung in Level 6
