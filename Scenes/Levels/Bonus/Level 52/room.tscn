@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=4 uid="uid://bnaastbhts5s7"]
+
+[ext_resource type="TileSet" uid="uid://bp6l3qpa0j5kn" path="res://Tileset1.tres" id="1_x6nw3"]
+[ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/crate/Crate.png" id="2_eq2mf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_71rij"]
+friction = 0.7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ce1u8"]
+size = Vector2(84, 84)
+
+[node name="Room" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(5376, -1280)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAC9/x0AAAANABYAAAC8/x0AAAAMABYAAAC7/x0AAAAMABYAAAC6/x0AAAAMABYAAAC5/x0AAAAMABYAAAC4/x0AAAAMABYAAAC3/x0AAAAMABYAAAC2/x0AAAAMABYAAAC1/x0AAAAMABYAAAC0/x0AAAAMABYAAACz/x0AAAAMABYAAACy/x0AAAAMABYAAACx/x0AAAAMABYAAACw/x0AAAAMABYAAACv/x0AAAAMABYAAACu/x0AAAAMABYAAACt/x0AAAAMABYAAACs/x0AAAALABYAAAC9/xwAAAANABQAAAC8/xwAAAAMABQAAAC7/xwAAAAMABQAAAC6/xwAAAAMABQAAAC5/xwAAAAMABQAAAC2/xwAAAAMABQAAACz/xwAAAAMABQAAACw/xwAAAAMABQAAACv/xwAAAAMABQAAACu/xwAAAAMABQAAACt/xwAAAAMABQAAACs/xwAAAALABQAAAC9/xgAAAAOABYAAAC9/xcAAAAOABUAAAC9/xYAAAAOABUAAAC9/xUAAAAOABUAAAC9/xQAAAASABQAAAC8/xQAAAAMABcAAAC7/xQAAAAMABcAAAC6/xQAAAAMABcAAAC5/xQAAAAMABcAAAC4/xQAAAAMABcAAAC3/xQAAAAMABcAAAC2/xQAAAAMABcAAAC1/xQAAAAMABcAAAC0/xQAAAAMABcAAACz/xQAAAAMABcAAACy/xQAAAAMABcAAACx/xQAAAAMABcAAACw/xQAAAAMABcAAACv/xQAAAAMABcAAACu/xQAAAAMABcAAACt/xQAAAAMABcAAACs/xQAAAAPABQAAACs/xgAAAAOABYAAACs/xcAAAAOABUAAACs/xYAAAAOABUAAACs/xUAAAAOABUAAAC3/xgAAAANABcAAAC2/xgAAAAMABcAAAC1/xgAAAAMABcAAAC0/xgAAAAMABcAAACz/xgAAAAMABcAAACy/xgAAAALABcAAAC1/xwAAAAMABQAAAC0/xwAAAAMABQAAACy/xwAAAAMABQAAACx/xwAAAAMABQAAAC4/xwAAAAMABQAAAC3/xwAAAAMABQAAAA=")
+tile_set = ExtResource("1_x6nw3")
+
+[node name="Crate" type="RigidBody2D" parent="." groups=["platforms"]]
+position = Vector2(578, 213)
+collision_layer = 2
+collision_mask = 3
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_71rij")
+
+[node name="Sprite2D" type="Sprite2D" parent="Crate"]
+scale = Vector2(5, 5)
+texture = ExtResource("2_eq2mf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate"]
+shape = SubResource("RectangleShape2D_ce1u8")

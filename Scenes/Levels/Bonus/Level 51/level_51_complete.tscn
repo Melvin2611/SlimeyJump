@@ -1,0 +1,132 @@
+[gd_scene load_steps=7 format=3 uid="uid://bo2ittq3iwedd"]
+
+[ext_resource type="Texture2D" uid="uid://da7dwk1bcw3my" path="res://Sprites/background/weltraum/background_1.png" id="1_1qof6"]
+[ext_resource type="Texture2D" uid="uid://opmex364onhs" path="res://Sprites/background/weltraum/background_2.png" id="2_c4k24"]
+[ext_resource type="Texture2D" uid="uid://c6mkkf4ko88tb" path="res://Sprites/background/weltraum/background_3.png" id="3_r3gc0"]
+[ext_resource type="Texture2D" uid="uid://bpi4wedpqtoby" path="res://Sprites/background/weltraum/background_4.png" id="4_xptxe"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="5_u2sdg"]
+[ext_resource type="Script" uid="uid://dbx7pkwhuqm14" path="res://Scripts/Objects/W9/buttonsBW.gd" id="6_rp567"]
+
+[node name="Level51Complete" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -588.0
+offset_top = -241.0
+offset_right = 1278.0
+offset_bottom = 857.0
+color = Color(0, 0, 0.1764706, 1)
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.05, 1)
+scroll_offset = Vector2(-337, 463)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_begin = Vector2(-10000000, 100000000)
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D5"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_1qof6")
+
+[node name="Parallax2D6" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-337, 463)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D6"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_c4k24")
+
+[node name="Parallax2D7" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.13, 1)
+scroll_offset = Vector2(-337, 463)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D7"]
+scale = Vector2(4, 4)
+texture = ExtResource("3_r3gc0")
+
+[node name="Parallax2D8" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.17, 1)
+scroll_offset = Vector2(-337, 463)
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_end = Vector2(100000000, 100000000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D8"]
+scale = Vector2(4, 4)
+texture = ExtResource("4_xptxe")
+
+[node name="Congratulations" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 253.5
+offset_top = 69.0
+offset_right = 900.5
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.993368, 0.993367, 1.46317e-05, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_u2sdg")
+theme_override_font_sizes/font_size = 120
+text = "Congratulations"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level COMPLETE" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 325.0
+offset_top = 252.0
+offset_right = 827.0
+offset_bottom = 333.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_u2sdg")
+theme_override_font_sizes/font_size = 80
+text = "Level 51 COMPLETE"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 403.0
+offset_top = 517.0
+offset_right = 751.0
+offset_bottom = 566.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("6_rp567")
+metadata/_edit_use_anchors_ = true
+
+[node name="Back To Title" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u2sdg")
+theme_override_font_sizes/font_size = 40
+text = "Back to Title"
+
+[node name="NEXT LEVEL" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("5_u2sdg")
+theme_override_font_sizes/font_size = 40
+text = "Back to Level Select"
+
+[connection signal="pressed" from="Buttons/Back To Title" to="Buttons" method="_on_back_to_title_pressed"]
+[connection signal="pressed" from="Buttons/NEXT LEVEL" to="Buttons" method="_on_next_level_pressed"]
