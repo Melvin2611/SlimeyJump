@@ -1,18 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc0avyq0awm0s"]
+[gd_scene load_steps=7 format=3 uid="uid://c8rus5qlmgx74"]
 
-[ext_resource type="Texture2D" uid="uid://da7dwk1bcw3my" path="res://Sprites/background/weltraum/background_1.png" id="1_x4igl"]
-[ext_resource type="Texture2D" uid="uid://opmex364onhs" path="res://Sprites/background/weltraum/background_2.png" id="2_wqaiq"]
-[ext_resource type="Texture2D" uid="uid://c6mkkf4ko88tb" path="res://Sprites/background/weltraum/background_3.png" id="3_yw7yo"]
-[ext_resource type="Texture2D" uid="uid://bpi4wedpqtoby" path="res://Sprites/background/weltraum/background_4.png" id="4_7bvwh"]
-[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="5_y1l4v"]
-[ext_resource type="Script" uid="uid://dbx7pkwhuqm14" path="res://Scripts/Objects/W9/buttonsBW.gd" id="6_x4igl"]
+[ext_resource type="Texture2D" uid="uid://da7dwk1bcw3my" path="res://Sprites/background/weltraum/background_1.png" id="1_hq8ax"]
+[ext_resource type="Texture2D" uid="uid://opmex364onhs" path="res://Sprites/background/weltraum/background_2.png" id="2_0hw1c"]
+[ext_resource type="Texture2D" uid="uid://c6mkkf4ko88tb" path="res://Sprites/background/weltraum/background_3.png" id="3_3saow"]
+[ext_resource type="Texture2D" uid="uid://bpi4wedpqtoby" path="res://Sprites/background/weltraum/background_4.png" id="4_l24ck"]
+[ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="5_r84ce"]
+[ext_resource type="Script" uid="uid://dbx7pkwhuqm14" path="res://Scripts/Objects/W9/buttonsBW.gd" id="6_sfuy7"]
 
-[node name="Level49Complete" type="Node2D"]
+[node name="Level50Complete" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -588.0
-offset_top = -4329.0
-offset_right = 24577.0
+offset_top = -241.0
+offset_right = 1278.0
 offset_bottom = 857.0
 color = Color(0, 0, 0.1764706, 1)
 
@@ -26,7 +26,7 @@ limit_end = Vector2(100000000, 100000000)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D5"]
 scale = Vector2(4, 4)
-texture = ExtResource("1_x4igl")
+texture = ExtResource("1_hq8ax")
 
 [node name="Parallax2D6" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.1, 1)
@@ -37,7 +37,7 @@ limit_end = Vector2(100000000, 100000000)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D6"]
 scale = Vector2(4, 4)
-texture = ExtResource("2_wqaiq")
+texture = ExtResource("2_0hw1c")
 
 [node name="Parallax2D7" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.13, 1)
@@ -48,7 +48,7 @@ limit_end = Vector2(100000000, 100000000)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D7"]
 scale = Vector2(4, 4)
-texture = ExtResource("3_yw7yo")
+texture = ExtResource("3_3saow")
 
 [node name="Parallax2D8" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.17, 1)
@@ -59,7 +59,7 @@ limit_end = Vector2(100000000, 100000000)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D8"]
 scale = Vector2(4, 4)
-texture = ExtResource("4_7bvwh")
+texture = ExtResource("4_l24ck")
 
 [node name="Congratulations" type="Label" parent="."]
 anchors_preset = 8
@@ -75,7 +75,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.993368, 0.993367, 1.46317e-05, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_y1l4v")
+theme_override_fonts/font = ExtResource("5_r84ce")
 theme_override_font_sizes/font_size = 120
 text = "Congratulations"
 metadata/_edit_use_anchors_ = true
@@ -93,9 +93,9 @@ offset_bottom = 333.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_y1l4v")
+theme_override_fonts/font = ExtResource("5_r84ce")
 theme_override_font_sizes/font_size = 80
-text = "Level 49 COMPLETE"
+text = "Level 50 COMPLETE"
 metadata/_edit_use_anchors_ = true
 
 [node name="Buttons" type="HBoxContainer" parent="."]
@@ -112,19 +112,19 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("6_x4igl")
+script = ExtResource("6_sfuy7")
 metadata/_edit_use_anchors_ = true
 
 [node name="Back To Title" type="Button" parent="Buttons"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_y1l4v")
+theme_override_fonts/font = ExtResource("5_r84ce")
 theme_override_font_sizes/font_size = 40
 text = "Back to Title"
 
 [node name="NEXT LEVEL" type="Button" parent="Buttons"]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("5_y1l4v")
+theme_override_fonts/font = ExtResource("5_r84ce")
 theme_override_font_sizes/font_size = 40
 text = "Back to Level Select"
 

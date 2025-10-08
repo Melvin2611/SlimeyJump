@@ -123,5 +123,6 @@ func _on_Coin_reset_button_pressed() -> void:
 
 func _on_level_unlock_button_pressed() -> void:
 	ProgressManager.highest_completed_level = 48  # Setze auf die Anzahl der Levels, um alle freizuschalten
+	ProgressManager.unlocked_bonus_levels = [48, 49, 50, 51, 52, 53] # Schalte Bonus Level frei
 	ProgressManager.save_progress()
 	print("Alle Levels freigeschaltet!")

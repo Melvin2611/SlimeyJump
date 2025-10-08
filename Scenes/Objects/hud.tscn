@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://bwe04db4dy1ku"]
 
 [ext_resource type="Script" uid="uid://dhxm5dxm24r7v" path="res://Scripts/scene scripts/hud.gd" id="1_bjfho"]
-[ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Sprites/Objects/Coin.png" id="2_6fbih"]
+[ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="2_6fbih"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="3_t1xeu"]
-[ext_resource type="Texture2D" uid="uid://cu0ucvua0u0y" path="res://Sprites/Objects/Sprites/Pause-button.png" id="4_2ubmp"]
-[ext_resource type="Texture2D" uid="uid://ril7iyiauw0v" path="res://Sprites/Objects/Sprites/Pause-button-pressed.png" id="5_u1fe8"]
-[ext_resource type="Texture2D" uid="uid://d3b37tkar16w6" path="res://Sprites/Objects/Sprites/Pause-button-hover.png" id="6_2x80y"]
+[ext_resource type="Texture2D" uid="uid://cu0ucvua0u0y" path="res://Sprites/Pause-button.png" id="4_2ubmp"]
+[ext_resource type="Texture2D" uid="uid://ril7iyiauw0v" path="res://Sprites/Pause-button-pressed.png" id="5_u1fe8"]
+[ext_resource type="Texture2D" uid="uid://d3b37tkar16w6" path="res://Sprites/Pause-button-hover.png" id="6_2x80y"]
 [ext_resource type="Shader" uid="uid://dm47q4kny0bj7" path="res://Scripts/shader/hud.gdshader" id="7_u1fe8"]
-[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board.png" id="8_k1jev"]
-[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="9_mbgcg"]
-[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-hover.png" id="10_bdieq"]
+[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sign-Board/Sign-board.png" id="8_k1jev"]
+[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="9_mbgcg"]
+[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sign-Board/Sign-board-hover.png" id="10_bdieq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2x80y"]
 shader = ExtResource("7_u1fe8")
