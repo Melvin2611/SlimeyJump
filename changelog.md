@@ -331,6 +331,26 @@
 > button Fix in Level 6
 > Green Jelly Fix in Level 6
 
+## v.0.9.3-beta
+#### Levels:
+> Level 50 spikes have been added
+> Level 50 Big Void sprite Positions have been changed to now reflect the Void and continue themselfes
+> Level 51 added and Completed
+> level 52 added and Completed
+
+#### mechanics:
+> New HeavyOnePressButton has been added and is a merge of the OnePressButton and the heavybutton
+> Repeating Rooms Mechanic has been added
+
+#### Fix:
+> Gravity Fields have been fixed, and now rotate the Sprite instead of the Rigidbody
+> Level 50 Slime Position has been fixed
+
+#### others:
+> Unlock all Debug button now unlocks the Bonus Levels as well
+> version label has been changed
+> Version number has been changed
+> the .pck has now been merged into the .exe and is now no longer needed 
 
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
@@ -665,3 +685,24 @@
 #### Fix:
 > Knopf Fehler behebung in Level 6
 > Grünes Gelee Fehler behebung in Level 6
+
+## v.0.9.3-beta
+#### Level:
+> Level 50 stacheln wurden Hinzugefügt
+> Level 50 Big Void sprite Positionen wurden so geändert das sie jetzt fortlaufen und auch wirklich das Void zeigen
+> Level 51 wurde hinzugefügt und fertiggestellt
+> level 52 wurde hinzugefügt und fertiggestellt
+
+#### Mechaniken:
+> Neuer HeavyOnePressButton wurde hinzugefügt und ist ein HeavyButton und OnePressButton zusammen
+> Wiederholende Räume Mechanik wurde hinzugefügt
+
+#### Fix:
+> Gravity Fields wurden gefixt, und rotieren jetzt das Sprite anstelle vom Rigidbody
+> Level 50 Slime Position wurde gefixt
+
+#### sonstiges:
+> Unlock all Debug Menü button schaltet jetzt auch Bonus Level frei
+> versions label wurde geändert
+> Versions Nummer wurde geändert
+> die .pck datei wurde jetzt in die .exe gemerged, wodurch man nur noch eine Brauch
