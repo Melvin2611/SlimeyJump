@@ -1,11 +1,11 @@
 [gd_scene load_steps=25 format=4 uid="uid://bbu853t6d4tyv"]
 
 [ext_resource type="Script" uid="uid://d3cqgi2c30nml" path="res://Scripts/scene scripts/main_menu.gd" id="1_totuj"]
-[ext_resource type="Texture2D" uid="uid://irmyl2mv6ebv" path="res://Sprites/Objects/Sprites/background/country Platform/Background (by ansimuz).png" id="2_0126h"]
-[ext_resource type="Texture2D" uid="uid://08qva5h2rr23" path="res://Sprites/Objects/Sprites/Objects/Cloud/Cloud1.png" id="2_udm2q"]
-[ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Objects/Sprites/Objects/Cloud/Cloud2.png" id="3_mjet1"]
+[ext_resource type="Texture2D" uid="uid://irmyl2mv6ebv" path="res://Sprites/background/country Platform/Background (by ansimuz).png" id="2_0126h"]
+[ext_resource type="Texture2D" uid="uid://08qva5h2rr23" path="res://Sprites/Objects/Cloud/Cloud1.png" id="2_udm2q"]
+[ext_resource type="Texture2D" uid="uid://drvxe8jcduebs" path="res://Sprites/Objects/Cloud/Cloud2.png" id="3_mjet1"]
 [ext_resource type="Script" uid="uid://si5jvfnxecac" path="res://Scripts/Objects/Clouds/CloudsT.gd" id="4_mjet1"]
-[ext_resource type="Texture2D" uid="uid://c8lveqkxenxjw" path="res://Sprites/Objects/Sprites/background/Title.png" id="5_4lp62"]
+[ext_resource type="Texture2D" uid="uid://c8lveqkxenxjw" path="res://Sprites/background/Title.png" id="5_4lp62"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="6_mjet1"]
 [ext_resource type="Texture2D" uid="uid://j5fcmts8n05s" path="res://Sprites/Objects/Sign-Board/Chain.png" id="6_nl2gc"]
 [ext_resource type="AudioStream" uid="uid://cv3wog2lg0g4b" path="res://Sound/sfx/menu-button-88360.mp3" id="8_4lp62"]
@@ -16,9 +16,9 @@
 [ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="15_s8c0c"]
 [ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="17_w2mqo"]
 [ext_resource type="Script" uid="uid://bxp68adapuj5r" path="res://Scripts/Objects/W8/Level 48/final-label.gd" id="18_s8c0c"]
-[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board.png" id="19_p2sjk"]
-[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="20_apm58"]
-[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sprites/Objects/Sign-Board/Sign-board-hover.png" id="21_c131k"]
+[ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sign-Board/Sign-board.png" id="19_p2sjk"]
+[ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="20_apm58"]
+[ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sign-Board/Sign-board-hover.png" id="21_c131k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0vewo"]
 animations = [{
