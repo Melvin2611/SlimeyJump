@@ -73,7 +73,6 @@
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="62_gdyxu"]
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="63_dxufx"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="64_q1u8p"]
-[ext_resource type="AudioStream" uid="uid://b0klxdv65xagh" path="res://Sound/mus/cottagecore-re.mp3" id="65_emxqo"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="66_y8lxs"]
 [ext_resource type="Script" uid="uid://5g2vt3lsrmco" path="res://Scripts/Objects/wind.gd" id="67_up8j4"]
 [ext_resource type="AudioStream" uid="uid://dq8mydokpmrbr" path="res://Sound/sfx/wind.mp3" id="68_t1i4i"]
@@ -81,6 +80,7 @@
 [ext_resource type="Texture2D" uid="uid://bvqwf2dnhgspc" path="res://Sprites/background/dessert/flyingsan/flying-sand2.png" id="70_xbsc7"]
 [ext_resource type="Texture2D" uid="uid://d2geqgbuhdmnv" path="res://Sprites/background/dessert/flyingsan/flying-sand3.png" id="71_qqeby"]
 [ext_resource type="Texture2D" uid="uid://csyiqjbcn6j64" path="res://Sprites/background/dessert/flyingsan/flying-sand4.png" id="72_r1cjg"]
+[ext_resource type="AudioStream" uid="uid://d2t7ujhdvkp1" path="res://Sound/mus/desert-storm-re.mp3" id="74_l7xqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dyot2"]
 size = Vector2(384, 256)
@@ -2173,7 +2173,7 @@ stream = ExtResource("64_q1u8p")
 bus = &"SFX"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("65_emxqo")
+stream = ExtResource("74_l7xqv")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"

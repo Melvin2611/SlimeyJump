@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="31_ykju0"]
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="32_yp6c0"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="33_vxcb6"]
-[ext_resource type="AudioStream" uid="uid://b0klxdv65xagh" path="res://Sound/mus/cottagecore-re.mp3" id="34_2au41"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="35_kge4i"]
 [ext_resource type="Script" uid="uid://bp6g4sf10noh8" path="res://Scripts/Objects/W6/Wind Stream.gd" id="35_y6ey8"]
 [ext_resource type="Texture2D" uid="uid://dh4f4lll8m2br" path="res://Sprites/Objects/Lava/Laval1.png" id="36_o2o0k"]
@@ -54,6 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://wh8jcw5i81o4" path="res://Sprites/Objects/crumbleblock/Crumble5.png" id="52_8mbuj"]
 [ext_resource type="Texture2D" uid="uid://kbpcvt5cfqu4" path="res://Sprites/Objects/crumbleblock/Crumble6.png" id="53_d6g2g"]
 [ext_resource type="Texture2D" uid="uid://brfq3tf4dq7am" path="res://Sprites/Objects/crumbleblock/Crumble1.png" id="54_3o5er"]
+[ext_resource type="AudioStream" uid="uid://dje1ils1hyxui" path="res://Sound/mus/dark-clouds-re.mp3" id="55_3o5er"]
 [ext_resource type="Script" uid="uid://bjwrdicjqc6k2" path="res://Scripts/Objects/W6/Level 35/elevator_platform.gd" id="55_ivlbe"]
 [ext_resource type="Script" uid="uid://chv6l06ieg52v" path="res://Scripts/Objects/W7/Air-stream-wind.gd" id="55_urv3i"]
 [ext_resource type="Texture2D" uid="uid://cqni3d2lhrgor" path="res://Sprites/Objects/Wind/Wind1.png" id="56_8mbuj"]
@@ -886,10 +886,11 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("5_llhjt")
 
-[node name="Goal" type="Area2D" parent="."]
+[node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(16078, -4089)
 collision_layer = 2
 script = ExtResource("6_3o5er")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(-1, 0)
@@ -1527,7 +1528,7 @@ texture = SubResource("GradientTexture2D_fy8ao")
 texture_scale = 20.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("34_2au41")
+stream = ExtResource("55_3o5er")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"
@@ -1535,11 +1536,12 @@ parameters/looping = true
 
 [node name="HUD" parent="." instance=ExtResource("35_kge4i")]
 
-[node name="Death Plain" type="Area2D" parent="."]
+[node name="Death Plain" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(17023, -7617)
 rotation = 1.5707964
 collision_layer = 2
 script = ExtResource("20_ksy8e")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
 position = Vector2(-36, 0.375)

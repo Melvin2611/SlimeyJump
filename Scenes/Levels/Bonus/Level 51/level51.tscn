@@ -67,7 +67,6 @@
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="61_m6hvp"]
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="62_7uri7"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="63_rpir0"]
-[ext_resource type="AudioStream" uid="uid://b0klxdv65xagh" path="res://Sound/mus/cottagecore-re.mp3" id="64_jyebd"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="65_aeq8k"]
 [ext_resource type="Shader" uid="uid://4pdpoyjiusm" path="res://Scripts/shader/underwater.gdshader" id="66_14hjp"]
 [ext_resource type="Texture2D" uid="uid://dhhs8dy2umlax" path="res://Sprites/Slime/Slime-red/charge/Slime-charge1.png" id="68_fshb8"]
@@ -81,6 +80,7 @@
 [ext_resource type="Texture2D" uid="uid://863nndevec5s" path="res://Sprites/Slime/Slime-red/squish/Slime-squish3.png" id="76_d4o1b"]
 [ext_resource type="Texture2D" uid="uid://brnyvsyd00l6k" path="res://Sprites/Slime/Slime-red/squish/Slime-squish4.png" id="77_jgutt"]
 [ext_resource type="Texture2D" uid="uid://b16brx4vswi10" path="res://Sprites/Slime/Slime-red/squish/Slime-squish5.png" id="78_5r8o5"]
+[ext_resource type="AudioStream" uid="uid://c064g5uyo03p5" path="res://Sound/mus/ambient-pad-background-re.mp3" id="79_fshb8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjpsr"]
 size = Vector2(384, 256)
@@ -1991,7 +1991,7 @@ stream = ExtResource("63_rpir0")
 bus = &"SFX"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("64_jyebd")
+stream = ExtResource("79_fshb8")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"

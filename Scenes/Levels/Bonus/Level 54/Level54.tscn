@@ -44,8 +44,8 @@
 [ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Slime/Slime-squish/Slime-squish2.png" id="43_fqp6k"]
 [ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="44_ndg6k"]
 [ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="45_6u8u7"]
+[ext_resource type="AudioStream" uid="uid://crkjsqmdmuiqe" path="res://Sound/mus/LavaLand-re.mp3" id="45_08fqu"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="46_ibxks"]
-[ext_resource type="AudioStream" uid="uid://b0klxdv65xagh" path="res://Sound/mus/cottagecore-re.mp3" id="47_mymea"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="48_os1eu"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="49_5olq8"]
 [ext_resource type="Script" uid="uid://3u458b6icnll" path="res://Scripts/Objects/W8/meteorspawner.gd" id="49_08fqu"]
@@ -1020,7 +1020,7 @@ stream = ExtResource("46_ibxks")
 bus = &"SFX"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("47_mymea")
+stream = ExtResource("45_08fqu")
 volume_db = -6.492
 autoplay = true
 bus = &"Music"
