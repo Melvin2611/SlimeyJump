@@ -1495,7 +1495,7 @@ offset_bottom = -1140.0
 color = Color(0, 0, 0.1764706, 1)
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player"]]
-position = Vector2(7356, -3126)
+position = Vector2(188, -83)
 disable_mode = 2
 collision_mask = 2
 gravity_scale = 0.5
