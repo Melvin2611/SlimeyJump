@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://opmex364onhs" path="res://Sprites/background/weltraum/background_2.png" id="2_u2lns"]
 [ext_resource type="Texture2D" uid="uid://c6mkkf4ko88tb" path="res://Sprites/background/weltraum/background_3.png" id="3_hldai"]
 [ext_resource type="Texture2D" uid="uid://bpi4wedpqtoby" path="res://Sprites/background/weltraum/background_4.png" id="4_qbn3o"]
-[ext_resource type="Script" uid="uid://co2w2flnux732" path="res://Scripts/Objects/W9/Level 51/GoalL51.gd" id="6_ux1h6"]
 [ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="7_gf22b"]
+[ext_resource type="Script" uid="uid://dklq2synrsril" path="res://Scripts/Objects/W9/Level 52/GoalL52.gd" id="8_e00lx"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="8_v13yc"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_v40jm"]
 [ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/crate/Crate.png" id="33_xhsc3"]
@@ -5140,7 +5140,7 @@ script = ExtResource("9_v40jm")
 [node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(13121, -1792)
 collision_layer = 2
-script = ExtResource("6_ux1h6")
+script = ExtResource("8_e00lx")
 player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]

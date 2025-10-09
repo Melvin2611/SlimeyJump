@@ -25,7 +25,11 @@ func _ready():
 	lock_rotation = true
 	contact_monitor = true
 	max_contacts_reported = 4
-	linear_damp = 0.5
+	linear_damp = 0.5  # Reduzierte Dämpfung
+	# Reduziere Reibung für alle TileMapLayer
+	for layer in get_tree().get_nodes_in_group("tilemap_layers"):
+		if layer is TileMapLayer:
+			layer.collision_friction = 0.05  # Sehr niedrige Reibung
 	# Connect signals für Animation-Triggers
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
