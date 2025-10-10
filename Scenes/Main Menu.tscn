@@ -1338,7 +1338,7 @@ offset_top = 334.0
 offset_right = 836.0
 offset_bottom = 357.0
 theme_override_fonts/font = ExtResource("9_tbdrc")
-text = "v.0.9.4-beta"
+text = "last prerelease"
 
 [node name="Coin2" type="Sprite2D" parent="."]
 position = Vector2(873, 593)

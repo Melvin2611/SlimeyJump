@@ -1,9 +1,9 @@
 [gd_scene load_steps=58 format=4 uid="uid://cuw31gb1eiuan"]
 
-[ext_resource type="Texture2D" uid="uid://d3rqu5lgh41rh" path="res://Sprites/Objects/Sprites/background/underwater/far.png" id="1_owx5s"]
-[ext_resource type="Texture2D" uid="uid://bt5m7atsy8qmx" path="res://Sprites/Objects/Sprites/background/underwater/sand.png" id="2_j00xr"]
-[ext_resource type="Texture2D" uid="uid://c0v1tmsapwrcc" path="res://Sprites/Objects/Sprites/background/underwater/foreground-1.png" id="3_q0hvy"]
-[ext_resource type="Texture2D" uid="uid://b0a70l3l3h5lw" path="res://Sprites/Objects/Sprites/background/underwater/foreground-2.png" id="4_giuqk"]
+[ext_resource type="Texture2D" uid="uid://d3rqu5lgh41rh" path="res://Sprites/background/underwater/far.png" id="1_owx5s"]
+[ext_resource type="Texture2D" uid="uid://bt5m7atsy8qmx" path="res://Sprites/background/underwater/sand.png" id="2_j00xr"]
+[ext_resource type="Texture2D" uid="uid://c0v1tmsapwrcc" path="res://Sprites/background/underwater/foreground-1.png" id="3_q0hvy"]
+[ext_resource type="Texture2D" uid="uid://b0a70l3l3h5lw" path="res://Sprites/background/underwater/foreground-2.png" id="4_giuqk"]
 [ext_resource type="Texture2D" uid="uid://bft8ky0g30kc1" path="res://Sprites/Objects/Big-Void.png" id="5_08hkj"]
 [ext_resource type="Script" uid="uid://bpiiqyo2jabga" path="res://Scripts/Objects/W3/Level 15/GoalL15.gd" id="6_kf0nu"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="7_hpuft"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="18_i4jec"]
 [ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="18_npgsf"]
 [ext_resource type="PackedScene" uid="uid://bs3igc2piqcfx" path="res://Scenes/Objects/MovingPlatform-sand.tscn" id="19_giuqk"]
+[ext_resource type="Script" uid="uid://dp67dj5n4hcus" path="res://Scripts/Objects/PowerUp.gd" id="19_j00xr"]
 [ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="19_mbvxe"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="19_qi5bv"]
 [ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="20_npgsf"]
@@ -36,7 +37,6 @@
 [ext_resource type="AudioStream" uid="uid://loqbjeluihr8" path="res://Sound/mus/ambient-pad-background-music-for-space-or-underwater-adventure-3323.mp3" id="36_ft4ya"]
 [ext_resource type="Script" uid="uid://suflpospr30v" path="res://Scripts/Objects/W1/Level 1/death_Plain.gd" id="37_w17xt"]
 [ext_resource type="Script" uid="uid://b87qfq22j3gs5" path="res://Scripts/Objects/W4/Strömung.gd" id="38_j00xr"]
-[ext_resource type="Script" uid="uid://du1hc4tbk6yki" path="res://Scripts/Objects/blue_drop.gd" id="41_kf0nu"]
 [ext_resource type="Texture2D" uid="uid://c0dl6v5qdy1qe" path="res://Sprites/Slime/Slime-Blue/Slime-drop.png" id="42_hpuft"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0xlq"]
@@ -3623,6 +3623,18 @@ sources/1 = SubResource("TileSetAtlasSource_j00xr")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hpuft"]
 polygon = PackedVector2Array(2.25, -2.75, 2.25, -2.75, 306.25, -2.75, 306.25, -50.75, 215.25, -50.75, 210.25, -58.75, 210.25, -96.75, 212.25, -98.75, 258.25, -98.75, 258.25, -192.75, 260.5, -194.75, 306.25, -194.75, 306.25, -288.75, 308.25, -290.75, 336.25, -290.75, 338.25, -288.75, 338.25, -162.75, 370.25, -162.75, 370.25, -2.75, 578, -2.75, 578.25, 45.25, -45.75, 45.25, -45.75, -946.75, 2.25, -946.75, 2.25, -386.75, 128.25, -386.75, 130.25, -384.75, 130.25, -379.75, 129.25, -375.75, 128.25, -373.75, 125.25, -370.75, 66.25, -370.75, 66.25, -356.75, 64.25, -354.75, 2.25, -354.75, 2.25, -2.75, 2.25, -2.75)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_giuqk"]
+size = Vector2(12, 16)
+
+[sub_resource type="Gradient" id="Gradient_qi5bv"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_17tqr"]
+gradient = SubResource("Gradient_qi5bv")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.6, 0)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_jsro5"]
 resource_name = "Slime"
 animations = [{
@@ -3716,17 +3728,6 @@ size = Vector2(19832, 133.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0hvy"]
 size = Vector2(8443, 4037)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_npgsf"]
-
-[sub_resource type="Gradient" id="Gradient_qi5bv"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_17tqr"]
-gradient = SubResource("Gradient_qi5bv")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.6, 0)
-
 [node name="Level21" type="Node2D"]
 
 [node name="ColorRect2" type="ColorRect" parent="."]
@@ -3785,7 +3786,7 @@ texture = ExtResource("5_08hkj")
 position = Vector2(6634, -969)
 collision_layer = 2
 script = ExtResource("6_kf0nu")
-player = NodePath("../SlimePlayerglow")
+player = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(185, 3)
@@ -3882,37 +3883,23 @@ coin_id = "C212"
 position = Vector2(6386, -2204)
 coin_id = "C213"
 
-[node name="SlimePlayerglow" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
-visible = false
-position = Vector2(-1611, -78)
-disable_mode = 2
-collision_mask = 2
-gravity_scale = 0.5
-continuous_cd = 2
-contact_monitor = true
-max_contacts_reported = 4
-script = ExtResource("22_e7y2n")
+[node name="power up" type="Area2D" parent="."]
+position = Vector2(-673, -102)
+scale = Vector2(4, 4)
+collision_layer = 2
+script = ExtResource("19_j00xr")
+slime_type = 4
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayerglow"]
-position = Vector2(5, -19)
-scale = Vector2(2.9825, 2.96875)
-sprite_frames = SubResource("SpriteFrames_jsro5")
-animation = &"charge"
-autoplay = "idle"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="power up"]
+shape = SubResource("RectangleShape2D_giuqk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SlimePlayerglow"]
-position = Vector2(5, -17.5)
-shape = SubResource("RectangleShape2D_gysy4")
+[node name="Sprite2D" type="Sprite2D" parent="power up"]
+texture = ExtResource("42_hpuft")
 
-[node name="SlimeJump" type="AudioStreamPlayer" parent="SlimePlayerglow"]
-stream = ExtResource("33_r3cds")
-bus = &"SFX"
-
-[node name="PointLight2D" type="PointLight2D" parent="SlimePlayerglow"]
-color = Color(3.1766297e-06, 0.9973003, 0.36689553, 1)
-energy = 0.5
-texture = SubResource("GradientTexture2D_j00xr")
-texture_scale = 15.0
+[node name="PointLight2D" type="PointLight2D" parent="power up"]
+scale = Vector2(0.25, 0.25)
+texture = SubResource("GradientTexture2D_17tqr")
+texture_scale = 3.0
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player", "hide_triggers"]]
 position = Vector2(-1611, -78)
@@ -3946,6 +3933,12 @@ energy = 0.5
 texture = SubResource("GradientTexture2D_j00xr")
 texture_scale = 15.0
 
+[node name="PointLight2D2" type="PointLight2D" parent="SlimePlayer"]
+color = Color(3.1766297e-06, 0.9973003, 0.36689553, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_j00xr")
+texture_scale = 15.0
+
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_3et3l")
 offset_left = -1953.0
@@ -3960,11 +3953,10 @@ autoplay = true
 bus = &"Music"
 parameters/looping = true
 
-[node name="Death Plain" type="Area2D" parent="." node_paths=PackedStringArray("player")]
+[node name="Death Plain" type="Area2D" parent="."]
 position = Vector2(2521, 270)
 collision_layer = 2
 script = ExtResource("37_w17xt")
-player = NodePath("../SlimePlayerglow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
 position = Vector2(-36, 0.375)
@@ -3977,7 +3969,7 @@ bus = &"SFX"
 [node name="Strömung" type="Area2D" parent="."]
 position = Vector2(1193, 370)
 script = ExtResource("38_j00xr")
-push_force = 700.0
+push_force = 400.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Strömung"]
 position = Vector2(1212.5, -2211.5)
@@ -3985,21 +3977,5 @@ shape = SubResource("RectangleShape2D_q0hvy")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.48570347, 0.48570353, 0.48570347, 1)
-
-[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("slime_player_blue")]
-position = Vector2(-673, -102)
-script = ExtResource("41_kf0nu")
-slime_player_blue = NodePath("../SlimePlayerglow")
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("42_hpuft")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2(2.5, 2.5)
-shape = SubResource("RectangleShape2D_npgsf")
-
-[node name="PointLight2D" type="PointLight2D" parent="Area2D"]
-texture = SubResource("GradientTexture2D_17tqr")
 
 [node name="HUD" parent="." instance=ExtResource("35_735s7")]

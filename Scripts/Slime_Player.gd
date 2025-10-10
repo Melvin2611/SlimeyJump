@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+class_name SlimePlayer
+
 # Variablen für die Mechanik
 var is_aiming = false
 var aim_start_pos: Vector2
@@ -11,11 +13,17 @@ var has_squished = false
 var air_fling_count = 0
 @export var max_air_flings = 1
 var current_platform: Node = null
-var ignore_platform_next_frame = false  # Flag gegen Stuck nach Fling
-var using_controller = false  # Neuer Flag, um zwischen Maus und Controller zu unterscheiden
+var ignore_platform_next_frame = false
+var using_controller = false
+var is_switching = false
 
 # Neue exportierte Variable für die Versteck-Mechanik
 @export var hide_on_hit_group: String = "hide_triggers"
+
+enum SlimeType { DEFAULT, BLUE, RED, SUPER, LIGHT }
+
+@export var current_slime_type: SlimeType = SlimeType.DEFAULT
+
 
 # Referenz zum AnimatedSprite2D
 @onready var animated_sprite = $AnimatedSprite2D
@@ -25,19 +33,71 @@ func _ready():
 	lock_rotation = true
 	contact_monitor = true
 	max_contacts_reported = 4
-	linear_damp = 0.5  # Reduzierte Dämpfung
-	# Reduziere Reibung für alle TileMapLayer
+	linear_damp = 0.5
+	aim_start_pos = global_position
+	aim_current_pos = global_position
 	for layer in get_tree().get_nodes_in_group("tilemap_layers"):
 		if layer is TileMapLayer:
-			layer.collision_friction = 0.05  # Sehr niedrige Reibung
-	# Connect signals für Animation-Triggers
+			layer.collision_friction = 0.05
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	animated_sprite.animation_finished.connect(_on_animation_finished)
 	if animated_sprite.sprite_frames:
 		animated_sprite.sprite_frames.set_animation_loop("squish", false)
+	apply_slime_properties()
 
-# Ground-Detection: Mit colliding_bodies für Animationen
+func apply_slime_properties():
+	match current_slime_type:
+		SlimeType.DEFAULT:
+			gravity_scale = 1.0
+			mass = 1.0
+			force_multiplier = 4.0
+			max_air_flings = 1
+			if has_node("PointLight2D"):
+				$PointLight2D.visible = false
+			animated_sprite.play("idle")
+			update_animation()
+
+		SlimeType.BLUE:
+			gravity_scale = 0.5
+			mass = 1.0
+			force_multiplier = 8.0
+			max_air_flings = 1
+			if has_node("PointLight2D"):
+				$PointLight2D.visible = false
+			animated_sprite.play("idle_blue")
+			update_animation()
+
+		SlimeType.RED:
+			gravity_scale = 1.2
+			mass = 1.2
+			force_multiplier = 4.0
+			max_air_flings = 1
+			if has_node("PointLight2D"):
+				$PointLight2D.visible = false
+			animated_sprite.play("idle_red")
+			update_animation()
+
+		SlimeType.SUPER:
+			gravity_scale = 0.8
+			mass = 1.0
+			force_multiplier = 7.0
+			max_air_flings = 2
+			if has_node("PointLight2D"):
+				$PointLight2D.visible = true
+			animated_sprite.play("idle_super")
+			update_animation()
+
+		SlimeType.LIGHT:
+			gravity_scale = 1.0
+			mass = 1.0
+			force_multiplier = 4.0
+			max_air_flings = 1
+			if has_node("PointLight2D"):
+				$PointLight2D.visible = true
+			animated_sprite.play("idle")
+			update_animation()
+
 func _physics_process(_delta: float):
 	var colliding_bodies = get_colliding_bodies()
 	var was_on_ground = is_on_ground
@@ -55,19 +115,18 @@ func _physics_process(_delta: float):
 		if is_on_ground:
 			air_fling_count = 0
 			has_squished = false
-		_animation()
+		update_animation()
 
-	_animation()
+	update_animation()
 	ignore_platform_next_frame = false
 
-# Plattform-Sync: In integrate_forces mit Contacts und Setzen
 func _integrate_forces(state: PhysicsDirectBodyState2D):
 	if ignore_platform_next_frame:
-		return  # Skip nach Fling
+		return
 
 	var has_platform_contact = false
 	var platform: Node = null
-	var platform_direction_type = 0  # Default horizontal
+	var platform_direction_type = 0
 
 	for i in range(state.get_contact_count()):
 		var collider = state.get_contact_collider_object(i)
@@ -86,68 +145,108 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		else:
 			state.linear_velocity.y = platform_velocity.y
 
-# Signals für zusätzliche Triggers
 func _on_body_entered(body: Node):
 	if body is TileMapLayer or body.is_in_group("platforms"):
-		_animation()
+		update_animation()
 	
-	# Neue Versteck-Logik: Verstecke den Player, wenn er einen Body in der exportierten Gruppe trifft
 	if not hide_on_hit_group.is_empty() and body.is_in_group(hide_on_hit_group):
 		animated_sprite.visible = false
-		linear_velocity = Vector2.ZERO  # Optional: Stoppe die Bewegung
+		linear_velocity = Vector2.ZERO
 
 func _on_body_exited(body: Node):
 	if body is TileMapLayer or body.is_in_group("platforms"):
-		_animation()
+		update_animation()
 
-# Animation fertig
 func _on_animation_finished():
 	if is_on_ground and animated_sprite.animation == "squish":
 		has_squished = true
-		_animation()
+		update_animation()
 
-# Input-Check (entfernt, da Berührungen von überall akzeptiert werden)
-# func _is_input_on_slime(input_pos: Vector2) -> bool: ... (nicht mehr benötigt)
+func reset_state():
+	var keep_position = global_position
+	print("[RESET] START, global_position=", global_position)
+
+	is_aiming = false
+	aim_start_pos = global_position
+	aim_current_pos = global_position
+	linear_velocity = Vector2.ZERO
+	air_fling_count = 0
+	has_squished = false
+	is_on_ground = false
+	current_platform = null
+	ignore_platform_next_frame = false
+	using_controller = false
+	is_switching = true
+
+	animated_sprite.play("idle")
+
+	# Physik 1 Frame aussetzen, damit Position nicht "springt"
+	freeze = true
+	await get_tree().process_frame
+	global_position = keep_position
+	freeze = false
+
+	await get_tree().create_timer(0.2).timeout
+	is_switching = false
+
+	global_position = keep_position
+	print("[RESET] END, global_position=", global_position)
 
 func _input(event):
+	if is_switching:
+		print("Input ignored: is_switching is true")
+		return
+
+	# 🖱️ Maus-Eingabe
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed and (is_on_ground or air_fling_count < max_air_flings):
+			print("Mouse button pressed: starting aim")
 			is_aiming = true
-			aim_start_pos = get_global_mouse_position()  # Setze auf ersten Touch-Punkt
-			aim_current_pos = get_global_mouse_position()
+			aim_start_pos = get_global_mouse_position()  # <-- Berührpunkt ist Startpunkt!
+			aim_current_pos = aim_start_pos
 			linear_velocity = Vector2.ZERO
-			_animation()
+			update_animation()
 			queue_redraw()
+
 		elif not event.pressed and is_aiming:
+			print("Mouse button released: applying impulse")
 			is_aiming = false
 			ignore_platform_next_frame = true
-			_animation()
+			update_animation()
 			queue_redraw()
 			_apply_impulse()
 			if not is_on_ground:
 				air_fling_count += 1
+
 	elif event is InputEventMouseMotion and is_aiming:
 		aim_current_pos = get_global_mouse_position()
 		queue_redraw()
+
+	# 📱 Touch-Eingabe
 	elif event is InputEventScreenTouch:
 		var viewport = get_viewport()
 		var canvas_transform = viewport.get_canvas_transform()
 		var touch_global = canvas_transform.affine_inverse() * event.position
+
 		if event.pressed and (is_on_ground or air_fling_count < max_air_flings):
+			print("Screen touch: starting aim")
 			is_aiming = true
-			aim_start_pos = touch_global  # Setze auf ersten Touch-Punkt
+			aim_start_pos = touch_global  # <-- Hier auch: Startpunkt = Touchpunkt
 			aim_current_pos = touch_global
 			linear_velocity = Vector2.ZERO
-			_animation()
+			update_animation()
 			queue_redraw()
+
 		elif not event.pressed and is_aiming:
+			print("Screen touch released: applying impulse")
 			is_aiming = false
 			ignore_platform_next_frame = true
-			_animation()
+			update_animation()
 			queue_redraw()
 			_apply_impulse()
 			if not is_on_ground:
 				air_fling_count += 1
+
 	elif event is InputEventScreenDrag and is_aiming:
 		var viewport = get_viewport()
 		var canvas_transform = viewport.get_canvas_transform()
@@ -155,43 +254,49 @@ func _input(event):
 		aim_current_pos = drag_global
 		queue_redraw()
 
+
 func _process(_delta: float):
+	if is_switching:
+		print("Controller input ignored: is_switching is true")
+		return
+
 	var stick_x = Input.get_joy_axis(0, JOY_AXIS_LEFT_X)
 	var stick_y = Input.get_joy_axis(0, JOY_AXIS_LEFT_Y)
 	var stick_vector = Vector2(stick_x, stick_y)
 	var deadzone = 0.2
 
 	if stick_vector.length() > deadzone and (is_on_ground or air_fling_count < max_air_flings) and not is_aiming:
+		print("Controller input: starting aim")
 		is_aiming = true
 		using_controller = true
-		aim_start_pos = global_position  # Starte vom Zentrum des Slimes
+		aim_start_pos = global_position
 		linear_velocity = Vector2.ZERO
-		_animation()
+		update_animation()
 		queue_redraw()
 
 	if is_aiming and using_controller and stick_vector.length() > deadzone:
 		var drag_length = stick_vector.length() * max_drag_distance
 		var direction = stick_vector.normalized()
-		aim_current_pos = aim_start_pos + direction * drag_length  # Ziehen in Richtung des Sticks
+		aim_current_pos = aim_start_pos + direction * drag_length
 		queue_redraw()
 	elif is_aiming and using_controller and stick_vector.length() <= deadzone:
+		print("Controller input released: applying impulse")
 		is_aiming = false
 		using_controller = false
 		ignore_platform_next_frame = true
-		_animation()
+		update_animation()
 		queue_redraw()
 		_apply_impulse()
 		if not is_on_ground:
 			air_fling_count += 1
 
-# Draw Trajectory
 func _draw():
-	if is_aiming:
-		# aim_start_pos bleibt der erste Touch-Punkt, nicht mehr auf global_position setzen
+	if is_aiming and aim_start_pos != null and aim_current_pos != null:
 		var drag_vector = aim_current_pos - aim_start_pos
 		if drag_vector.length() > max_drag_distance:
 			drag_vector = drag_vector.normalized() * max_drag_distance
 			aim_current_pos = aim_start_pos + drag_vector
+
 		var start_point = to_local(aim_start_pos)
 		var end_point = to_local(aim_current_pos)
 		var num_dots = 10
@@ -203,31 +308,71 @@ func _draw():
 			var radius = max_radius - (max_radius - min_radius) * t
 			draw_circle(point, radius, Color(0.4, 0.4, 0.4, 0.5))
 
-# Apply Impulse
+
 func _apply_impulse():
+	if is_switching:
+		print("Impulse blocked: is_switching is true")
+		return
+
 	var drag_vector = aim_start_pos - aim_current_pos
 	var force = drag_vector * force_multiplier
 	var max_force = 1000.0
 	if force.length() > max_force:
 		force = force.normalized() * max_force
+	if drag_vector.length() > max_drag_distance * 2:
+		print("Impulse blocked: drag_vector too large, drag_vector=", drag_vector)
+		return
+	print("Applying impulse: aim_start_pos=", aim_start_pos, ", aim_current_pos=", aim_current_pos, ", force=", force, ", global_position=", global_position)
 	apply_central_impulse(force)
-	_animation()
+	update_animation()
 
-# Animation
-func _animation():
+func change_slime(new_type: SlimeType):
+	if is_switching:
+		return
+
+	is_switching = true
+	current_slime_type = new_type
+
+	reset_state()
+	apply_slime_properties()
+
+	await get_tree().create_timer(0.3).timeout
+	is_switching = false
+
+func get_animation_name(base_name: String) -> String:
+	match current_slime_type:
+		SlimeType.DEFAULT:
+			return base_name
+		SlimeType.BLUE:
+			return base_name + "_blue"
+		SlimeType.RED:
+			return base_name + "_red"
+		SlimeType.SUPER:
+			return base_name + "_super"
+		SlimeType.LIGHT:
+			return base_name
+	return base_name
+
+func update_animation():
 	if is_aiming:
-		if animated_sprite.animation != "charge":
-			animated_sprite.play("charge")
+		var anim_name = get_animation_name("charge")
+		if animated_sprite.animation != anim_name:
+			animated_sprite.play(anim_name)
 			if using_controller:
-				Input.start_joy_vibration(0, 0.5, 0.5, 0.5)  # Vibriere Controller (weak/strong magnitude 0.5, Dauer 0.5s)
+				Input.start_joy_vibration(0, 0.5, 0.5, 0.5)
 			else:
-				Input.vibrate_handheld(500)  # Vibriere Handy (Android/iOS, 500ms)
+				Input.vibrate_handheld(500)
 	elif is_on_ground:
-		if not has_squished and animated_sprite.animation != "squish":
-			animated_sprite.play("squish")
-		elif has_squished and animated_sprite.animation != "idle":
-			animated_sprite.play("idle")
+		if not has_squished:
+			var anim_name = get_animation_name("squish")
+			if animated_sprite.animation != anim_name:
+				animated_sprite.play(anim_name)
+		else:
+			var anim_name = get_animation_name("idle")
+			if animated_sprite.animation != anim_name:
+				animated_sprite.play(anim_name)
 	else:
-		if animated_sprite.animation != "fling":
-			animated_sprite.play("fling")
+		var anim_name = get_animation_name("fling")
+		if animated_sprite.animation != anim_name:
+			animated_sprite.play(anim_name)
 			$SlimeJump.play()

@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var other_area = $Area2D  # Pfad zur zweiten Area2D, direktes Kind
 var has_been_entered = false  # Flag, um zu verfolgen, ob die Area2D bereits betreten wurde
+@export var up_move: int = 500
 
 func _ready():
 	# Nur die zweite Area2D wird auf monitoring false gesetzt
@@ -18,4 +19,4 @@ func _on_body_entered(_body):
 		other_area.monitoring = true
 		# Erstelle einen Tween für die Bewegung
 		var tween = create_tween()
-		tween.tween_property(other_area, "position:y", other_area.position.y - 500, 0.5).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(other_area, "position:y", other_area.position.y - up_move, 0.5).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)

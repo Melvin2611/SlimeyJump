@@ -1,67 +1,46 @@
-[gd_scene load_steps=84 format=4 uid="uid://baum21wso1mxo"]
+[gd_scene load_steps=61 format=4 uid="uid://baum21wso1mxo"]
 
-[ext_resource type="Texture2D" uid="uid://dstk4ykqavkaa" path="res://Sprites/Objects/Sprites/plank-backdrop.png" id="1_7gxwp"]
+[ext_resource type="Texture2D" uid="uid://dstk4ykqavkaa" path="res://Sprites/plank-backdrop.png" id="1_7gxwp"]
 [ext_resource type="Script" uid="uid://b0dvkova1i6aq" path="res://Scripts/Objects/W2/Level 11/GoalL11.gd" id="1_87ry0"]
-[ext_resource type="Texture2D" uid="uid://dt4jeqa3aeb1s" path="res://Sprites/Objects/Sprites/Objects/door2.png" id="2_p6j3a"]
-[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Sprites/Objects/Treasure-chest.png" id="4_p6j3a"]
+[ext_resource type="Texture2D" uid="uid://dt4jeqa3aeb1s" path="res://Sprites/Objects/door2.png" id="2_p6j3a"]
+[ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="4_p6j3a"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="4_piki2"]
 [ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="5_p6j3a"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="8_mg0kr"]
 [ext_resource type="Script" uid="uid://cs4bwivxtx3pb" path="res://Scripts/Objects/W1/Level 3/door.gd" id="9_l35bf"]
-[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sprites/Objects/Sign.png" id="10_ahh0k"]
-[ext_resource type="Texture2D" uid="uid://cs1mfpjvebrhy" path="res://Sprites/Objects/Sprites/Objects/Door.png" id="10_kluhm"]
-[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Sprites/Objects/Speech-Bubble.png" id="11_k6txc"]
-[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/Objects/Sprites/15 Blob TileMap 16x16.png" id="11_u4nw5"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="10_ahh0k"]
+[ext_resource type="Texture2D" uid="uid://cs1mfpjvebrhy" path="res://Sprites/Objects/Door.png" id="10_kluhm"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="11_k6txc"]
+[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="11_u4nw5"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="12_l67ua"]
-[ext_resource type="Texture2D" uid="uid://bc2fxyigartxw" path="res://Sprites/Objects/Sprites/wood_tileset.png" id="12_ntuus"]
+[ext_resource type="Texture2D" uid="uid://bc2fxyigartxw" path="res://Sprites/wood_tileset.png" id="12_ntuus"]
 [ext_resource type="Script" uid="uid://yvllfwn1cdix" path="res://Scripts/Objects/Conveyorbelt.gd" id="13_aq87c"]
 [ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="13_k6txc"]
-[ext_resource type="Texture2D" uid="uid://7mnoohorfu3m" path="res://Sprites/Objects/Sprites/wood_tileset-pers.png" id="13_oosvs"]
-[ext_resource type="Texture2D" uid="uid://c2knc1mbwofp1" path="res://Sprites/Objects/Sprites/Objects/conveyor/Conveyor1.png" id="14_k5hlt"]
+[ext_resource type="Texture2D" uid="uid://7mnoohorfu3m" path="res://Sprites/wood_tileset-pers.png" id="13_oosvs"]
+[ext_resource type="Texture2D" uid="uid://c2knc1mbwofp1" path="res://Sprites/Objects/conveyor/Conveyor1.png" id="14_k5hlt"]
 [ext_resource type="Script" uid="uid://do4d8v42bq5pn" path="res://Scripts/Objects/heavy-button.gd" id="14_mg0kr"]
-[ext_resource type="Texture2D" uid="uid://0cds7ilgpubl" path="res://Sprites/Objects/Sprites/Objects/conveyor/Conveyor2.png" id="15_133bt"]
-[ext_resource type="Texture2D" uid="uid://cleqou8o6v6xe" path="res://Sprites/Objects/Sprites/Objects/Button/heavybutton/Heavy-Button2.png" id="15_mkq7l"]
-[ext_resource type="Texture2D" uid="uid://c7t0va08u87jt" path="res://Sprites/Objects/Sprites/Objects/Button/heavybutton/Heavy-Button1.png" id="16_ectdg"]
-[ext_resource type="Texture2D" uid="uid://b0hndsiwsakno" path="res://Sprites/Objects/Sprites/Objects/conveyor/Conveyor3.png" id="16_u6rn5"]
-[ext_resource type="Texture2D" uid="uid://b3w232g0e002q" path="res://Sprites/Objects/Sprites/Objects/conveyor/Conveyor4.png" id="17_g45rs"]
+[ext_resource type="Texture2D" uid="uid://0cds7ilgpubl" path="res://Sprites/Objects/conveyor/Conveyor2.png" id="15_133bt"]
+[ext_resource type="Texture2D" uid="uid://cleqou8o6v6xe" path="res://Sprites/Objects/Button/heavybutton/Heavy-Button2.png" id="15_mkq7l"]
+[ext_resource type="Texture2D" uid="uid://c7t0va08u87jt" path="res://Sprites/Objects/Button/heavybutton/Heavy-Button1.png" id="16_ectdg"]
+[ext_resource type="Texture2D" uid="uid://b0hndsiwsakno" path="res://Sprites/Objects/conveyor/Conveyor3.png" id="16_u6rn5"]
+[ext_resource type="Texture2D" uid="uid://b3w232g0e002q" path="res://Sprites/Objects/conveyor/Conveyor4.png" id="17_g45rs"]
 [ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="18_1dhys"]
-[ext_resource type="Script" uid="uid://qm4b0b4kysjk" path="res://Scripts/Objects/Red_drop.gd" id="19_1ta58"]
-[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge1.png" id="19_7gxwp"]
-[ext_resource type="Script" uid="uid://chnnslmx0qie" path="res://Scripts/Objects/green_drop.gd" id="19_jo7on"]
-[ext_resource type="Texture2D" uid="uid://qlmp7tjyyup0" path="res://Sprites/Objects/Sprites/Slime/Slime-red/Red-drop.png" id="20_1ta58"]
-[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge2.png" id="20_mg0kr"]
-[ext_resource type="Texture2D" uid="uid://c0dl6v5qdy1qe" path="res://Sprites/Objects/Sprites/Slime/Slime-Blue/Slime-drop.png" id="21_2wmkw"]
+[ext_resource type="Texture2D" uid="uid://qlmp7tjyyup0" path="res://Sprites/Slime/Slime-red/Red-drop.png" id="20_1ta58"]
+[ext_resource type="Texture2D" uid="uid://c0dl6v5qdy1qe" path="res://Sprites/Slime/Slime-Blue/Slime-drop.png" id="21_2wmkw"]
 [ext_resource type="Script" uid="uid://fsqlbp2xeo0k" path="res://Scripts/Objects/leap.gd" id="21_11pvu"]
-[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling1.png" id="21_mkq7l"]
-[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling2.png" id="22_ectdg"]
-[ext_resource type="Texture2D" uid="uid://dpu2apdisajsx" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform1.png" id="22_g8h13"]
-[ext_resource type="Texture2D" uid="uid://bcx5vhuvamc8e" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform2.png" id="23_ahh0k"]
-[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle2.png" id="23_v84v2"]
-[ext_resource type="Texture2D" uid="uid://dlqn4fhsvpg10" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform3.png" id="24_k6txc"]
-[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle1.png" id="24_rwfc8"]
-[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish1.png" id="25_jj22k"]
-[ext_resource type="Texture2D" uid="uid://cooq000h0kuyn" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform4.png" id="25_l67ua"]
-[ext_resource type="Texture2D" uid="uid://cqpsluoeqys70" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform5.png" id="26_7txc1"]
-[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish2.png" id="26_p6j3a"]
-[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish3.png" id="27_11pvu"]
-[ext_resource type="Texture2D" uid="uid://bfd1jdx3sq1w5" path="res://Sprites/Objects/Sprites/Objects/leap platform/Leap-platform6.png" id="27_rsk25"]
-[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish4.png" id="28_g8h13"]
+[ext_resource type="Texture2D" uid="uid://dpu2apdisajsx" path="res://Sprites/Objects/leap platform/Leap-platform1.png" id="22_g8h13"]
+[ext_resource type="Texture2D" uid="uid://bcx5vhuvamc8e" path="res://Sprites/Objects/leap platform/Leap-platform2.png" id="23_ahh0k"]
+[ext_resource type="Texture2D" uid="uid://dlqn4fhsvpg10" path="res://Sprites/Objects/leap platform/Leap-platform3.png" id="24_k6txc"]
+[ext_resource type="Texture2D" uid="uid://cooq000h0kuyn" path="res://Sprites/Objects/leap platform/Leap-platform4.png" id="25_l67ua"]
+[ext_resource type="Texture2D" uid="uid://cqpsluoeqys70" path="res://Sprites/Objects/leap platform/Leap-platform5.png" id="26_7txc1"]
+[ext_resource type="Texture2D" uid="uid://bfd1jdx3sq1w5" path="res://Sprites/Objects/leap platform/Leap-platform6.png" id="27_rsk25"]
 [ext_resource type="AudioStream" uid="uid://bxbi040lktj06" path="res://Sound/sfx/cartoon-jump-6462.mp3" id="28_royim"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="29_ahh0k"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="32_7txc1"]
 [ext_resource type="AudioStream" uid="uid://dvd78rljjr5ap" path="res://Sound/mus/magic-forest-318165.mp3" id="33_rsk25"]
-[ext_resource type="Texture2D" uid="uid://dhhs8dy2umlax" path="res://Sprites/Objects/Sprites/Slime/Slime-red/charge/Slime-charge1.png" id="35_g45rs"]
-[ext_resource type="Texture2D" uid="uid://c4o58fvt48afp" path="res://Sprites/Objects/Sprites/Slime/Slime-red/charge/Slime-charge2.png" id="36_1dhys"]
-[ext_resource type="Texture2D" uid="uid://dqwvibh1gq45k" path="res://Sprites/Objects/Sprites/Slime/Slime-red/fling/Slime-fling1.png" id="37_7gxwp"]
-[ext_resource type="Texture2D" uid="uid://bf74k8mn0f3mb" path="res://Sprites/Objects/Sprites/Slime/Slime-red/fling/Slime-fling2.png" id="38_mg0kr"]
-[ext_resource type="Texture2D" uid="uid://cj83jk56aakn5" path="res://Sprites/Objects/Sprites/Slime/Slime-red/idle/Slime-idle1.png" id="39_mkq7l"]
-[ext_resource type="Texture2D" uid="uid://buq0sh7ptfloe" path="res://Sprites/Objects/Sprites/Slime/Slime-red/idle/Slime-idle2.png" id="40_ectdg"]
-[ext_resource type="Texture2D" uid="uid://cj8pmxpnhqtx7" path="res://Sprites/Objects/Sprites/Slime/Slime-red/squish/Slime-squish1.png" id="41_v84v2"]
-[ext_resource type="Texture2D" uid="uid://cojbqvho7w8se" path="res://Sprites/Objects/Sprites/Slime/Slime-red/squish/Slime-squish2.png" id="42_rwfc8"]
-[ext_resource type="Texture2D" uid="uid://863nndevec5s" path="res://Sprites/Objects/Sprites/Slime/Slime-red/squish/Slime-squish3.png" id="43_jj22k"]
-[ext_resource type="Texture2D" uid="uid://brnyvsyd00l6k" path="res://Sprites/Objects/Sprites/Slime/Slime-red/squish/Slime-squish4.png" id="44_p6j3a"]
-[ext_resource type="Texture2D" uid="uid://b16brx4vswi10" path="res://Sprites/Objects/Sprites/Slime/Slime-red/squish/Slime-squish5.png" id="45_11pvu"]
-[ext_resource type="Texture2D" uid="uid://cye6awto0xkmu" path="res://Sprites/Objects/Sprites/Objects/crate/heavy-Crate.png" id="51_mkq7l"]
+[ext_resource type="Script" uid="uid://dp67dj5n4hcus" path="res://Scripts/Objects/PowerUp.gd" id="34_ahh0k"]
+[ext_resource type="SpriteFrames" uid="uid://cbkv3giprpc4" path="res://Sprites/Slime/Slime.tres" id="38_l35bf"]
+[ext_resource type="Texture2D" uid="uid://cye6awto0xkmu" path="res://Sprites/Objects/crate/heavy-Crate.png" id="51_mkq7l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_royim"]
 size = Vector2(384, 256)
@@ -2359,121 +2338,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0q5rg"]
-size = Vector2(12, 15.75)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_empks"]
-resource_name = "Slime"
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_7gxwp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_mg0kr")
-}],
-"loop": true,
-"name": &"charge",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("21_mkq7l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_ectdg")
-}],
-"loop": true,
-"name": &"fling",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("23_v84v2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_rwfc8")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 5.0,
-"texture": ExtResource("25_jj22k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_p6j3a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_11pvu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_g8h13")
-}],
-"loop": true,
-"name": &"squish",
-"speed": 10.0
-}]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6txc"]
+size = Vector2(12, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5spx"]
 size = Vector2(98, 92)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_g8h13"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("35_g45rs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_1dhys")
-}],
-"loop": true,
-"name": &"charge",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("37_7gxwp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_mg0kr")
-}],
-"loop": true,
-"name": &"fling",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("39_mkq7l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_ectdg")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 5.0,
-"texture": ExtResource("41_v84v2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_rwfc8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_jj22k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_p6j3a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_11pvu")
-}],
-"loop": true,
-"name": &"squish",
-"speed": 10.0
-}]
 
 [node name="Level12" type="Node2D"]
 
@@ -2916,32 +2785,29 @@ volume_db = 15.0
 max_distance = 1000.0
 bus = &"SFX"
 
-[node name="Red Drop" type="Area2D" parent="." node_paths=PackedStringArray("slime_player_blue")]
-position = Vector2(-3, 116)
+[node name="power up" type="Area2D" parent="."]
+position = Vector2(-4, 115)
 scale = Vector2(4, 4)
-script = ExtResource("19_1ta58")
-slime_player_blue = NodePath("../SlimePlayerRed")
-target_position = Vector2(5276, 188)
+collision_layer = 2
+script = ExtResource("34_ahh0k")
+slime_type = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Red Drop"]
-position = Vector2(0, -0.125)
-shape = SubResource("RectangleShape2D_0q5rg")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="power up"]
+shape = SubResource("RectangleShape2D_k6txc")
 
-[node name="Sprite2D" type="Sprite2D" parent="Red Drop"]
+[node name="Sprite2D" type="Sprite2D" parent="power up"]
 texture = ExtResource("20_1ta58")
 
-[node name="Green Drop2" type="Area2D" parent="." node_paths=PackedStringArray("slime_player", "slime_player_other")]
-position = Vector2(0, -3497)
+[node name="power up2" type="Area2D" parent="."]
+position = Vector2(0, -3498)
 scale = Vector2(4, 4)
-script = ExtResource("19_jo7on")
-slime_player = NodePath("../SlimePlayer")
-slime_player_other = NodePath("../SlimePlayerRed")
+collision_layer = 2
+script = ExtResource("34_ahh0k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Green Drop2"]
-position = Vector2(0, -0.125)
-shape = SubResource("RectangleShape2D_0q5rg")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="power up2"]
+shape = SubResource("RectangleShape2D_k6txc")
 
-[node name="Sprite2D" type="Sprite2D" parent="Green Drop2"]
+[node name="Sprite2D" type="Sprite2D" parent="power up2"]
 texture = ExtResource("21_2wmkw")
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player"]]
@@ -2956,7 +2822,7 @@ script = ExtResource("18_1dhys")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayer"]
 position = Vector2(5, -19)
 scale = Vector2(2.9825, 2.96875)
-sprite_frames = SubResource("SpriteFrames_empks")
+sprite_frames = ExtResource("38_l35bf")
 animation = &"idle"
 autoplay = "idle"
 
@@ -2966,33 +2832,6 @@ position = Vector2(5, -18)
 shape = SubResource("RectangleShape2D_i5spx")
 
 [node name="SlimeJump" type="AudioStreamPlayer2D" parent="SlimePlayer"]
-stream = ExtResource("29_ahh0k")
-bus = &"SFX"
-
-[node name="SlimePlayerRed" type="RigidBody2D" parent="." groups=["Player"]]
-position = Vector2(5276, 188)
-disable_mode = 2
-collision_mask = 2
-mass = 1.2
-gravity_scale = 1.2
-continuous_cd = 2
-contact_monitor = true
-max_contacts_reported = 4
-script = ExtResource("18_1dhys")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayerRed"]
-position = Vector2(5, -19)
-scale = Vector2(2.9825, 2.96875)
-sprite_frames = SubResource("SpriteFrames_g8h13")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SlimePlayerRed"]
-visible = false
-position = Vector2(5, -18)
-shape = SubResource("RectangleShape2D_i5spx")
-
-[node name="SlimeJump" type="AudioStreamPlayer2D" parent="SlimePlayerRed"]
 stream = ExtResource("29_ahh0k")
 bus = &"SFX"
 
