@@ -503,6 +503,12 @@ offset_right = 24245.0
 offset_bottom = 3729.0
 color = Color(0.25882354, 0.1254902, 0.12941177, 1)
 
+[node name="ColorRect2" type="ColorRect" parent="Background"]
+offset_left = -3360.0
+offset_right = 24059.0
+offset_bottom = 2375.0
+color = Color(0.11764706, 0.039215688, 0.07058824, 1)
+
 [node name="Parallax2D3" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.9, 1)
 repeat_size = Vector2(960, 0)
@@ -625,10 +631,11 @@ position = Vector2(11293, -1613)
 scale = Vector2(4, 4)
 texture = ExtResource("5_eg2ma")
 
-[node name="Goal" type="Area2D" parent="."]
+[node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(22214, -55)
 collision_layer = 2
 script = ExtResource("6_sbyq1")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(808, -2630)

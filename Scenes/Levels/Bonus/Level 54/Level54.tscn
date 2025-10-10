@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://opmex364onhs" path="res://Sprites/background/weltraum/background_2.png" id="2_08fqu"]
 [ext_resource type="Texture2D" uid="uid://c6mkkf4ko88tb" path="res://Sprites/background/weltraum/background_3.png" id="3_o8bpn"]
 [ext_resource type="Texture2D" uid="uid://bpi4wedpqtoby" path="res://Sprites/background/weltraum/background_4.png" id="4_cx751"]
+[ext_resource type="Script" uid="uid://ccdjoqandgqj0" path="res://Scripts/Objects/W9/Level 54/GoalL54.gd" id="5_1glwq"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="5_anj75"]
-[ext_resource type="Script" uid="uid://ct5cdcvi671fc" path="res://Scripts/Objects/W9/Level 53/GoalL53.gd" id="6_t0ay5"]
 [ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="7_dabq5"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="8_ai6t6"]
 [ext_resource type="Texture2D" uid="uid://dh4f4lll8m2br" path="res://Sprites/Objects/Lava/Laval1.png" id="10_mjgu6"]
@@ -518,10 +518,11 @@ limit_end = Vector2(100000000, 100000000)
 scale = Vector2(4, 4)
 texture = ExtResource("4_cx751")
 
-[node name="Goal" type="Area2D" parent="."]
+[node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(38410, -2553)
 collision_layer = 2
-script = ExtResource("6_t0ay5")
+script = ExtResource("5_1glwq")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(-1, 0)
@@ -1048,7 +1049,7 @@ drag_vertical_enabled = true
 script = ExtResource("5_anj75")
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player"]]
-position = Vector2(27718, -1503)
+position = Vector2(76, -63)
 disable_mode = 2
 collision_mask = 2
 gravity_scale = 0.5

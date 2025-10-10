@@ -6853,7 +6853,7 @@ texture = ExtResource("8_hput7")
 position = Vector2(6914, -4999)
 collision_layer = 2
 script = ExtResource("9_n5khx")
-player = NodePath("")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(223, 43)

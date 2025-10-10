@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://bxcjkmhftwauh" path="res://Sprites/Objects/Smoke/Smoke5.png" id="17_46fh0"]
 [ext_resource type="Texture2D" uid="uid://bbmfywjmt224r" path="res://Sprites/Objects/Smoke/Smoke6.png" id="18_iiwxv"]
 [ext_resource type="Texture2D" uid="uid://dpje5bn5k2cf0" path="res://Sprites/Objects/Smoke/Vent.png" id="19_u7ex4"]
-[ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="20_lwh4e"]
 [ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="21_tul6v"]
 [ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="22_qm3sf"]
 [ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="23_adh6o"]
@@ -52,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://cvhrw7e3npvs4" path="res://Sprites/Objects/Button/OnePressbutton/Button1.png" id="39_4v6uw"]
 [ext_resource type="Script" uid="uid://yvllfwn1cdix" path="res://Scripts/Objects/Conveyorbelt.gd" id="40_1wp7w"]
 [ext_resource type="Texture2D" uid="uid://c2knc1mbwofp1" path="res://Sprites/Objects/conveyor/Conveyor1.png" id="41_qde4n"]
+[ext_resource type="Script" uid="uid://cqebogjlws6y5" path="res://Scripts/Slime_Player_Clone.gd" id="42_lff8f"]
 [ext_resource type="Texture2D" uid="uid://0cds7ilgpubl" path="res://Sprites/Objects/conveyor/Conveyor2.png" id="42_w0ssl"]
 [ext_resource type="Texture2D" uid="uid://b0hndsiwsakno" path="res://Sprites/Objects/conveyor/Conveyor3.png" id="43_rp3el"]
 [ext_resource type="Texture2D" uid="uid://b3w232g0e002q" path="res://Sprites/Objects/conveyor/Conveyor4.png" id="44_gu7n4"]
@@ -3526,10 +3526,11 @@ position = Vector2(1115, 475)
 scale = Vector2(8, 8)
 texture = ExtResource("1_fl24m")
 
-[node name="Goal" type="Area2D" parent="."]
+[node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(2922, -969)
 collision_layer = 2
 script = ExtResource("2_5e8ov")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(185, 3)
@@ -4382,7 +4383,7 @@ collision_mask = 2
 continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 4
-script = ExtResource("20_lwh4e")
+script = ExtResource("42_lff8f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayer"]
 position = Vector2(5, -19)
@@ -4406,7 +4407,7 @@ collision_mask = 3
 continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 4
-script = ExtResource("20_lwh4e")
+script = ExtResource("42_lff8f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayer2"]
 position = Vector2(5, -19)

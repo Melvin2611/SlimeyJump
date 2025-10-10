@@ -1,50 +1,50 @@
 [gd_scene load_steps=53 format=4 uid="uid://qx1du6ewxvwn"]
 
-[ext_resource type="Texture2D" uid="uid://6ap8s0ayytsf" path="res://Sprites/Objects/Sprites/background/Dungeon/BackgroundLayer1-169.png" id="1_5ihs5"]
-[ext_resource type="Texture2D" uid="uid://dugpenbj8qiuv" path="res://Sprites/Objects/Sprites/background/Dungeon/BackgroundLayer2-169.png" id="2_flgu7"]
-[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/Objects/Sprites/15 Blob TileMap 16x16.png" id="3_7f57o"]
+[ext_resource type="Texture2D" uid="uid://6ap8s0ayytsf" path="res://Sprites/background/Dungeon/BackgroundLayer1-169.png" id="1_5ihs5"]
+[ext_resource type="Texture2D" uid="uid://dugpenbj8qiuv" path="res://Sprites/background/Dungeon/BackgroundLayer2-169.png" id="2_flgu7"]
+[ext_resource type="Texture2D" uid="uid://bncks8jnmshrd" path="res://Sprites/15 Blob TileMap 16x16.png" id="3_7f57o"]
 [ext_resource type="Script" uid="uid://chk4yd65na0uw" path="res://Scripts/Objects/W1/Level 3/goalL3.gd" id="4_frfm6"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="5_frfm6"]
-[ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Sprites/Objects/Goal.png" id="5_u4ogi"]
+[ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="5_u4ogi"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="6_ovhyh"]
 [ext_resource type="Script" uid="uid://do8pyygfb2j8j" path="res://Scripts/Objects/W1/Level 3/spikeL3.gd" id="7_5ihs5"]
 [ext_resource type="AudioStream" uid="uid://cg4bwhsb2qiab" path="res://Sound/sfx/slime-impact-352473.mp3" id="7_ipch6"]
 [ext_resource type="Script" uid="uid://bfueaiaeontww" path="res://Scripts/Slime_Player.gd" id="7_kdldm"]
-[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge1.png" id="8_8h0s3"]
-[ext_resource type="Texture2D" uid="uid://bnvkpl632nh5t" path="res://Sprites/Objects/Sprites/Objects/Spike.png" id="8_wsvcu"]
-[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Objects/Sprites/Slime/Slime-charge/Slime-charge2.png" id="9_wsvcu"]
-[ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/Sprites/Objects/crate/Crate.png" id="10_5ihs5"]
-[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling1.png" id="10_7a0la"]
+[ext_resource type="Texture2D" uid="uid://8qo5ofajyhbw" path="res://Sprites/Slime/Slime-charge/Slime-charge1.png" id="8_8h0s3"]
+[ext_resource type="Texture2D" uid="uid://bnvkpl632nh5t" path="res://Sprites/Objects/Spike.png" id="8_wsvcu"]
+[ext_resource type="Texture2D" uid="uid://cqrrtfbdrng2v" path="res://Sprites/Slime/Slime-charge/Slime-charge2.png" id="9_wsvcu"]
+[ext_resource type="Texture2D" uid="uid://7jyiv0rif7w1" path="res://Sprites/Objects/crate/Crate.png" id="10_5ihs5"]
+[ext_resource type="Texture2D" uid="uid://dufl4g7i51pbw" path="res://Sprites/Slime/Slime-Fling/Slime-fling1.png" id="10_7a0la"]
 [ext_resource type="Script" uid="uid://b28yk7bf85j0w" path="res://Scripts/Objects/W1/Level 3/button.gd" id="11_flgu7"]
-[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Objects/Sprites/Slime/Slime-Fling/Slime-fling2.png" id="11_osyjc"]
-[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle2.png" id="12_4n7nk"]
-[ext_resource type="Texture2D" uid="uid://b1kf44lic3mle" path="res://Sprites/Objects/Sprites/Objects/Button/Button2.png" id="12_pyilj"]
-[ext_resource type="Texture2D" uid="uid://d084rij1ole7e" path="res://Sprites/Objects/Sprites/Objects/Button/Button1.png" id="13_1qr8o"]
-[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Objects/Sprites/Slime/Slime-idle/Slime-idle1.png" id="13_5ihs5"]
-[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish1.png" id="14_flgu7"]
+[ext_resource type="Texture2D" uid="uid://4ss0p2j6v80" path="res://Sprites/Slime/Slime-Fling/Slime-fling2.png" id="11_osyjc"]
+[ext_resource type="Texture2D" uid="uid://bq4bfyou5d5nu" path="res://Sprites/Slime/Slime-idle/Slime-idle2.png" id="12_4n7nk"]
+[ext_resource type="Texture2D" uid="uid://b1kf44lic3mle" path="res://Sprites/Objects/Button/Button2.png" id="12_pyilj"]
+[ext_resource type="Texture2D" uid="uid://d084rij1ole7e" path="res://Sprites/Objects/Button/Button1.png" id="13_1qr8o"]
+[ext_resource type="Texture2D" uid="uid://cumoipsfe2nug" path="res://Sprites/Slime/Slime-idle/Slime-idle1.png" id="13_5ihs5"]
+[ext_resource type="Texture2D" uid="uid://o5ial33w3g5k" path="res://Sprites/Slime/Slime-squish/Slime-squish1.png" id="14_flgu7"]
 [ext_resource type="Script" uid="uid://cs4bwivxtx3pb" path="res://Scripts/Objects/W1/Level 3/door.gd" id="14_t7hd2"]
 [ext_resource type="PackedScene" uid="uid://cl0bbaq3jye0q" path="res://Scenes/Objects/Coin.tscn" id="15_1qr8o"]
-[ext_resource type="Texture2D" uid="uid://cs1mfpjvebrhy" path="res://Sprites/Objects/Sprites/Objects/Door.png" id="15_agf52"]
+[ext_resource type="Texture2D" uid="uid://cs1mfpjvebrhy" path="res://Sprites/Objects/Door.png" id="15_agf52"]
 [ext_resource type="PackedScene" uid="uid://b2f8x4t5o7pun" path="res://Scenes/Objects/MovingPlatform.tscn" id="15_flgu7"]
-[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish2.png" id="15_pyilj"]
-[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish3.png" id="16_1qr8o"]
-[ext_resource type="Texture2D" uid="uid://bft8ky0g30kc1" path="res://Sprites/Objects/Sprites/Objects/Big-Void.png" id="17_1qr8o"]
-[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Objects/Sprites/Slime/Slime-squish/Slime-squish4.png" id="17_t7hd2"]
+[ext_resource type="Texture2D" uid="uid://b80048sw6auli" path="res://Sprites/Slime/Slime-squish/Slime-squish2.png" id="15_pyilj"]
+[ext_resource type="Texture2D" uid="uid://b5kscu7pj7rn2" path="res://Sprites/Slime/Slime-squish/Slime-squish3.png" id="16_1qr8o"]
+[ext_resource type="Texture2D" uid="uid://bft8ky0g30kc1" path="res://Sprites/Objects/Big-Void.png" id="17_1qr8o"]
+[ext_resource type="Texture2D" uid="uid://cpa2y7yk851vc" path="res://Sprites/Slime/Slime-squish/Slime-squish4.png" id="17_t7hd2"]
 [ext_resource type="Script" uid="uid://ctfxr1g87qjrr" path="res://Scripts/Objects/W1/Level 3/death_plainL3.gd" id="18_agf52"]
-[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sprites/Objects/Sign.png" id="18_f8bem"]
+[ext_resource type="Texture2D" uid="uid://5ipaj4xad2ac" path="res://Sprites/Objects/Sign.png" id="18_f8bem"]
 [ext_resource type="PackedScene" uid="uid://bwe04db4dy1ku" path="res://Scenes/Objects/hud.tscn" id="19_f8bem"]
-[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Sprites/Objects/Speech-Bubble.png" id="19_xmixj"]
+[ext_resource type="Texture2D" uid="uid://ceyjbaeqtutcx" path="res://Sprites/Objects/Speech-Bubble.png" id="19_xmixj"]
 [ext_resource type="AudioStream" uid="uid://ws6dua8evf1h" path="res://Sound/sfx/jump_c_02-102843.mp3" id="20_7f57o"]
 [ext_resource type="FontFile" uid="uid://dmknmcxlvkcm6" path="res://Miscealanous/m6x11plus.ttf" id="20_f8bem"]
 [ext_resource type="Script" uid="uid://bdwviq2fug1vc" path="res://Scripts/Label.gd" id="21_wwx7f"]
-[ext_resource type="Texture2D" uid="uid://flqjmb4dcls7" path="res://Sprites/Objects/Sprites/background/Dungeon/ForegroundLayer1-169.png" id="30_pyilj"]
+[ext_resource type="Texture2D" uid="uid://flqjmb4dcls7" path="res://Sprites/background/Dungeon/ForegroundLayer1-169.png" id="30_pyilj"]
 [ext_resource type="AudioStream" uid="uid://3rp5o4jnlwwj" path="res://Sound/mus/the-castle-267961.mp3" id="38_xmixj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jxwp"]
 size = Vector2(384, 256)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7a0la"]
-size = Vector2(9.75, 14)
+size = Vector2(9.75, 12.000001)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f8bem"]
 friction = 0.7
@@ -1217,6 +1217,32 @@ repeat_times = 8
 scale = Vector2(2, 2)
 texture = ExtResource("2_flgu7")
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(2580, 375)
+scale = Vector2(4, 4)
+texture = ExtResource("18_f8bem")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(2503, 281)
+scale = Vector2(4, 4)
+texture = ExtResource("19_xmixj")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -27.25
+offset_top = -14.0
+offset_right = 275.75
+offset_bottom = 99.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("20_f8bem")
+theme_override_font_sizes/font_size = 25
+text = "Der Knopf öffnet die Tür, aber
+nur so lange er unten ist. 
+Vielleicht gibt es hier ja etwas, 
+das uns helfen kann."
+script = ExtResource("21_wwx7f")
+text_key = "W1L3S1"
+
 [node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(8845, 310)
 collision_layer = 2
@@ -1406,7 +1432,7 @@ scale = Vector2(4, 4)
 script = ExtResource("7_5ihs5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spike10"]
-position = Vector2(2.875, 0)
+position = Vector2(2.875, -7.6293945e-06)
 shape = SubResource("RectangleShape2D_7a0la")
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike10"]
@@ -1625,32 +1651,6 @@ direction_type = 1
 position = Vector2(6781, 588)
 scale = Vector2(8, 8)
 texture = ExtResource("17_1qr8o")
-
-[node name="Sign" type="Sprite2D" parent="."]
-position = Vector2(2580, 375)
-scale = Vector2(4, 4)
-texture = ExtResource("18_f8bem")
-
-[node name="Speech-bubble" type="Sprite2D" parent="."]
-position = Vector2(2503, 281)
-scale = Vector2(4, 4)
-texture = ExtResource("19_xmixj")
-
-[node name="Label" type="Label" parent="Speech-bubble"]
-offset_left = -27.25
-offset_top = -14.0
-offset_right = 275.75
-offset_bottom = 99.0
-scale = Vector2(0.2, 0.2)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("20_f8bem")
-theme_override_font_sizes/font_size = 25
-text = "Der Knopf öffnet die Tür, aber
-nur so lange er unten ist. 
-Vielleicht gibt es hier ja etwas, 
-das uns helfen kann."
-script = ExtResource("21_wwx7f")
-text_key = "W1L3S1"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(262, 760)

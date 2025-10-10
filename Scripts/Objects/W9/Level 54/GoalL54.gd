@@ -4,10 +4,11 @@ extends Area2D
 
 func _ready():
 	body_entered.connect(_on_body_entered)
-	Global.set_current_level("Level 5")
 	
 func _on_body_entered(body: Node):
+	print("entered")
 	if body == player:
+		print("Player entered")
 		$AudioStreamPlayer2D.play()
-		await get_tree().create_timer(0.2).timeout
-		get_tree().change_scene_to_file("res://Scenes/Levels/W1/Level 5/level_5_complete.tscn")
+		await get_tree().create_timer(3.6).timeout
+		get_tree().change_scene_to_file("res://Scenes/Levels/Bonus/Level 54/level_54_complete.tscn")

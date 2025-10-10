@@ -4908,12 +4908,14 @@ collision_mask = 3
 position = Vector2(0, 1.125)
 shape = SubResource("RectangleShape2D_ocrv4")
 
-[node name="Button2" type="StaticBody2D" parent="." groups=["platforms"]]
+[node name="Button2" type="StaticBody2D" parent="." node_paths=PackedStringArray("ColorRect1", "ColorRect2") groups=["platforms"]]
 position = Vector2(-1693, -1254)
 scale = Vector2(4, 4)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("14_vlmq4")
+ColorRect1 = NodePath("../ColorRect3")
+ColorRect2 = NodePath("../ColorRect4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button2"]
 position = Vector2(0, 5)

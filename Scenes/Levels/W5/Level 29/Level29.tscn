@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bih75ysk80nip" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_3.png" id="3_fv3ie"]
 [ext_resource type="Texture2D" uid="uid://d2tm3ud7kdnnm" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_4.png" id="4_yduvm"]
 [ext_resource type="Texture2D" uid="uid://dtatqmjquf6q0" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_5.png" id="5_mk8mw"]
-[ext_resource type="Script" uid="uid://c5imhhtm52cj6" path="res://Scripts/Objects/W5/Level 27/GoalL27.gd" id="6_w48kf"]
+[ext_resource type="Script" uid="uid://c4h0x17tfkud" path="res://Scripts/Objects/W5/Level 29/GoalL29.gd" id="6_6w1ou"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="7_smduw"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="8_fqryu"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_4sg1m"]
@@ -4816,7 +4816,7 @@ texture = ExtResource("5_mk8mw")
 [node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(-22, -137)
 collision_layer = 2
-script = ExtResource("6_w48kf")
+script = ExtResource("6_6w1ou")
 player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
@@ -4902,7 +4902,7 @@ scale = Vector2(4, 4)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("11_kevhu")
-door_path = NodePath("../Door")
+door_path = NodePath("../Door2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button2"]
 position = Vector2(0, 5)

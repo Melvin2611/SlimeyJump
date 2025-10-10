@@ -20,7 +20,7 @@
 	"W3L15S1": "Finally we found a\nplace to stay.\nBut please be careful\nthat nothing collapses here!",
 	"W3L16S1": "What a strange machine, but\nit doesn’t look like we can get out\nany other way, maybe it can help us!",
 	"W3L17S1": "Watch out that you don’t\nrun into any spikes!",
-	"W3L18S1": "Back there is already my Tre...\nI mean Our Treasure!\nQuick, clone yourself, we’ll grab it!",
+	"W3L18S1": "Back there is already my Tre...\nI mean Our Treasure!\nQuick, clone yourself,\nwe’ll grab it!",
 	"W4L19S1": "Pahh!\nYou’re lucky, you can breathe under water!\nWait, do you even breathe?\nWhatever! But please hurry,\nmy wood will rot otherwise!",
 	"W4L20S1": "Careful with this current,\nyou could be swept into holes\nor get a seaweed\nslapped in your face!",
 	"W4L21S1": "Now we’re going really\ndeep down!\nlook, we even found another\nstrange gel.",
@@ -28,7 +28,8 @@
 	"W4L23S1": "It’s getting darker and darker,\nsoon everything will be pitch black.\nAre you sure we want to go on?\nI’m getting thalassophobia!",
 	"W4L24S1": "Something is glowing golden\nback there, I hope it’s my—\nOur treasure! But watch out,\ndon’t get lost here!",
 	"W5L25S1": "Finally out of the water,\nand you already want to go into a\ndark forest at night?! …Scared?...\nWhat?!?! I’m not scared!",
-	"W5L26S1": "Is that up there a G-G-G-\nGHOST?!?!\nI think it hasn’t seen us yet!\nP-please go away and\nd-don’t get caught!",
+	"W5L25S2": "Pahh! The Light is back,\nThanks a lot!\nNow we only need to\nopen this door and go.",
+	"W5L26S1": "Is that up there a G-G-G-GHOST?!?!\nI think it hasn’t seen us yet!\nP-please go away and\nd-don’t get caught!",
 	"W5L26S2": "Thanks for turning the light\nback on.\nI think the ghosts follow us\nonly if we get too close.",
 	"W5L27S1": "T-t-there ahead…\nit’s just…\n \nPLEASE GET AWAY!!!!!!",
 	"W5L28S1": "T-t-there’s a h-house over there,\nmaybe we can\nh-hide inside.",
@@ -44,9 +45,9 @@
 	"W7L37S1": "WOW!\nAnd now we’re above the clouds!\nGood thing I’m not afraid\nof heights!",
 	"W7L38S1": "Oh man…\nThe wind currents here are\nextremely strong,\nmaybe they can even carry us!",
 	"W7L39S1": "WHAT?!\nWHY ARE THESE PIECES HE…\n \nUhhhhhh……",
-	"W7L40S1": "Ohhh…\n \nT-these clouds are so cool…\nThey appear and disappear\nin rhythm.",
+	"W7L40S1": "Ohhh…\nT-these clouds are so cool…\nThey appear and disappear\nin rhythm.",
 	"W7L41S1": "...",
-	"W7L42S1": "Damn!!!\nWe’re already almost in space!",
+	"W7L42S1": "Dammit!!!\nWe’re already almost in space!",
 	"W7L42S2": "Wonderful!!!\nWe’re already almost in space!",
 	"PopUpT1": "Not enough Coins! (24 needed)",
 	"PopUpT21": "Unlock Stage",
@@ -72,7 +73,8 @@
 	"Confirm": "Confirm",
 	"Cancel": "Cancel",
 	"PopUpLP": "Do you really want to reset all stage Progress?",
-	"MuteS": "Mute Sound"
+	"MuteS": "Mute Sound",
+	"Thanksforplaying": "This is the End of Slimey Jump, I thank you very much for playing my Game,\nand hope that you will maybe check out my future Projects!\nThis was my First ever game, well of course I made some small things in\nScratch if you know what that is, but never did I do something like Slimey\nJump! and I really Hope that you as the Player had as much fun with the Game,\nas me the Developer!"
   },
   "de": {
 	"W1L1S1": "Ziehe vom Slime weg eine Linie,\nwenn du loslässt schießt der Slime\nin die entgegengesetzte Richtung",
@@ -103,6 +105,7 @@
 	"W4L23S1": "Das wird ja immer dunkler,\nnicht mehr lang und alles ist\nPech schwarz sicher das wir\nweiter wollen?\nIch kriege noch eine Thalassopphobie!",
 	"W4L24S1": "Da hinten leuchtet irgendwas\nGolden, ich hoffe das ist mei-\nUnser Schatz! aber pass auf,\ndass du dich hier nicht verläufst!",
 	"W5L25S1": "Da ist man endlich aus dem\nWasser raus, und schon willst\ndu bei Nacht in einen Dunklen\nWald?! ...Angst?...\nWas?!?! Ich hab doch keine Angst!",
+	"W5L25S2": "Puhh! Das Licht ist an,\nDanke dir dafür!\nJetzt müssen wir nur noch\ndie Tür öffnen und weiter.",
 	"W5L26S1": "Ist das da vorne ein G-G-G-\nGEIST?!?!\nIch glaube er hat uns n-noch nicht\ngesehen! b-bitte hau ab,\n und l-lass dich nicht erwischen!",
 	"W5L26S2": "Danke, dass du das Licht wieder\nangemacht hast.\nIch glaube die Geister folgen uns\nnur wenn wir ihnen zu nahe kommen.",
 	"W5L27S1": "d-d-da vorne...\ndas ist ja e-einfach nur...\n \nBITTE GEH HIER WEG!!!!!!",
@@ -147,7 +150,8 @@
 	"Confirm": "Annehmen",
 	"Cancel": "Abbrechen",
 	"PopUpLP": "Möchtest du wirklich den kompletten Level Fortschritt zurücksetzen?",
-	"MuteS": "Ton stummschalten"
+	"MuteS": "Ton stummschalten",
+	"Thanksforplaying": "Das hier ist das Ende von Slimey Jump, Ich danke dir wirklich sehr, das du\nmein Spiel gespielt hast, und Hoffe das du vielleicht auch meine Zukünftigen\nProjekte ausprobierst! Das war my erstes Spiel, naja eigentlich habe ich ein\npaar Scratch spiele gemacht wenn du weißt was das ist, aber noch nie so etwas\ngroßes richtiges, und ich hoffe wirklich, das DU als Spieler,\ngenau so viel Spaß am Spiel hattest, wie ich der Developer!"
   },
   "fr": {
 	"W1L1S1": "Tirez une ligne loin du Slime,\nquand vous lâchez, le Slime\ns'élance dans la direction opposée",
@@ -178,6 +182,7 @@
 	"W4L23S1": "Ça devient de plus en plus sombre,\nbientôt tout sera noir comme du poix.\nEs-tu sûr qu'on veuille continuer ?\nJe commence à avoir la thalassophobie !",
 	"W4L24S1": "Quelque chose brille en or\nlà-bas, j'espère que c'est mon—\nNotre trésor ! Mais attention,\nne te perds pas ici !",
 	"W5L25S1": "Enfin sorti de l'eau,\net tu veux déjà aller dans une\nforêt sombre la nuit ?! …Peur ?...\nQuoi ?!?! Je n'ai pas peur !",
+	"W5L25S2": "Ouf ! La lumière est revenue,\nMerci beaucoup !\nMaintenant, il ne reste plus qu’à\nouvrir cette porte et partir.",
 	"W5L26S1": "Est-ce que là-haut c'est un F-F-F-\nFANTÔME ?!?! \nJe pense qu'il ne nous a pas encore vus !\nS-s'il te plaît va-t'en et\nn-ne te fais pas attraper !",
 	"W5L26S2": "Merci d'avoir rallumé la lumière.\nJe pense que les fantômes nous suivent\nseulement si on s'approche trop.",
 	"W5L27S1": "L-l-là devant…\nc'est juste…\n \nS'IL TE PLAÎT PARS D'ICI !!!!!!",
@@ -222,7 +227,8 @@
 	"Confirm": "Confirmer",
 	"Cancel": "Annuler",
 	"PopUpLP": "Voulez-vous vraiment réinitialiser toute la progression des stages ?",
-	"MuteS": "Couper le son"
+	"MuteS": "Couper le son",
+	"Thanksforplaying": "C'est la fin de Slimey Jump, je te remercie vraiment beaucoup d'avoir\njoué à mon jeu, et j'espère que tu essaieras peut-être aussi mes futurs\nprojets ! C'était mon tout premier jeu, bon, j'ai fait quelques petites\nchoses sur Scratch si tu sais ce que c'est, mais jamais quelque chose\nd'aussi grand, et j'espère vraiment que toi, le joueur, tu t'es autant\namusé avec le jeu que moi, le développeur !"
   },
   "it": {
 	"W1L1S1": "Tira una linea lontano dallo Slime,\nquando rilasci lo Slime\nsi lancia nella direzione opposta",
@@ -253,6 +259,7 @@
 	"W4L23S1": "Sta diventando sempre più buio,\npresto tutto sarà nero come la pece.\nSei sicuro che vogliamo continuare?\nSto prendendo la talassofobia!",
 	"W4L24S1": "Qualcosa brilla d'oro\nlaggiù, spero che sia il mio—\nNostro tesoro! Ma attenzione,\nnon perderti qui!",
 	"W5L25S1": "Finalmente fuori dall'acqua,\ne già vuoi andare in una\nforesta oscura di notte?! …Paura?...\nCosa?!?! Non ho paura!",
+	"W5L25S2": "Uff! La luce è tornata,\nGrazie mille!\nOra dobbiamo solo\naprire questa porta e andare.",
 	"W5L26S1": "È quello lassù un F-F-F-\nFANTASMA?!?!\nPenso che non ci abbia visti ancora!\nP-per favore vai via e\nn-non farti prendere!",
 	"W5L26S2": "Grazie per aver riacceso la luce.\nPenso che i fantasmi ci seguano\nsolo se ci avviciniamo troppo.",
 	"W5L27S1": "L-l-là davanti…\nè solo…\n \nPER FAVORE VAI VIA!!!!!!",
@@ -297,7 +304,8 @@
 	"Confirm": "Conferma",
 	"Cancel": "Annulla",
 	"PopUpLP": "Vuoi davvero ripristinare tutti i progressi dei livelli di gioco?",
-	"MuteS": "Silenzia audio"
+	"MuteS": "Silenzia audio",
+	"Thanksforplaying": "Questo è la fine di Slimey Jump, ti ringrazio davvero tanto per aver\ngiocato al mio gioco, e spero che proverai magari anche i miei futuri\nprogetti! Questo è stato il mio primo gioco, beh, ho fatto qualche\npiccola cosa su Scratch, se sai cos'è, ma mai qualcosa di così grande,\ne spero davvero che tu, giocatore, ti sia divertito con il gioco tanto\nquanto me, lo sviluppatore!"
   },
   "es": {
 	"W1L1S1": "Tira una línea lejos del Slime,\ncuando sueltas el Slime\nse lanza en la dirección opuesta",
@@ -328,6 +336,7 @@
 	"W4L23S1": "Se está poniendo más y más oscuro,\npronto todo será negro como la brea.\n¿Estás seguro de que queremos continuar?\n¡Estoy desarrollando talasofobia!",
 	"W4L24S1": "Algo brilla dorado\nallá atrás, ¡espero que sea mi—\nNuestro tesoro! Pero cuidado,\n¡no te pierdas aquí!",
 	"W5L25S1": "Finalmente fuera del agua,\n¡y ya quieres ir a un\nbosque oscuro de noche?! …¿Miedo?...\n¡Qué?!?! ¡No tengo miedo!",
+	"W5L25S2": "¡Uf! La luz ha vuelto,\n¡Muchas gracias!\nAhora solo necesitamos\nabrir esta puerta y seguir.",
 	"W5L26S1": "¿Es eso allá arriba un F-F-F-\nFANTASMA?!?!\n¡Creo que no nos ha visto aún!\nP-por favor vete y\nn-no te dejes atrapar!",
 	"W5L26S2": "Gracias por encender la luz\nde nuevo.\nCreo que los fantasmas nos siguen\nsolo si nos acercamos demasiado.",
 	"W5L27S1": "A-a-allá adelante…\nes solo…\n \n¡POR FAVOR ALEJATE!!!!!!",
@@ -372,7 +381,8 @@
 	"Confirm": "Confirmar",
 	"Cancel": "Cancelar",
 	"PopUpLP": "¿Realmente quieres restablecer todo el progreso de los niveles de juego?",
-	"MuteS": "Silenciar sonido"
+	"MuteS": "Silenciar sonido",
+	"Thanksforplaying": "Este es el final de Slimey Jump, te agradezco mucho por haber jugado\na mi juego, y espero que tal vez pruebes también mis futuros proyectos.\n¡Este fue mi primer juego, bueno, hice algunas cositas en Scratch si\nsabes qué es, pero nunca algo tan grande, y espero de verdad que tú,\ncomo jugador, te hayas divertido con el juego tanto como yo, el\ndesarrollador!"
   },
   "zh": {
 	"W1L1S1": "从Slime拉出一条线，\n当你放手时Slime\n会向相反方向发射",
@@ -403,6 +413,7 @@
 	"W4L23S1": "越来越暗了，\n很快一切都会漆黑一片。\n你确定我们要继续吗？\n我开始有深海恐惧症了！",
 	"W4L24S1": "那里有什么金色的在发光，\n希望那是我的—\n我们的宝藏！但小心，\n别在这里迷路！",
 	"W5L25S1": "终于出了水，\n你就想在晚上进一个\n黑暗森林？！…害怕？...\n什么？!?! 我不害怕！",
+	"W5L25S2": "哈！灯又亮了，\n非常感谢！\n现在我们只需要\n打开这扇门继续走。",
 	"W5L26S1": "那里上面的是G-G-G-\n鬼魂？!?! \n我想它还没看到我们！\n请走开，别\n被抓到！",
 	"W5L26S2": "谢谢你把灯\n重新打开。\n我想鬼魂只在我们\n太靠近时才跟着我们。",
 	"W5L27S1": "那-那前面…\n只是…\n \n请走开！！！！！",
@@ -447,7 +458,8 @@
 	"Confirm": "确认",
 	"Cancel": "取消",
 	"PopUpLP": "你真的想重置所有关卡进度吗？",
-	"MuteS": "静音"
+	"MuteS": "静音",
+	"Thanksforplaying": "这是 Slimey Jump 的结束，非常感谢你玩我的游戏，\n希望你也许也会尝试我未来的项目！这是我的第一款游戏，\n好吧，我在 Scratch 上做过一些小东西，如果你知道那是\n什么，但从没做过这么大的东西，我真心希望你作为玩家，\n玩这个游戏的乐趣和我这个开发者一样多！"
   },
   "ja": {
 	"W1L1S1": "スライムから線を引いて離すと、\n離したときスライムは\n反対方向に飛ぶ",
@@ -478,6 +490,7 @@
 	"W4L23S1": "どんどん暗くなる、\nもうすぐ真っ暗。\n続けるの確か？\n深海恐怖症になりそう！",
 	"W4L24S1": "あそこに金色に輝く何か、\n私の—\n私たちの宝物だといいな！でも注意、\nここで迷子にならないで！",
 	"W5L25S1": "やっと水から出たのに、\n夜に暗い森に行きたいの？！…怖い？...\n何？!?! 怖くないよ！",
+	"W5L25S2": "ふぅ！明かりが戻った、\n本当にありがとう！\nあとはこのドアを開けて\n進むだけだ。",
 	"W5L26S1": "あそこ上のはG-G-G-\nゴースト？!?! \nまだ見られてないと思う！\nお願い行って、\n捕まらないで！",
 	"W5L26S2": "ライトを再点灯してくれてありがとう。\nゴーストは近づきすぎると\nだけ追ってくると思う。",
 	"W5L27S1": "あ-あそこに…\nただ…\n \nお願いここから離れて！！！！！",
@@ -522,7 +535,8 @@
 	"Confirm": "確認",
 	"Cancel": "キャンセル",
 	"PopUpLP": "すべてのコースの進捗を本当にリセットしますか？",
-	"MuteS": "音をミュート"
+	"MuteS": "音をミュート",
+	"Thanksforplaying": "これがSlimey Jumpの終わりです。私のゲームをプレイしてくれて\n本当にありがとう、そして将来のプロジェクトも試してくれると\n嬉しいな！これが私の初めてのゲームなんだ、うん、Scratchで\nいくつか小さなものを作ったことがあるよ、知ってるかな、でも\nこんな大きなものは初めてで、プレイヤーの君が、開発者の僕と\n同じくらいゲームを楽しんでくれたことを本当に願ってるよ！"
   },
   "ru": {
 	"W1L1S1": "Тяните линию от Слима,\nкогда отпускаете, Слим\nлетит в противоположном направлении",
@@ -553,6 +567,7 @@
 	"W4L23S1": "Становится всё темнее и темнее,\nскоро всё будет чёрным как смоль.\nТы уверен, что мы хотим продолжать?\nУ меня развивается талассофобия!",
 	"W4L24S1": "Что-то светится золотым\nтам сзади, надеюсь это моё—\nНаше сокровище! Но осторожно,\nне заблудись здесь!",
 	"W5L25S1": "Наконец из воды,\nи ты уже хочешь пойти в\nтёмный лес ночью?! …Боишься?...\nЧто?!?! Я не боюсь!",
+	"W5L25S2": "Уф! Свет снова включился,\nБольшое спасибо!\nТеперь осталось только\nоткрыть эту дверь и идти дальше.",
 	"W5L26S1": "Это там наверху П-П-П-\nПРИЗРАК?!?!\nЯ думаю, он нас ещё не увидел!\nП-пожалуйста уйди и\nн-не дай себя поймать!",
 	"W5L26S2": "Спасибо, что включил свет\nснова.\nЯ думаю, призраки следуют за нами\nтолько если мы подходим слишком близко.",
 	"W5L27S1": "Т-т-там впереди…\nэто просто…\n \nПОЖАЛУЙСТА УХОДИ ОТСЮДА!!!!!!",
@@ -597,6 +612,7 @@
 	"Confirm": "Подтвердить",
 	"Cancel": "Отмена",
 	"PopUpLP": "Вы действительно хотите сбросить весь прогресс игровых уровней?",
-	"MuteS": "Отключить звук"
+	"MuteS": "Отключить звук",
+	"Thanksforplaying": "Это конец Slimey Jump, я очень благодарю тебя за то, что ты сыграл\nв мою игру, и надеюсь, что ты, возможно, попробуешь и мои будущие\nпроекты! Это была моя первая игра, ну, я сделал несколько мелочей\nв Scratch, если ты знаешь, что это, но никогда ничего такого большого,\nи я очень надеюсь, что ты, как игрок, получил столько же удовольствия\nот игры, сколько я, разработчик!"
   }
 }

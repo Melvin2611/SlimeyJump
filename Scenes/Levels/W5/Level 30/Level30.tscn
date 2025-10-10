@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bih75ysk80nip" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_3.png" id="3_e4yb6"]
 [ext_resource type="Texture2D" uid="uid://d2tm3ud7kdnnm" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_4.png" id="4_etdrb"]
 [ext_resource type="Texture2D" uid="uid://dtatqmjquf6q0" path="res://Sprites/background/Haunted Forest Parallaxing Background/background_5.png" id="5_a1p5w"]
-[ext_resource type="Script" uid="uid://c5imhhtm52cj6" path="res://Scripts/Objects/W5/Level 27/GoalL27.gd" id="6_dy5s5"]
+[ext_resource type="Script" uid="uid://bytbhhdxa4kn3" path="res://Scripts/Objects/W5/Level 30/GoalL30.gd" id="6_mkumc"]
 [ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="7_dy5s5"]
 [ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="8_dy5s5"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_771nf"]
@@ -4869,7 +4869,7 @@ texture = ExtResource("5_a1p5w")
 [node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(2858, -1481)
 collision_layer = 2
-script = ExtResource("6_dy5s5")
+script = ExtResource("6_mkumc")
 player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]

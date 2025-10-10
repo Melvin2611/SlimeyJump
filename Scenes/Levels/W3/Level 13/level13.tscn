@@ -2788,6 +2788,7 @@ offset_right = 277.5
 offset_bottom = 111.75
 scale = Vector2(0.2, 0.2)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("18_wvbfv")
 theme_override_font_sizes/font_size = 22
 text = "Glaubst du wirklich hier finden wir
@@ -2956,11 +2957,10 @@ script = ExtResource("38_bf4pq")
 position = Vector2(34.63, 0.44)
 shape = SubResource("RectangleShape2D_gc37e")
 
-[node name="Death Plain" type="Area2D" parent="." node_paths=PackedStringArray("player")]
+[node name="Death Plain" type="Area2D" parent="."]
 position = Vector2(3501, 745)
 collision_layer = 2
 script = ExtResource("23_6tmsj")
-player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain"]
 position = Vector2(-36, 0.375)
@@ -2970,11 +2970,10 @@ shape = SubResource("RectangleShape2D_durrg")
 stream = ExtResource("24_7mlab")
 bus = &"SFX"
 
-[node name="Death Plain2" type="Area2D" parent="." node_paths=PackedStringArray("player")]
+[node name="Death Plain2" type="Area2D" parent="."]
 position = Vector2(2902, -1305)
 collision_layer = 2
 script = ExtResource("23_6tmsj")
-player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death Plain2"]
 position = Vector2(-36, 0.375)

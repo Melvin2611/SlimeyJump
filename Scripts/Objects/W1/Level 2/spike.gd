@@ -8,4 +8,4 @@ func _on_body_entered(body: RigidBody2D):
 		Global.reset_level_coins()
 		$AudioStreamPlayer.play()
 		await get_tree().create_timer(0.2).timeout
-		get_tree().change_scene_to_file("res://Scenes/Levels/Level 2/Level2.tscn")
+		get_tree().reload_current_scene()

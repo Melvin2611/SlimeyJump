@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c0v1tmsapwrcc" path="res://Sprites/background/underwater/foreground-1.png" id="3_q0hvy"]
 [ext_resource type="Texture2D" uid="uid://b0a70l3l3h5lw" path="res://Sprites/background/underwater/foreground-2.png" id="4_giuqk"]
 [ext_resource type="Texture2D" uid="uid://bft8ky0g30kc1" path="res://Sprites/Objects/Big-Void.png" id="5_08hkj"]
-[ext_resource type="Script" uid="uid://bpiiqyo2jabga" path="res://Scripts/Objects/W3/Level 15/GoalL15.gd" id="6_kf0nu"]
+[ext_resource type="Script" uid="uid://0bcau6doi0m1" path="res://Scripts/Objects/W4/Level 21/GoalL21.gd" id="6_j00xr"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="7_hpuft"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="8_npgsf"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_qi5bv"]
@@ -3785,8 +3785,8 @@ texture = ExtResource("5_08hkj")
 [node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(6634, -969)
 collision_layer = 2
-script = ExtResource("6_kf0nu")
-player = NodePath("")
+script = ExtResource("6_j00xr")
+player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(185, 3)
@@ -3888,7 +3888,7 @@ position = Vector2(-673, -102)
 scale = Vector2(4, 4)
 collision_layer = 2
 script = ExtResource("19_j00xr")
-slime_type = 4
+slime_type = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="power up"]
 shape = SubResource("RectangleShape2D_giuqk")
@@ -3910,6 +3910,7 @@ continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("22_e7y2n")
+current_slime_type = 6
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayer"]
 position = Vector2(5, -19)

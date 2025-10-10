@@ -3992,7 +3992,7 @@ continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("22_tto82")
-current_slime_type = 4
+current_slime_type = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SlimePlayer"]
 position = Vector2(5, -19)

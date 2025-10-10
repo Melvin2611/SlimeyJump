@@ -1,8 +1,8 @@
 [gd_scene load_steps=61 format=4 uid="uid://baum21wso1mxo"]
 
 [ext_resource type="Texture2D" uid="uid://dstk4ykqavkaa" path="res://Sprites/plank-backdrop.png" id="1_7gxwp"]
-[ext_resource type="Script" uid="uid://b0dvkova1i6aq" path="res://Scripts/Objects/W2/Level 11/GoalL11.gd" id="1_87ry0"]
 [ext_resource type="Texture2D" uid="uid://dt4jeqa3aeb1s" path="res://Sprites/Objects/door2.png" id="2_p6j3a"]
+[ext_resource type="Script" uid="uid://djntk8whond02" path="res://Scripts/Objects/W2/Level 12/GoalL12.gd" id="3_l35bf"]
 [ext_resource type="Texture2D" uid="uid://wdqkpqp2ts18" path="res://Sprites/Objects/Treasure-chest.png" id="4_p6j3a"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="4_piki2"]
 [ext_resource type="AudioStream" uid="uid://yxlt0f3ffw16" path="res://Sound/sfx/you-win-sequence-1-183948.mp3" id="5_p6j3a"]
@@ -2363,7 +2363,7 @@ texture = ExtResource("2_p6j3a")
 [node name="Goal" type="Area2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(-185, -4061)
 collision_layer = 2
-script = ExtResource("1_87ry0")
+script = ExtResource("3_l35bf")
 player = NodePath("../SlimePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]

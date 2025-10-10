@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwe04db4dy1ku"]
+[gd_scene load_steps=13 format=3 uid="uid://bwe04db4dy1ku"]
 
 [ext_resource type="Script" uid="uid://dhxm5dxm24r7v" path="res://Scripts/scene scripts/hud.gd" id="1_bjfho"]
 [ext_resource type="Texture2D" uid="uid://oh1liuiwq6d7" path="res://Sprites/Objects/Coin.png" id="2_6fbih"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d3b37tkar16w6" path="res://Sprites/Pause-button-hover.png" id="6_2x80y"]
 [ext_resource type="Shader" uid="uid://dm47q4kny0bj7" path="res://Scripts/shader/hud.gdshader" id="7_u1fe8"]
 [ext_resource type="Texture2D" uid="uid://c1wy43lsbgqgf" path="res://Sprites/Objects/Sign-Board/Sign-board.png" id="8_k1jev"]
+[ext_resource type="Texture2D" uid="uid://j5fcmts8n05s" path="res://Sprites/Objects/Sign-Board/Chain.png" id="8_mbgcg"]
 [ext_resource type="Texture2D" uid="uid://buj806hrtv2nn" path="res://Sprites/Objects/Sign-Board/Sign-board-pressed.png" id="9_mbgcg"]
 [ext_resource type="Texture2D" uid="uid://dyakey5pserjp" path="res://Sprites/Objects/Sign-Board/Sign-board-hover.png" id="10_bdieq"]
 
@@ -85,6 +86,16 @@ offset_right = 1112.0
 offset_bottom = 608.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="PauseMenu"]
+position = Vector2(410, -95)
+scale = Vector2(6, 6)
+texture = ExtResource("8_mbgcg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="PauseMenu"]
+position = Vector2(746, -95.00001)
+scale = Vector2(6, 6)
+texture = ExtResource("8_mbgcg")
 
 [node name="Resume Button" type="TextureButton" parent="PauseMenu"]
 layout_mode = 1
