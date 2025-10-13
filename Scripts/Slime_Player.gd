@@ -41,7 +41,10 @@ func _ready():
 	body_exited.connect(_on_body_exited)
 	animated_sprite.animation_finished.connect(_on_animation_finished)
 	if animated_sprite.sprite_frames:
-		animated_sprite.sprite_frames.set_animation_loop("squish", false)
+		for anim_name in animated_sprite.sprite_frames.get_animation_names():
+			if anim_name.begins_with("squish"):
+				animated_sprite.sprite_frames.set_animation_loop(anim_name, false)
+
 	apply_slime_properties()
 
 func apply_slime_properties():
@@ -125,6 +128,37 @@ func apply_slime_properties():
 				$PointLight2D.visible = true
 			animated_sprite.play("idle")
 			update_animation()
+# --- 🔧 Fix für Godot 4.5 Animation Reset ---
+
+	if animated_sprite:
+	# Signal trennen, um Autotrigger zu verhindern
+		if animated_sprite.animation_finished.is_connected(_on_animation_finished):
+			animated_sprite.animation_finished.disconnect(_on_animation_finished)
+	# Zustand vollständig zurücksetzen
+		has_squished = false
+		is_aiming = false
+		is_on_ground = false
+		animated_sprite.stop()
+		animated_sprite.frame = 0
+		animated_sprite.visible = true
+
+		# Idle-Animation sauber setzen
+		var idle_anim = get_animation_name("idle")
+		if animated_sprite.sprite_frames and animated_sprite.sprite_frames.has_animation(idle_anim):
+			animated_sprite.animation = idle_anim
+		else:
+			print("⚠️ Missing animation:", idle_anim)
+		# Einen Frame warten, damit Godot den Playback-State wirklich ersetzt
+		await get_tree().process_frame
+
+		# Erst danach Animation spielen
+		animated_sprite.play()
+
+		# Und dann Signal reconnecten (nach 1 weiteren Frame, um Race Conditions zu vermeiden)
+		await get_tree().process_frame
+		if not animated_sprite.animation_finished.is_connected(_on_animation_finished):
+			animated_sprite.animation_finished.connect(_on_animation_finished)
+	# ⛔ Kein update_animation() hier – das ruft sonst sofort wieder squish auf!
 
 func _physics_process(_delta: float):
 	var colliding_bodies = get_colliding_bodies()
@@ -186,12 +220,15 @@ func _on_body_exited(body: Node):
 		update_animation()
 
 func _on_animation_finished():
-	if is_on_ground and animated_sprite.animation == "squish":
+	if animated_sprite.animation.begins_with("squish"):
 		has_squished = true
-		update_animation()
+		var idle_anim = get_animation_name("idle")
+		if animated_sprite.sprite_frames.has_animation(idle_anim):
+			animated_sprite.play(idle_anim)
 
 func reset_state():
 	var keep_position = global_position
+	print("[RESET] START, global_position=", global_position)
 
 	is_aiming = false
 	aim_start_pos = global_position
@@ -205,20 +242,19 @@ func reset_state():
 	using_controller = false
 	is_switching = true
 
-	# Animation sofort auf idle
-	animated_sprite.play("idle")
-	
-	# Bodenkontakt-Logik überspringen für 1 Frame
-	skip_squish_next_frame = true
+	if animated_sprite:
+		animated_sprite.stop()
+		animated_sprite.play("idle")
 
-	# Physik 1 Frame aussetzen
 	freeze = true
 	await get_tree().process_frame
 	global_position = keep_position
 	freeze = false
 
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(0.1).timeout
 	is_switching = false
+
+	print("[RESET] END, global_position=", global_position)
 
 func _input(event):
 	if is_switching:
@@ -282,7 +318,6 @@ func _input(event):
 		aim_current_pos = drag_global
 		queue_redraw()
 
-
 func _process(_delta: float):
 	if is_switching:
 		print("Controller input ignored: is_switching is true")
@@ -336,7 +371,6 @@ func _draw():
 			var radius = max_radius - (max_radius - min_radius) * t
 			draw_circle(point, radius, Color(0.4, 0.4, 0.4, 0.5))
 
-
 func _apply_impulse():
 	if is_switching:
 		print("Impulse blocked: is_switching is true")
@@ -370,7 +404,6 @@ func _apply_impulse():
 	apply_central_impulse(force)
 	update_animation()
 
-
 func change_slime(new_type: SlimeType):
 	if is_switching:
 		return
@@ -381,8 +414,18 @@ func change_slime(new_type: SlimeType):
 	reset_state()
 	apply_slime_properties()
 
-	# 🔹 nach Reset + Apply: sofort idle erzwingen
+	# 🔹 Warten, bis Physik-Update durch ist, damit Bodenstatus sich stabilisiert
+	await get_tree().process_frame
+
+	# 🔹 Sicherstellen, dass die Animation wirklich wechselt
+	if animated_sprite:
+		animated_sprite.stop()
+		var anim_name = get_animation_name("idle")
+		animated_sprite.play(anim_name)
+	
 	has_squished = true
+	is_on_ground = true
+
 	update_animation()
 
 	await get_tree().create_timer(0.3).timeout
@@ -409,31 +452,36 @@ func get_animation_name(base_name: String) -> String:
 	return base_name
 
 func update_animation():
-	if skip_squish_next_frame:
-		# 1 Frame Squish blockieren
+	if not animated_sprite:
+		return
+
+	if is_switching:
+		# Während des Slime-Wechsels -> nur Idle, keine Squishs
 		var anim_name = get_animation_name("idle")
 		if animated_sprite.animation != anim_name:
+			animated_sprite.stop()
 			animated_sprite.play(anim_name)
-		skip_squish_next_frame = false
 		return
-	
+
 	if is_aiming:
 		var anim_name = get_animation_name("charge")
 		if animated_sprite.animation != anim_name:
 			animated_sprite.play(anim_name)
-	elif is_switching:
-		# Während Slime-Wechsel -> immer idle, keine squish
-		var anim_name = get_animation_name("idle")
-		if animated_sprite.animation != anim_name:
-			animated_sprite.play(anim_name)
 	elif is_on_ground:
 		if not has_squished:
-			animated_sprite.play(get_animation_name("squish"))
+			var anim_name = get_animation_name("squish")
+			if animated_sprite.animation != anim_name:
+				animated_sprite.stop()
+				animated_sprite.play(anim_name)
 		else:
-			animated_sprite.play(get_animation_name("idle"))
+			var anim_name = get_animation_name("idle")
+			if animated_sprite.animation != anim_name:
+				animated_sprite.stop()
+				animated_sprite.play(anim_name)
 	else:
 		var anim_name = get_animation_name("fling")
 		if animated_sprite.animation != anim_name:
+			animated_sprite.stop()
 			animated_sprite.play(anim_name)
 			if has_node("SlimeJump"):
 				$SlimeJump.play()

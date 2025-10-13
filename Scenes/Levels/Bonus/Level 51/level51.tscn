@@ -1798,7 +1798,7 @@ shape = SubResource("RectangleShape2D_tr2o7")
 texture = ExtResource("55_s7ikv")
 
 [node name="SlimePlayer" type="RigidBody2D" parent="." groups=["Player"]]
-position = Vector2(12243, -2919)
+position = Vector2(-12, 241)
 disable_mode = 2
 collision_mask = 2
 gravity_scale = 0.5
@@ -1812,7 +1812,7 @@ current_slime_type = 5
 position = Vector2(5, -19)
 scale = Vector2(2.9825, 2.96875)
 sprite_frames = ExtResource("57_8jh30")
-animation = &"charge"
+animation = &"squish_super"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SlimePlayer"]
@@ -1846,5 +1846,4 @@ offset_right = 14770.0
 offset_bottom = 4204.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)

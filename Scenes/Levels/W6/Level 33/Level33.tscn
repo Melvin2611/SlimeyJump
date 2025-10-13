@@ -5798,7 +5798,7 @@ animations = [{
 size = Vector2(3808.5, 3400.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rw0y8"]
-size = Vector2(3.6699963, 69.54)
+size = Vector2(3.6699963, 46.71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bte50"]
 size = Vector2(112, 16)
@@ -6123,7 +6123,7 @@ collision_layer = 2
 script = ExtResource("41_ypngq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gravity Field"]
-position = Vector2(17.865, -16.89)
+position = Vector2(17.865, -28.305)
 shape = SubResource("RectangleShape2D_rw0y8")
 
 [node name="crumbleblock" type="Area2D" parent="."]

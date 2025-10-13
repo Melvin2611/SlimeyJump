@@ -276,7 +276,7 @@ func _on_texture_button_20_pressed() -> void:
 func _on_texture_button_21_pressed() -> void:
 	if ProgressManager.is_level_unlocked(20):
 		Global.reset_level_coins()
-		get_tree().change_scene
+		get_tree().change_scene_to_file("res://Scenes/Levels/W4/Level 21/Level21.tscn")
 
 func _on_texture_button_22_pressed() -> void:
 	if ProgressManager.is_level_unlocked(21):
@@ -488,7 +488,7 @@ func _on_texture_button_50_pressed() -> void:
 func _on_texture_button_51_pressed() -> void:
 	if ProgressManager.is_level_unlocked(50):
 		Global.reset_level_coins()
-		get_tree().change_scene_to_file("res://Scenes/Levels/Bonus/Level 51/Level51.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Levels/Bonus/Level 51/level51.tscn")
 		print("Lade Level 51")
 	else:
 		_show_purchase_popup(50)

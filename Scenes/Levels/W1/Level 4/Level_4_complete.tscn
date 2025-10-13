@@ -63,7 +63,7 @@ position = Vector2(513, 325)
 scale = Vector2(6, 6)
 texture = ExtResource("2_gbix4")
 
-[node name="Coin Label" type="Label" parent="." node_paths=PackedStringArray("coin_label")]
+[node name="Coin Label" type="Label" parent="."]
 offset_left = 593.0
 offset_top = 301.0
 offset_right = 643.0
@@ -72,7 +72,6 @@ theme_override_fonts/font = ExtResource("1_0wo5o")
 theme_override_font_sizes/font_size = 60
 text = ": 0"
 script = ExtResource("3_vm2op")
-coin_label = NodePath(".")
 metadata/_edit_use_anchors_ = true
 
 [node name="Buttons" type="HBoxContainer" parent="."]

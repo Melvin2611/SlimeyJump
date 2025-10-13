@@ -4827,6 +4827,32 @@ stream = ExtResource("8_h5wm5")
 volume_db = 10.0
 bus = &"SFX"
 
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(-1129, -66)
+scale = Vector2(4, 4)
+texture = ExtResource("39_bm0r2")
+
+[node name="Speech-bubble" type="Sprite2D" parent="."]
+position = Vector2(-1206, -160)
+scale = Vector2(4, 4)
+texture = ExtResource("40_75wdf")
+
+[node name="Label" type="Label" parent="Speech-bubble"]
+offset_left = -28.5
+offset_top = -13.0
+offset_right = 277.5
+offset_bottom = 114.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("41_h5wm5")
+theme_override_font_sizes/font_size = 22
+text = "D-D-Da hinten  ist ein H-Haus,
+vielleicht k-können wir uns
+d-da verstecken."
+script = ExtResource("42_75wdf")
+text_key = "W5L28S1"
+metadata/_edit_use_anchors_ = true
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-1056, -193)
 zoom = Vector2(0.82, 0.82)
@@ -5055,28 +5081,3 @@ shape = SubResource("RectangleShape2D_bm0r2")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Death Plain"]
 stream = ExtResource("39_2u0e7")
 bus = &"SFX"
-
-[node name="Sign" type="Sprite2D" parent="."]
-position = Vector2(-1129, -66)
-scale = Vector2(4, 4)
-texture = ExtResource("39_bm0r2")
-
-[node name="Speech-bubble" type="Sprite2D" parent="."]
-position = Vector2(-1206, -160)
-scale = Vector2(4, 4)
-texture = ExtResource("40_75wdf")
-
-[node name="Label" type="Label" parent="Speech-bubble"]
-offset_left = -28.5
-offset_top = -13.0
-offset_right = 277.5
-offset_bottom = 114.0
-scale = Vector2(0.2, 0.2)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("41_h5wm5")
-theme_override_font_sizes/font_size = 22
-text = "D-D-Da hinten  ist ein H-Haus,
-vielleicht k-können wir uns
-d-da verstecken."
-script = ExtResource("42_75wdf")
-text_key = "W5L28S1"

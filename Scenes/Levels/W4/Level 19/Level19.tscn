@@ -109,7 +109,7 @@ size = Vector2(32, 5.25)
 size = Vector2(14, 47.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d75k"]
-size = Vector2(9.75, 14)
+size = Vector2(9.75, 9)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r38k8"]
 texture = ExtResource("6_y6358")
@@ -3763,7 +3763,7 @@ scale = Vector2(4, 4)
 script = ExtResource("39_jb2ml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spike"]
-position = Vector2(2.875, 0)
+position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_6d75k")
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike"]
@@ -3851,7 +3851,7 @@ scale = Vector2(4, 4)
 script = ExtResource("39_jb2ml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spike6"]
-position = Vector2(2.875, 0)
+position = Vector2(2.875, 0.5)
 shape = SubResource("RectangleShape2D_6d75k")
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike6"]
@@ -3969,10 +3969,10 @@ bus = &"SFX"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_2xyac")
-offset_left = -1953.0
-offset_top = -3913.0
-offset_right = 7315.0
-offset_bottom = 180.0
+offset_left = -1979.0
+offset_top = -3882.0
+offset_right = 7289.0
+offset_bottom = 225.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_uvt4y")

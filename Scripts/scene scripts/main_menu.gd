@@ -2,9 +2,6 @@ extends Control
 
 @export var coin_count: Node2D
 
-func _ready():
-	ProgressManager.show_something.connect(_on_show_something)
-
 func _on_play_pressed():
 	$ButtonSound.play()
 	await get_tree().create_timer(0.2).timeout

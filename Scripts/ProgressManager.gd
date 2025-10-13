@@ -2,7 +2,6 @@ extends Node
 
 # Signal, das ausgesendet wird, wenn sich global_coin_count ändert
 signal coin_count_updated(new_count: int)
-signal show_something
 
 # Neues Signal für Änderungen an den Comics (z.B. wenn ein neues freigeschaltet wird)
 signal comics_updated()

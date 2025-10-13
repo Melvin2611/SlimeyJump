@@ -191,7 +191,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("28_hm5xf")
 }],
-"loop": true,
+"loop": false,
 "name": &"squish",
 "speed": 10.0
 }, {
@@ -211,7 +211,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("33_qc4nq")
 }],
-"loop": true,
+"loop": false,
 "name": &"squish_blue",
 "speed": 10.0
 }, {
@@ -231,7 +231,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("38_rwov5")
 }],
-"loop": true,
+"loop": false,
 "name": &"squish_red",
 "speed": 10.0
 }, {
@@ -248,7 +248,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("42_tcoye")
 }],
-"loop": true,
+"loop": false,
 "name": &"squish_super",
 "speed": 10.0
 }]

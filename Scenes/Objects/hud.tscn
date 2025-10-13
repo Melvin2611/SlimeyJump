@@ -16,8 +16,12 @@
 shader = ExtResource("7_u1fe8")
 shader_parameter/blur_size = 4.0
 shader_parameter/darkness = 0.6
+shader_parameter/radial_strength = 0.5
+shader_parameter/wobble_strength = 0.6
+shader_parameter/time_speed = 1.0
 
 [node name="HUD" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_bjfho")
 
 [node name="Coin" type="Sprite2D" parent="."]
@@ -60,8 +64,8 @@ theme_override_font_sizes/font_size = 40
 text = ": 0/3"
 
 [node name="Pause Button" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 60.0
+offset_bottom = 60.0
 scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("4_2ubmp")
 texture_pressed = ExtResource("5_u1fe8")
@@ -172,17 +176,6 @@ theme_override_fonts/font = ExtResource("3_t1xeu")
 theme_override_font_sizes/font_size = 30
 text = "QUIT"
 
-[node name="Button" type="Button" parent="PauseMenu"]
-layout_mode = 0
-offset_left = 440.0
-offset_top = 478.0
-offset_right = 538.0
-offset_bottom = 528.0
-scale = Vector2(3, 3)
-theme_override_font_sizes/font_size = 30
-text = "debug
-"
-
 [node name="DebugMenu" type="Control" parent="."]
 process_mode = 3
 visible = false
@@ -239,7 +232,7 @@ text = "Unlock All Levels"
 
 [node name="add coins" type="Button" parent="DebugMenu/VBoxContainer"]
 layout_mode = 2
-text = "add coin"
+text = "add coins (5)"
 
 [node name="Invincible" type="CheckButton" parent="DebugMenu/VBoxContainer"]
 layout_mode = 2
@@ -253,53 +246,21 @@ text = "show data"
 layout_mode = 2
 text = "infinte jump"
 
+[node name="ColorRect" type="ColorRect" parent="DebugMenu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+
+[node name="Label" type="Label" parent="DebugMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "This is the Debug Menu, in here you can give yourself some
+cheats, if you want to open it again, just press F8 while Paused,
+or on Mobile hold the Top left and Top right corner pressed!"
+
 [node name="exit debug" type="Button" parent="DebugMenu/VBoxContainer"]
 layout_mode = 2
 text = "Exit debug"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="DebugMenu/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="DebugMenu/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "cord examples:
-Level1:
-start: 0,300
-castle: 5000,300
-end: 8500,300
-Level2:
-start: 0,300
-after gap1: 4100,300
-end: 7800,-400
-Level3:
-start: 0,300
-after door: 3200,300
-end: 8500,300
-Level4:
-start: 0,300
-after gap: 5350,150
-after doors: 7475,300
-end: 9000,-100"
-
-[node name="Label2" type="Label" parent="DebugMenu/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-text = "Level 5:
-start: 0,300
-after door: 3300,300
-end: 7600,300
-Level 6:
-start: 0,300
-after door1: 1000,-3500
-end: -1500,-12850
-Level7:
-start: 0,300
-after door: 4200,200
-end: 8250,200
-Level8:
-start: 0,300
-after leap: 2400,300
-end: 5300,300"
 
 [node name="LabelFPS" type="Label" parent="."]
 offset_left = 1.0
@@ -311,7 +272,6 @@ offset_bottom = 85.0
 [connection signal="pressed" from="PauseMenu/Resume Button" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/Restart Button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="PauseMenu/Quit Button" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="PauseMenu/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="DebugMenu/VBoxContainer/HBoxContainer/tp Button" to="." method="_on_teleport_button_pressed"]
 [connection signal="pressed" from="DebugMenu/VBoxContainer/HBoxContainer/Reset Button" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="DebugMenu/VBoxContainer/HBoxContainer/Button" to="." method="_on_Coin_reset_button_pressed"]

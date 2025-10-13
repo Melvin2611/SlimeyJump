@@ -6521,8 +6521,6 @@ position_smoothing_speed = 7.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("8_mloqn")
-lookahead_time = 0.6
-lookahead_smoothing = 1.0
 
 [node name="Button2" type="StaticBody2D" parent="." node_paths=PackedStringArray("Node1") groups=["platforms"]]
 position = Vector2(-98, -1828)

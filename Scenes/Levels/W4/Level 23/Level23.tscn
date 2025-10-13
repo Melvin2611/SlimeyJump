@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c0v1tmsapwrcc" path="res://Sprites/background/underwater/foreground-1.png" id="3_ojxlm"]
 [ext_resource type="Texture2D" uid="uid://b0a70l3l3h5lw" path="res://Sprites/background/underwater/foreground-2.png" id="4_813j4"]
 [ext_resource type="Texture2D" uid="uid://bft8ky0g30kc1" path="res://Sprites/Objects/Big-Void.png" id="5_s7cur"]
-[ext_resource type="Script" uid="uid://bpiiqyo2jabga" path="res://Scripts/Objects/W3/Level 15/GoalL15.gd" id="6_glhd0"]
+[ext_resource type="Script" uid="uid://syr2nb6lvhqy" path="res://Scripts/Objects/W4/Level 23/GoalL23.gd" id="6_glhd0"]
 [ext_resource type="Texture2D" uid="uid://bjmkwggvhbt3l" path="res://Sprites/Objects/Goal.png" id="7_4ikqw"]
 [ext_resource type="AudioStream" uid="uid://ddudf4f4jxcah" path="res://Sound/sfx/pixel-level-up-sound-351836.mp3" id="8_j81w6"]
 [ext_resource type="Script" uid="uid://buvxkj1pgnabx" path="res://Scripts/Objects/camera_2d.gd" id="9_cf2e5"]

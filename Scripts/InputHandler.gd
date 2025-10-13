@@ -6,37 +6,14 @@ extends CanvasLayer
 @onready var debug_menu = $DebugMenu
 
 # Variablen für Touch-Erkennung
-# --- Neue Variablen ---
-var left_touch_id: int = -1
-var right_touch_id: int = -1
-var left_touch_start: float = 0.0
-var right_touch_start: float = 0.0
-var is_left_touching: bool = false
-var is_right_touching: bool = false
-
-const TOUCH_HOLD_TIME: float = 3.0
-const CORNER_SIZE: float = 100.0
-
-# Diese zwei farbigen Indikatoren zeigen an, wenn du die Ecken berührst
-@onready var left_indicator = ColorRect.new()
-@onready var right_indicator = ColorRect.new()
+var touch_left_start_time: float = 0.0
+var touch_right_start_time: float = 0.0
+var is_touching_left: bool = false
+var is_touching_right: bool = false
+const TOUCH_HOLD_TIME: float = 3.0  # 3 Sekunden
+const CORNER_SIZE: float = 100.0    # Größe der oberen Ecken (in Pixeln)
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS
-
-	# === Visuelle Touch-Indikatoren einrichten ===
-	left_indicator.color = Color(0, 1, 0, 0.2) # halbtransparentes Grün
-	left_indicator.size = Vector2(CORNER_SIZE, CORNER_SIZE)
-	left_indicator.visible = false
-	add_child(left_indicator)
-
-	right_indicator.color = Color(0, 0, 1, 0.2) # halbtransparentes Blau
-	right_indicator.size = Vector2(CORNER_SIZE, CORNER_SIZE)
-	right_indicator.position = Vector2(get_viewport().size.x - CORNER_SIZE, 0)
-	right_indicator.visible = false
-	add_child(right_indicator)
-
-	# Rest deines bestehenden _ready()-Codes
 	# Verbinde Signale
 	if not Global.coin_collected.is_connected(_on_coin_collected):
 		Global.coin_collected.connect(_on_coin_collected)
@@ -58,96 +35,58 @@ func _ready() -> void:
 	update_hud(Global.level_coin_count, ProgressManager.global_coin_count)
 
 	# Stelle sicher, dass Input verarbeitet wird
-	set_process_input(true)
-	set_process_unhandled_input(true)  # Aktiviere unhandled_input für nicht konsumierte Eingaben
-	print("Input- und unhandled_input-Verarbeitung aktiviert")
+	set_process_input(true)  # Ersetze unhandled_input mit input für bessere Kontrolle
+	print("Input-Verarbeitung aktiviert")
 
 func _input(event: InputEvent) -> void:
-	# Prüfe Key-Events unabhängig von der UI-Fokussierung
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_D or event.keycode == KEY_F8:
-			if get_tree().paused and debug_menu:
-				print("Debug-Taste während Pause erkannt: ", event.as_text())
-				# Temporäre Aufhebung der Pause für die Eingabe
-				get_tree().paused = false
-				await get_tree().create_timer(0.01).timeout  # Kurzer Delay
+	# Prüfe nur Key-Events während der Pause
+	if event is InputEventKey and event.pressed and get_tree().paused:
+		if event.keycode == KEY_F8:
+			print("F8 während Pause erkannt")
+			if debug_menu:
+				print("Öffne Debug-Menü mit F8")
 				debug_menu.visible = true
-				print("Debug-Menü geöffnet")
-				get_tree().paused = true
 			else:
-				print("Debug-Taste ignoriert - Spiel nicht pausiert")
+				print("FEHLER: debug_menu ist null")
+		elif event.keycode == KEY_D:
+			print("D während Pause erkannt")
+			if debug_menu:
+				print("Öffne Debug-Menü mit D")
+				debug_menu.visible = true
+			else:
+				print("FEHLER: debug_menu ist null")
 
+	# Touch-Erkennung für Mobile
 	if event is InputEventScreenTouch:
-		var pos = event.position
-		var size = get_viewport().get_visible_rect().size
-		var left_corner = Rect2(Vector2(0, 0), Vector2(CORNER_SIZE, CORNER_SIZE))
-		var right_corner = Rect2(Vector2(size.x - CORNER_SIZE, 0), Vector2(CORNER_SIZE, CORNER_SIZE))
-
+		var touch_pos = event.position
+		var viewport_size = get_viewport().get_visible_rect().size
+		var left_corner_rect = Rect2(0, 0, CORNER_SIZE, CORNER_SIZE)
+		var right_corner_rect = Rect2(viewport_size.x - CORNER_SIZE, 0, CORNER_SIZE, CORNER_SIZE)
 		if event.pressed:
-			if left_corner.has_point(pos):
-				is_left_touching = true
-				left_touch_id = event.index
-				left_touch_start = Time.get_ticks_msec() / 1000.0
-				left_indicator.visible = true
-				print("👆 Linke Ecke gedrückt (ID:", event.index, ")")
-
-			elif right_corner.has_point(pos):
-				is_right_touching = true
-				right_touch_id = event.index
-				right_touch_start = Time.get_ticks_msec() / 1000.0
-				right_indicator.visible = true
-				print("👆 Rechte Ecke gedrückt (ID:", event.index, ")")
-
+			if left_corner_rect.has_point(touch_pos):
+				is_touching_left = true
+				touch_left_start_time = Time.get_ticks_msec() / 1000.0
+				print("Touch in linker Ecke erkannt: ", touch_pos)
+			elif right_corner_rect.has_point(touch_pos):
+				is_touching_right = true
+				touch_right_start_time = Time.get_ticks_msec() / 1000.0
+				print("Touch in rechter Ecke erkannt: ", touch_pos)
 		else:
-			if event.index == left_touch_id:
-				is_left_touching = false
-				left_touch_id = -1
-				left_indicator.visible = false
-
-			elif event.index == right_touch_id:
-				is_right_touching = false
-				right_touch_id = -1
-				right_indicator.visible = false
-
-			print("✋ Touch beendet (ID:", event.index, ")")
-
-
-func _unhandled_input(event: InputEvent) -> void:
-	# Zusätzliche Überprüfung für nicht konsumierte Eingaben
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_D or event.keycode == KEY_F8:
-			if get_tree().paused and debug_menu:
-				print("Unhandled Debug-Taste während Pause erkannt: ", event.as_text())
-				get_tree().paused = false
-				await get_tree().create_timer(0.01).timeout
-				debug_menu.visible = true
-				print("Debug-Menü geöffnet (unhandled)")
-				get_tree().paused = true
-			else:
-				print("Unhandled Debug-Taste ignoriert - Spiel nicht pausiert")
+			is_touching_left = false
+			is_touching_right = false
+			print("Touch beendet")
 
 func _process(delta: float) -> void:
-	if is_left_touching and is_right_touching and get_tree().paused:
-		var now = Time.get_ticks_msec() / 1000.0
-		var left_elapsed = now - left_touch_start
-		var right_elapsed = now - right_touch_start
-
-		# Indikatoren heller machen, je näher du an 3 Sekunden kommst
-		var progress = clamp(min(left_elapsed, right_elapsed) / TOUCH_HOLD_TIME, 0.0, 1.0)
-		left_indicator.color.a = 0.2 + 0.3 * progress
-		right_indicator.color.a = 0.2 + 0.3 * progress
-
-		if left_elapsed >= TOUCH_HOLD_TIME and right_elapsed >= TOUCH_HOLD_TIME:
-			print("✅ Beide Ecken 3s gedrückt – öffne Debug-Menü")
+	# Touch-Logik für Mobile während der Pause
+	if is_touching_left and is_touching_right and get_tree().paused:
+		var current_time = Time.get_ticks_msec() / 1000.0
+		if (current_time - touch_left_start_time >= TOUCH_HOLD_TIME and 
+			current_time - touch_right_start_time >= TOUCH_HOLD_TIME):
+			print("Touch für 3 Sekunden in beiden Ecken, öffne Debug-Menü")
 			if debug_menu:
 				debug_menu.visible = true
-			is_left_touching = false
-			is_right_touching = false
-			left_touch_id = -1
-			right_touch_id = -1
-			left_indicator.visible = false
-			right_indicator.visible = false
-
+			is_touching_left = false
+			is_touching_right = false
 
 # Bestehende Funktionen
 func _on_coin_collected(level_count: int, global_count: int):
@@ -267,6 +206,5 @@ func _on_Coin_reset_button_pressed() -> void:
 func _on_level_unlock_button_pressed() -> void:
 	ProgressManager.highest_completed_level = 48
 	ProgressManager.unlocked_bonus_levels = [48, 49, 50, 51, 52, 53]
-	ProgressManager.unlocked_comics = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 	ProgressManager.save_progress()
 	print("Alle Levels freigeschaltet!")
