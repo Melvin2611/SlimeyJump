@@ -352,6 +352,30 @@
 > Version number has been changed
 > the .pck has now been merged into the .exe and is now no longer needed 
 
+# Exit of the Betas! We are now released check out the Game on itch.io, I might also add it to the Google Playstore!
+
+## v.1.0.0
+#### Levels:
+> Level 53 added and Completed
+> Level 54 added and Completed
+> New Bonus Level Music
+
+#### Mechanics:
+> Power Ups and Abilitys have gotten a Rework
+
+#### Menus:
+> Version Label change
+> Language last updates
+> Debug Menu has been changed
+> Debug Menu is no longer accesible through the button, but now through F8 / D or holding the top left & top right corner of the screen on mobile
+
+#### Bugs:
+> Ressources Export Problem that persisted into every last Version has been fixed
+> Gravity Field Problem has been fixed
+> a lot of false linking has been fixed
+> Settings now get instantly loaded when starting instead of you having to enter the Settings Menu
+> Some Signs have gotten a small change so that the English text fits, now English and German Text is fitting everywhere.
+
 # Patchlogs und Changelogs DEUTSCH
 ## v.0.0.1
 > Player wurde hinzugefügt
@@ -706,3 +730,27 @@
 > versions label wurde geändert
 > Versions Nummer wurde geändert
 > die .pck datei wurde jetzt in die .exe gemerged, wodurch man nur noch eine Brauch
+
+# Ende der Betas! Das spiel ist jetzt released! Es ist auf itch.io und vielleicht bringe ich es auch noch zum Google playstore
+
+## v.1.0.0
+#### Level:
+> Level 53 hinzugefügt und Fertig Gestellt
+> Level 54 hinzugefügt und Fertig Gestellt
+> Neue Musik für die Bonus Level
+
+#### Mechaniken:
+> Power Ups und Abilitys haben ein Rework bekommen
+
+#### Menüs:
+> Versions Label zu v.1.0.0 geändert
+> letzten paar Sprach Updates
+> Debug Menü wurde etwas verändert
+> Debug Menu kann nicht mehr über den Button erreicht werden, sondern jetzt indem man F8 / D drückt, oder auch die ecke oben links und oben rechts gleichzeitig gedrückt hält aufm Handy.
+
+#### Bugs:
+> Ein fehler beim Export von Ressourcen der über alle letzteren Versionen existierte wurde behoben
+> Die drehung des Gravity Fields wurde Gefixt
+> Ein haufen von Falschen verlinkungen wurde behoben
+> Die Einstellungen werden jetzt sofort beim Starten geladen, was bedeutet das man nicht mehr zum laden die Einstellungs Seite öffnen muss
+> Einige Schilder haben kleine Änderungen bekommen, damit sie in der Englischen und Deutschen Version passen (die anderen Versionen schauen noch raus)
